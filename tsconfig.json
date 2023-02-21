@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./config/build/",
+    "outDir": "./build/",
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "ES5",

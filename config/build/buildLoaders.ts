@@ -6,22 +6,13 @@ export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule
   const { isDev } = options;
 
   const fileLoader = {
-    test: /\.(png|jpe?g|gif)$/i,
-    use: [
-      {
-        loader: 'file-loader',
-      },
-    ],
+    test: /\.(?:ico|gif|png|jpg|jpeg)$/,
+    type: 'asset/resource',
   };
 
   const fontsLoader = {
-    test: /\.(eot|svg|ttf|woff|woff2)$/,
-    use: {
-      loader: 'file-loader',
-      options: {
-        name: '../../public/fonts/[name].[ext]',
-      },
-    },
+    test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+    type: 'asset/inline',
   };
 
   const svgLoader = {

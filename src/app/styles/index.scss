@@ -1,13 +1,13 @@
 @import "normalize";
-@import "fonts/fonts";
+@import "./fonts/fonts";
 @import "globals";
-@import "variables/global";
-@import "variables/mockups";
+@import "./variables/global";
+@import "./variables/mockups";
 @import "mixins";
 
 body {
-  font: var(--font-primary);
+  font-family: var(--font-primary);
   font-size: var(--font-size-body);
-  color: var(--color-greyscale-primary);
-  background: var(--color-greyscale-bg-primary);
+  color: var(--color-black-dark);
+  background: var(--color-white-bg);
 }

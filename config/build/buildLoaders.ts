@@ -14,6 +14,16 @@ export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule
     ],
   };
 
+  const fontsLoader = {
+    test: /\.(eot|svg|ttf|woff|woff2)$/,
+    use: {
+      loader: 'file-loader',
+      options: {
+        name: '../../public/fonts/[name].[ext]',
+      },
+    },
+  };
+
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
@@ -63,5 +73,6 @@ export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule
     cssLoader,
     svgLoader,
     fileLoader,
+    fontsLoader,
   ];
 }

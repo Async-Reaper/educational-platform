@@ -1,6 +1,6 @@
 import { Link, type LinkProps } from 'react-router-dom';
 import { type FC } from 'react';
-import { classNames } from 'shared/libs/halpers/classNames';
+import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
 export enum Variants {

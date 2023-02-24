@@ -1,4 +1,4 @@
-import { Icon } from 'shared/libs/icons';
+// import { Icon } from 'shared/libs/icons';
 import { useTranslation } from 'react-i18next';
 import { LangSwitcher } from 'widgets';
 
@@ -9,7 +9,7 @@ function Component() {
      <div>
         <LangSwitcher />
         {t('Главная страница')}
-        <Icon name='steam' color='greyscale-primary' />
+        {/* <Icon name='steam' color='greyscale-primary' /> */}
      </div>
   );
 }

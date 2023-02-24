@@ -1,9 +1,15 @@
-import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import 'shared/config/i18n';
 
-function Index() {
-  return (
-     <div />
-  );
-}
+import App from 'app/App';
+import { ErrorBoundary } from 'app/providers/error-boundary';
 
-export default Index;
+render(
+   <BrowserRouter>
+      <ErrorBoundary>
+         <App />
+      </ErrorBoundary>
+   </BrowserRouter>,
+   document.getElementById('root'),
+);

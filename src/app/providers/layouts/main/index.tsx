@@ -4,10 +4,11 @@ type Props = {
   children: ReactNode
 };
 
-const Component: FC<Props> = ({ children }) => {
+// eslint-disable-next-line react/function-component-definition
+const Component: FC<Props> = ({ children }) => (
    <main>
       {children}
-   </main>;
-};
+   </main>
+);
 
 export const MainLayout = Component;

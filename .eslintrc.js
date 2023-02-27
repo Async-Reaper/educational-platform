@@ -51,6 +51,7 @@ module.exports = {
       'react/react-in-jsx-scope': 'off',
       'react/function-component-definition': 'off',
       'react/require-default-props': 'off',
+      'react/function-component-definition': 'off',
       'react/jsx-props-no-spreading': 'off',
       'react/jsx-indent': ['error', 3],
       'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],

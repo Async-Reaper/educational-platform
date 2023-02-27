@@ -33,12 +33,12 @@ const Component: FC<Props> = (props) => {
   return (
      <ComponentUi
        className={
-        classNames(
-          cls.text,
-          [cls[`variant--${variant}`], cls[`color--${color}`], cls[`tag--${tag}`]],
-          { [cls.uppercase]: uppercase, [cls.noWrap]: noWrap, [cls.inline]: inline },
-        )
-     }
+            classNames(
+              cls.text,
+              [cls[`variant--${variant}`], cls[`color--${color}`], cls[`tag--${tag}`]],
+              { [cls.uppercase]: uppercase, [cls.noWrap]: noWrap, [cls.inline]: inline },
+            )
+          }
        {...otherProps}
      >
         {children}

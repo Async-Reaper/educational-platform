@@ -1,16 +1,18 @@
-import React, { type FC } from 'react';
+import React, {type FC, ReactNode} from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
 type Variant =
-  | 'xs'
-  | 'l'
-  | 'xl';
+    | 'xs'
+    | 'l'
+    | 'm'
+    | 'xl';
 
 type Props = {
   variant?: Variant
   color?: Colors;
-  children: string;
+  border?: boolean;
+  children: ReactNode;
   full?: boolean
 };
 const Component: FC<Props> = (props) => {
@@ -18,6 +20,7 @@ const Component: FC<Props> = (props) => {
     variant = 'l',
     color = 'primary',
     children,
+    border = false,
     full = false,
     ...otherProps
   } = props;
@@ -28,8 +31,10 @@ const Component: FC<Props> = (props) => {
          cls.button,
          [cls[`variant--${variant}`],
            cls[`color--${color}`]],
-
-         { [cls.full]: full },
+         {
+           [cls.full]: full,
+           [cls.border]: border,
+         },
        )}
        {...otherProps}
      >

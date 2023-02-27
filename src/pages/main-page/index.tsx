@@ -1,7 +1,7 @@
 // import { Icon } from 'shared/libs/icons';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Toggle } from 'shared/ui';
+import { Button, Typography } from 'shared/ui';
 import { LangSwitcher } from 'widgets';
 
 function Component() {
@@ -11,7 +11,9 @@ function Component() {
      <div>
         <LangSwitcher />
         {t('Главная страница')}
-        <Toggle isActive={s} handler={() => f(!s)} />
+        <Button variant='xs' border>
+           <Typography variant='small'>Регистрация</Typography>
+        </Button>
      </div>
   );
 }

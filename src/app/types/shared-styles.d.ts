@@ -1,7 +1,7 @@
 declare type Colors =
     | 'gray-primary'
     | 'gray-secondary'
-    | 'black-ligth'
+    | 'black-light'
     | 'black-dark'
     | 'violet-primary'
     | 'violet-secondary'

@@ -17,7 +17,9 @@
 
   &.variant {
     &--h1 {
-      font-size: 42px;
+      font-weight: 700;
+      font-size: var(--font-size-h1);
+      line-height: 48px;
 
       @include phones-xs{}
 
@@ -35,7 +37,9 @@
     }
 
     &--h2 {
-      font-size: 36px;
+      font-weight: 700;
+      font-size: var(--font-size-h2);
+      line-height: 42px;
 
       @include phones-xs{}
 
@@ -53,7 +57,9 @@
     }
 
     &--h3 {
-      font-size: 30px;
+      font-weight: 500;
+      font-size: var(--font-size-h3);
+      line-height: 32px;
 
       @include phones-xs{}
 
@@ -70,55 +76,12 @@
       @include desktop-xl{}
     }
 
-    &--h4 {
-      font-size: 24px;
-
-      @include phones-xs{}
-
-      @include phones{}
-
-      @include tablets{}
-
-      @include laptop {
-        font-size: var(--font-size-h4);
-      }
-
-      @include desktop{}
-
-      @include desktop-xl{}
-    }
-
-    &--h5 {
-      font-size: 20px;
-
-      @include phones-xs{}
-
-      @include phones{}
-
-      @include tablets{}
-
-      @include laptop {
-        font-size: var(--font-size-h5);
-      }
-
-      @include desktop{}
-
-      @include desktop-xl{}
-    }
-
-    &--h6 {
-      font-size: var(--font-size-h6);
-    }
-
-    &--subtitle {
-      font-size: var(--font-size-subtitle);
-    }
 
     &--body {
       font-size: var(--font-size-body);
     }
 
-    &--xs {
+    &--small {
       font-size: var(--font-size-xs);
     }
   }

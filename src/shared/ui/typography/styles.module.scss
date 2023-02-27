@@ -1,0 +1,149 @@
+@import "../../../app/styles/mixins";
+
+.text {
+  &.inline {
+    display: inline-block;
+  }
+
+  &.noWrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.variant {
+    &--h1 {
+      font-size: 42px;
+
+      @include phones-xs{}
+
+      @include phones{}
+
+      @include tablets{}
+
+      @include laptop {
+        font-size: var(--font-size-h1);
+      }
+
+      @include desktop{}
+
+      @include desktop-xl{}
+    }
+
+    &--h2 {
+      font-size: 36px;
+
+      @include phones-xs{}
+
+      @include phones{}
+
+      @include tablets{}
+
+      @include laptop {
+        font-size: var(--font-size-h2);
+      }
+
+      @include desktop{}
+
+      @include desktop-xl{}
+    }
+
+    &--h3 {
+      font-size: 30px;
+
+      @include phones-xs{}
+
+      @include phones{}
+
+      @include tablets{}
+
+      @include laptop {
+        font-size: var(--font-size-h3);
+      }
+
+      @include desktop{}
+
+      @include desktop-xl{}
+    }
+
+    &--h4 {
+      font-size: 24px;
+
+      @include phones-xs{}
+
+      @include phones{}
+
+      @include tablets{}
+
+      @include laptop {
+        font-size: var(--font-size-h4);
+      }
+
+      @include desktop{}
+
+      @include desktop-xl{}
+    }
+
+    &--h5 {
+      font-size: 20px;
+
+      @include phones-xs{}
+
+      @include phones{}
+
+      @include tablets{}
+
+      @include laptop {
+        font-size: var(--font-size-h5);
+      }
+
+      @include desktop{}
+
+      @include desktop-xl{}
+    }
+
+    &--h6 {
+      font-size: var(--font-size-h6);
+    }
+
+    &--subtitle {
+      font-size: var(--font-size-subtitle);
+    }
+
+    &--body {
+      font-size: var(--font-size-body);
+    }
+
+    &--xs {
+      font-size: var(--font-size-xs);
+    }
+  }
+
+  &.color {
+    &--inherit {
+      color: inherit;
+    }
+
+    &--primary {
+      color: var(--color-primary-text);
+    }
+
+    &--secondary {
+      color: var(--color-secondary-text);
+    }
+  }
+
+  &.tag {
+    &--b {
+      font-weight: 600;
+    }
+
+    &--span {
+      font-weight: 500;
+    }
+  }
+}

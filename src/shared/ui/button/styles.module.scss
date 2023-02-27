@@ -1,0 +1,37 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+
+  &.full {
+    width: 100%;
+  }
+
+  &.variant {
+    &--xs {
+      padding: 9px 23px;
+    }
+
+    &--l {
+      padding: 12px 24px;
+    }
+
+    &--xl {
+      padding: 18px 38px;
+    }
+  }
+
+  &.color {
+    &--primary {
+      color: var(--color-primary-black);
+      background-color: var(--color-primary);
+    }
+
+    &--secondary {
+      color: var(--color-primary-white);
+      background-color: var(--color-secondary);
+    }
+  }
+}

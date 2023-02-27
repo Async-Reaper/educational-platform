@@ -2,8 +2,9 @@ import './styles/index.scss';
 import { classNames } from 'shared/libs/helpers/classNames';
 import { AppRouter, MainLayout } from 'app/providers';
 import { Suspense } from 'react';
-import Typography from 'shared/ui/typography';
+
 import { t } from 'i18next';
+import { Typography } from 'shared/ui';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Suspense fallback={<>Loading ...</>}>
            <MainLayout>
               <AppRouter />
-              <Typography color='violet-primary' variant='trafalgar'>
+              <Typography color='violet-primary' variant='small'>
                  {t('str')}
               </Typography>
            </MainLayout>

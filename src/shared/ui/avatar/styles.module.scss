@@ -1,0 +1,46 @@
+.avatar {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-md);
+  width: fit-content;
+  text-align: center;
+  grid-gap: 5px;
+  position: relative;
+
+  .avatarImage {
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--border-radius-md);
+
+    &.rounded {
+      border-radius: var(--border-radius-rounded);
+    }
+  }
+
+  &.variant {
+    &--xs {
+      max-width: 36px;
+      max-height: 36px;
+    }
+
+    &--l {
+      max-width: 46px;
+      max-height: 46px;
+    }
+
+    &--xl {
+      max-width: 56px;
+      max-height: 56px;
+    }
+  }
+
+  .status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

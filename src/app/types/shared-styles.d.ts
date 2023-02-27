@@ -1,2 +1,9 @@
 declare type Colors =
-    | 'greyscale-primary';
+    | 'gray-primary'
+    | 'gray-secondary'
+    | 'black-ligth'
+    | 'black-dark'
+    | 'violet-primary'
+    | 'violet-secondary'
+    | 'white-bg'
+    | 'black-bg';

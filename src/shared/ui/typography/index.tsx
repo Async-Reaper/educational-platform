@@ -1,57 +1,49 @@
-import React from 'react';
-import DynamicComponent from 'shared/ui/typography/DynamicComponent';
-import { themeColor } from 'shared/ui/theme';
+import React, { type FC, ReactNode } from 'react';
+import { classNames } from 'shared/libs/helpers/classNames';
+import cls from './styles.module.scss';
 
-export type Variant =
-    | 'canon'
-    | 'trafalgar'
-    | 'paragon'
-    | 'doublePica'
-    | 'default';
+type Tag = 'h1' | 'h2' | 'h3' | 'span' | 'strong';
 
-const variantsTypography = {
-  canon: {
-    tag: 'h1',
-    fontSize: ['40px'],
-    fontWeight: 700,
-    lineHeight: ['48px'],
-  },
-  trafalgar: {
-    tag: 'h2',
-    fontSize: ['32px'],
-    fontWeight: 700,
-    lineHeight: ['42px'],
-  },
-  paragon: {
-    tag: 'h3',
-    fontSize: ['24px'],
-    fontWeight: 500,
-    lineHeight: ['32px'],
-  },
-  doublePica: {
-    tag: 'p',
-    fontSize: ['18px'],
-    fontWeight: 400,
-    lineHeight: ['24px'],
-  },
-  default: {
-    tag: 'span',
-    fontSize: ['14px'],
-    fontWeight: 300,
-    lineHeight: ['16px'],
-  },
+type Variant = 'h1' | 'h2' | 'h3' | 'body' | 'small';
+
+type Props = {
+  color?: Colors;
+  tag?: Tag;
+  variant?: Variant;
+  children: ReactNode;
+  inline?: boolean;
+  noWrap?: boolean;
+  uppercase?: boolean;
 };
 
-interface Props {
-  children: React.ReactNode;
-  color: themeColor;
-  variant: Variant;
-}
+const Component: FC<Props> = (props) => {
+  const {
+    tag = 'div',
+    variant = 'body',
+    color = 'inherit',
+    children,
+    noWrap = false,
+    inline = false,
+    uppercase = false,
+    ...otherProps
+  } = props;
 
-const Typography: React.FC<Props> = ({ variant = 'default', ...props }) => (
-   <DynamicComponent {...variantsTypography[variant]} {...props}>
-      {props.children}
-   </DynamicComponent>
-);
+  const ComponentUi = tag;
 
-export default Typography;
+  return (
+     <ComponentUi
+       className={
+        classNames(
+          cls.text,
+          [cls[`variant--${variant}`], cls[`color--${color}`], cls[`tag--${tag}`]],
+          { [cls.uppercase]: uppercase, [cls.noWrap]: noWrap, [cls.inline]: inline },
+        )
+     }
+       {...otherProps}
+     >
+        {children}
+     </ComponentUi>
+  );
+};
+
+export const Typography = React.memo(Component);

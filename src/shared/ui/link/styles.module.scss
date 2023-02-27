@@ -1,9 +1,14 @@
-.AppLink {
-  color: var(--primary-color);
+.app_link {
+  padding: 20px;
+  transition: 0.2s ease;
 }
 
 .primary {
-  color: var(--primary-color);
+  color: var(--color-primary-white);
+
+  &:hover {
+    color: var(--color-primary-gold);
+  }
 }
 
 .secondary {
@@ -12,4 +17,8 @@
 
 .red {
   color: red;
+}
+
+.active {
+  color: var(--color-primary-gold);
 }

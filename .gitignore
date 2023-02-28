@@ -1,5 +1,5 @@
 /node_modules
 /yarn-error
 /build
-/.idea
+.idea
 yarn-error.log

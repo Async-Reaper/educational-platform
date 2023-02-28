@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SVGAttributes } from "react";
 
-export const ArrowBottomIcon = React.memo(
+export const FlagRightIcon = React.memo(
   ({
     size = 24,
     color = "#4E5361",
@@ -12,12 +12,12 @@ export const ArrowBottomIcon = React.memo(
     return (
       <svg width={size} height={size} fill="none" {...props}>
         <path
-          fill="#494947"
-          d="M9 1a1 1 0 00-2 0h2zM7.293 21.707a1 1 0 001.414 0l6.364-6.364a1 1 0 00-1.414-1.414L8 19.586l-5.657-5.657A1 1 0 00.93 15.343l6.364 6.364zM7 1v20h2V1H7z"
+          fill="#9B53C8"
+          d="M12.634 6.76a.732.732 0 010 1.268l-11.535 6.66A.732.732 0 010 14.053V.733C0 .17.61-.183 1.099.1l11.535 6.66z"
         />
       </svg>
     );
   }
 );
 
-ArrowBottomIcon.displayName = "ArrowBottomIcon";
+FlagRightIcon.displayName = "FlagRightIcon";

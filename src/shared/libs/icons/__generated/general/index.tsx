@@ -10,6 +10,7 @@ import {FlagRightIcon as flag_right} from './FlagRight';
 import {LightnessIcon as lightness} from './Lightness';
 import {LineIcon as line} from './Line';
 import {LoadingIcon as loading} from './Loading';
+import {MinusIcon as minus} from './Minus';
 import {PlayIcon as play} from './Play';
 import {PlusIcon as plus} from './Plus';
 import {TgIcon as tg} from './Tg';
@@ -28,6 +29,7 @@ export type IconName =
   | 'lightness'
   | 'line'
   | 'loading'
+  | 'minus'
   | 'play'
   | 'plus'
   | 'tg'
@@ -48,6 +50,7 @@ export const iconSet: {
   lightness,
   line,
   loading,
+  minus,
   play,
   plus,
   tg,

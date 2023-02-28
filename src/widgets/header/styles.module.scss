@@ -1,11 +1,24 @@
+@import "../../app/styles/mixins";
+
 .header {
+    padding: 36px 0;
+
     .header__inner {
+        @include flex-space;
 
         .header__logo {
-    
+            @include flex-space;
+            grid-gap: 8px;
+            .logo__text {
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 32px;
+            }
         }
-    }
-    .buttons__group {
-        
+
+        .buttons__group {
+            @include flex-space;
+            grid-gap: 21px
+        }
     }
 }

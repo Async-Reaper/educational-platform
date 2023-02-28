@@ -22,7 +22,11 @@ const Component: FC<Props> = (props) => {
 
   return (
      <div className={classNames(cls.avatar, [cls[`variant--${variant}`]])}>
-        <img className={classNames(cls.avatarImage, [], { [cls.rounded]: rounded })} src={src} alt='User avatar' />
+        <img
+          className={classNames(cls.avatarImage, [], { [cls.rounded]: rounded })}
+          src={src}
+          alt='User avatar'
+        />
         {isOnline && variant !== 'xs' ? (
            <div className={classNames(cls.status)}>
               <ColoredIcon name='status_online' size={16} />

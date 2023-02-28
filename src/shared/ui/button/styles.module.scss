@@ -1,9 +1,7 @@
 @import "../../../app/styles/mixins";
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-space;
   border-radius: var(--border-radius-over);
   cursor: pointer;
   color: var(--color-white-bg);
@@ -37,5 +35,8 @@
 
   &.color {
     @include color;
+  }
+  &.background {
+    @include background;
   }
 }

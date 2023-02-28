@@ -45,11 +45,12 @@
 
 @mixin flex-space {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 
-@mixin color {
+@mixin background {
   &--gray-primary {
     background-color: var(--color-gray-primary)  
   }
@@ -73,5 +74,32 @@
   }
   &--black-bg {
     background-color: var(--color-black-bg)
+  }
+}
+
+@mixin color {
+  &--gray-primary {
+    color: var(--color-gray-primary)  
+  }
+  &--gray-secondary {
+    color: var(--color-gray-secondary)
+  }
+  &--black-light {
+    color: var(--color-black-light)
+  }
+  &--black-dark {
+    color: var(--color-black-dark)
+  }
+  &--violet-primary {
+    color: var(--color-violet-primary)
+  }
+  &--violet-secondary {
+    color: var(--color-violet-secondary)
+  }
+  &--white-bg {
+    color: var(--color-white-bg)
+  }
+  &--black-bg {
+    color: var(--color-black-bg)
   }
 }

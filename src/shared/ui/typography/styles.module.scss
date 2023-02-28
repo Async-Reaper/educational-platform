@@ -91,13 +91,7 @@
       color: inherit;
     }
 
-    &--primary {
-      color: var(--color-black-bg);
-    }
-
-    &--secondary {
-      color: var(--color-white-bg);
-    }
+    @include color;
   }
 
   &.tag {

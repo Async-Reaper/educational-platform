@@ -11,6 +11,7 @@ type Variant =
 type Props = {
   variant?: Variant
   color?: Colors;
+  background?: Colors;
   border?: boolean;
   children: ReactNode;
   full?: boolean
@@ -19,7 +20,8 @@ type Props = {
 const Component: FC<Props> = (props) => {
   const {
     variant = 'l',
-    color = 'violet-primary',
+    color = 'white-bg',
+    background = 'violet-primary',
     children,
     border = false,
     full = false,
@@ -31,7 +33,9 @@ const Component: FC<Props> = (props) => {
        className={classNames(
          cls.button,
          [cls[`variant--${variant}`],
-           cls[`color--${color}`]],
+           cls[`color--${color}`],
+           cls[`background--${background}`],
+         ],
          {
            [cls.full]: full,
            [cls.border]: border,

@@ -1,4 +1,4 @@
-import React, {type FC, ReactNode} from 'react';
+import React, { type FC, ReactNode } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
@@ -15,10 +15,11 @@ type Props = {
   children: ReactNode;
   full?: boolean
 };
+
 const Component: FC<Props> = (props) => {
   const {
     variant = 'l',
-    color = 'primary',
+    color = 'violet-primary',
     children,
     border = false,
     full = false,

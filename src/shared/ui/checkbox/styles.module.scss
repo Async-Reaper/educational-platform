@@ -1,3 +1,5 @@
+@import "../../../app/styles/mixins";
+
 .checkboxWrapper {
   display: flex;
   justify-content: center;
@@ -24,13 +26,7 @@
   }
 
   &.background {
-    &--primary {
-      background-color: var(--color-primary);
-    }
-
-    &--secondary {
-      background-color: var(--color-secondary);
-    }
+    @include color;
   }
 
   .checkboxContent {
@@ -58,13 +54,7 @@
     }
 
     &.color {
-      &--primary {
-        background-color: var(--color-primary-black);
-      }
-
-      &--secondary {
-        background-color: var(--color-primary-white);
-      }
+      @include color;
     }
   }
 }

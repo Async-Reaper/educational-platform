@@ -1,4 +1,5 @@
 @import "variables/mockups";
+@import "variables/global.scss";
 
 @mixin phones-xs {
   @media screen and (min-width: $xs) {
@@ -45,4 +46,32 @@
 @mixin flex-space {
   display: flex;
   justify-content: space-between;
+}
+
+
+@mixin color {
+  &--gray-primary {
+    background-color: var(--color-gray-primary)  
+  }
+  &--gray-secondary {
+    background-color: var(--color-gray-secondary)
+  }
+  &--black-light {
+    background-color: var(--color-black-light)
+  }
+  &--black-dark {
+    background-color: var(--color-black-dark)
+  }
+  &--violet-primary {
+    background-color: var(--color-violet-primary)
+  }
+  &--violet-secondary {
+    background-color: var(--color-violet-secondary)
+  }
+  &--white-bg {
+    background-color: var(--color-white-bg)
+  }
+  &--black-bg {
+    background-color: var(--color-black-bg)
+  }
 }

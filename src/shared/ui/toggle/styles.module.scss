@@ -1,3 +1,5 @@
+@import "../../../app/styles/mixins";
+
 .toggle {
   border-radius: var(--border-radius-md);
   width: max-content;
@@ -31,13 +33,7 @@
   }
 
   &.background {
-    &--primary {
-      background-color: var(--color-primary);
-    }
-
-    &--secondary {
-      background-color: var(--color-secondary);
-    }
+    @include color;
   }
 
   .toggleSlider {
@@ -61,13 +57,7 @@
     }
 
     &.color {
-      &--primary {
-        background-color: var(--color-primary-black);
-      }
-
-      &--secondary {
-        background-color: var(--color-primary-white);
-      }
+      @include color;
     }
   }
 }

@@ -1,24 +1,23 @@
-import React, { type FC } from 'react';
+import React from 'react';
 import { Container } from 'shared/ui';
+import { LinkSection } from 'widgets/top-section/ui/elements/link-section';
 import cls from './styles.module.scss';
 import {
-  BottomIcon, ButtonsGroup, ImageBG, TextContent,
+  BottomIcon,
+  ButtonsGroup, ContentWrapper, ImageBG, TextContent, TopSectionWrapper,
 } from './ui';
 
-interface Props {
-
-}
-
-const Component: FC<Props> = () => (
+const Component = () => (
    <div className={cls.top__section}>
       <Container>
-         <div className={cls.top__sectionWrapper}>
-            <div className={cls.content}>
+         <TopSectionWrapper>
+            <ContentWrapper>
                <TextContent />
                <ButtonsGroup />
-            </div>
+            </ContentWrapper>
             <ImageBG />
-         </div>
+         </TopSectionWrapper>
+         <LinkSection />
       </Container>
       <BottomIcon />
    </div>

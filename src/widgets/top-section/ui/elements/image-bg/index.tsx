@@ -1,11 +1,12 @@
 import React from 'react';
 import { Image } from 'shared/ui';
-import iMac from '../../img/iMac.png';
+import iMac from '../../../img/iMac.png';
 import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.images__bg}>
       <Image src={iMac} name='iMac' />
+       <div></div>
       {/* <div className={cls.image__iMac}>
                     <img src={iMac} alt='iMac' />
                  </div>

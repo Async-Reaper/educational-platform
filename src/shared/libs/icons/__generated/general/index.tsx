@@ -3,6 +3,7 @@ import {SVGAttributes} from 'react';
 import {ArrowBottomIcon as arrow_bottom} from './ArrowBottom';
 import {ArrowRightIcon as arrow_right} from './ArrowRight';
 import {ArrowRoundedIcon as arrow_rounded} from './ArrowRounded';
+import {BorderArrowBottomIcon as border_arrow_bottom} from './BorderArrowBottom';
 import {CheckRoundedIcon as check_rounded} from './CheckRounded';
 import {CheckIcon as check} from './Check';
 import {DocsIcon as docs} from './Docs';
@@ -22,6 +23,7 @@ export type IconName =
   | 'arrow_bottom'
   | 'arrow_right'
   | 'arrow_rounded'
+  | 'border_arrow_bottom'
   | 'check_rounded'
   | 'check'
   | 'docs'
@@ -43,6 +45,7 @@ export const iconSet: {
   arrow_bottom,
   arrow_right,
   arrow_rounded,
+  border_arrow_bottom,
   check_rounded,
   check,
   docs,

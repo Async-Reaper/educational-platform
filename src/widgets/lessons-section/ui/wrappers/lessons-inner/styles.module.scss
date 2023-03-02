@@ -1,0 +1,21 @@
+.lessons__inner {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "01";
+        top: 130px;
+        right: 0;
+        height: 233px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 324.743px;
+        line-height: 104px;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(161.72deg, #ddc9ff -20.29%, rgb(221 201 255 / 0%) 116.82%);
+        opacity: 0.9;
+    }
+}

@@ -81,16 +81,16 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  appearance: none;
+    appearance: none;
 }
 
 canvas,
@@ -98,7 +98,7 @@ input,
 select,
 button,
 progress {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 article,
@@ -113,86 +113,86 @@ main,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 *[hidden] {
-  display: none;
+    display: none;
 }
 
 svg {
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
 menu,
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: none;
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  appearance: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    appearance: none;
 }
 
 input {
-  outline: none;
-  border: none;
-  background-image: none;
-  background-color: transparent;
-  box-shadow: none;
+    outline: none;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 ::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+    border: 0;
+    padding: 0;
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--color-gray);
+    background: var(--color-gray);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 5px;
+    background: var(--color-primary);
+    border-radius: 5px;
 }

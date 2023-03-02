@@ -1,60 +1,60 @@
 @import "../../../app/styles/mixins";
 
 .checkboxWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--color-greyscale-dark);
-  border-radius: var(--border-radius-md);
-  cursor: pointer;
-
-  &.variant {
-    &--xs {
-      width: 16px;
-      height: 16px;
-    }
-
-    &--l {
-      width: 20px;
-      height: 20px;
-    }
-
-    &--xl {
-      width: 26px;
-      height: 26px;
-    }
-  }
-
-  &.background {
-    @include color;
-  }
-
-  .checkboxContent {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-greyscale-light);
+    background: var(--color-greyscale-dark);
     border-radius: var(--border-radius-md);
+    cursor: pointer;
 
     &.variant {
-      &--xs {
-        width: 14px;
-        height: 14px;
-      }
+        &--xs {
+            width: 16px;
+            height: 16px;
+        }
 
-      &--l {
-        width: 18px;
-        height: 18px;
-      }
+        &--l {
+            width: 20px;
+            height: 20px;
+        }
 
-      &--xl {
-        width: 22px;
-        height: 22px;
-      }
+        &--xl {
+            width: 26px;
+            height: 26px;
+        }
     }
 
-    &.color {
-      @include color;
+    &.background {
+        @include color;
     }
-  }
+
+    .checkboxContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-greyscale-light);
+        border-radius: var(--border-radius-md);
+
+        &.variant {
+            &--xs {
+                width: 14px;
+                height: 14px;
+            }
+
+            &--l {
+                width: 18px;
+                height: 18px;
+            }
+
+            &--xl {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        &.color {
+            @include color;
+        }
+    }
 }

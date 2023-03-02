@@ -1,63 +1,63 @@
 @import "../../../app/styles/mixins";
 
 .toggle {
-  border-radius: var(--border-radius-md);
-  width: max-content;
-  cursor: pointer;
-  transition: all, var(--duration-fast);
-
-  &.variant {
-    &--xs {
-      padding: 3px 17px 3px 4px;
-
-      &.active {
-        padding: 3px 4px 3px 17px;
-      }
-    }
-
-    &--l {
-      padding: 4px 23px 4px 4px;
-
-      &.active {
-        padding: 4px 4px 4px 23px;
-      }
-    }
-
-    &--xl {
-      padding: 4px 28px 4px 4px;
-
-      &.active {
-        padding: 4px 4px 4px 28px;
-      }
-    }
-  }
-
-  &.background {
-    @include color;
-  }
-
-  .toggleSlider {
     border-radius: var(--border-radius-md);
+    width: max-content;
+    cursor: pointer;
+    transition: all, var(--duration-fast);
 
     &.variant {
-      &--xs {
-        width: 12px;
-        height: 12px;
-      }
+        &--xs {
+            padding: 3px 17px 3px 4px;
 
-      &--l {
-        width: 14px;
-        height: 14px;
-      }
+            &.active {
+                padding: 3px 4px 3px 17px;
+            }
+        }
 
-      &--xl {
-        width: 18px;
-        height: 18px;
-      }
+        &--l {
+            padding: 4px 23px 4px 4px;
+
+            &.active {
+                padding: 4px 4px 4px 23px;
+            }
+        }
+
+        &--xl {
+            padding: 4px 28px 4px 4px;
+
+            &.active {
+                padding: 4px 4px 4px 28px;
+            }
+        }
     }
 
-    &.color {
-      @include color;
+    &.background {
+        @include color;
     }
-  }
+
+    .toggleSlider {
+        border-radius: var(--border-radius-md);
+
+        &.variant {
+            &--xs {
+                width: 12px;
+                height: 12px;
+            }
+
+            &--l {
+                width: 14px;
+                height: 14px;
+            }
+
+            &--xl {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        &.color {
+            @include color;
+        }
+    }
 }

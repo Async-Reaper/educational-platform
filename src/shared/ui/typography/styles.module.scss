@@ -1,106 +1,107 @@
 @import "../../../app/styles/mixins";
 
 .text {
-  &.inline {
-    display: inline-block;
-  }
-
-  &.noWrap {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &.uppercase {
-    text-transform: uppercase;
-  }
-
-  &.variant {
-    &--h1 {
-      font-weight: 900;
-      font-size: var(--font-size-h1);
-      line-height: 48px;
-
-      @include phones-xs{}
-
-      @include phones{}
-
-      @include tablets{}
-
-      @include laptop {
-        font-size: var(--font-size-h1);
-      }
-
-      @include desktop{}
-
-      @include desktop-xl{}
+    &.inline {
+        display: inline-block;
     }
 
-    &--h2 {
-      font-weight: 700;
-      font-size: var(--font-size-h2);
-      line-height: 42px;
-
-      @include phones-xs{}
-
-      @include phones{}
-
-      @include tablets{}
-
-      @include laptop {
-        font-size: var(--font-size-h2);
-      }
-
-      @include desktop{}
-
-      @include desktop-xl{}
+    &.noWrap {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
-    &--h3 {
-      font-weight: 400;
-      font-size: var(--font-size-h3);
-      line-height: 32px;
-
-      @include phones-xs{}
-
-      @include phones{}
-
-      @include tablets{}
-
-      @include laptop {
-        font-size: var(--font-size-h3);
-      }
-
-      @include desktop{}
-
-      @include desktop-xl{}
+    &.uppercase {
+        text-transform: uppercase;
     }
 
+    &.variant {
+        &--h1 {
+            font-weight: 700;
+            font-size: var(--font-size-h1);
+            line-height: 48px;
 
-    &--body {
-      font-size: var(--font-size-body);
+            @include phones-xs{}
+
+            @include phones{}
+
+            @include tablets{}
+
+            @include laptop {
+                font-size: var(--font-size-h1);
+            }
+
+            @include desktop{}
+
+            @include desktop-xl{}
+        }
+
+        &--h2 {
+            font-weight: 700;
+            font-size: var(--font-size-h2);
+            line-height: 42px;
+
+            @include phones-xs{}
+
+            @include phones{}
+
+            @include tablets{}
+
+            @include laptop {
+                font-size: var(--font-size-h2);
+            }
+
+            @include desktop{}
+
+            @include desktop-xl{}
+        }
+
+        &--h3 {
+            font-weight: 500;
+            font-size: var(--font-size-h3);
+            line-height: 32px;
+
+            @include phones-xs{}
+
+            @include phones{}
+
+            @include tablets{}
+
+            @include laptop {
+                font-size: var(--font-size-h3);
+            }
+
+            @include desktop{}
+
+            @include desktop-xl{}
+        }
+
+        &--body {
+            font-size: var(--font-size-body);
+            font-weight: 400;
+        }
+
+        &--small {
+            font-size: var(--font-size-small);
+            font-weight: 300;
+        }
     }
 
-    &--small {
-      font-size: var(--font-size-xs);
-    }
-  }
+    &.color {
+        &--inherit {
+            color: inherit;
+        }
 
-  &.color {
-    &--inherit {
-      color: inherit;
+        @include color;
     }
 
-    @include color;
-  }
+    &.tag {
+        &--b {
+            font-weight: 600;
+        }
 
-  &.tag {
-    &--b {
-      font-weight: 600;
+        &--span {
+            font-weight: 500;
+        }
     }
-
-    &--span {
-      font-weight: 500;
-    }
-  }
 }

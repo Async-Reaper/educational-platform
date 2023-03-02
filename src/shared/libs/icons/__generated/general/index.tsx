@@ -4,7 +4,6 @@ import {ArrowBottomIcon as arrow_bottom} from './ArrowBottom';
 import {ArrowRightIcon as arrow_right} from './ArrowRight';
 import {ArrowRoundedIcon as arrow_rounded} from './ArrowRounded';
 import {BackPlayerIcon as back_player} from './BackPlayer';
-import {BigPlayIcon as big_play} from './BigPlay';
 import {BorderArrowBottomIcon as border_arrow_bottom} from './BorderArrowBottom';
 import {CheckRoundedIcon as check_rounded} from './CheckRounded';
 import {CheckIcon as check} from './Check';
@@ -21,10 +20,9 @@ import {MinusIcon as minus} from './Minus';
 import {NextPlayerIcon as next_player} from './NextPlayer';
 import {PlayIcon as play} from './Play';
 import {PlusIcon as plus} from './Plus';
-import {RadarCircleBigIcon as radar_circle_big} from './RadarCircleBig';
-import {RadarCircleSmallIcon as radar_circle_small} from './RadarCircleSmall';
 import {TgIcon as tg} from './Tg';
 import {VerificationIcon as verification} from './Verification';
+import {VolumeIcon as volume} from './Volume';
 import {WkIcon as wk} from './Wk';
 import {YoutubeIcon as youtube} from './Youtube';
 
@@ -33,7 +31,6 @@ export type IconName =
   | 'arrow_right'
   | 'arrow_rounded'
   | 'back_player'
-  | 'big_play'
   | 'border_arrow_bottom'
   | 'check_rounded'
   | 'check'
@@ -50,10 +47,9 @@ export type IconName =
   | 'next_player'
   | 'play'
   | 'plus'
-  | 'radar_circle_big'
-  | 'radar_circle_small'
   | 'tg'
   | 'verification'
+  | 'volume'
   | 'wk'
   | 'youtube';
 
@@ -64,7 +60,6 @@ export const iconSet: {
   arrow_right,
   arrow_rounded,
   back_player,
-  big_play,
   border_arrow_bottom,
   check_rounded,
   check,
@@ -81,10 +76,9 @@ export const iconSet: {
   next_player,
   play,
   plus,
-  radar_circle_big,
-  radar_circle_small,
   tg,
   verification,
+  volume,
   wk,
   youtube
 };

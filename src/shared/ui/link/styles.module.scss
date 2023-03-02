@@ -1,24 +1,24 @@
 .app_link {
-  padding: 20px;
-  transition: 0.2s ease;
+    padding: 20px;
+    transition: 0.2s ease;
 }
 
 .primary {
-  color: var(--color-primary-white);
+    color: var(--color-primary-white);
 
-  &:hover {
-    color: var(--color-primary-gold);
-  }
+    &:hover {
+        color: var(--color-primary-gold);
+    }
 }
 
 .secondary {
-  color: var(--inverted-primary-color);
+    color: var(--inverted-primary-color);
 }
 
 .red {
-  color: red;
+    color: red;
 }
 
 .active {
-  color: var(--color-primary-gold);
+    color: var(--color-primary-gold);
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColoredIcon } from 'shared/libs/icons';
+import { ColoredIcon, Icon } from 'shared/libs/icons';
 import { Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
@@ -19,9 +19,36 @@ const Component = () => (
                Изучите видеоуроки
             </Typography>
          </div>
-         <div>
-            <div className="video">
-               
+         <div className={cls.video}>
+            <div className='video'>
+               <video src='' />
+            </div>
+            <div className={cls.videoBenefits} />
+         </div>
+         <div className={cls.lessons__list}>
+            <div className={cls.lesson__item}>
+               <video src='' />
+               <Typography tag='h3' variant='h3'>
+                  Как успевать в отведенное время?
+               </Typography>
+            </div>
+            <div className={cls.lesson__item}>
+               <video src='' />
+               <Typography tag='h3' variant='h3'>
+                  Как успевать в отведенное время?
+               </Typography>
+            </div>
+            <div className={cls.lesson__item}>
+               <video src='' />
+               <Typography tag='h3' variant='h3'>
+                  Как успевать в отведенное время?
+               </Typography>
+            </div>
+            <div className={cls.lesson__text}>
+               <Icon name='megaphone' />
+               <Typography tag='h3' variant='h3'>
+                  Об этом и не только расскажет практикующий эксперт Антон Добрышин.
+               </Typography>
             </div>
          </div>
       </div>

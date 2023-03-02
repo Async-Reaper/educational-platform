@@ -1,5 +1,6 @@
 import React, { type FC } from 'react';
-import { Image, Typography } from 'shared/ui';
+import { Typography } from 'shared/ui';
+import { CourseBookmark, CourseWrapper } from 'entities/course/ui';
 
 interface Props {
   name: string;
@@ -7,15 +8,15 @@ interface Props {
 }
 
 const Component: FC<Props> = ({ name, src }) => (
-   <div className='course__wrapper'>
-      <div className='course__bookmark' />
+   <CourseWrapper>
+      <CourseBookmark />
       <div className='course__title'>
-         <Typography tag='h1' variant='h3'>{name}</Typography>
+         <Typography tag='h1' variant='h3' color='gray-primary'>{name}</Typography>
       </div>
       <div>
-         <Image name='img' src={src} />
+         <img alt='img' src={src} />
       </div>
-   </div>
+   </CourseWrapper>
 );
 
 export const Course = React.memo(Component);

@@ -100,7 +100,11 @@
 
     &.tag {
         &--b {
-            font-weight: 600;
+            font-weight: 900;
+        }
+
+        &--strong {
+            font-weight: 700;
         }
 
         &--span {

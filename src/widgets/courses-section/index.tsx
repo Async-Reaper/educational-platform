@@ -1,32 +1,39 @@
 import { Course } from 'entities/course';
 import React from 'react';
-import { Icon } from 'shared/libs/icons';
-import { Button, Container, Typography } from 'shared/ui';
+import { Container } from 'shared/ui';
+import { UploadCourse } from 'features';
+import { SectionWrapper } from 'widgets/courses-section/ui/wrappers/section-wraperr';
+import {
+  CoursesList,
+  CoursesWrapper,
+  SectionTitle,
+  UploadButtonWrapper,
+  UploadCourseWrapper,
+  UploadDescription,
+} from 'widgets/courses-section/ui';
 import mac from './img/MacBook.png';
 
 const Component = () => (
-   <div className='courses__sectionWrapper'>
+   <SectionWrapper>
       <Container>
-         <div className='courses__wrapper'>
-            <Typography tag='h3' variant='h2'>Популярные курсы</Typography>
-            <div className='courses__list'>
+         <CoursesWrapper>
+            <SectionTitle />
+            <CoursesList>
                <Course name='course' src={mac} />
-            </div>
-         </div>
-         <div className='upload__course'>
-            <div className='upload__description'>
-               <Typography tag='h1' variant='h3'>Загрузка курса</Typography>
-               <Typography tag='h1' variant='h3'>У нас есть план эвакуации из любой проблемной ситуации.</Typography>
-            </div>
-            <div className='upload__button'>
-               <Button variant='l'>
-                  <Typography tag='strong' variant='h3'>Загрузить курс</Typography>
-                  <Icon name='lightness' />
-               </Button>
-            </div>
-         </div>
+               <Course name='course' src={mac} />
+               <Course name='course' src={mac} />
+               <Course name='course' src={mac} />
+            </CoursesList>
+         </CoursesWrapper>
+         <UploadCourseWrapper>
+            <UploadDescription />
+            <UploadButtonWrapper>
+               <UploadCourse />
+            </UploadButtonWrapper>
+         </UploadCourseWrapper>
       </Container>
-   </div>
+
+   </SectionWrapper>
 );
 
 export const CoursesSection = React.memo(Component);

@@ -1,5 +1,6 @@
 import { Header, LessonsSection, TopSection } from 'widgets';
 import { TestSection } from 'widgets/test-section';
+import { CoursesSection } from 'widgets/courses-section';
 
 function Component() {
 //   const { t } = useTranslation('main');
@@ -9,6 +10,7 @@ function Component() {
         <TopSection />
         <LessonsSection />
         <TestSection />
+        <CoursesSection />
      </div>
   );
 }

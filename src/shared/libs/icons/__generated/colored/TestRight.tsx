@@ -184,128 +184,120 @@ export const TestRightIcon = React.memo(
           fill="#DFDFDF"
         />
         <g filter="url(#test-right_svg__d)">
-          <g filter="url(#test-right_svg__e)">
-            <rect
-              x={102.159}
-              y={153.856}
-              width={220.841}
-              height={30.356}
-              rx={7.589}
-              fill="#fff"
-            />
-          </g>
-          <circle cx={121.511} cy={168.655} r={11.004} fill="#F1F1F1" />
-          <path
-            d="M116.159 173.651l4.262-9.562h2.185l4.276 9.562h-2.322l-3.497-8.442h.874l-3.511 8.442h-2.267zm2.131-2.049l.587-1.68h4.918l.601 1.68h-6.106z"
-            fill="#9B53C8"
-          />
           <rect
-            x={143.14}
-            y={160.687}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
-          />
-          <rect
-            x={143.14}
-            y={167.517}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
-          />
-          <rect
-            x={143.14}
-            y={174.347}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
-          />
-        </g>
-        <g filter="url(#test-right_svg__f)">
-          <g filter="url(#test-right_svg__g)">
-            <rect
-              x={102.159}
-              y={203.186}
-              width={220.841}
-              height={30.356}
-              rx={7.589}
-              fill="#9B53C8"
-            />
-          </g>
-          <circle cx={121.511} cy={217.984} r={11.004} fill="#A58AF0" />
-          <path
-            d="M117.422 222.98v-9.562h4.672c1.202 0 2.104.227 2.705.683.61.455.915 1.056.915 1.803 0 .501-.123.938-.369 1.311a2.435 2.435 0 01-1.011.847c-.428.201-.92.301-1.475.301l.259-.56c.601 0 1.134.1 1.599.3.464.191.824.478 1.079.861.264.382.396.851.396 1.407 0 .819-.323 1.461-.97 1.926-.646.455-1.598.683-2.855.683h-4.945zm2.199-1.667h2.582c.574 0 1.006-.091 1.298-.273.3-.191.451-.492.451-.901 0-.401-.151-.697-.451-.888-.292-.201-.724-.301-1.298-.301h-2.746v-1.612h2.364c.537 0 .947-.091 1.229-.273.292-.191.437-.478.437-.861 0-.373-.145-.651-.437-.833-.282-.191-.692-.287-1.229-.287h-2.2v6.229z"
-            fill="#fff"
-          />
-          <rect
-            x={143.14}
-            y={210.016}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#fff"
-          />
-          <rect
-            x={143.14}
-            y={216.846}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#fff"
-          />
-          <rect
-            x={143.14}
-            y={223.676}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
+            x={102.159}
+            y={153.856}
+            width={220.841}
+            height={30.356}
+            rx={7.589}
             fill="#fff"
           />
         </g>
-        <g filter="url(#test-right_svg__h)">
-          <g filter="url(#test-right_svg__i)">
-            <rect
-              x={102.159}
-              y={252.515}
-              width={220.841}
-              height={30.356}
-              rx={7.589}
-              fill="#fff"
-            />
-          </g>
-          <circle cx={121.511} cy={267.313} r={11.004} fill="#F1F1F1" />
-          <path
-            d="M122.212 272.473a5.871 5.871 0 01-2.063-.356 4.863 4.863 0 01-2.732-2.609 5.02 5.02 0 01-.383-1.981c0-.719.128-1.379.383-1.98a4.863 4.863 0 011.093-1.571 4.902 4.902 0 011.653-1.025 5.608 5.608 0 012.062-.369c.829 0 1.576.146 2.241.438a4.311 4.311 0 011.694 1.256l-1.421 1.312a3.246 3.246 0 00-1.093-.834 3.009 3.009 0 00-1.311-.286 3.35 3.35 0 00-1.23.218 2.793 2.793 0 00-.97.629 2.96 2.96 0 00-.642.969 3.411 3.411 0 00-.218 1.243c0 .456.073.87.218 1.244.155.373.369.696.642.969.274.274.597.483.97.629a3.35 3.35 0 001.23.218c.473 0 .91-.091 1.311-.273a3.335 3.335 0 001.093-.86l1.421 1.311a4.423 4.423 0 01-1.694 1.27c-.665.292-1.416.438-2.254.438z"
-            fill="#9B53C8"
-          />
+        <circle cx={121.511} cy={168.655} r={11.004} fill="#F1F1F1" />
+        <path
+          d="M116.159 173.651l4.262-9.562h2.185l4.276 9.562h-2.322l-3.497-8.442h.874l-3.511 8.442h-2.267zm2.131-2.049l.587-1.68h4.918l.601 1.68h-6.106z"
+          fill="#9B53C8"
+        />
+        <rect
+          x={143.14}
+          y={160.687}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
+        <rect
+          x={143.14}
+          y={167.517}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
+        <rect
+          x={143.14}
+          y={174.347}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
+        <rect
+          x={102.159}
+          y={203.186}
+          width={220.841}
+          height={30.356}
+          rx={7.589}
+          fill="#9B53C8"
+        />
+        <circle cx={121.511} cy={217.984} r={11.004} fill="#A58AF0" />
+        <path
+          d="M117.422 222.98v-9.562h4.672c1.202 0 2.104.227 2.705.683.61.455.915 1.056.915 1.803 0 .501-.123.938-.369 1.311a2.435 2.435 0 01-1.011.847c-.428.201-.92.301-1.475.301l.259-.56c.601 0 1.134.1 1.599.3.464.191.824.478 1.079.861.264.382.396.851.396 1.407 0 .819-.323 1.461-.97 1.926-.646.455-1.598.683-2.855.683h-4.945zm2.199-1.667h2.582c.574 0 1.006-.091 1.298-.273.3-.191.451-.492.451-.901 0-.401-.151-.697-.451-.888-.292-.201-.724-.301-1.298-.301h-2.746v-1.612h2.364c.537 0 .947-.091 1.229-.273.292-.191.437-.478.437-.861 0-.373-.145-.651-.437-.833-.282-.191-.692-.287-1.229-.287h-2.2v6.229z"
+          fill="#fff"
+        />
+        <rect
+          x={143.14}
+          y={210.016}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#fff"
+        />
+        <rect
+          x={143.14}
+          y={216.846}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#fff"
+        />
+        <rect
+          x={143.14}
+          y={223.676}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#fff"
+        />
+        <g filter="url(#test-right_svg__e)">
           <rect
-            x={143.14}
-            y={259.345}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
-          />
-          <rect
-            x={143.14}
-            y={266.175}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
-          />
-          <rect
-            x={143.14}
-            y={273.005}
-            width={169.995}
-            height={3.036}
-            rx={1.518}
-            fill="#C7C7C7"
+            x={102.159}
+            y={252.515}
+            width={220.841}
+            height={30.356}
+            rx={7.589}
+            fill="#fff"
           />
         </g>
+        <circle cx={121.511} cy={267.313} r={11.004} fill="#F1F1F1" />
+        <path
+          d="M122.212 272.473a5.871 5.871 0 01-2.063-.356 4.863 4.863 0 01-2.732-2.609 5.02 5.02 0 01-.383-1.981c0-.719.128-1.379.383-1.98a4.863 4.863 0 011.093-1.571 4.902 4.902 0 011.653-1.025 5.608 5.608 0 012.062-.369c.829 0 1.576.146 2.241.438a4.311 4.311 0 011.694 1.256l-1.421 1.312a3.246 3.246 0 00-1.093-.834 3.009 3.009 0 00-1.311-.286 3.35 3.35 0 00-1.23.218 2.793 2.793 0 00-.97.629 2.96 2.96 0 00-.642.969 3.411 3.411 0 00-.218 1.243c0 .456.073.87.218 1.244.155.373.369.696.642.969.274.274.597.483.97.629a3.35 3.35 0 001.23.218c.473 0 .91-.091 1.311-.273a3.335 3.335 0 001.093-.86l1.421 1.311a4.423 4.423 0 01-1.694 1.27c-.665.292-1.416.438-2.254.438z"
+          fill="#9B53C8"
+        />
+        <rect
+          x={143.14}
+          y={259.345}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
+        <rect
+          x={143.14}
+          y={266.175}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
+        <rect
+          x={143.14}
+          y={273.005}
+          width={169.995}
+          height={3.036}
+          rx={1.518}
+          fill="#C7C7C7"
+        />
         <path
           d="M105.964 84.701a2.8 2.8 0 01-1.529-.424c-.447-.283-.799-.69-1.056-1.223-.249-.54-.374-1.18-.374-1.924 0-.743.125-1.381.374-1.914.257-.54.609-.95 1.056-1.233a2.8 2.8 0 011.529-.424c.573 0 1.082.141 1.53.424.447.283.795.694 1.045 1.233.257.533.385 1.17.385 1.914 0 .743-.128 1.385-.385 1.924-.25.533-.598.94-1.045 1.223a2.803 2.803 0 01-1.53.424zm0-1.351c.421 0 .75-.181.987-.543.243-.362.365-.92.365-1.677 0-.756-.122-1.315-.365-1.677-.237-.362-.566-.543-.987-.543-.414 0-.743.181-.986.543-.237.362-.355.92-.355 1.677 0 .756.118 1.315.355 1.677.243.362.572.543.986.543zm10.061-.217H114.9v1.45h-1.559v-1.45h-3.719v-1.076l3.255-4.38h1.678l-3.019 4.153h1.854v-1.292h1.51v1.293h1.125v1.302z"
           fill="#494947"
@@ -455,34 +447,6 @@ export const TestRightIcon = React.memo(
           </filter>
           <filter
             id="test-right_svg__d"
-            x={92.159}
-            y={147.856}
-            width={240.841}
-            height={50.356}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={4} />
-            <feGaussianBlur stdDeviation={5} />
-            <feColorMatrix values="0 0 0 0 0.1875 0 0 0 0 0.151406 0 0 0 0 0.135937 0 0 0 0.19 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="test-right_svg__e"
             x={64.214}
             y={131.089}
             width={296.732}
@@ -510,91 +474,7 @@ export const TestRightIcon = React.memo(
             />
           </filter>
           <filter
-            id="test-right_svg__f"
-            x={92.159}
-            y={197.186}
-            width={240.841}
-            height={50.356}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={4} />
-            <feGaussianBlur stdDeviation={5} />
-            <feColorMatrix values="0 0 0 0 0.1875 0 0 0 0 0.151406 0 0 0 0 0.135937 0 0 0 0.19 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="test-right_svg__g"
-            x={64.214}
-            y={180.418}
-            width={296.732}
-            height={106.247}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={15.178} />
-            <feGaussianBlur stdDeviation={18.973} />
-            <feColorMatrix values="0 0 0 0 0.483606 0 0 0 0 0.337125 0 0 0 0 0.290867 0 0 0 0.22 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="test-right_svg__h"
-            x={92.159}
-            y={246.515}
-            width={240.841}
-            height={50.356}
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity={0} result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy={4} />
-            <feGaussianBlur stdDeviation={5} />
-            <feColorMatrix values="0 0 0 0 0.1875 0 0 0 0 0.151406 0 0 0 0 0.135937 0 0 0 0.19 0" />
-            <feBlend
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
-            />
-            <feBlend
-              in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
-              result="shape"
-            />
-          </filter>
-          <filter
-            id="test-right_svg__i"
+            id="test-right_svg__e"
             x={64.214}
             y={229.748}
             width={296.732}

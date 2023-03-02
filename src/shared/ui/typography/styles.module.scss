@@ -1,6 +1,9 @@
 @import "../../../app/styles/mixins";
 
 .text {
+    position: relative;
+    z-index: 9999;
+
     &.inline {
         display: inline-block;
     }

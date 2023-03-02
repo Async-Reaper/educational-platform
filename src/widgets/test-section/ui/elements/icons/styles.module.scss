@@ -1,0 +1,44 @@
+.test {
+    &__left {
+        position: absolute;
+        z-index: 999;
+    }
+
+    &__top {
+        position: absolute;
+        left: 255px;
+        top: 15px;
+    }
+
+    &__arrowLeft {
+        position: absolute;
+        top: 170px;
+        left: 335px;
+    }
+
+    &__arrowRight {
+        position: absolute;
+        top: 147px;
+        left: 335px;
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 250px;
+        top: 255px;
+        z-index: -1;
+    }
+
+    &__right {
+        position: absolute;
+        left: 408px;
+        z-index: 2;
+    }
+
+    &__border {
+        position: absolute;
+        top: -92px;
+        left: 150px;
+        z-index: 1;
+    }
+}

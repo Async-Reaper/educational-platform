@@ -12,16 +12,16 @@ export const TestArrowLeftIcon = React.memo(
     return (
       <svg width={size} height={size} fill="none" {...props}>
         <path
-          d="M43.91 10.455H7.138l6.885-6.886A2.09 2.09 0 1011.067.612L.612 11.067a2.09 2.09 0 000 2.957l10.455 10.454c.408.409.943.613 1.479.613a2.09 2.09 0 001.478-3.57l-6.885-6.885h36.77a2.091 2.091 0 000-4.181z"
+          d="M34.933 1.522a2.091 2.091 0 00-2.957 2.956l6.885 6.886H2.091a2.09 2.09 0 000 4.181h36.77l-6.885 6.886a2.091 2.091 0 002.957 2.956l10.455-10.454a2.09 2.09 0 000-2.957L34.933 1.521z"
           fill="url(#test-arrow-left_svg__a)"
         />
         <defs>
           <linearGradient
             id="test-arrow-left_svg__a"
-            x1={0}
-            y1={13}
-            x2={37}
-            y2={13}
+            x1={46}
+            y1={14.5}
+            x2={5.5}
+            y2={14.5}
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#8852FC" />

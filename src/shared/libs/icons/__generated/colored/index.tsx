@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {SVGAttributes} from 'react';
 import {BigPlayIcon as big_play} from './BigPlay';
+import {BorderTestIcon as border_test} from './BorderTest';
 import {DottedPlayerIcon as dotted_player} from './DottedPlayer';
 import {LineIcon as line} from './Line';
 import {LogoIcon as logo} from './Logo';
@@ -19,6 +20,7 @@ import {WaveIcon as wave} from './Wave';
 
 export type IconName =
   | 'big_play'
+  | 'border_test'
   | 'dotted_player'
   | 'line'
   | 'logo'
@@ -39,6 +41,7 @@ export const iconSet: {
   [key in IconName]: React.FC<SVGAttributes<SVGElement> & {size?: number}>;
 } = {
   big_play,
+  border_test,
   dotted_player,
   line,
   logo,

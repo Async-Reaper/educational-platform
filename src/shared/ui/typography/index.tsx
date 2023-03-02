@@ -2,7 +2,7 @@ import React, { type FC, ReactNode } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
-type Tag = 'h1' | 'h2' | 'h3' | 'span' | 'strong';
+type Tag = 'h1' | 'h2' | 'h3' | 'span' | 'strong' | 'b';
 
 type Variant = 'h1' | 'h2' | 'h3' | 'body' | 'small';
 

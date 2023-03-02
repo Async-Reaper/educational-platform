@@ -4,9 +4,11 @@ import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.lessons__sectionTitle}>
-      <Typography tag='h1' variant='h1' uppercase color='gray-primary'>
-         Talent Q: 6 шагов к успеху
-      </Typography>
+      <h1>
+         <span>Talent Q:</span>
+         {' '}
+         6 шагов к успеху
+      </h1>
    </div>
 );
 

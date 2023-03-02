@@ -5,9 +5,9 @@ interface Props {
   children: ReactNode
 }
 const Component: FC<Props> = ({ children }) => (
-   <div className={cls.top__sectionWrapper}>
+   <div className={cls.top__sectionBody}>
       {children}
    </div>
 );
 
-export const TopSectionWrapper = React.memo(Component);
+export const TopSectionBody = React.memo(Component);

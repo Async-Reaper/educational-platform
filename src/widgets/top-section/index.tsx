@@ -1,26 +1,25 @@
 import React from 'react';
 import { Container } from 'shared/ui';
 import { LinkSection } from 'widgets/top-section/ui/elements/link-section';
-import cls from './styles.module.scss';
 import {
   BottomIcon,
-  ButtonsGroup, ContentWrapper, ImageBG, TextContent, TopSectionWrapper,
+  ButtonsGroup, ContentWrapper, ImageBG, TextContent, TopSectionWrapper, TopSectionBody,
 } from './ui';
 
 const Component = () => (
-   <div className={cls.top__section}>
+   <TopSectionWrapper>
       <Container>
-         <TopSectionWrapper>
+         <TopSectionBody>
             <ContentWrapper>
                <TextContent />
                <ButtonsGroup />
             </ContentWrapper>
             <ImageBG />
-         </TopSectionWrapper>
+         </TopSectionBody>
          <LinkSection />
       </Container>
       <BottomIcon />
-   </div>
+   </TopSectionWrapper>
 );
 
 export const TopSection = React.memo(Component);

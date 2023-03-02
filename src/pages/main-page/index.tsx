@@ -1,4 +1,5 @@
-import { Header, TopSection, VideoLessons } from 'widgets';
+import { Header, LessonsSection, TopSection } from 'widgets';
+import { TestSection } from 'widgets/test-section';
 
 function Component() {
 //   const { t } = useTranslation('main');
@@ -6,7 +7,8 @@ function Component() {
      <div>
         <Header />
         <TopSection />
-        <VideoLessons />
+        <LessonsSection />
+        <TestSection />
      </div>
   );
 }

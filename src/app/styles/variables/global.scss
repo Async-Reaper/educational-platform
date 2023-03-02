@@ -1,42 +1,41 @@
 :root {
-  --font-primary: "Montserrat";
-  --font-size-h1: 40px;
-  --font-size-h2: 32px;
-  --font-size-h3: 24px;
-  --font-size-body: 18px;
-  --font-size-small: 14px;
-  --font-size-h1-min: 40px;
-  --font-size-h2-min: 32px;
-  --font-size-h3-min: 24px;
-  --font-size-body-min: 14px;
-  --font-size-xs-min: 12px;
-  --border-radius-xs: 1px;
-  --border-radius-sm: 3px;
-  --border-radius-md: 5px;
-  --border-radius-lg: 10px;
-  --border-radius-xl: 15px;
-  --border-radius-xxl: 20px;
-  --border-radius-over: 100px;
+    --font-primary: "Montserrat";
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 24px;
+    --font-size-body: 18px;
+    --font-size-small: 14px;
+    --font-size-h1-min: 40px;
+    --font-size-h2-min: 32px;
+    --font-size-h3-min: 24px;
+    --font-size-body-min: 14px;
+    --font-size-xs-min: 12px;
+    --border-radius-xs: 1px;
+    --border-radius-sm: 3px;
+    --border-radius-md: 5px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 15px;
+    --border-radius-xxl: 20px;
+    --border-radius-over: 100px;
 
-  /* COLORS */
-  --color-gray-primary: #555555;
-  --color-gray-secondary: #C4C4C4;
-  --color-black-light: #494947;
-  --color-black-dark: #171716;
-  --color-violet-primary: #9B53C8;
-  --color-violet-secondary: #7A29AC66;
-  --color-white-bg: #FFFFFF;
-  --color-black-bg: #17181E;
+    /* COLORS */
+    --color-gray-primary: #555;
+    --color-gray-secondary: #c4c4c4;
+    --color-black-light: #494947;
+    --color-black-dark: #171716;
+    --color-violet-primary: #9b53c8;
+    --color-violet-secondary: #7a29ac66;
+    --color-white-bg: #fff;
+    --color-black-bg: #17181e;
 
-  /* OTHER */
-  --hover-effect: brightness(1.15);
+    /* OTHER */
+    --hover-effect: brightness(1.15);
 
-  /* DURATION */
-  --duration-very-slow: 2500ms;
-  --duration-slow: 2000ms;
-  --duration-semi-slow: 1500ms;
-  --duration-semi-fast: 400ms;
-  --duration-fast: 300ms;
-  --duration-very-fast: 150ms;
+    /* DURATION */
+    --duration-very-slow: 2500ms;
+    --duration-slow: 2000ms;
+    --duration-semi-slow: 1500ms;
+    --duration-semi-fast: 400ms;
+    --duration-fast: 300ms;
+    --duration-very-fast: 150ms;
 }
-

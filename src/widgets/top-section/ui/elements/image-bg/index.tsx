@@ -6,7 +6,7 @@ import cls from './styles.module.scss';
 const Component = () => (
    <div className={cls.images__bg}>
       <Image src={iMac} name='iMac' />
-       <div></div>
+      <div />
       {/* <div className={cls.image__iMac}>
                     <img src={iMac} alt='iMac' />
                  </div>

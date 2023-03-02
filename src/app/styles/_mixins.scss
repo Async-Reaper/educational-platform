@@ -1,105 +1,118 @@
 @import "variables/mockups";
-@import "variables/global.scss";
+@import "variables/global";
 
 @mixin phones-xs {
-  @media screen and (min-width: $xs) {
-    @content;
-  }
+    @media screen and (min-width: $xs) {
+        @content;
+    }
 }
 
 @mixin phones {
-  @media screen and (min-width: $sm) {
-    @content;
-  }
+    @media screen and (min-width: $sm) {
+        @content;
+    }
 }
 
 @mixin tablets {
-  @media screen and (min-width: $md) {
-    @content;
-  }
+    @media screen and (min-width: $md) {
+        @content;
+    }
 }
 
 @mixin laptop {
-  @media screen and (min-width: $lg) {
-    @content;
-  }
+    @media screen and (min-width: $lg) {
+        @content;
+    }
 }
 
 @mixin desktop {
-  @media screen and (min-width: $xl) {
-    @content;
-  }
+    @media screen and (min-width: $xl) {
+        @content;
+    }
 }
 
 @mixin desktop-xl {
-  @media screen and (min-width: $xxl) {
-    @content;
-  }
+    @media screen and (min-width: $xxl) {
+        @content;
+    }
 }
 
 @mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin flex-space {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
 @mixin background {
-  &--gray-primary {
-    background-color: var(--color-gray-primary)  
-  }
-  &--gray-secondary {
-    background-color: var(--color-gray-secondary)
-  }
-  &--black-light {
-    background-color: var(--color-black-light)
-  }
-  &--black-dark {
-    background-color: var(--color-black-dark)
-  }
-  &--violet-primary {
-    background-color: var(--color-violet-primary)
-  }
-  &--violet-secondary {
-    background-color: var(--color-violet-secondary)
-  }
-  &--white-bg {
-    background-color: var(--color-white-bg)
-  }
-  &--black-bg {
-    background-color: var(--color-black-bg)
-  }
+    &--gray-primary {
+        background-color: var(--color-gray-primary);
+    }
+
+    &--gray-secondary {
+        background-color: var(--color-gray-secondary);
+    }
+
+    &--black-light {
+        background-color: var(--color-black-light);
+    }
+
+    &--black-dark {
+        background-color: var(--color-black-dark);
+    }
+
+    &--violet-primary {
+        background-color: var(--color-violet-primary);
+    }
+
+    &--violet-secondary {
+        background-color: var(--color-violet-secondary);
+    }
+
+    &--white-bg {
+        background-color: var(--color-white-bg);
+    }
+
+    &--black-bg {
+        background-color: var(--color-black-bg);
+    }
 }
 
 @mixin color {
-  &--gray-primary {
-    color: var(--color-gray-primary)  
-  }
-  &--gray-secondary {
-    color: var(--color-gray-secondary)
-  }
-  &--black-light {
-    color: var(--color-black-light)
-  }
-  &--black-dark {
-    color: var(--color-black-dark)
-  }
-  &--violet-primary {
-    color: var(--color-violet-primary)
-  }
-  &--violet-secondary {
-    color: var(--color-violet-secondary)
-  }
-  &--white-bg {
-    color: var(--color-white-bg)
-  }
-  &--black-bg {
-    color: var(--color-black-bg)
-  }
+    &--gray-primary {
+        color: var(--color-gray-primary);
+    }
+
+    &--gray-secondary {
+        color: var(--color-gray-secondary);
+    }
+
+    &--black-light {
+        color: var(--color-black-light);
+    }
+
+    &--black-dark {
+        color: var(--color-black-dark);
+    }
+
+    &--violet-primary {
+        color: var(--color-violet-primary);
+    }
+
+    &--violet-secondary {
+        color: var(--color-violet-secondary);
+    }
+
+    &--white-bg {
+        color: var(--color-white-bg);
+    }
+
+    &--black-bg {
+        color: var(--color-black-bg);
+    }
 }

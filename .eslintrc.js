@@ -40,7 +40,7 @@ module.exports = {
       'max-len': ['error', { ignoreComments: true, code: 100 }],
       '@typescript-eslint/no-use-before-define': ['error'],
       '@typescript-eslint/indent': ['error', 3],
-      'i18next/no-literal-string': ['error', { markupOnly: true }],
+      'i18next/no-literal-string': ['off', { markupOnly: true }],
       'import/extensions': 'off',
       'import/no-unresolved': ['off', { caseSensitive: false }],
       'import/prefer-default-export': 'off',

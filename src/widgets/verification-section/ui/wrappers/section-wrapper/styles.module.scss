@@ -1,0 +1,16 @@
+.section__wrapper {
+    padding: 350px 0 150px;
+    position: relative;
+    background: linear-gradient(180deg, #15161e 3.65%, #0c0d11 102.17%);
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 400px;
+        left: -100px;
+        background: linear-gradient(106.72deg, #9b53c8 -19.79%, rgb(155 83 200 / 0%) 99.91%);
+        width: 700px;
+        height: 352px;
+        border-radius: 50px;
+    }
+}

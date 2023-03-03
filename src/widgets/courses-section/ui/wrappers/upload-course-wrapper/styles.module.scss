@@ -5,13 +5,15 @@
     align-items: center;
     background: linear-gradient(180deg, #17181e 0%, #13151c 100%);
     box-shadow: 0 0 20px rgb(140 140 140 / 35%), 0 10px 20px rgb(55 46 43 / 16%);
+    filter: drop-shadow(0 10px 50px rgb(175 73 255 / 29%));
     border-radius: 20px;
     padding: 45px 77px 38px 34px;
+    z-index: 999;
 
     &::after {
         position: absolute;
         content: "03";
-        top: 0px;
+        top: 0;
         right: 0;
         height: 233px;
         display: flex;

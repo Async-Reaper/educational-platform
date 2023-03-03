@@ -1,4 +1,6 @@
-import { Header, LessonsSection, TopSection } from 'widgets';
+import {
+  Header, LessonsSection, TopSection, VerificationSection,
+} from 'widgets';
 import { TestSection } from 'widgets/test-section';
 import { CoursesSection } from 'widgets/courses-section';
 
@@ -11,6 +13,7 @@ function Component() {
         <LessonsSection />
         <TestSection />
         <CoursesSection />
+        <VerificationSection />
      </div>
   );
 }

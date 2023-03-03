@@ -9,13 +9,13 @@ const Component = () => {
   return (
      <div className={cls.content__buttons}>
         <Button variant='l' background='violet-primary'>
-           <Typography tag='span' variant='small' color='white-bg'>
+           <Typography tag='span' variant='body' color='white-bg'>
               {t('Начать сейчас')}
            </Typography>
            <Icon name='play' size={22} />
         </Button>
         <Button variant='l' background='gray-primary' border>
-           <Typography tag='span' variant='small' color='white-bg'>
+           <Typography tag='span' variant='body' color='white-bg'>
               {t('Подробнее')}
            </Typography>
            <Icon name='arrow_right' width={30} height={10} />

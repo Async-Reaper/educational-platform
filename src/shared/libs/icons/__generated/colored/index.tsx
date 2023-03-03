@@ -8,6 +8,8 @@ import {LogoIcon as logo} from './Logo';
 import {PlayButtonPlayerIcon as play_button_player} from './PlayButtonPlayer';
 import {RadarCircleBigIcon as radar_circle_big} from './RadarCircleBig';
 import {RadarCircleSmallIcon as radar_circle_small} from './RadarCircleSmall';
+import {SecondWaveIcon as second_wave} from './SecondWave';
+import {SectionWaveIcon as section_wave} from './SectionWave';
 import {StatusOnlineIcon as status_online} from './StatusOnline';
 import {TestArrowLeftIcon as test_arrow_left} from './TestArrowLeft';
 import {TestArrowRightIcon as test_arrow_right} from './TestArrowRight';
@@ -16,6 +18,7 @@ import {TestCheckedIcon as test_checked} from './TestChecked';
 import {TestLeftIcon as test_left} from './TestLeft';
 import {TestRightIcon as test_right} from './TestRight';
 import {TestTopIcon as test_top} from './TestTop';
+import {ThirdWaveIcon as third_wave} from './ThirdWave';
 import {WaveIcon as wave} from './Wave';
 
 export type IconName =
@@ -27,6 +30,8 @@ export type IconName =
   | 'play_button_player'
   | 'radar_circle_big'
   | 'radar_circle_small'
+  | 'second_wave'
+  | 'section_wave'
   | 'status_online'
   | 'test_arrow_left'
   | 'test_arrow_right'
@@ -35,6 +40,7 @@ export type IconName =
   | 'test_left'
   | 'test_right'
   | 'test_top'
+  | 'third_wave'
   | 'wave';
 
 export const iconSet: {
@@ -48,6 +54,8 @@ export const iconSet: {
   play_button_player,
   radar_circle_big,
   radar_circle_small,
+  second_wave,
+  section_wave,
   status_online,
   test_arrow_left,
   test_arrow_right,
@@ -56,5 +64,6 @@ export const iconSet: {
   test_left,
   test_right,
   test_top,
+  third_wave,
   wave
 };

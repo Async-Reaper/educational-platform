@@ -1,0 +1,27 @@
+.verification__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 60px;
+
+    &::after {
+        position: absolute;
+        content: "04";
+        top: 30px;
+        right: 0;
+        height: 290px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 381.633px;
+        line-height: 122px;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(161.72deg, #fff -20.29%, rgb(255 255 255 / 0%) 116.82%);
+        opacity: 0.9;
+    }
+}

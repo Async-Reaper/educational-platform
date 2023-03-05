@@ -1,0 +1,19 @@
+.pay__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+        border: 1px solid #cbcbcb;
+        border-radius: 20px;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.corr {
+            padding: 5px 0 0 5px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import {
-  Header, LessonsSection, QuestionsSection, TopSection, VerificationSection,
+  Header, LessonsSection, QuestionsSection, TopSection, UsedPlatformSection, VerificationSection,
 } from 'widgets';
 import { TestSection } from 'widgets/test-section';
 import { CoursesSection } from 'widgets/courses-section';
@@ -17,6 +17,7 @@ function Component() {
         <BlackGradient>
            <VerificationSection />
            <QuestionsSection />
+           <UsedPlatformSection />
         </BlackGradient>
      </div>
   );

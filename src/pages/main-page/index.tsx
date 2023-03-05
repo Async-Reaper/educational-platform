@@ -1,4 +1,5 @@
 import {
+  Footer,
   Header, LessonsSection, QuestionsSection, TopSection, UsedPlatformSection, VerificationSection,
 } from 'widgets';
 import { TestSection } from 'widgets/test-section';
@@ -18,6 +19,7 @@ function Component() {
            <VerificationSection />
            <QuestionsSection />
            <UsedPlatformSection />
+           <Footer />
         </BlackGradient>
      </div>
   );

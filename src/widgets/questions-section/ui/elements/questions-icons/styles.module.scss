@@ -5,51 +5,75 @@
         position: absolute;
         top: 75px;
         left: 20px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
     }
 
     .arrow_to_questions {
         position: absolute;
         top: 170px;
         left: 120px;
+        animation: 1 var(--duration-very-fast) linear render-arrow;
     }
 
     .questions_3_d {
         position: absolute;
         top: 147px;
         right: 5px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
     }
 
     .arrow_to_cube {
         position: absolute;
         bottom: 105px;
         left: 215px;
+        animation: 1 var(--duration-very-fast) linear render-arrow;
     }
 
     .cube_3_d {
         position: absolute;
         bottom: -15px;
         left: 25px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
     }
 
     .middle_pillar {
         position: absolute;
         top: -100px;
         right: -105px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
     }
 
     .big_pillar {
         position: absolute;
         right: -215px;
         top: 150px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
     }
 
     .small_pillar {
         position: absolute;
         bottom: 120px;
         left: -85px;
+        animation: 1 var(--duration-very-fast) linear render-pillar;
+    }
+}
+
+@keyframes render-pillar {
+    from {
+        transform: scale(1, 0);
     }
 
-    .mesh {
-        //position: absolute;
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes render-arrow {
+    from {
+        transform: scale(0, 0);
+    }
+
+    to {
+        transform: scale(0, 1);
     }
 }

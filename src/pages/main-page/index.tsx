@@ -1,8 +1,9 @@
 import {
-  Header, LessonsSection, TopSection, VerificationSection,
+  Header, LessonsSection, QuestionsSection, TopSection, VerificationSection,
 } from 'widgets';
 import { TestSection } from 'widgets/test-section';
 import { CoursesSection } from 'widgets/courses-section';
+import { BlackGradient } from 'shared/ui';
 
 function Component() {
 //   const { t } = useTranslation('main');
@@ -13,7 +14,10 @@ function Component() {
         <LessonsSection />
         <TestSection />
         <CoursesSection />
-        <VerificationSection />
+        <BlackGradient>
+           <VerificationSection />
+           <QuestionsSection />
+        </BlackGradient>
      </div>
   );
 }

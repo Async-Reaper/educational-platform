@@ -5,12 +5,6 @@ import cls from './styles.module.scss';
 const Component = () => (
    <>
       <ColoredIcon
-        className={cls.section__wave}
-        name='section_wave'
-        width={window.innerWidth}
-        height={100}
-      />
-      <ColoredIcon
         className={cls.first__wave}
         name='second_wave'
         width={window.innerWidth}

@@ -1,0 +1,55 @@
+.questions__icons {
+    position: relative;
+
+    .message_3_d {
+        position: absolute;
+        top: 75px;
+        left: 20px;
+    }
+
+    .arrow_to_questions {
+        position: absolute;
+        top: 170px;
+        left: 120px;
+    }
+
+    .questions_3_d {
+        position: absolute;
+        top: 147px;
+        right: 5px;
+    }
+
+    .arrow_to_cube {
+        position: absolute;
+        bottom: 105px;
+        left: 215px;
+    }
+
+    .cube_3_d {
+        position: absolute;
+        bottom: -15px;
+        left: 25px;
+    }
+
+    .middle_pillar {
+        position: absolute;
+        top: -100px;
+        right: -105px;
+    }
+
+    .big_pillar {
+        position: absolute;
+        right: -215px;
+        top: 150px;
+    }
+
+    .small_pillar {
+        position: absolute;
+        bottom: 120px;
+        left: -85px;
+    }
+
+    .mesh {
+        //position: absolute;
+    }
+}

@@ -1,6 +1,7 @@
 export { Accordion } from './accordion';
 export { AppLink } from './link';
 export { Avatar } from './avatar';
+export { BlackGradient } from './black-gradient';
 export { Button } from './button';
 export { Checkbox } from './checkbox';
 export { Container } from './container';

@@ -1,0 +1,20 @@
+.black__gradient {
+    position: relative;
+    background:
+        radial-gradient(
+            39.78% 20.85% at 109.9% 70.37%,
+            #4f218a 0%,
+            rgb(79 33 138 / 0%) 100%
+        ),
+        radial-gradient(
+            44.47% 14.3% at 47.69% 107.3%,
+            #62218a 0%,
+            rgb(44 20 69 / 0%) 100%
+        ),
+        linear-gradient(180deg, #15161e 3.65%, #0c0d11 102.17%);
+
+    .section__wave {
+        position: absolute;
+        top: -100px;
+    }
+}

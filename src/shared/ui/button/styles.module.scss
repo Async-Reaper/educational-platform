@@ -7,6 +7,8 @@
     cursor: pointer;
     color: var(--color-white-bg);
     background-color: var(--color-violet-primary);
+    z-index: 999999;
+    width: max-content;
 
     &.border {
         background-color: transparent !important;

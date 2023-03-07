@@ -23,5 +23,3 @@ export const CheckRoundedIcon = React.memo(
     );
   }
 );
-
-CheckRoundedIcon.displayName = "CheckRoundedIcon";

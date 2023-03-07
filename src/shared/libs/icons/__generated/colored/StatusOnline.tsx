@@ -25,5 +25,3 @@ export const StatusOnlineIcon = React.memo(
     );
   }
 );
-
-StatusOnlineIcon.displayName = "StatusOnlineIcon";

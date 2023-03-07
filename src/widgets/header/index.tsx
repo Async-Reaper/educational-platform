@@ -14,8 +14,10 @@ const Component: FC<Props> = () => {
         <Container>
            <div className={cls.header__inner}>
               <div className={cls.header__logo}>
-                 <ColoredIcon name='logo' size={35} />
-                 <small className={cls.logo__text}>Solutions</small>
+                 <ColoredIcon name='logo' size={59} />
+                 <small className={cls.logo__text}>
+                     Кузбасский колледж архитектуры, строительства и цифровых технологий
+                 </small>
               </div>
               <div className={cls.buttons__group}>
                  <Button variant='xs' border>Регистрация</Button>

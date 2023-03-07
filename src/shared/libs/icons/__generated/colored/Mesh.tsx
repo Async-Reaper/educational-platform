@@ -34,5 +34,3 @@ export const MeshIcon = React.memo(
     );
   }
 );
-
-MeshIcon.displayName = "MeshIcon";

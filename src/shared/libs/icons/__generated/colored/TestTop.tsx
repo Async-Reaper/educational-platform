@@ -75,5 +75,3 @@ export const TestTopIcon = React.memo(
     );
   }
 );
-
-TestTopIcon.displayName = "TestTopIcon";

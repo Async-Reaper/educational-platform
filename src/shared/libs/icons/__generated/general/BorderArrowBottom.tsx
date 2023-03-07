@@ -20,5 +20,3 @@ export const BorderArrowBottomIcon = React.memo(
     );
   }
 );
-
-BorderArrowBottomIcon.displayName = "BorderArrowBottomIcon";

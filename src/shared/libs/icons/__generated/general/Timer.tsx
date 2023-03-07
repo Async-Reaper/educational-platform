@@ -25,5 +25,3 @@ export const TimerIcon = React.memo(
     );
   }
 );
-
-TimerIcon.displayName = "TimerIcon";

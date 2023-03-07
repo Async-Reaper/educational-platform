@@ -75,5 +75,3 @@ export const TestBottomIcon = React.memo(
     );
   }
 );
-
-TestBottomIcon.displayName = "TestBottomIcon";

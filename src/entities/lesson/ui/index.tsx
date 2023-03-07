@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { type FC } from 'react';
 import { Typography } from 'shared/ui';
 import { ColoredIcon } from 'shared/libs/icons';
+import { LessonItem } from 'widgets/lessons-section/model/lessons';
 import cls from './styles.module.scss';
 
-const Component = () => (
-   <div className={cls.lesson}>
+interface Props {
+  lesson: LessonItem
+}
+
+const Component: FC<Props> = ({ lesson }) => (
+   <a href={lesson.link} className={cls.lesson}>
       <div className={cls.video}>
          <ColoredIcon
            className={cls.play__icon}
@@ -12,12 +17,11 @@ const Component = () => (
            size={24}
            color='gray-primary'
          />
-         <div className={cls.duration}>07:41</div>
       </div>
       <Typography tag='h3' variant='h3' color='gray-primary'>
-         Как успевать в отведенное время?
+         {lesson.name}
       </Typography>
-   </div>
+   </a>
 );
 
 export const Lesson = React.memo(Component);

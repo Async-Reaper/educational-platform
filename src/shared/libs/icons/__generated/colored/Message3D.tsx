@@ -111,5 +111,3 @@ export const Message3DIcon = React.memo(
     );
   }
 );
-
-Message3DIcon.displayName = "Message3DIcon";

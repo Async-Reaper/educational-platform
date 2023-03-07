@@ -27,5 +27,3 @@ export const ArrowRoundedIcon = React.memo(
     );
   }
 );
-
-ArrowRoundedIcon.displayName = "ArrowRoundedIcon";

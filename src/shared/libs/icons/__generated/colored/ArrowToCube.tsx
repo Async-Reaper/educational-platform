@@ -150,5 +150,3 @@ export const ArrowToCubeIcon = React.memo(
     );
   }
 );
-
-ArrowToCubeIcon.displayName = "ArrowToCubeIcon";

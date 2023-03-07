@@ -53,5 +53,3 @@ export const MiddlePillarIcon = React.memo(
     );
   }
 );
-
-MiddlePillarIcon.displayName = "MiddlePillarIcon";

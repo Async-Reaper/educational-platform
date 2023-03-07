@@ -152,5 +152,3 @@ export const ArrowToQuestionsIcon = React.memo(
     );
   }
 );
-
-ArrowToQuestionsIcon.displayName = "ArrowToQuestionsIcon";

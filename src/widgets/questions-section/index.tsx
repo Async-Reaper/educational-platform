@@ -1,18 +1,16 @@
 import React from 'react';
-import { Container } from 'shared/ui';
+import {Container} from 'shared/ui';
 import {
-  Description,
-  DescriptionWrapper,
-  QuestionsContent,
-  QuestionsIcons,
-  QuestionsInner,
-  SectionWrapper,
-  Subtitle,
-  SubtitleWrapper,
-  Title,
-  TitleWrapper,
+    Description,
+    DescriptionWrapper,
+    QuestionsContent,
+    QuestionsIcons,
+    QuestionsInner,
+    SectionWrapper,
+    Title,
+    TitleWrapper,
 } from 'widgets/questions-section/ui';
-import { AskQuestions } from 'features';
+import {AskQuestions} from 'features';
 
 const Component = () => (
    <SectionWrapper>
@@ -22,9 +20,6 @@ const Component = () => (
                <TitleWrapper>
                   <Title />
                </TitleWrapper>
-               <SubtitleWrapper>
-                  <Subtitle />
-               </SubtitleWrapper>
                <DescriptionWrapper>
                   <Description />
                </DescriptionWrapper>

@@ -7,8 +7,8 @@ const Component = () => (
    <div className={cls.lesson__additional}>
       <Icon name='megaphone' width={48} height={55} />
       <Typography tag='h3' variant='h3' color='gray-primary'>
-         Об этом и не только расскажет
-         <span className={cls.color__part}> практикующий эксперт Антон Добрышин.</span>
+         Этому и не только вы
+          <span className={cls.color__part}> научитесь на нашей платформе.</span>
       </Typography>
    </div>
 );

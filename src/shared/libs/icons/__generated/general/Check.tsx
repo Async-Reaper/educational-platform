@@ -22,5 +22,3 @@ export const CheckIcon = React.memo(
     );
   }
 );
-
-CheckIcon.displayName = "CheckIcon";

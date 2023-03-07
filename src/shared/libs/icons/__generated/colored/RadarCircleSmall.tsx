@@ -35,5 +35,3 @@ export const RadarCircleSmallIcon = React.memo(
     );
   }
 );
-
-RadarCircleSmallIcon.displayName = "RadarCircleSmallIcon";

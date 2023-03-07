@@ -19,5 +19,3 @@ export const FlagRightIcon = React.memo(
     );
   }
 );
-
-FlagRightIcon.displayName = "FlagRightIcon";

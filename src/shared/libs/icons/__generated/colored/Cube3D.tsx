@@ -78,5 +78,3 @@ export const Cube3DIcon = React.memo(
     );
   }
 );
-
-Cube3DIcon.displayName = "Cube3DIcon";

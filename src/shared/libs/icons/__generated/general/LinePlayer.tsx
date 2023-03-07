@@ -16,5 +16,3 @@ export const LinePlayerIcon = React.memo(
     );
   }
 );
-
-LinePlayerIcon.displayName = "LinePlayerIcon";

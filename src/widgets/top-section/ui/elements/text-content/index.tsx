@@ -8,7 +8,8 @@ const Component = () => {
   return (
      <div className={cls.content__text}>
         <Typography variant='h2' color='white-bg'>
-           {t('Первая интеллектуальная платформа для подготовки к тестам Talent Q')}
+           {t('Первая интеллектуальная платформа ')}
+           <span>{t('для обмена педагогическим опытом')}</span>
         </Typography>
         <Typography variant='h3' color='gray-primary'>
            {t('от эксперта Светланы Курановой')}

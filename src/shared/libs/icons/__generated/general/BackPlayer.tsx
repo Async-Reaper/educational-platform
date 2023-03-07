@@ -55,5 +55,3 @@ export const BackPlayerIcon = React.memo(
     );
   }
 );
-
-BackPlayerIcon.displayName = "BackPlayerIcon";

@@ -19,5 +19,3 @@ export const YoutubeIcon = React.memo(
     );
   }
 );
-
-YoutubeIcon.displayName = "YoutubeIcon";

@@ -23,5 +23,3 @@ export const PlusIcon = React.memo(
     );
   }
 );
-
-PlusIcon.displayName = "PlusIcon";

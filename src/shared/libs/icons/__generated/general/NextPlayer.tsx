@@ -55,5 +55,3 @@ export const NextPlayerIcon = React.memo(
     );
   }
 );
-
-NextPlayerIcon.displayName = "NextPlayerIcon";

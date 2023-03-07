@@ -25,5 +25,3 @@ export const BorderTestIcon = React.memo(
     );
   }
 );
-
-BorderTestIcon.displayName = "BorderTestIcon";

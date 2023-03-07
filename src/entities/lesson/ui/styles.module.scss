@@ -1,6 +1,5 @@
 .lesson {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     grid-gap: 30px;
 
@@ -9,7 +8,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 175px;
+        width: 112px;
         height: 112px;
         background: var(--color-gray-secondary);
         box-shadow: 0 30px 30px rgb(109 94 88 / 25%);
@@ -24,24 +23,6 @@
         .play__icon {
             position: absolute;
             left: 52px;
-        }
-
-        .duration {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            width: 68px;
-            height: 21px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 22px;
-            background: var(--color-black-bg);
-            color: var(--color-white-bg);
-            backdrop-filter: blur(1px);
-            border-radius: 20px 0;
         }
     }
 }

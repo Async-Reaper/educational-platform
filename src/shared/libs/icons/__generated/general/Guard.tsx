@@ -23,5 +23,3 @@ export const GuardIcon = React.memo(
     );
   }
 );
-
-GuardIcon.displayName = "GuardIcon";

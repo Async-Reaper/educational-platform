@@ -95,5 +95,5 @@ export const iconSet: {
   visa,
   volume,
   wk,
-  youtube
+  youtube,
 };

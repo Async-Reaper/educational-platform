@@ -49,5 +49,3 @@ export const TestCheckedIcon = React.memo(
     );
   }
 );
-
-TestCheckedIcon.displayName = "TestCheckedIcon";

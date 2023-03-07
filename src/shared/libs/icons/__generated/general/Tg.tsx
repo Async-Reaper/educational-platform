@@ -23,5 +23,3 @@ export const TgIcon = React.memo(
     );
   }
 );
-
-TgIcon.displayName = "TgIcon";

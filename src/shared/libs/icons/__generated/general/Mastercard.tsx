@@ -31,5 +31,3 @@ export const MastercardIcon = React.memo(
     );
   }
 );
-
-MastercardIcon.displayName = "MastercardIcon";

@@ -23,5 +23,3 @@ export const LightnessIcon = React.memo(
     );
   }
 );
-
-LightnessIcon.displayName = "LightnessIcon";

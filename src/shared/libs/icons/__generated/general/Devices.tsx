@@ -47,5 +47,3 @@ export const DevicesIcon = React.memo(
     );
   }
 );
-
-DevicesIcon.displayName = "DevicesIcon";

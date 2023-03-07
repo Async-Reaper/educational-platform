@@ -53,5 +53,3 @@ export const BigPillarIcon = React.memo(
     );
   }
 );
-
-BigPillarIcon.displayName = "BigPillarIcon";

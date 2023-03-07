@@ -23,5 +23,3 @@ export const DocsIcon = React.memo(
     );
   }
 );
-
-DocsIcon.displayName = "DocsIcon";

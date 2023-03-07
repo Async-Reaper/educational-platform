@@ -30,5 +30,3 @@ export const DottedPlayerIcon = React.memo(
     );
   }
 );
-
-DottedPlayerIcon.displayName = "DottedPlayerIcon";

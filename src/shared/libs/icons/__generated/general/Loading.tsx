@@ -24,5 +24,3 @@ export const LoadingIcon = React.memo(
     );
   }
 );
-
-LoadingIcon.displayName = "LoadingIcon";

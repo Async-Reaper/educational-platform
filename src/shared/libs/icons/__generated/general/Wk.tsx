@@ -19,5 +19,3 @@ export const WkIcon = React.memo(
     );
   }
 );
-
-WkIcon.displayName = "WkIcon";

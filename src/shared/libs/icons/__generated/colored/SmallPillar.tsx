@@ -53,5 +53,3 @@ export const SmallPillarIcon = React.memo(
     );
   }
 );
-
-SmallPillarIcon.displayName = "SmallPillarIcon";

@@ -32,5 +32,3 @@ export const SecondWaveIcon = React.memo(
     );
   }
 );
-
-SecondWaveIcon.displayName = "SecondWaveIcon";

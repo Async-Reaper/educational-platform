@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColoredIcon } from 'shared/libs/icons';
+import {ColoredIcon} from 'shared/libs/icons';
 import cls from './styles.module.scss';
 
 const Component = () => (

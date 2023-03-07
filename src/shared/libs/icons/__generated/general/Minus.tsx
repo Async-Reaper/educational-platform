@@ -24,5 +24,3 @@ export const MinusIcon = React.memo(
     );
   }
 );
-
-MinusIcon.displayName = "MinusIcon";

@@ -1,13 +1,18 @@
 import React from 'react';
-import { ColoredIcon } from 'shared/libs/icons';
 import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.player}>
       <div className={cls.center}>
-         <ColoredIcon className={cls.play} name='big_play' size={69} />
-         <ColoredIcon className={cls.radar__circleSmall} name='radar_circle_small' size={139} />
-         <ColoredIcon className={cls.radar__circleBig} name='radar_circle_big' size={224} />
+         <iframe
+           width='688'
+           height='420'
+           src='https://www.youtube.com/embed/R3xmwaZgrJ8'
+           title='YouTube video player'
+           frameBorder='0'
+           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+           allowFullScreen
+         />
       </div>
    </div>
 );

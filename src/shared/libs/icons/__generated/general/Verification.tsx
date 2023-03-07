@@ -27,5 +27,3 @@ export const VerificationIcon = React.memo(
     );
   }
 );
-
-VerificationIcon.displayName = "VerificationIcon";

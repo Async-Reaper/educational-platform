@@ -5,7 +5,7 @@ import cls from './styles.module.scss';
 const Component = () => (
    <div className={cls.content__description}>
       <Typography tag='span' variant='h3' color='gray-primary'>
-         Наши и реальные тесты идентичны по сложности, тематике и формату вопросов.
+         Пройди тест, составленный нашими экспертами и узнай что тебе ближе
       </Typography>
    </div>
 );

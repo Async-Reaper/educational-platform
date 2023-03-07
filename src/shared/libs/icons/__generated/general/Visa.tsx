@@ -23,5 +23,3 @@ export const VisaIcon = React.memo(
     );
   }
 );
-
-VisaIcon.displayName = "VisaIcon";

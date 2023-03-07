@@ -16,5 +16,3 @@ export const LineIcon = React.memo(
     );
   }
 );
-
-LineIcon.displayName = "LineIcon";

@@ -62,5 +62,3 @@ export const SectionWaveIcon = React.memo(
     );
   }
 );
-
-SectionWaveIcon.displayName = "SectionWaveIcon";

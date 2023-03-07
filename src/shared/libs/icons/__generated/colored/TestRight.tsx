@@ -53,7 +53,7 @@ export const TestRightIcon = React.memo(
           fillOpacity={0.7}
         />
         <path
-          d="M69.576 128.146v-.05h-13.76v.555h13.759v-.505z"
+          d="M55.865 128.096h-.05v.555h13.76v-.555h-13.71z"
           stroke="#fff"
           strokeOpacity={0.7}
           strokeWidth={0.1}
@@ -108,7 +108,7 @@ export const TestRightIcon = React.memo(
           fillOpacity={0.7}
         />
         <path
-          d="M66.954 157.004c.531.001 1.02.287 1.28.747l.196-.079a.954.954 0 00.53-1.221l-1.526-3.968-.01-.023a.95.95 0 00-1.24-.513l-.02-.046.02.046-7.627 3.161a.946.946 0 00-.525 1.21l.257.686h1.087l-.349-.872a.277.277 0 01.134-.351l1.928-.965 5.865 2.188zm0 0h-6.106m6.106 0l-6.206.05.1-.05m1.105-.837a.277.277 0 01-.133.351m.133-.351l-1.217.837h.112m1.105-.837l-.482-1.206m.482 1.206l-.843-1.36m.71 1.711l-.023-.045.023.045zm0 0l-.972.486m.262-2.197a.277.277 0 01.36.154m-.36-.154l-.02.009.02-.009zm.36.154l-.045.019.046-.019zm5.484 2.598h-9.666m9.666 0l-9.666-.05v.05m9.666 0a.915.915 0 01.907.81m-.907-.81v-.05l.907.86m-10.573-.81a.915.915 0 00-.907.81m.907-.81l-.907.81m0 0h11.48m-11.48 0h11.48m-.907 6.141a.918.918 0 00.917-.917v-2.85h-11.5v2.85m10.583.917l-10.633-.917h.05m10.583.917h-9.666m9.666 0h-9.666m-.917-.917c0 .506.41.916.917.917m-.917-.917l.917.917m12.19-8.259l-1.526-3.968a1.506 1.506 0 00-1.947-.864l-.033.014-7.627 3.161a1.5 1.5 0 00-.833 1.918l.185.492h-.41a1.473 1.473 0 00-1.47 1.472v5.117c0 .812.658 1.471 1.47 1.472h9.667a1.474 1.474 0 001.472-1.472v-5.118c0-.066-.006-.132-.015-.198l.227-.092a1.511 1.511 0 00.84-1.934zm-9.565.6l-.276-.688 1.43-.715.276.688-1.43.715zm7.958 3.337h-11.5v-1.264h11.5v1.264z"
+          d="M66.954 157.004c.531.001 1.02.287 1.28.747l.196-.079a.954.954 0 00.53-1.221l-2.006.553zm0 0h-6.106m6.106 0h-6.106m0 0l.972-.486-.023-.045-.95.531zm.262-2.197a.277.277 0 01.36.154l-.36-.154zm0 0l-.02.009.02-.009zm5.844 9.703a.918.918 0 00.917-.917v-2.85h-11.5v2.85m10.583.917l-10.633-.917h.05m10.583.917h-9.666m9.666 0h-9.666m-.917-.917c0 .506.41.916.917.917m-.917-.917l.917.917m12.19-8.259l-1.526-3.968a1.506 1.506 0 00-1.947-.864l-.033.014-7.627 3.161a1.5 1.5 0 00-.833 1.918l.185.492h-.41a1.473 1.473 0 00-1.47 1.472v5.117c0 .812.658 1.471 1.47 1.472h9.667a1.474 1.474 0 001.472-1.472v-5.118c0-.066-.006-.132-.015-.198l.227-.092a1.511 1.511 0 00.84-1.934zm-2.044-3.768l1.526 3.968-7.87-1.635-1.93.965a.277.277 0 00-.133.351l.349.872h-1.087l-.257-.686a.946.946 0 01.525-1.21l7.627-3.161-.02-.046.02.046a.95.95 0 011.24.513l.01.023zm-10.146 5.076h9.666a.915.915 0 01.907.81H56.38a.915.915 0 01.907-.81zm2.625-.708l-.276-.688 1.43-.715.276.688-1.43.715zm7.958 3.337h-11.5v-1.264h11.5v1.264z"
           stroke="#fff"
           strokeOpacity={0.7}
           strokeWidth={0.1}
@@ -130,7 +130,7 @@ export const TestRightIcon = React.memo(
           fillOpacity={0.7}
         />
         <path
-          d="M65.44 156.017l-.046.02.02.046.185.415.02.046.046-.02 2.17-.965.046-.02-.02-.046-.186-.416-.02-.045-.046.02-2.17.965z"
+          d="M65.6 156.498l.02.046.045-.02 2.17-.965.046-.02-.02-.046-.186-.416-.02-.045-.046.02-2.17.965-.045.02.02.046.185.415z"
           stroke="#fff"
           strokeOpacity={0.7}
           strokeWidth={0.1}
@@ -141,23 +141,10 @@ export const TestRightIcon = React.memo(
           fillOpacity={0.7}
         />
         <path
-          d="M67.19 154.114l-.02-.046-.046.021-3.134 1.447-.045.021.021.045.19.413.021.045.046-.021 3.134-1.446.045-.021-.02-.046-.191-.412z"
+          d="M63.99 155.536l-.045.021.021.045.19.413.021.045.046-.021 3.134-1.446.045-.021-.02-.046-.191-.412-.021-.046-.046.021-3.134 1.447z"
           stroke="#fff"
           strokeOpacity={0.7}
           strokeWidth={0.1}
-        />
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M69.639 53.101a7.762 7.762 0 10-4.412 3.598l-3.295-3.295a4.208 4.208 0 01.937-8.31 4.207 4.207 0 014.063 5.3l2.707 2.707z"
-          fill="#9B53C8"
-        />
-        <rect
-          width={9.832}
-          height={3.192}
-          rx={1.596}
-          transform="scale(-1 1) rotate(-45 32.382 113.884)"
-          fill="#494947"
         />
         <rect
           x={95}
@@ -342,6 +329,14 @@ export const TestRightIcon = React.memo(
           rx={2.656}
           fill="#8C8C8C"
         />
+        <path
+          d="M55.084 42.225c-.042.127-.084 3.042-.084 6.492v6.281l.83-.084a6.302 6.302 0 003.55-1.62c1-.915 1.464-1.662 1.9-3.028l.31-1.014.015 2.845.014 2.859h6.252l-3.196-3.211-3.197-3.21V42h-3.155c-2.746 0-3.168.028-3.239.225z"
+          fill="#9B53C8"
+        />
+        <path
+          d="M64.97 45.154c-1.69 1.718-3.07 3.169-3.07 3.225 0 .07 1.352.127 3 .141l2.985.028.043 3.197.028 3.21h6.407l-3.21-3.21-3.197-3.197 3.168-3.168c1.747-1.746 3.169-3.211 3.169-3.267 0-.07-1.408-.099-3.126-.085l-3.14.014-3.057 3.112z"
+          fill="#9B53C8"
+        />
         <defs>
           <filter
             id="test-right_svg__a"
@@ -357,7 +352,7 @@ export const TestRightIcon = React.memo(
             <feComposite
               in2="SourceAlpha"
               operator="in"
-              result="effect1_backgroundBlur_401_335"
+              result="effect1_backgroundBlur_280_3"
             />
             <feColorMatrix
               in="SourceAlpha"
@@ -368,12 +363,12 @@ export const TestRightIcon = React.memo(
             <feGaussianBlur stdDeviation={12.303} />
             <feColorMatrix values="0 0 0 0 0.420833 0 0 0 0 0.346206 0 0 0 0 0.322639 0 0 0 0.46 0" />
             <feBlend
-              in2="effect1_backgroundBlur_401_335"
-              result="effect2_dropShadow_401_335"
+              in2="effect1_backgroundBlur_280_3"
+              result="effect2_dropShadow_280_3"
             />
             <feBlend
               in="SourceGraphic"
-              in2="effect2_dropShadow_401_335"
+              in2="effect2_dropShadow_280_3"
               result="shape"
             />
           </filter>
@@ -391,7 +386,7 @@ export const TestRightIcon = React.memo(
             <feComposite
               in2="SourceAlpha"
               operator="in"
-              result="effect1_backgroundBlur_401_335"
+              result="effect1_backgroundBlur_280_3"
             />
             <feColorMatrix
               in="SourceAlpha"
@@ -402,12 +397,12 @@ export const TestRightIcon = React.memo(
             <feGaussianBlur stdDeviation={13.258} />
             <feColorMatrix values="0 0 0 0 0.420833 0 0 0 0 0.346206 0 0 0 0 0.322639 0 0 0 0.46 0" />
             <feBlend
-              in2="effect1_backgroundBlur_401_335"
-              result="effect2_dropShadow_401_335"
+              in2="effect1_backgroundBlur_280_3"
+              result="effect2_dropShadow_280_3"
             />
             <feBlend
               in="SourceGraphic"
-              in2="effect2_dropShadow_401_335"
+              in2="effect2_dropShadow_280_3"
               result="shape"
             />
           </filter>
@@ -425,7 +420,7 @@ export const TestRightIcon = React.memo(
             <feComposite
               in2="SourceAlpha"
               operator="in"
-              result="effect1_backgroundBlur_401_335"
+              result="effect1_backgroundBlur_280_3"
             />
             <feColorMatrix
               in="SourceAlpha"
@@ -436,12 +431,12 @@ export const TestRightIcon = React.memo(
             <feGaussianBlur stdDeviation={15.178} />
             <feColorMatrix values="0 0 0 0 0.420833 0 0 0 0 0.346206 0 0 0 0 0.322639 0 0 0 0.46 0" />
             <feBlend
-              in2="effect1_backgroundBlur_401_335"
-              result="effect2_dropShadow_401_335"
+              in2="effect1_backgroundBlur_280_3"
+              result="effect2_dropShadow_280_3"
             />
             <feBlend
               in="SourceGraphic"
-              in2="effect2_dropShadow_401_335"
+              in2="effect2_dropShadow_280_3"
               result="shape"
             />
           </filter>
@@ -465,11 +460,11 @@ export const TestRightIcon = React.memo(
             <feColorMatrix values="0 0 0 0 0.483606 0 0 0 0 0.337125 0 0 0 0 0.290867 0 0 0 0.22 0" />
             <feBlend
               in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
+              result="effect1_dropShadow_280_3"
             />
             <feBlend
               in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
+              in2="effect1_dropShadow_280_3"
               result="shape"
             />
           </filter>
@@ -493,11 +488,11 @@ export const TestRightIcon = React.memo(
             <feColorMatrix values="0 0 0 0 0.483606 0 0 0 0 0.337125 0 0 0 0 0.290867 0 0 0 0.22 0" />
             <feBlend
               in2="BackgroundImageFix"
-              result="effect1_dropShadow_401_335"
+              result="effect1_dropShadow_280_3"
             />
             <feBlend
               in="SourceGraphic"
-              in2="effect1_dropShadow_401_335"
+              in2="effect1_dropShadow_280_3"
               result="shape"
             />
           </filter>
@@ -506,5 +501,3 @@ export const TestRightIcon = React.memo(
     );
   }
 );
-
-TestRightIcon.displayName = "TestRightIcon";

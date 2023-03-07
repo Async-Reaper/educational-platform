@@ -221,5 +221,3 @@ export const Questions3DIcon = React.memo(
     );
   }
 );
-
-Questions3DIcon.displayName = "Questions3DIcon";

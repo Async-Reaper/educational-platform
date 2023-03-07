@@ -32,5 +32,3 @@ export const ThirdWaveIcon = React.memo(
     );
   }
 );
-
-ThirdWaveIcon.displayName = "ThirdWaveIcon";

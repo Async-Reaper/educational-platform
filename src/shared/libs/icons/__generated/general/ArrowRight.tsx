@@ -19,5 +19,3 @@ export const ArrowRightIcon = React.memo(
     );
   }
 );
-
-ArrowRightIcon.displayName = "ArrowRightIcon";

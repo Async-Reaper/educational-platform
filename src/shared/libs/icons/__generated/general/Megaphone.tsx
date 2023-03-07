@@ -23,5 +23,3 @@ export const MegaphoneIcon = React.memo(
     );
   }
 );
-
-MegaphoneIcon.displayName = "MegaphoneIcon";

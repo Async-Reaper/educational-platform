@@ -2,16 +2,16 @@ import React from 'react';
 import { Button, Container, Typography } from 'shared/ui';
 import { ColoredIcon, Icon } from 'shared/libs/icons';
 import {
-   Bookmark, DescriptionWrapper,
-   ExaminationCourse, ExaminationTextItem, PayIcons,
-   SectionWrapper, SignupItemIcons,
-   Title,
-   TitleWrapper,
-   UsedInner,
-   UsedItem,
-   UsedList,
-   UsedTitle,
-   UsedTitleWrapper,
+  Bookmark, DescriptionWrapper,
+  ExaminationCourse, ExaminationTextItem, PayIcons,
+  SectionWrapper, SignupItemIcons,
+  Title,
+  TitleWrapper,
+  UsedInner,
+  UsedItem,
+  UsedList,
+  UsedTitle,
+  UsedTitleWrapper,
 } from 'widgets/used-platform-section/ui';
 
 const Component = () => (
@@ -24,13 +24,6 @@ const Component = () => (
             <UsedList>
                <UsedItem>
                   <Bookmark number='01' />
-                  <UsedTitleWrapper>
-                     <UsedTitle text='Проверка и подбор курса' />
-                  </UsedTitleWrapper>
-                  <ExaminationCourse />
-               </UsedItem>
-               <UsedItem>
-                  <Bookmark number='02' />
                   <UsedTitleWrapper>
                      <UsedTitle text='Регистрация в системе' />
                   </UsedTitleWrapper>
@@ -49,18 +42,22 @@ const Component = () => (
                   </Button>
                </UsedItem>
                <UsedItem>
+                  <Bookmark number='02' />
+                  <UsedTitleWrapper>
+                     <UsedTitle text='Пройти тест' />
+                  </UsedTitleWrapper>
+                  <ExaminationCourse />
+               </UsedItem>
+               <UsedItem>
                   <Bookmark number='03' />
                   <UsedTitleWrapper>
-                     <UsedTitle text='Проверка и подбор курса' />
+                     <UsedTitle text='Подбор курса' />
                   </UsedTitleWrapper>
                   <DescriptionWrapper>
-                     <ExaminationTextItem text={
-                        `Выберите удобный способ онлайн-оплаты 
-                        и не беспокойтесь: соединение защищено!`
-                     }
+                     <ExaminationTextItem
+                       text='Выберите подходяший курс исходя из результатов теста'
                      />
                   </DescriptionWrapper>
-                  <PayIcons />
                </UsedItem>
             </UsedList>
          </UsedInner>

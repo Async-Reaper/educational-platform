@@ -33,5 +33,3 @@ export const SmartphoneIcon = React.memo(
     );
   }
 );
-
-SmartphoneIcon.displayName = "SmartphoneIcon";

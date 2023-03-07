@@ -32,5 +32,3 @@ export const WaveIcon = React.memo(
     );
   }
 );
-
-WaveIcon.displayName = "WaveIcon";

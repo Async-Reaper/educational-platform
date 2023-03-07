@@ -92,5 +92,5 @@ export const iconSet: {
   test_right,
   test_top,
   third_wave,
-  wave
+  wave,
 };

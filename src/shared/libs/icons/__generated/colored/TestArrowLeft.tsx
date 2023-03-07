@@ -32,5 +32,3 @@ export const TestArrowLeftIcon = React.memo(
     );
   }
 );
-
-TestArrowLeftIcon.displayName = "TestArrowLeftIcon";

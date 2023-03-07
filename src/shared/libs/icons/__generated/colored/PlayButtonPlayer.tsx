@@ -36,5 +36,3 @@ export const PlayButtonPlayerIcon = React.memo(
     );
   }
 );
-
-PlayButtonPlayerIcon.displayName = "PlayButtonPlayerIcon";

@@ -8,7 +8,7 @@ const Component = () => (
          Загрузка курса
       </Typography>
       <Typography tag='h1' variant='h3'>
-         У нас есть план эвакуации из любой проблемной ситуации.
+         Вы можете загрузить свой личный курс
       </Typography>
    </div>
 );

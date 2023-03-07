@@ -33,5 +33,3 @@ export const BigPlayIcon = React.memo(
     );
   }
 );
-
-BigPlayIcon.displayName = "BigPlayIcon";

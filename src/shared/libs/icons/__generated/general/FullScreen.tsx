@@ -22,5 +22,3 @@ export const FullScreenIcon = React.memo(
     );
   }
 );
-
-FullScreenIcon.displayName = "FullScreenIcon";

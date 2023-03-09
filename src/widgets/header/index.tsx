@@ -16,11 +16,15 @@ const Component: FC<Props> = () => {
               <div className={cls.header__logo}>
                  <ColoredIcon name='logo' size={59} />
                  <small className={cls.logo__text}>
-                     Кузбасский колледж архитектуры, строительства и цифровых технологий
+                    Кузбасский колледж архитектуры, строительства и цифровых технологий
                  </small>
               </div>
               <div className={cls.buttons__group}>
-                 <Button variant='xs' border>Регистрация</Button>
+                 <Button variant='xs' border>
+                    <Typography>
+                       Регистрация
+                    </Typography>
+                 </Button>
                  <Button variant='xs'>Вход</Button>
               </div>
            </div>

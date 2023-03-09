@@ -5,14 +5,29 @@
 
     border-radius: var(--border-radius-over);
     cursor: pointer;
-    color: var(--color-white-bg);
-    background-color: var(--color-violet-primary);
     z-index: 999999;
     width: max-content;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0 20px 30px rgb(66 44 34 / 33%);
+    }
 
     &.border {
-        background-color: transparent !important;
+        background: transparent !important;
         border: 1px solid var(--color-violet-primary);
+        transition: all 0.5s;
+        color: var(--color-violet-primary);
+
+        &:hover {
+            background: var(--color-violet-primary) !important;
+            color: var(--color-white-bg) !important;
+
+            svg {
+                stroke: var(--color-white-bg) !important;
+                fill: var(--color-white-bg) !important;
+            }
+        }
     }
 
     &.full {
@@ -39,11 +54,60 @@
         }
     }
 
-    &.color {
-        @include color;
-    }
-
     &.background {
-        @include background;
+        &--gray-primary {
+            background-color: var(--color-gray-primary);
+        }
+
+        &--gray-secondary {
+            background-color: var(--color-gray-secondary);
+        }
+
+        &--black-light {
+            background-color: var(--color-black-light);
+        }
+
+        &--black-dark {
+            background-color: var(--color-black-dark);
+        }
+
+        &--violet-primary {
+            background: var(--color-violet-primary);
+            transition: all 0.4s;
+
+            &:hover {
+                background: var(--color-white-bg);
+                color: var(--color-violet-primary);
+
+                svg {
+                    stroke: var(--color-violet-primary);
+                    fill: var(--color-violet-primary);
+                }
+            }
+        }
+
+        &--violet-secondary {
+            background-color: var(--color-violet-secondary);
+        }
+
+        &--white-bg {
+            background-color: var(--color-white-bg);
+            color: var(--color-violet-primary);
+            transition: all 0.4s;
+
+            &:hover {
+                background: var(--color-violet-primary);
+                color: var(--color-white-bg);
+
+                svg {
+                    stroke: var(--color-white-bg);
+                    fill: var(--color-white-bg);
+                }
+            }
+        }
+
+        &--black-bg {
+            background-color: var(--color-black-bg);
+        }
     }
 }

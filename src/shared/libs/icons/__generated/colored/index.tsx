@@ -6,6 +6,7 @@ import {BigPillarIcon as big_pillar} from './BigPillar';
 import {BigPlayIcon as big_play} from './BigPlay';
 import {BorderTestIcon as border_test} from './BorderTest';
 import {Cube3DIcon as cube_3_d} from './Cube3D';
+import {DevicesIcon as devices} from './Devices';
 import {DottedPlayerIcon as dotted_player} from './DottedPlayer';
 import {LineIcon as line} from './Line';
 import {LogoIcon as logo} from './Logo';
@@ -37,6 +38,7 @@ export type IconName =
   | 'big_play'
   | 'border_test'
   | 'cube_3_d'
+  | 'devices'
   | 'dotted_player'
   | 'line'
   | 'logo'
@@ -70,6 +72,7 @@ export const iconSet: {
   big_play,
   border_test,
   cube_3_d,
+  devices,
   dotted_player,
   line,
   logo,

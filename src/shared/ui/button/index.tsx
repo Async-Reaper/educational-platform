@@ -10,30 +10,32 @@ type Variant =
 
 type Props = {
   variant?: Variant
-  color?: Colors;
   background?: Colors;
   border?: boolean;
   children: ReactNode;
-  full?: boolean
+  full?: boolean;
+  ref?: React.Ref<any>;
+  onClick?: () => void,
 };
 
 const Component: FC<Props> = (props) => {
   const {
     variant = 'l',
-    color = 'white-bg',
     background = 'violet-primary',
     children,
     border = false,
     full = false,
+    ref,
+    onClick,
     ...otherProps
   } = props;
 
   return (
      <button
+       ref={ref}
        className={classNames(
          cls.button,
          [cls[`variant--${variant}`],
-           cls[`color--${color}`],
            cls[`background--${background}`],
          ],
          {

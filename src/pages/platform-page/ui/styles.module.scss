@@ -1,0 +1,10 @@
+.page_wrapper {
+    display: grid;
+    grid-template-columns: max-content auto;
+    background: var(--color-gray-secondary);
+    height: 100%;
+
+    .content_wrapper {
+        display: grid;
+    }
+}

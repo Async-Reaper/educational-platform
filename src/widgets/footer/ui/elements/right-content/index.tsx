@@ -7,7 +7,7 @@ const Component = () => (
          Пользовательское соглашение
       </Typography>
       <Typography variant='body' color='white-bg'>
-         Игорь Попцов | +7 (999) 999 99 99
+         Согласие на обработку персональных данных
       </Typography>
    </>
 );

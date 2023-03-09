@@ -3,6 +3,7 @@
 .text {
     position: relative;
     z-index: 9999;
+    color: inherit;
 
     &.inline {
         display: inline-block;

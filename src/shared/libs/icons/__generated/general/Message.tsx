@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SVGAttributes } from "react";
 
-export const ArrowBottomIcon = React.memo(
+export const MessageIcon = React.memo(
   ({
     size = 24,
     color = "#4E5361",
@@ -12,7 +12,7 @@ export const ArrowBottomIcon = React.memo(
     return (
       <svg width={size} height={size} fill="none" {...props}>
         <path
-          d="M9 1a1 1 0 00-2 0h2zM7.293 21.707a1 1 0 001.414 0l6.364-6.364a1 1 0 00-1.414-1.414L8 19.586l-5.657-5.657A1 1 0 00.93 15.343l6.364 6.364zM7 1v20h2V1H7z"
+          d="M.5 5a5 5 0 015-5h40a5 5 0 015 5v30a5 5 0 01-5 5h-40a5 5 0 01-5-5V5zM6 2.5L25.5 22 45 2.5H6zm41.5.5L27.148 24.383a2.5 2.5 0 01-3.296 0L3.5 3v34h44V3z"
           fill={color}
         />
       </svg>

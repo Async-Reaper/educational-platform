@@ -11,7 +11,7 @@ export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule
   };
 
   const fontsLoader = {
-    test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+    test: /\.(woff(2)?|eot|ttf|otf)$/,
     type: 'asset/inline',
   };
 

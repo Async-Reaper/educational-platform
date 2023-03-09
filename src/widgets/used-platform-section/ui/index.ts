@@ -12,3 +12,4 @@ export { ExaminationTextItem } from './elements/examination-text-item';
 export { UsedTitle } from './elements/used-title';
 export { SignupItemIcons } from './elements/signup-item-icons';
 export { PayIcons } from './elements/pay-icons';
+export { RunSignup } from './elements/run-signup';

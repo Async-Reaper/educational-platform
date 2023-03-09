@@ -1,15 +1,17 @@
 import React from 'react';
-import { Typography } from 'shared/ui';
+import { AppLink, Typography } from 'shared/ui';
 
 const Component = () => (
-    <>
-        <Typography variant='body' color='white-bg'>
+   <>
+      <AppLink to='/platform'>
+         <Typography variant='body' color='white-bg'>
             Ссылка на сайт
-        </Typography>
-        <Typography variant='body' color='white-bg'>
-            Copyright 2020 Q solutions
-        </Typography>
-    </>
+         </Typography>
+      </AppLink>
+      <Typography variant='body' color='white-bg'>
+         s.kuranova@kasict.ru
+      </Typography>
+   </>
 );
 
 export const LeftContent = React.memo(Component);

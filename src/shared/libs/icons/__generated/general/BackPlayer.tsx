@@ -13,7 +13,7 @@ export const BackPlayerIcon = React.memo(
       <svg width={size} height={size} fill="none" {...props}>
         <path
           d="M.498 5.197a.977.977 0 000 1.704l8.112 4.566a.977.977 0 001.457-.851V1.483A.977.977 0 008.61.63L.498 5.197z"
-          fill="#EFEFEF"
+          fill={color}
         />
         <g filter="url(#back-player_svg__a)">
           <path

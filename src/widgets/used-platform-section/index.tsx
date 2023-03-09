@@ -2,16 +2,16 @@ import React from 'react';
 import { Button, Container, Typography } from 'shared/ui';
 import { ColoredIcon, Icon } from 'shared/libs/icons';
 import {
-  Bookmark, DescriptionWrapper,
-  ExaminationCourse, ExaminationTextItem, PayIcons,
-  SectionWrapper, SignupItemIcons,
-  Title,
-  TitleWrapper,
-  UsedInner,
-  UsedItem,
-  UsedList,
-  UsedTitle,
-  UsedTitleWrapper,
+    Bookmark, DescriptionWrapper,
+    ExaminationCourse, ExaminationTextItem, PayIcons, RunSignup,
+    SectionWrapper, SignupItemIcons,
+    Title,
+    TitleWrapper,
+    UsedInner,
+    UsedItem,
+    UsedList,
+    UsedTitle,
+    UsedTitleWrapper,
 } from 'widgets/used-platform-section/ui';
 
 const Component = () => (
@@ -34,12 +34,7 @@ const Component = () => (
                      </Typography>
                   </DescriptionWrapper>
                   <SignupItemIcons />
-                  <Button variant='l' background='white-bg' border>
-                     <Typography tag='span' variant='h3' color='violet-primary'>
-                        Поехали
-                     </Typography>
-                     <Icon name='arrow_rounded' size={48} />
-                  </Button>
+                  <RunSignup />
                </UsedItem>
                <UsedItem>
                   <Bookmark number='02' />

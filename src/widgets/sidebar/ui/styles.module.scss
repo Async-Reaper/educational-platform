@@ -1,0 +1,19 @@
+.sidebar_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .logo_wrapper {
+        background: var(--color-white-bg);
+        padding: 30px;
+    }
+
+    .links_wrapper {
+        background: var(--color-violet-primary);
+        height: 100%;
+        padding: 45px 30px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+}

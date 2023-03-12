@@ -4,6 +4,7 @@ import { AppRouter, MainLayout } from 'app/providers';
 import { Suspense } from 'react';
 
 function App() {
+
   return (
      <div className={classNames('', ['theme'], { hovered: false })}>
         <Suspense fallback={<>Loading ...</>}>

@@ -12,3 +12,14 @@ body {
     background: var(--color-black-dark);
     overflow-x: hidden;
 }
+
+.page_platform {
+    background: var(--color-gray-secondary);
+    height: 100%;
+}
+
+.page_platform__content {
+    position: relative;
+    padding: 20px;
+    margin: 0 0 0 120px;
+}

@@ -4,7 +4,7 @@ import { CourseBookmark, CourseWrapper } from 'entities/course/ui';
 
 interface Props {
   name: string;
-  src: string;
+  src?: string;
 }
 
 const Component: FC<Props> = ({ name, src }) => (
@@ -14,7 +14,11 @@ const Component: FC<Props> = ({ name, src }) => (
          <Typography tag='h1' variant='h3' color='gray-primary'>{name}</Typography>
       </div>
       <div>
-         <img alt='img' src={src} />
+         {
+          src
+            ? <img alt='img' src={src} />
+            : null
+          }
       </div>
    </CourseWrapper>
 );

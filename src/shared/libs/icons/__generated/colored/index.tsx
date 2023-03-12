@@ -8,12 +8,14 @@ import {BorderTestIcon as border_test} from './BorderTest';
 import {Cube3DIcon as cube_3_d} from './Cube3D';
 import {DevicesIcon as devices} from './Devices';
 import {DottedPlayerIcon as dotted_player} from './DottedPlayer';
+import {LectureIcon as lecture} from './Lecture';
 import {LineIcon as line} from './Line';
 import {LogoIcon as logo} from './Logo';
 import {MeshIcon as mesh} from './Mesh';
 import {Message3DIcon as message_3_d} from './Message3D';
 import {MiddlePillarIcon as middle_pillar} from './MiddlePillar';
 import {PlayButtonPlayerIcon as play_button_player} from './PlayButtonPlayer';
+import {PresentationIcon as presentation} from './Presentation';
 import {Questions3DIcon as questions_3_d} from './Questions3D';
 import {RadarCircleBigIcon as radar_circle_big} from './RadarCircleBig';
 import {RadarCircleSmallIcon as radar_circle_small} from './RadarCircleSmall';
@@ -40,12 +42,14 @@ export type IconName =
   | 'cube_3_d'
   | 'devices'
   | 'dotted_player'
+  | 'lecture'
   | 'line'
   | 'logo'
   | 'mesh'
   | 'message_3_d'
   | 'middle_pillar'
   | 'play_button_player'
+  | 'presentation'
   | 'questions_3_d'
   | 'radar_circle_big'
   | 'radar_circle_small'
@@ -74,12 +78,14 @@ export const iconSet: {
   cube_3_d,
   devices,
   dotted_player,
+  lecture,
   line,
   logo,
   mesh,
   message_3_d,
   middle_pillar,
   play_button_player,
+  presentation,
   questions_3_d,
   radar_circle_big,
   radar_circle_small,

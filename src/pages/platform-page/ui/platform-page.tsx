@@ -1,13 +1,15 @@
 import React from 'react';
 import { Sidebar } from 'widgets/sidebar';
-import cls from './styles.module.scss';
+import { CoursesList } from 'widgets/courses-list';
 
 const Component = () => (
-   <div className={cls.page_wrapper}>
+   <div className='page_platform'>
       <div>
          <Sidebar />
       </div>
-      <div className={cls.content_wrapper} />
+      <div className='page_platform__content'>
+         <CoursesList />
+      </div>
    </div>
 );
 

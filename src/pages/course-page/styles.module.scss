@@ -1,0 +1,46 @@
+.variant_learning__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .video__lessons {
+        text-align: center;
+        margin: 0 0 50px;
+
+        video {
+            width: calc(100vw - 30%);
+            max-height: 400px;
+            background: var(--color-black-bg);
+            border-radius: var(--border-radius-md);
+        }
+    }
+
+    .variant_learning {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+
+        .variant__name {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .variant_files__wrapper {
+            display: grid;
+            grid-auto-flow: row;
+            grid-gap: 15px;
+            width: max-content;
+        }
+
+        .number {
+            background: var(--color-violet-secondary);
+            width: 75px;
+            height: 75px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

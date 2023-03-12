@@ -1,0 +1,1 @@
+export { TheirCourses } from './ui';

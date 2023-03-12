@@ -6,22 +6,24 @@ import cls from './styles.module.scss';
 const Component = () => (
    <div className={cls.sidebar_wrapper}>
       <div className={cls.logo_wrapper}>
-         <ColoredIcon name='logo' size={59} />
+         <AppLink to='/platform'>
+            <ColoredIcon name='logo' color='gray-secondary' size={59} />
+         </AppLink>
       </div>
       <div className={cls.links_wrapper}>
          <div className={cls.user_link__wrapper}>
-            <AppLink to='/platform'>
-               <Icon name='user' size={55} />
+            <AppLink to='/private-cabinet'>
+               <Icon name='user' color='gray-secondary' size={55} />
             </AppLink>
          </div>
          <div className={cls.home_link__wrapper}>
             <AppLink to='/'>
-               <Icon name='home' size={55} />
+               <Icon name='home' color='gray-secondary' size={55} />
             </AppLink>
          </div>
          <div className={cls.message_link__wrapper}>
             <AppLink to='/platform'>
-               <Icon name='message' size={55} />
+               <Icon name='message' color='gray-secondary' size={55} />
             </AppLink>
          </div>
       </div>

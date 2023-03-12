@@ -1,0 +1,19 @@
+.course__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 22px;
+    box-shadow: 0 0 20px rgb(67 45 36 / 25%);
+    border-radius: 20px;
+    background: var(--color-gray-primary);
+    transition: all 0.35s;
+    color: var(--color-gray-secondary);
+    width: max-content;
+    min-width: 300px;
+
+    &:hover {
+        background: var(--color-black-light);
+        color: var(--color-white-bg);
+    }
+}

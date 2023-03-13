@@ -1,7 +1,11 @@
 import React, { type FC } from 'react';
 import { ColoredIcon } from 'shared/libs/icons';
-import { Button, Container, Typography } from 'shared/ui';
+import {
+  Button, Container, ModalWindow, Typography,
+} from 'shared/ui';
 import cls from './styles.module.scss';
+import {AuthPhone} from "features";
+import {Signup} from "features/signup";
 
 interface Props {
 
@@ -9,6 +13,9 @@ interface Props {
 
 const Component: FC<Props> = () => {
   const path = '/';
+  const [isVisibleLogin, setIsVisibleLogin] = React.useState(false);
+  const [isVisibleSignup, setIsVisibleSignup] = React.useState(false);
+
   return (
      <div className={cls.header}>
         <Container>
@@ -20,14 +27,28 @@ const Component: FC<Props> = () => {
                  </small>
               </div>
               <div className={cls.buttons__group}>
-                 <Button variant='xs' border>
+                 <Button variant='xs' border onClick={() => setIsVisibleSignup(!isVisibleSignup)}>
                     <Typography>
                        Регистрация
                     </Typography>
                  </Button>
-                 <Button variant='xs'>Вход</Button>
+                 <Button variant='xs' onClick={() => setIsVisibleLogin(!isVisibleLogin)}>
+                    Вход
+                 </Button>
               </div>
            </div>
+           <ModalWindow
+             isVisible={isVisibleLogin}
+             setIsVisible={() => setIsVisibleLogin(!isVisibleLogin)}
+           >
+              <AuthPhone />
+           </ModalWindow>
+           <ModalWindow
+             isVisible={isVisibleSignup}
+             setIsVisible={() => setIsVisibleSignup(!isVisibleSignup)}
+           >
+              <Signup />
+           </ModalWindow>
         </Container>
      </div>
   );

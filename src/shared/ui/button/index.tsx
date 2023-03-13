@@ -1,4 +1,4 @@
-import React, { type FC, ReactNode } from 'react';
+import React, {Dispatch, type FC, ReactNode, SetStateAction} from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
@@ -15,7 +15,7 @@ type Props = {
   children: ReactNode;
   full?: boolean;
   ref?: React.Ref<any>;
-  onClick?: () => void,
+  onClick?: (...args: any) => void,
 };
 
 const Component: FC<Props> = (props) => {
@@ -44,6 +44,7 @@ const Component: FC<Props> = (props) => {
          },
        )}
        {...otherProps}
+       onClick={() => onClick && onClick()}
      >
         {children}
      </button>

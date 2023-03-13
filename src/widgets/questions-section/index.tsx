@@ -1,34 +1,48 @@
-import React from 'react';
-import {Container} from 'shared/ui';
+import React, { useState } from 'react';
 import {
-    Description,
-    DescriptionWrapper,
-    QuestionsContent,
-    QuestionsIcons,
-    QuestionsInner,
-    SectionWrapper,
-    Title,
-    TitleWrapper,
+  Button, Container, ModalWindow, Typography,
+} from 'shared/ui';
+import {
+  Description,
+  DescriptionWrapper,
+  QuestionsContent,
+  QuestionsIcons,
+  QuestionsInner,
+  SectionWrapper,
+  Title,
+  TitleWrapper,
 } from 'widgets/questions-section/ui';
-import {AskQuestions} from 'features';
+import { AskQuestions } from 'features';
+import { Icon } from 'shared/libs/icons';
 
-const Component = () => (
-   <SectionWrapper>
-      <Container>
-         <QuestionsInner>
-            <QuestionsContent>
-               <TitleWrapper>
-                  <Title />
-               </TitleWrapper>
-               <DescriptionWrapper>
-                  <Description />
-               </DescriptionWrapper>
-               <AskQuestions />
-            </QuestionsContent>
-            <QuestionsIcons />
-         </QuestionsInner>
-      </Container>
-   </SectionWrapper>
-);
+const Component = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  return (
+     <SectionWrapper>
+        <Container>
+           <QuestionsInner>
+              <QuestionsContent>
+                 <TitleWrapper>
+                    <Title />
+                 </TitleWrapper>
+                 <DescriptionWrapper>
+                    <Description />
+                 </DescriptionWrapper>
+                 <Button variant='m' onClick={() => setIsVisible(true)}>
+                    <Typography tag='span' variant='h3'>
+                       Задать вопрос
+                    </Typography>
+                    <Icon name='questions' color='white-bg' size={47} />
+                 </Button>
+              </QuestionsContent>
+              <QuestionsIcons />
+           </QuestionsInner>
+        </Container>
+        <ModalWindow isVisible={isVisible} setIsVisible={() => setIsVisible(!isVisible)}>
+           <AskQuestions />
+        </ModalWindow>
+     </SectionWrapper>
+  );
+};
 
 export const QuestionsSection = React.memo(Component);

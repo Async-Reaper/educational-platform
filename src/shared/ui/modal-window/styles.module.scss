@@ -1,0 +1,22 @@
+.modal_window__wrapper {
+    display: none;
+
+    &.active {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+        background: rgb(0 0 0 / 30%);
+    }
+
+    .modal_window__content {
+        padding: 20px;
+        background: var(--color-white-bg);
+        border-radius: 20px;
+    }
+}

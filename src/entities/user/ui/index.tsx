@@ -1,12 +1,12 @@
+import ava from 'pages/private-cabinet/img/2uBiAY5PuDw.jpg';
 import React from 'react';
 import { Avatar, Typography } from 'shared/ui';
-import ava from 'pages/private-cabinet/img/2uBiAY5PuDw.jpg';
-import { UserType } from 'entities/user/types';
+import { User } from '../types';
 import cls from './styles.module.scss';
 
 const Component = () => {
-  const user: UserType = {
-    id: 34534,
+  const user: User = {
+    id: '34534',
     avatar: ava,
     firstname: '',
     surname: '',

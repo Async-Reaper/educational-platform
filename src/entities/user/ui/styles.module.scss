@@ -1,0 +1,23 @@
+.user_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .top_info_part {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .other__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .info_item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

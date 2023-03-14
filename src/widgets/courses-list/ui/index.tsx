@@ -1,39 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { AppLink } from 'shared/ui';
-import { PlatformCourse } from 'entities';
-import { getCourse } from 'widgets/courses-list/api/getCourse';
-import axios from 'axios';
-import { CourseType } from 'widgets/courses-list/types';
-import cls from './styles.module.scss';
+import { Course } from "entities/course";
+import React, { useEffect } from "react";
+import { useAppDispatch } from "shared/libs/hooks/useAppDispatch";
+import { useAppSelector } from "shared/libs/hooks/useAppSelector";
+import { AppLink } from "shared/ui";
+import { getCourses } from "widgets/courses-list/api/getCourses";
+import { CourseType } from "../model/types";
+import cls from "./styles.module.scss";
 
 const Component = () => {
-  const [courses, setCourses] = useState<CourseType[]>([]);
+  const dispatch = useAppDispatch();
+  const courses = useAppSelector((state) => state.courses.data);
 
-  // eslint-disable-next-line consistent-return
-  async function arr() {
-    try {
-      const response = await axios.get<CourseType[]>('http://localhost:8000/courses/get-courses');
-      const res = response.data;
-      setCourses(res);
-      return res;
-    } catch (e) {
-      console.log(e);
-    }
-  }
   useEffect(() => {
-    arr();
+    dispatch(getCourses());
   }, []);
 
   return (
-     <div className={cls.courses__wrapper}>
-        {
-             courses?.map((course) => (
-                <AppLink to='/course'>
-                   <PlatformCourse name={course.title} creator={course.creator} />
-                </AppLink>
-             ))
-         }
-     </div>
+    <div className={cls.courses__wrapper}>
+      {courses.map((course: CourseType) => (
+        <AppLink to="/course">
+          <Course name={course.title} />
+        </AppLink>
+      ))}
+    </div>
   );
 };
 

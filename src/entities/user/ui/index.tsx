@@ -1,53 +1,47 @@
-import ava from 'pages/private-cabinet/img/2uBiAY5PuDw.jpg';
-import React from 'react';
-import { Avatar, Typography } from 'shared/ui';
-import { UserType } from '../types';
-import cls from './styles.module.scss';
+import ava from "pages/private-cabinet/img/2uBiAY5PuDw.jpg";
+import React from "react";
+import { Avatar, Typography } from "shared/ui";
+import { getInfoUserSelector } from "../model/selector/getInfoUserSelector";
+import { UserType } from "../model/types";
+import cls from "./styles.module.scss";
 
 const Component = () => {
   const user: UserType = {
-    id: '34534',
+    id: "34534",
     avatar: ava,
-    firstname: '',
-    surname: '',
-    phone: '+79235639609',
+    firstname: "",
+    surname: "",
+    phone: "+79235639609",
   };
   return (
-     <div className={cls.user_info}>
-        <div className={cls.top_info_part}>
-           <Avatar src={user.avatar} variant='xl' />
-           <Typography variant='h1' color='violet-primary'>
-              #
-              {user.id}
-           </Typography>
+    <div className={cls.user_info}>
+      <div className={cls.top_info_part}>
+        <Avatar src={user.avatar} variant="xl" />
+        <Typography variant="h1" color="violet-primary">
+          #{getInfoUserSelector?.id}
+        </Typography>
+      </div>
+      <div className={cls.other__info}>
+        <div className={cls.info_item}>
+          <Typography variant="h3">Имя:</Typography>
+          <Typography variant="h3" color="violet-primary">
+            {getInfoUserSelector?.firstname}
+          </Typography>
         </div>
-        <div className={cls.other__info}>
-           <div className={cls.info_item}>
-              <Typography variant='h3'>
-                 Имя:
-              </Typography>
-              <Typography variant='h3' color='violet-primary'>
-                 {user.firstname}
-              </Typography>
-           </div>
-           <div className={cls.info_item}>
-              <Typography variant='h3'>
-                 Фамилия:
-              </Typography>
-              <Typography variant='h3' color='violet-primary'>
-                 {user.surname}
-              </Typography>
-           </div>
-           <div className={cls.info_item}>
-              <Typography variant='h3'>
-                 Телефон:
-              </Typography>
-              <Typography variant='h3' color='violet-primary'>
-                 {user.phone}
-              </Typography>
-           </div>
+        <div className={cls.info_item}>
+          <Typography variant="h3">Фамилия:</Typography>
+          <Typography variant="h3" color="violet-primary">
+            {getInfoUserSelector?.surname}
+          </Typography>
         </div>
-     </div>
+        <div className={cls.info_item}>
+          <Typography variant="h3">Телефон:</Typography>
+          <Typography variant="h3" color="violet-primary">
+            {getInfoUserSelector?.phone}
+          </Typography>
+        </div>
+      </div>
+    </div>
   );
 };
 

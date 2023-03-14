@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { userReducer } from "entities/user";
 import { coursesReducer } from "widgets/courses-list";
 
 const rootReducer = combineReducers({
   courses: coursesReducer,
+  user: userReducer,
 });
 
 export const setupStore = () =>

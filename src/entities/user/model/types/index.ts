@@ -7,5 +7,5 @@ export interface UserType {
 }
 
 export interface UserSchema {
-  data?: UserType
+  data?: UserType;
 }

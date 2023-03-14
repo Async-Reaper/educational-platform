@@ -1,10 +1,10 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { UserType, UserSchema } from 'entities/user/types';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { UserType, UserSchema } from "entities/user/model/types";
 
 const initialState: UserSchema = {};
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   reducers: {
     getUserInfo(state, action: PayloadAction<UserType>) {
@@ -12,3 +12,6 @@ const userSlice = createSlice({
     },
   },
 });
+
+export const { actions: userActions } = userSlice;
+export const { reducer: userReducer } = userSlice;

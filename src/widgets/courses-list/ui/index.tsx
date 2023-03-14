@@ -4,12 +4,12 @@ import { useAppDispatch } from "shared/libs/hooks/useAppDispatch";
 import { useAppSelector } from "shared/libs/hooks/useAppSelector";
 import { AppLink } from "shared/ui";
 import { getCourses } from "widgets/courses-list/api/getCourses";
+import { getAllCoursesSelector as courses } from "../model/selector/getAllCourses";
 import { CourseType } from "../model/types";
 import cls from "./styles.module.scss";
 
 const Component = () => {
   const dispatch = useAppDispatch();
-  const courses = useAppSelector((state) => state.courses.data);
 
   useEffect(() => {
     dispatch(getCourses());

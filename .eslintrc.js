@@ -4,26 +4,16 @@ module.exports = {
       es2021: true,
       jest: true,
    },
-   extends: [
-      'airbnb',
-   ],
+   extends: ['airbnb'],
    parserOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
    },
-   plugins: [
-      'react',
-      'i18next',
-   ],
+   plugins: ['react', 'i18next'],
    overrides: [
       {
-         extends: [
-            'airbnb-typescript',
-         ],
-         files: [
-            '*.ts',
-            '*.tsx',
-         ],
+         extends: ['airbnb-typescript'],
+         files: ['*.ts', '*.tsx'],
          parserOptions: {
             project: ['./tsconfig.json'],
             ecmaVersion: 'latest',
@@ -45,13 +35,13 @@ module.exports = {
       'import/no-unresolved': ['off', { caseSensitive: false }],
       'import/prefer-default-export': 'off',
       'import/no-extraneous-dependencies': 'off',
+      'multiline-ternary': ['error', 'always'],
       'no-restricted-globals': 'off',
       'react/button-has-type': 'off',
       'react/default-props-match-prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/function-component-definition': 'off',
       'react/require-default-props': 'off',
-      'react/function-component-definition': 'off',
       'react/jsx-props-no-spreading': 'off',
       'react/jsx-indent': ['error', 3],
       'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Input, Typography } from 'shared/ui';
+import { Button, DragDrop, Input, Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
 const Component = () => (
@@ -8,6 +8,7 @@ const Component = () => (
       <Input placeholder='Ваш имя' />
       <Input placeholder='Ваш фамилия' />
       <Input placeholder='Загрузите аватарку' type='file' accept='image/png, image/gif, image/jpeg' />
+      <DragDrop />
       <Button variant='xs' background='violet-primary'>
          <Typography variant='h3'>Вход</Typography>
       </Button>

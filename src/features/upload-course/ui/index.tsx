@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, Typography } from 'shared/ui';
+import { Button, DragDrop, Input, Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
 const Component = () => {
@@ -10,6 +10,7 @@ const Component = () => {
         <Input label='Файлы с презентациями' type='file' accept='.pptx' />
         <Input label='Файлы с лекциями' type='file' accept='.pdf' />
         <Input label='Видео файлы' type='file' accept='.mp4' />
+        <DragDrop />
         <Button variant='xs' background='violet-primary'>
            <Typography variant='h3'>Загрузить курс</Typography>
         </Button>

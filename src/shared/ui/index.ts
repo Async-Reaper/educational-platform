@@ -5,6 +5,7 @@ export { BlackGradient } from './black-gradient';
 export { Button } from './button';
 export { Checkbox } from './checkbox';
 export { Container } from './container';
+export { DragDrop } from './drag-drop';
 export { Image } from './image';
 export { Input } from './input';
 export { IconWrapper } from './icon-wrapper';

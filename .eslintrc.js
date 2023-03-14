@@ -21,6 +21,7 @@ module.exports = {
       },
    ],
    rules: {
+      'consistent-return': 'off',
       semi: 'error',
       indent: ['error', 3],
       'no-trailing-spaces': 'error',
@@ -36,6 +37,8 @@ module.exports = {
       'import/prefer-default-export': 'off',
       'import/no-extraneous-dependencies': 'off',
       'multiline-ternary': ['error', 'always'],
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': 'warn',
       'no-restricted-globals': 'off',
       'react/button-has-type': 'off',
       'react/default-props-match-prop-types': 'off',

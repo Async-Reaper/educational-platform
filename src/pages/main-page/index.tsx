@@ -3,14 +3,16 @@ import {
 } from 'widgets';
 import { TestSection } from 'widgets/test-section';
 import { CoursesSection } from 'widgets/courses-section';
-import { BlackGradient } from 'shared/ui';
+import { BlackBG, BlackGradient } from 'shared/ui';
 
 function Component() {
   //   const { t } = useTranslation('main');
   return (
      <div>
-        <Header />
-        <TopSection />
+        <BlackBG>
+           <Header />
+           <TopSection />
+        </BlackBG>
         <LessonsSection />
         <TestSection />
         <CoursesSection />

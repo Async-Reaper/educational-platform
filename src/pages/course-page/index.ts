@@ -1,0 +1,3 @@
+export {
+  CoursePage,
+} from './ui';

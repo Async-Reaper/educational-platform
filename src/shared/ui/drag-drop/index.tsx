@@ -1,49 +1,49 @@
 import React, { useState } from 'react';
+import { FileUploader } from 'react-drag-drop-files';
+import { Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
-const Component = () => {
-  const [drag, setDrag] = useState(false);
+const fileTypes = ['JPG', 'PNG', 'GIF'];
 
-  function dragStartHandler(e: React.DragEvent<HTMLDivElement>): void {
-    e.preventDefault();
-    setDrag(true);
-  }
+interface Props {
+  multiple?: boolean;
+  labelText?: string;
+  type?: string[]
+}
 
-  function dragLeaveHandler(e: React.DragEvent<HTMLDivElement>): void {
-    e.preventDefault();
-    setDrag(false);
-  }
+const Component:React.FC<Props> = (props) => {
+  const {
+    multiple = false,
+    labelText,
+    type = fileTypes,
+  } = props;
 
-  function onDropHandler(e: React.DragEvent<HTMLDivElement>) {
-    e.preventDefault();
-    //  const files = [...e.dataTransfer.files];
-    //  console.log(files);
-  }
-
+  const [file, setFile] = useState(null);
+  const handleChange = (files: any) => {
+    setFile(files);
+  };
   return (
-     <div>
-        {drag
+     <div className={cls.drop__wrapper}>
+        {labelText
           ? (
-             <div
-               className={cls.drop_area}
-               onDragStart={(e) => dragStartHandler(e)}
-               onDragLeave={(e) => dragLeaveHandler(e)}
-               onDragOver={(e) => dragStartHandler(e)}
-               onDrop={(e) => onDropHandler(e)}
-             >
-                Отпустите файлы, чтобы загрузить их
-             </div>
+             <label htmlFor={labelText}>
+                {labelText}
+             </label>
           )
-          : (
-             <div
-               className={cls.drop_area}
-               onDragStart={(e) => dragStartHandler(e)}
-               onDragLeave={(e) => dragLeaveHandler(e)}
-               onDragOver={(e) => dragStartHandler(e)}
-             >
-                Перетащите файлы, чтобы загрузить их
-             </div>
-          )}
+          : null}
+        <FileUploader
+          id={labelText}
+          multiple={multiple}
+          handleChange={handleChange}
+          name='file'
+          types={type}
+        >
+           <div className={cls.drop__area}>
+              <Typography variant='body'>
+                 Перетащите сюда файл или нажмите
+              </Typography>
+           </div>
+        </FileUploader>
      </div>
   );
 };

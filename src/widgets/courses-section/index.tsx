@@ -14,35 +14,56 @@ import {
   UploadDescription,
 } from 'widgets/courses-section/ui';
 import { Icon } from 'shared/libs/icons';
-import mac from './img/MacBook.png';
+import programming from './img/programming.png';
+import webDesign from './img/web-design.png';
+import secureInformation from './img/secure-information.png';
+import Modeling from './img/3d-modeling.png';
 
 const Component = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const coursesData = [
+    {
+      id: 1,
+      title: 'Программирование',
+      src: programming,
+    },
+    {
+      id: 3,
+      title: 'Веб-дизайн',
+      src: webDesign,
+    },
+    {
+      id: 4,
+      title: 'Средства защиты информации',
+      src: secureInformation,
+    },
+    {
+      id: 4,
+      title: '3Д моделирование',
+      src: Modeling,
+    },
+  ];
+
   return (
      <SectionWrapper>
         <Container>
            <CoursesWrapper>
               <SectionTitle />
               <CoursesList>
-                 <AppLink to='/course'>
-                    <Course name='course' src={mac} />
-                 </AppLink>
-                 <AppLink to='/course'>
-                    <Course name='course' src={mac} />
-                 </AppLink>
-                 <AppLink to='/course'>
-                    <Course name='course' src={mac} />
-                 </AppLink>
-                 <AppLink to='/course'>
-                    <Course name='course' src={mac} />
-                 </AppLink>
+                 {
+                      coursesData.map((course) => (
+                         <AppLink to='/course'>
+                            <Course name={course.title} src={course.src} />
+                         </AppLink>
+                      ))
+                  }
               </CoursesList>
            </CoursesWrapper>
            <UploadCourseWrapper>
               <UploadDescription />
               <UploadButtonWrapper>
                  <Button variant='m' background='white-bg' onClick={() => setIsVisible(true)}>
-                    <Typography tag='strong' variant='h3'>Загрузить курс</Typography>
+                    <Typography tag='strong' variant='h3'>Загрузить ресурс</Typography>
                     <Icon name='lightness' size={36} />
                  </Button>
               </UploadButtonWrapper>

@@ -6,12 +6,14 @@ const Component = () => (
    <div className={cls.link__sectionWrapper}>
       <div className={cls.link__sectionBackground}>
          <div className={cls.link__section}>
-            <Icon
-              className={cls.link__sectionIcon}
-              name='arrow_bottom'
-              width={14}
-              color='gray-primary'
-            />
+            <a href='#section1'>
+               <Icon
+                 className={cls.link__sectionIcon}
+                 name='arrow_bottom'
+                 width={14}
+                 color='gray-primary'
+               />
+            </a>
          </div>
       </div>
       <div className={cls.border__link}>

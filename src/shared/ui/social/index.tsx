@@ -4,9 +4,15 @@ import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.social}>
-      <Icon name='wk' size={30} />
-      <Icon name='youtube' size={30} />
-      <Icon name='tg' size={30} />
+      <a href='https://vk.com/kkasict' target='_blank' rel='noreferrer'>
+         <Icon name='wk' size={30} />
+      </a>
+      <a href='https://www.youtube.com/@newnst' target='_blank' rel='noreferrer'>
+         <Icon name='youtube' size={30} />
+      </a>
+      <a href='https://t.me/gapoukkasict' target='_blank' rel='noreferrer'>
+         <Icon name='tg' size={30} />
+      </a>
    </div>
 );
 

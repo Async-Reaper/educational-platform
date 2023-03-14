@@ -4,7 +4,7 @@ import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.section__title}>
-      <Typography tag='h3' variant='h2' color='gray-primary'>Популярные курсы</Typography>
+      <Typography tag='h3' variant='h2' color='gray-primary'>Наши курсы</Typography>
    </div>
 );
 

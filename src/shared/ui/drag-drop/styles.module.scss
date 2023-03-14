@@ -1,8 +1,22 @@
-.drop_area {
-    width: 180px;
-    height: 150px;
-    border: 5px dashed black;
+.drop__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding-inline: 10px;
+
+    label {
+        color: var(--color-violet-primary);
+    }
+
+    .drop__area {
+        cursor: pointer;
+        border-radius: 20px;
+        padding-inline: 10px;
+        height: 150px;
+        border: 2px dashed var(--color-violet-primary);
+        background: var(--color-violet-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

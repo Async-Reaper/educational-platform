@@ -4,6 +4,7 @@ import {ArrowBottomIcon as arrow_bottom} from './ArrowBottom';
 import {ArrowRightIcon as arrow_right} from './ArrowRight';
 import {ArrowRoundedIcon as arrow_rounded} from './ArrowRounded';
 import {BackPlayerIcon as back_player} from './BackPlayer';
+import {BackIcon as back} from './Back';
 import {BorderArrowBottomIcon as border_arrow_bottom} from './BorderArrowBottom';
 import {CheckRoundedIcon as check_rounded} from './CheckRounded';
 import {CheckIcon as check} from './Check';
@@ -39,6 +40,7 @@ export type IconName =
   | 'arrow_right'
   | 'arrow_rounded'
   | 'back_player'
+  | 'back'
   | 'border_arrow_bottom'
   | 'check_rounded'
   | 'check'
@@ -76,6 +78,7 @@ export const iconSet: {
   arrow_right,
   arrow_rounded,
   back_player,
+  back,
   border_arrow_bottom,
   check_rounded,
   check,

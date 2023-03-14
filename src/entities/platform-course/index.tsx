@@ -5,10 +5,11 @@ import { CourseBookmark, CourseWrapper } from './ui';
 interface Props {
   name: string;
   creator?: string;
+  onClick: () => void
 }
 
-const Component: FC<Props> = ({ name, creator }) => (
-   <CourseWrapper>
+const Component: FC<Props> = ({ name, creator, onClick }) => (
+   <CourseWrapper onClick={onClick}>
       <CourseBookmark />
       <div className='course__title'>
          <Typography tag='h1' variant='body'>{name}</Typography>

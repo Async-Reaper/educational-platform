@@ -33,9 +33,7 @@
             transition: all 0.2s;
 
             &:hover {
-                left: 0;
-                width: 64px;
-                height: 75px;
+                transform: scale(1.15, 1.1);
             }
         }
     }

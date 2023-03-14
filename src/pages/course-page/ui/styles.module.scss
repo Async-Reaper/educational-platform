@@ -1,3 +1,8 @@
+.course__name {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
 .variant_learning__wrapper {
     display: flex;
     flex-direction: column;
@@ -9,7 +14,6 @@
 
         video {
             width: calc(100vw - 30%);
-            max-height: 400px;
             background: var(--color-black-bg);
             border-radius: var(--border-radius-md);
         }

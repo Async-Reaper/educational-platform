@@ -6,3 +6,4 @@ export { UserPage } from './user-page';
 export { CoursesPage } from './courses-page';
 export { CoursePage } from './course-page/ui';
 export { PrivateCabinet } from './private-cabinet';
+export { SignupPage } from './signup-page';

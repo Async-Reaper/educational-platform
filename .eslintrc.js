@@ -26,6 +26,8 @@ module.exports = {
       indent: ['error', 3],
       'no-trailing-spaces': 'error',
       'no-tabs': 'off',
+      'no-continue': 'off',
+      'no-plusplus': 'off',
       'no-use-before-define': 'off',
       'no-mixed-spaces-and-tabs': ['off', 'smart-tabs'],
       'max-len': ['error', { ignoreComments: true, code: 100 }],

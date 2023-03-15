@@ -13,33 +13,42 @@ const Component = () => {
     surname: '',
     phone: '+79235639609',
   };
-  const getInfoUserSelector = useAppSelector((state) => state.user.data);
+  // const getInfoUserSelector = useAppSelector((state) => state.user.data);
+  const id = localStorage.getItem('id');
+  const firstname = localStorage.getItem('firstname');
+  const surname = localStorage.getItem('surname');
+  const avatar = localStorage.getItem('avatar');
+  const phone = localStorage.getItem('phone');
   return (
      <div className={cls.user_info}>
         <div className={cls.top_info_part}>
-           <Avatar src={user.avatar} variant='xl' />
+           <Avatar src={avatar} variant='xl' />
            <Typography variant='h1' color='violet-primary'>
               #
-              {getInfoUserSelector?.id}
+              {/* {getInfoUserSelector?.id} */}
+              {id}
            </Typography>
         </div>
         <div className={cls.other__info}>
            <div className={cls.info_item}>
               <Typography variant='h3'>Имя:</Typography>
               <Typography variant='h3' color='violet-primary'>
-                 {getInfoUserSelector?.firstname}
+                 {/* {getInfoUserSelector?.firstname} */}
+                 {firstname}
               </Typography>
            </div>
            <div className={cls.info_item}>
               <Typography variant='h3'>Фамилия:</Typography>
               <Typography variant='h3' color='violet-primary'>
-                 {getInfoUserSelector?.surname}
+                 {/* {getInfoUserSelector?.surname} */}
+                 {surname}
               </Typography>
            </div>
            <div className={cls.info_item}>
               <Typography variant='h3'>Телефон:</Typography>
               <Typography variant='h3' color='violet-primary'>
-                 {getInfoUserSelector?.phone}
+                 {/* {getInfoUserSelector?.phone} */}
+                 {phone}
               </Typography>
            </div>
         </div>

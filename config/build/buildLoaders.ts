@@ -36,7 +36,9 @@ export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule
   const cssLoader = {
     test: /\.(sa|sc|c)ss$/,
     use: [
-      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+      isDev
+        ? 'style-loader'
+        : MiniCssExtractPlugin.loader,
       {
         loader: 'css-loader',
         options: {

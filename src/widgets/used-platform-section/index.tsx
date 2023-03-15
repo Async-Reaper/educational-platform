@@ -2,16 +2,16 @@ import React from 'react';
 import { Button, Container, Typography } from 'shared/ui';
 import { ColoredIcon, Icon } from 'shared/libs/icons';
 import {
-    Bookmark, DescriptionWrapper,
-    ExaminationCourse, ExaminationTextItem, PayIcons, RunSignup,
-    SectionWrapper, SignupItemIcons,
-    Title,
-    TitleWrapper,
-    UsedInner,
-    UsedItem,
-    UsedList,
-    UsedTitle,
-    UsedTitleWrapper,
+  Bookmark, DescriptionWrapper,
+  ExaminationCourse, ExaminationTextItem, PayIcons, RunSignup,
+  SectionWrapper, SignupItemIcons,
+  Title,
+  TitleWrapper,
+  UsedInner,
+  UsedItem,
+  UsedList,
+  UsedTitle,
+  UsedTitleWrapper,
 } from 'widgets/used-platform-section/ui';
 
 const Component = () => (

@@ -5,7 +5,9 @@ function Component() {
   const { i18n } = useTranslation('main');
 
   const changeLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    i18n.changeLanguage(i18n.language === 'ru'
+      ? 'en'
+      : 'ru');
   };
 
   return (

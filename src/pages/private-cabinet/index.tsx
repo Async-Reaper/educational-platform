@@ -9,8 +9,8 @@ const Component = () => (
       <Sidebar />
       <div className='page_platform__content'>
          <User />
-         <TheirCourses />
-         <UploadCourse />
+         {/*<TheirCourses />*/}
+         {/*<UploadCourse />*/}
       </div>
    </div>
 );

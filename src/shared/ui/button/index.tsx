@@ -1,4 +1,6 @@
-import React, {Dispatch, type FC, ReactNode, SetStateAction} from 'react';
+import React, {
+  Dispatch, type FC, ReactNode, SetStateAction,
+} from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
@@ -16,6 +18,7 @@ type Props = {
   full?: boolean;
   ref?: React.Ref<any>;
   onClick?: (...args: any) => void,
+  disabled?: boolean;
 };
 
 const Component: FC<Props> = (props) => {
@@ -27,6 +30,7 @@ const Component: FC<Props> = (props) => {
     full = false,
     ref,
     onClick,
+    disabled = false,
     ...otherProps
   } = props;
 
@@ -45,6 +49,7 @@ const Component: FC<Props> = (props) => {
        )}
        {...otherProps}
        onClick={() => onClick && onClick()}
+       disabled={disabled}
      >
         {children}
      </button>

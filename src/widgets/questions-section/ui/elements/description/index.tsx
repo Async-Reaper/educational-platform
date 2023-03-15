@@ -1,9 +1,9 @@
 import React from 'react';
-import {Typography} from 'shared/ui';
+import { Typography } from 'shared/ui';
 
 const Component = () => (
    <Typography>
-       В данном разделе можно задать вопрос нашим экспертам.
+      В данном разделе можно задать вопрос нашим экспертам.
    </Typography>
 );
 

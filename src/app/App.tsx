@@ -4,6 +4,7 @@ import { AppRouter, MainLayout, StoreProvider } from 'app/providers';
 import { Suspense } from 'react';
 import { setupStore } from 'app/store';
 import { Provider } from 'react-redux';
+import '../../json-server/firebase';
 
 function App() {
   const store = setupStore();

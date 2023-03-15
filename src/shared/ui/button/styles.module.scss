@@ -75,6 +75,14 @@
             background: var(--color-violet-primary);
             transition: all 0.4s;
 
+            &:disabled {
+                background: var(--color-gray-primary) !important;
+                color: var(--color-white-bg) !important;
+                transition: none;
+                box-shadow: none;
+                cursor: auto;
+            }
+
             &:hover {
                 background: var(--color-white-bg);
                 color: var(--color-violet-primary);

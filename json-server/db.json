@@ -1,257 +1,27 @@
 {
-  "course": [
+  "course":
+[
+  {
+    "id":1,
+    "title":"Программирование",
+    "files":
     {
-      "id": 1,
-      "title": "Программирование",
-      "files": {
-        "presentation": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "lecture": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "video": [
-          {
-            "title": "Введение в серверную разработку",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          }
-        ]
-      }
+      "presentation":
+      [{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"}],"lecture":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"}],
+  "video":
+  [
+    {
+      "title":"Введение в серверную разработку",
+      "file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49",
+      "creator":"Иван Нелюбин"
     },
     {
-      "id": 2,
-      "title": "Веб-дизайн",
-      "files": {
-        "presentation": [
-          {
-            "title": "Введение в веб-дизайн",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "lecture": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "video": [
-          {
-            "title": "Введение в серверную разработку",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          }
-        ]
-      }
+      "title":"Введение в серверную разработку",
+      "file":"/",
+      "creator":"Иван Нелюбин"
     },
     {
-      "id": 3,
-      "title": "Средства защиты информации",
-      "files": {
-        "presentation": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "lecture": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "video": [
-          {
-            "title": "Введение",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          }
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "title": "3Д моделирование",
-      "files": {
-        "presentation": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "lecture": [
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Как правильно убрать?",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2",
-            "creator": "Иван Нелюбин"
-          }
-        ],
-        "video": [
-          {
-            "title": "Введение в 3д моделирование",
-            "file": "https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          },
-          {
-            "title": "Введение в серверную разработку",
-            "file": "/",
-            "creator": "Иван Нелюбин"
-          }
-        ]
-      }
-    }
-  ],
-  "users": [
-    {
-      "id": "234123412341",
-      "firstname": "Ivan",
-      "surname": "Nelyubin",
-      "phone": "+79235639609"
-    },
-    {
-      "id": "324131412341",
-      "firstname": "Igor",
-      "surname": "Poptsov",
-      "phone": "+79231621925",
-      "avatar": ""
-    }
-  ]
-}
+      "title":"Введение в серверную разработку",
+      "file":"/",
+      "creator":"Иван Нелюбин"}
+  ]}},{"id":2,"title":"Веб-дизайн","files":{"presentation":[{"title":"Введение в веб-дизайн","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"}],"lecture":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"}],"video":[{"title":"Введение в серверную разработку","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"}]}},{"id":3,"title":"Средства защиты информации","files":{"presentation":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"}],"lecture":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"}],"video":[{"title":"Введение","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"}]}},{"id":4,"title":"3Д моделирование","files":{"presentation":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/present.pptx?alt=media&token=7982220d-46af-428f-92e4-9c781e0c049d","creator":"Иван Нелюбин"}],"lecture":[{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"},{"title":"Как правильно убрать?","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/doc.pdf?alt=media&token=5beee6ab-c765-4adb-9e97-2818744af7e2","creator":"Иван Нелюбин"}],"video":[{"title":"Введение в 3д моделирование","file":"https://firebasestorage.googleapis.com/v0/b/lexa-16464.appspot.com/o/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.mp4?alt=media&token=ea208bb7-95da-4e01-b389-0c85a8843c49","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"},{"title":"Введение в серверную разработку","file":"/","creator":"Иван Нелюбин"}]}}],"users":[{"id":"234123412341","firstname":"Ivan","surname":"Nelyubin","phone":"+79235639609","avatar":"https://firebasestorage.googleapis.com/v0/b/educational-platform-ef524.appspot.com/o/avatars%2F%2B79235639609%2F%D0%91%D0%B5%D0%B7%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1.jpg?alt=media&token=1227a57c-5252-42a1-a3a5-339a2e1aa11e"},{"id":"324131412341","firstname":"Igor","surname":"Poptsov","phone":"+79231621925","avatar":"https://firebasestorage.googleapis.com/v0/b/educational-platform-ef524.appspot.com/o/avatars%2F%2B79231621925%2F%D0%A4%D0%BE%D0%BD%202.jpg?alt=media&token=89da0674-dfcc-4bfc-868d-1270da1c6bdd"},{"id":"234123412341","firstname":"Ivan","surname":"Nelyubin","phone":"+79235637609","avatar":""}]}

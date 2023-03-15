@@ -2,4 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    .auth__error {
+        color: red;
+    }
 }

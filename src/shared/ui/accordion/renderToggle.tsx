@@ -13,7 +13,12 @@ export const renderToggleDefault: React.FC<ToggleProps> = ({
   toggleHandler,
 }) => (
    <button className={styles.accordion__toggle} onClick={toggleHandler} aria-expanded={isExpanded}>
-      <Typography variant='body' color={isExpanded ? 'gray-primary' : 'gray-secondary'}>
+      <Typography
+        variant='body'
+        color={isExpanded
+          ? 'gray-primary'
+          : 'gray-secondary'}
+      >
          {title}
       </Typography>
 
@@ -21,11 +26,17 @@ export const renderToggleDefault: React.FC<ToggleProps> = ({
          <IconWrapper
            icon={(
               <Icon
-                name={isExpanded ? 'minus' : 'plus'}
-                color={isExpanded ? 'gray-primary' : 'gray-secondary'}
+                name={isExpanded
+                  ? 'minus'
+                  : 'plus'}
+                color={isExpanded
+                  ? 'gray-primary'
+                  : 'gray-secondary'}
               />
           )}
-           rotate={isExpanded ? 180 : 0}
+           rotate={isExpanded
+             ? 180
+             : 0}
          />
       </div>
    </button>

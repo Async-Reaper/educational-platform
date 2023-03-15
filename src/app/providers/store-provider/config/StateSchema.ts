@@ -1,7 +1,9 @@
-import { UserSchema } from "entities/user/model/types";
-import { AnyAction, EnhancedStore, Reducer, ReducersMapObject } from "@reduxjs/toolkit";
-import { CombinedState } from "redux";
-import { AxiosInstance } from "axios";
+import { UserSchema } from 'entities/user/model/types';
+import {
+  AnyAction, EnhancedStore, Reducer, ReducersMapObject,
+} from '@reduxjs/toolkit';
+import { CombinedState } from 'redux';
+import { AxiosInstance } from 'axios';
 
 export interface StateSchema {
   user: UserSchema;

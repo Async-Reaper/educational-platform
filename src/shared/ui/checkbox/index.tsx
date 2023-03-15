@@ -37,7 +37,9 @@ const Component: FC<Props> = (props) => {
             [cls[`variant--${variant}`], cls[`color--${color}`]],
           )}
         >
-           {isActive ? <Icon name='check' color='gray-primary' /> : null}
+           {isActive
+             ? <Icon name='check' color='gray-primary' />
+             : null}
         </div>
      </div>
   );

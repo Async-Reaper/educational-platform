@@ -1,0 +1,16 @@
+.signup_page__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+
+    .signup_link__wrapper {
+        position: absolute;
+        left: 30px;
+    }
+
+    .signup__wrapper {
+        max-width: max-content;
+        display: flex;
+    }
+}

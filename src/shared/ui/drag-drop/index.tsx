@@ -1,60 +1,86 @@
-import React, { useState } from "react";
-import { FileUploader } from "react-drag-drop-files";
-import { classNames } from "shared/libs/helpers/classNames";
-import { Typography } from "shared/ui";
-import cls from "./styles.module.scss";
+import React, { useState } from 'react';
+import { classNames } from 'shared/libs/helpers/classNames';
+import cls from './styles.module.scss';
+import pdfIcon from './img/pdf.png';
+import imgIcon from './img/image.png';
+import videoIcon from './img/video.png';
 
-const fileTypes = ["JPG", "PNG", "GIF"];
+const fileTypes: string = 'image/png, image/jpeg, image/jpg';
 
 interface Props {
   multiple?: boolean;
   labelText?: string;
-  type?: string[];
+  acceptType?: any;
+  onChange: any
+  filesInfo: any[];
 }
 
-const Component: React.FC<Props> = (props) => {
-  const { multiple = false, labelText, type = fileTypes } = props;
+const Component = (props: Props) => {
+  const {
+    multiple = false,
+    labelText,
+    acceptType = fileTypes,
+    onChange,
+    filesInfo,
+  } = props;
 
-  const [file, setFile] = useState(null);
-  const handleChange = (files: any) => {
-    setFile(files);
+  const [drop, setDrop] = useState(false);
+
+  const selectFileImage = (typeFile: string) => {
+    if (typeFile.match('image.*')) {
+      return imgIcon;
+    }
+    if (typeFile === 'application/pdf') {
+      return pdfIcon;
+    }
+    if (typeFile === 'video/mp4') {
+      return videoIcon;
+    }
   };
+
   return (
-    <div className={cls.drop__wrapper}>
-      {labelText ? <label htmlFor={labelText}>{labelText}</label> : null}
-      <form class={cls.form__container} en enctype="multipart/form-data">
-        <div class={cls.upload_files__container}>
-          <div class={cls.drag_file__area}>
-            <span class={classNames(cls.material__icons-outlined, [cls.upload-icon])}> file_upload </span>
-            <h3 class={cls.dynamic__message}> Drag & drop any file here </h3>
-            <label class="label">
-              {" "}
-              or{" "}
-              <span class={cls.browse__files}>
-                {" "}
-                <input type="file" class={cls.default-file-input} /> <span class={cls.browse-files-text}>browse file</span> <span>from device</span>{" "}
-              </span>{" "}
-            </label>
-          </div>
-          <span class={cls.cannot-upload-message}>
-            {" "}
-            <span class={cls.material-icons-outlined}>error</span> Please select a file first <span class={cls.material-icons-outlined.cancel-alert-button}>cancel</span>{" "}
-          </span>
-          <div class={cls.file-block">
-            <div class={cls.file-info">
-              {" "}
-              <span class={cls.material-icons-outlined file-icon}>description</span> <span class={cls.file-name}> </span> | <span class={cls.file-size}> </span>{" "}
-            </div>
-            <span class={cls.material-icons remove-file-icon}>delete</span>
-            <div class={cls.progress-bar}> </div>
-          </div>
-          <button type="button" class={cls.upload-button}>
-            {" "}
-            Upload{" "}
-          </button>
+     <div className={cls.drop__wrapper}>
+        {labelText
+          ? <label htmlFor={labelText}>{labelText}</label>
+          : null}
+
+        <div className={cls.wrapper}>
+           {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
+           <div
+             className={classNames(cls.drop, [], { [cls.active]: drop })}
+             onDragEnter={() => setDrop(true)}
+             onDragLeave={() => setDrop(false)}
+             // onDragEnd={() => setDrop(false)}
+             onMouseOut={() => setDrop(false)}
+             onDrop={() => setDrop(false)}
+           >
+              <div className={cls.cont}>
+                 <div>
+                    <div className={cls.tit}>Перенесите сюда</div>
+                    <div className={cls.desc}>ваши файлы, или</div>
+                    <div className={cls.browse}> Кликните здесь</div>
+                 </div>
+              </div>
+              <output id='#list' className={cls.list} />
+              <input
+                type='file'
+                multiple={multiple}
+                onChange={onChange}
+                accept={acceptType}
+              />
+           </div>
         </div>
-      </form>
-    </div>
+        <div className={cls.files__list__wrapper}>
+           {filesInfo.map((file, index) => (
+              <div key={index} className={cls.file__name__wrapper}>
+                 <div className={cls.file__img__wrapper}>
+                    <img src={selectFileImage(file.type)} alt='' />
+                 </div>
+                 {file.name}
+              </div>
+           ))}
+        </div>
+     </div>
   );
 };
 

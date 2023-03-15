@@ -1,6 +1,6 @@
 export interface UserType {
   id?: string;
-  avatar: string;
+  avatar: File | string;
   firstname: string;
   surname: string;
   phone: string;

@@ -70,7 +70,7 @@ const Component = () => {
            </UploadCourseWrapper>
         </Container>
         <ModalWindow isVisible={isVisible} setIsVisible={setIsVisible}>
-           <UploadCourse />
+           <UploadCourse setIsVisible={setIsVisible} />
         </ModalWindow>
      </SectionWrapper>
   );

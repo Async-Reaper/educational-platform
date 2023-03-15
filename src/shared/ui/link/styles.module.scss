@@ -1,7 +1,9 @@
 .app_link {
     transition: 0.2s ease;
-    display: block;
     width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .primary {

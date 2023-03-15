@@ -8,7 +8,7 @@ const Component = () => (
       <Icon name='megaphone' width={48} height={55} />
       <Typography tag='h3' variant='h3' color='gray-primary'>
          Этому и не только вы
-          <span className={cls.color__part}> научитесь на нашей платформе.</span>
+         <span className={cls.color__part}> научитесь на нашей платформе.</span>
       </Typography>
    </div>
 );

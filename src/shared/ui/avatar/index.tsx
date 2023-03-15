@@ -8,7 +8,7 @@ type Variant = 'xs' | 'l' | 'xl';
 type Props = {
   variant?: Variant;
   rounded?: boolean;
-  src: string;
+  src: any;
   isOnline?: boolean;
 };
 
@@ -27,11 +27,13 @@ const Component: FC<Props> = (props) => {
           src={src}
           alt='User avatar'
         />
-        {isOnline && variant !== 'xs' ? (
-           <div className={classNames(cls.status)}>
-              <ColoredIcon name='status_online' size={16} />
-           </div>
-        ) : null}
+        {isOnline && variant !== 'xs'
+          ? (
+             <div className={classNames(cls.status)}>
+                <ColoredIcon name='status_online' size={16} />
+             </div>
+          )
+          : null}
      </div>
   );
 };

@@ -8,7 +8,7 @@ import {
 import cls from './styles.module.scss';
 
 interface Props {
-  setIsVisible: (arg: boolean) => void
+  setIsVisible?: (arg: boolean) => void
 }
 
 const Component: React.FC<Props> = ({ setIsVisible }) => {

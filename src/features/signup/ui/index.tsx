@@ -13,6 +13,7 @@ const Component = () => {
   const [avatarLink, setAvatarLink] = useState<any>('');
   const [firstname, setFirstName] = useState<string>('');
   const [surname, setSurname] = useState<string>('');
+  const [name_work, setNameWork] = useState<string>('');
   const [phone, setPhone] = useState<string>('+7');
   const [error, setError] = useState<boolean>(true);
   const [successSignup, setSuccessSignup] = useState<boolean>(false);
@@ -34,6 +35,7 @@ const Component = () => {
     phone,
     firstname,
     surname,
+    name_work,
     avatar: avatarLink,
   };
   const storage = getStorage();
@@ -71,7 +73,7 @@ const Component = () => {
 
   useEffect(() => {
     // eslint-disable-next-line eqeqeq
-    if (phone == '+7' || phone.length < 11 || surname == '' || firstname == '') {
+    if (phone == '+7' || phone.length < 11 || surname == '' || firstname == '' || name_work == '') {
       setError(true);
     } else {
       setError(false);
@@ -102,6 +104,11 @@ const Component = () => {
           value={surname}
           onChange={(e) => setSurname(e.target.value)}
           placeholder='Ваш фамилия'
+        />
+        <Input
+          value={surname}
+          onChange={(e) => setSurname(e.target.value)}
+          placeholder='Ваше место работы'
         />
         <DragDrop
           onChange={uploadAvatar}

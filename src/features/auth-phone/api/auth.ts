@@ -11,6 +11,7 @@ export const auth = async (data: any) => {
       localStorage.setItem('surname', res.surname);
       localStorage.setItem('phone', res.phone);
       localStorage.setItem('avatar', res.avatar);
+      localStorage.setItem('name_work', res.name_work);
     }
     return res;
   } catch (e) {

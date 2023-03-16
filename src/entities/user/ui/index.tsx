@@ -19,6 +19,7 @@ const Component = () => {
   const surname = localStorage.getItem('surname');
   const avatar = localStorage.getItem('avatar');
   const phone = localStorage.getItem('phone');
+  const name_work = localStorage.getItem('name_work');
   return (
      <div className={cls.user_info}>
         <div className={cls.top_info_part}>
@@ -49,6 +50,13 @@ const Component = () => {
               <Typography variant='h3' color='violet-primary'>
                  {/* {getInfoUserSelector?.phone} */}
                  {phone}
+              </Typography>
+           </div>
+           <div className={cls.info_item}>
+              <Typography variant='h3'>Место работы:</Typography>
+              <Typography variant='h3' color='violet-primary'>
+                 {/* {getInfoUserSelector?.phone} */}
+                 {name_work}
               </Typography>
            </div>
         </div>

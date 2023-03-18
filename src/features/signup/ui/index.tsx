@@ -78,7 +78,7 @@ const Component = () => {
     } else {
       setError(false);
     }
-  }, [firstname, surname, phone]);
+  }, [firstname, surname, phone, name_work]);
   const handleSignup = async () => {
     await fr();
     if (!error) {
@@ -106,8 +106,8 @@ const Component = () => {
           placeholder='Ваш фамилия'
         />
         <Input
-          value={surname}
-          onChange={(e) => setSurname(e.target.value)}
+          value={name_work}
+          onChange={(e) => setNameWork(e.target.value)}
           placeholder='Ваше место работы'
         />
         <DragDrop

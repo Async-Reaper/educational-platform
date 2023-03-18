@@ -68,7 +68,9 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
     await fr();
     if (!error) {
       const uploadFunc = await uploadResource(dataResource);
-      setIsVisible(false);
+      if (setIsVisible) {
+        setIsVisible(false);
+      }
     }
   };
 

@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import {
   Button, DragDrop, Input, Typography,
 } from 'shared/ui';
-import {
-  getStorage, listAll, ref, uploadBytes,
-} from 'firebase/storage';
+import { uploadFiles } from '../api/uploadResource';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -14,10 +12,9 @@ interface Props {
 const Component: React.FC<Props> = ({ setIsVisible }) => {
   const [filesCourse, setFilesCourse] = useState<any>([]);
   const [error, setError] = useState<boolean>();
-  const [titleResource, setTitleResource] = useState<string>();
-  const [nameResource, setNameResource] = useState<string>();
-  const [typeResource, setTypeResource] = useState<string>();
-  const [uploadStatus, setUploadStatus] = useState<boolean>(false);
+  const [titleResource, setTitleResource] = useState<string>('');
+  const [nameResource, setNameResource] = useState<string>('');
+  const [typeResource, setTypeResource] = useState<string>('');
 
   // eslint-disable-next-line @typescript-eslint/no-shadow
   const uploadResource = (evt: any) => {
@@ -42,32 +39,10 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
     filesCourse: '',
   };
 
-  const fr = async () => {
-    const rell = async () => {
-      const storage = getStorage();
-      const storageRef = ref(storage, `${nameResource}/${typeResource}/${filesCourse[0].name}`);
-      console.log(storageRef);
-      await uploadBytes(storageRef, filesCourse[0]).then((snapshot) => {
-        console.log(snapshot);
-      });
-
-      const listRef = ref(storage, `${nameResource}/${typeResource}/${filesCourse[0].name}`);
-      await listAll(listRef)
-        .then((res) => {
-          res.items.forEach((itemRef) => {
-            console.log(itemRef.fullPath);
-          });
-        }).catch((error) => {
-          // Uh-oh, an error occurred!
-        });
-    };
-    const res = await rell();
-  };
-
   const handleUpload = async () => {
-    await fr();
+    await uploadFiles(nameResource, typeResource, filesCourse[0]);
     if (!error) {
-      const uploadFunc = await uploadResource(dataResource);
+      uploadResource(dataResource);
       if (setIsVisible) {
         setIsVisible(false);
       }

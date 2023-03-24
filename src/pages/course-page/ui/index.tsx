@@ -51,6 +51,31 @@ const Component = () => {
   useEffect(() => {
     data();
   }, []);
+
+  const variants = [
+    {
+      name: 'Введение в программирование',
+    },
+    {
+      name: 'Переменные и блоки',
+    },
+      {
+          name: 'Переменные и блоки',
+      },
+      {
+          name: 'Переменные и блоки',
+      },
+      {
+          name: 'Переменные и блоки',
+      },
+      {
+          name: 'Переменные и блоки',
+      },
+      {
+          name: 'Переменные и блоки',
+      },
+  ];
+
   return (
      <div className='page_platform'>
         <Sidebar />
@@ -60,62 +85,57 @@ const Component = () => {
                  {JSON.parse(localStorage.getItem('course') || '')}
               </Typography>
            </div>
-           <div className={cls.variant_learning__wrapper}>
-              <div className={cls.video__lessons}>
-                 <video
-                   src={course?.files.video[0].file}
-                   controls
-                 >
-                    <source src={course?.files.video[0].file} />
-                 </video>
-                 <Typography variant='h3' color='gray-primary'>
-                    {course?.files.video[0].title}
-                 </Typography>
-              </div>
-              <div className={cls.variant_learning}>
-                 <div className={cls.variant__name}>
-                    <div className={cls.number}>
-                       <ColoredIcon name='presentation' width={42} height={37} />
-                    </div>
-                    <div className='variant__title'>
-                       <Typography tag='strong' variant='h3' color='violet-secondary'>
-                          Презентации
-                       </Typography>
-                    </div>
-                 </div>
-                 <div className={cls.variant_files__wrapper}>
+           <div className={cls.course__content}>
+              <div className={cls.themes__wrapper}>
+                 <div className={cls.themes__list}>
                     {
-                        course?.files.presentation
-                          ? course?.files.presentation.map((file: any) => (
-                             <a href={file.file} download>
-                                {file.title}
-                             </a>
-                          ))
-                          : null
-                     }
+                           variants.map((variant) => (
+                              <div className={cls.theme__item}>
+                                 <div className={cls.theme__title}>
+                                    <Typography variant='small' tag='span'>
+                                       {variant.name}
+                                    </Typography>
+                                 </div>
+                                 <div className={cls.theme_variants__list}>
+                                    <div className={cls.theme_variant__item}>
+                                       <Typography variant='small'>
+                                          Видео
+                                       </Typography>
+                                    </div>
+                                    <div className={cls.theme_variant__item}>
+                                       <Typography variant='small'>
+                                          Презентации
+                                       </Typography>
+                                    </div>
+                                    <div className={cls.theme_variant__item}>
+                                       <Typography variant='small'>
+                                          Лекции
+                                       </Typography>
+                                    </div>
+                                    <div className={cls.theme_variant__item}>
+                                       <Typography variant='small'>
+                                          Тренажеры
+                                       </Typography>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           ))
+                       }
+
                  </div>
               </div>
-              <div className={cls.variant_learning}>
-                 <div className={cls.variant__name}>
-                    <div className={cls.number}>
-                       <ColoredIcon name='lecture' width={42} height={37} />
-                    </div>
-                    <div className='variant__title'>
-                       <Typography tag='strong' variant='h3' color='violet-secondary'>
-                          Лекции
-                       </Typography>
-                    </div>
-                 </div>
-                 <div className={cls.variant_files__wrapper}>
-                    {
-                          course?.files.lecture
-                            ? course.files.lecture.map((file) => (
-                               <a href={file.file} target='_blank' rel='noreferrer'>
-                                  {file.title}
-                               </a>
-                            ))
-                            : null
-                      }
+              <div className={cls.variant_learning__wrapper}>
+                 <div className={cls.video__lessons}>
+                    <video
+                      src={course?.files.video[0].file}
+                      controls
+                    >
+                       <source src={course?.files.video[0].file} />
+                    </video>
+                    <Typography variant='h3' color='gray-primary'>
+                       {course?.files.video[0].title}
+                    </Typography>
                  </div>
               </div>
            </div>

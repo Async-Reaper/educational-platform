@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container } from 'shared/ui';
 import { Lesson } from 'entities';
-import { Player } from 'features';
 import { LessonsInner } from 'widgets/lessons-section/ui/wrappers/lessons-inner';
 import { lessons } from 'widgets/lessons-section/model/lessons';
+import { Player } from 'widgets/lessons-section/ui/elements/player';
 import {
   LessonsAdditional,
   LessonsList,

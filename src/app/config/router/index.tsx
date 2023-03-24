@@ -1,14 +1,12 @@
 import { type RouteProps } from 'react-router-dom';
 import {
-  CoursePage, CoursesPage, MainPage, PlatformPage, PrivateCabinet, SignupPage, UserPage,
+  CoursePage, MainPage, PlatformPage, PrivateCabinet, UserPage,
 } from 'pages';
 
 export enum AppRoutes {
   MAIN = 'MAIN',
   PLATFORM = 'PLATFORM',
-  SIGNUP = 'SIGNUP',
   PLATFORM_USER = 'PLATFORM_USER',
-  PLATFORM_COURSES_LIST = 'PLATFORM_COURSES_LIST',
   PLATFORM_COURSE = 'PLATFORM_COURSE',
   PRIVATE_CABINET = 'PRIVATE_CABINET',
 }
@@ -16,10 +14,8 @@ export enum AppRoutes {
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.PLATFORM]: '/platform',
-  [AppRoutes.SIGNUP]: '/signup',
   [AppRoutes.PRIVATE_CABINET]: '/private-cabinet',
   [AppRoutes.PLATFORM_USER]: '/user/:id',
-  [AppRoutes.PLATFORM_COURSES_LIST]: '/courses',
   [AppRoutes.PLATFORM_COURSE]: '/course',
 };
 
@@ -32,10 +28,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePath.PLATFORM,
     element: <PlatformPage />,
   },
-  [AppRoutes.SIGNUP]: {
-    path: RoutePath.SIGNUP,
-    element: <SignupPage />,
-  },
   [AppRoutes.PLATFORM_USER]: {
     path: RoutePath.PLATFORM_USER,
     element: <UserPage />,
@@ -43,10 +35,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PRIVATE_CABINET]: {
     path: RoutePath.PRIVATE_CABINET,
     element: <PrivateCabinet />,
-  },
-  [AppRoutes.PLATFORM_COURSES_LIST]: {
-    path: RoutePath.PLATFORM_COURSES_LIST,
-    element: <CoursesPage />,
   },
   [AppRoutes.PLATFORM_COURSE]: {
     path: RoutePath.PLATFORM_COURSE,

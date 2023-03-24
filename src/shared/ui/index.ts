@@ -12,5 +12,6 @@ export { Input } from './input';
 export { IconWrapper } from './icon-wrapper';
 export { ModalWindow } from './modal-window';
 export { TextArea } from './textarea';
+export { ErrorText } from './error-text';
 export { Toggle } from './toggle';
 export { Typography } from './typography';

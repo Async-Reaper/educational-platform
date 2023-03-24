@@ -3,7 +3,7 @@ import { ColoredIcon } from 'shared/libs/icons';
 import {
   Button, Container, ModalWindow, Typography,
 } from 'shared/ui';
-import { AuthPhone } from 'features';
+import { Auth } from 'features';
 import { useNavigate } from 'react-router-dom';
 import cls from './styles.module.scss';
 
@@ -35,7 +35,7 @@ const Component: FC<Props> = () => {
     localStorage.removeItem('avatar');
     localStorage.removeItem('firstname');
     localStorage.removeItem('surname');
-    localStorage.removeItem('phone');
+    localStorage.removeItem('email');
   };
   return (
      <div className={cls.header}>
@@ -66,11 +66,9 @@ const Component: FC<Props> = () => {
                           </>
                        )
                        : (
-                          <>
-                             <Button variant='xs' onClick={() => setIsVisibleLogin(!isVisibleLogin)}>
-                                Вход
-                             </Button>
-                          </>
+                          <Button variant='xs' onClick={() => setIsVisibleLogin(!isVisibleLogin)}>
+                             Вход
+                          </Button>
                        )
                   }
               </div>
@@ -79,7 +77,7 @@ const Component: FC<Props> = () => {
              isVisible={isVisibleLogin}
              setIsVisible={() => setIsVisibleLogin(!isVisibleLogin)}
            >
-              <AuthPhone setVisible={setIsVisibleLogin} />
+              <Auth setVisible={setIsVisibleLogin} />
            </ModalWindow>
         </Container>
      </div>

@@ -1,16 +1,27 @@
 import React from 'react';
 import { Sidebar } from 'widgets/sidebar';
 import { User } from 'entities';
-import { TheirCourses } from 'widgets';
-import { UploadCourse } from 'features';
+import { Auth, UploadCourse } from 'features';
+import cls from './styles.module.scss';
 
 const Component = () => (
    <div className='page_platform'>
       <Sidebar />
       <div className='page_platform__content'>
-         <User />
+         {localStorage.getItem('user')
+           ? (
+              <div>
+                 <User />
+                 <UploadCourse />
+              </div>
+           )
+           : (
+              <div className={cls.auth__wrapper}>
+                 <Auth />
+              </div>
+           )}
          {/* <TheirCourses /> */}
-         <UploadCourse />
+
       </div>
    </div>
 );

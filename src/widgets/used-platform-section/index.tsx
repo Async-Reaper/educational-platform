@@ -22,20 +22,20 @@ const Component = () => (
                <Title />
             </TitleWrapper>
             <UsedList>
-               <UsedItem>
-                  <Bookmark number='01' />
-                  <UsedTitleWrapper>
-                     <UsedTitle text='Регистрация в системе' />
-                  </UsedTitleWrapper>
-                  <DescriptionWrapper>
-                     <Typography variant='body' color='gray-primary'>
-                        Войдите на платформу, используя код из СМС.
-                        Процедура займёт не больше минуты.
-                     </Typography>
-                  </DescriptionWrapper>
-                  <SignupItemIcons />
-                  <RunSignup />
-               </UsedItem>
+               {/* <UsedItem> */}
+               {/*   <Bookmark number='01' /> */}
+               {/*   <UsedTitleWrapper> */}
+               {/*      <UsedTitle text='Регистрация в системе' /> */}
+               {/*   </UsedTitleWrapper> */}
+               {/*   <DescriptionWrapper> */}
+               {/*      <Typography variant='body' color='gray-primary'> */}
+               {/*         Войдите на платформу, используя код из СМС. */}
+               {/*         Процедура займёт не больше минуты. */}
+               {/*      </Typography> */}
+               {/*   </DescriptionWrapper> */}
+               {/*   <SignupItemIcons /> */}
+               {/*   <RunSignup /> */}
+               {/* </UsedItem> */}
                <UsedItem>
                   <Bookmark number='02' />
                   <UsedTitleWrapper>

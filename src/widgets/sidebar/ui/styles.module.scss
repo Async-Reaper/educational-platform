@@ -6,13 +6,14 @@
 
     .logo_wrapper {
         background: var(--color-white-bg);
-        padding: 30px;
+        padding: 30px 20px;
     }
 
     .links_wrapper {
-        background: var(--color-violet-primary);
+        //background: var(--color-violet-primary);
+        background: linear-gradient(179.99deg, #9B53C8 0.01%, rgba(155, 83, 200, 0.31) 99.99%);
         height: 100%;
-        padding: 45px 30px;
+        padding: 45px 20px;
         display: flex;
         flex-direction: column;
         grid-gap: 20px;

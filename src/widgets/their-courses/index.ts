@@ -1,1 +1,0 @@
-export { TheirCourses } from './ui';

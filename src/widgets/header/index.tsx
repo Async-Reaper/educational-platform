@@ -67,11 +67,6 @@ const Component: FC<Props> = () => {
                        )
                        : (
                           <>
-                             <Button variant='xs' border onClick={() => navigate('/signup')}>
-                                <Typography>
-                                   Регистрация
-                                </Typography>
-                             </Button>
                              <Button variant='xs' onClick={() => setIsVisibleLogin(!isVisibleLogin)}>
                                 Вход
                              </Button>

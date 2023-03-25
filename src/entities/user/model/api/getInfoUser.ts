@@ -1,8 +1,8 @@
 import { AppDispatch } from 'app/providers/store-provider';
 import axios from 'axios';
 import { API_URL, GET_INFO_USER } from 'shared/constants/baseURL';
-import { userActions } from '../model/slice';
-import { UserType } from '../model/types';
+import { userActions } from '../slice';
+import { UserType } from '../types';
 
 export const getInfoUser = (id: number) => async (dispatch: AppDispatch) => {
   try {

@@ -1,5 +1,4 @@
 import type webpack from 'webpack';
-import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
 import { type BuildOptions } from './types/config';
 import buildPlugins from './buildPlugins';
 import buildLoaders from './buildLoaders';

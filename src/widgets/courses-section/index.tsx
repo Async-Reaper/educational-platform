@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
   AppLink, Button, Container, ModalWindow, Typography,
 } from 'shared/ui';
-import { UploadCourse } from 'features';
+import { UploadResource } from 'features';
 import { SectionWrapper } from 'widgets/courses-section/ui/wrappers/section-wraperr';
 import {
   CoursesList,
@@ -70,7 +70,7 @@ const Component = () => {
            </UploadCourseWrapper>
         </Container>
         <ModalWindow isVisible={isVisible} setIsVisible={setIsVisible}>
-           <UploadCourse setIsVisible={setIsVisible} />
+           <UploadResource setIsVisible={setIsVisible} />
         </ModalWindow>
      </SectionWrapper>
   );

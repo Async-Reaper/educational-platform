@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Button, DragDrop, Input, Typography,
 } from 'shared/ui';
-import { uploadFiles } from '../api/uploadResource';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -39,14 +38,14 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
     filesCourse: '',
   };
 
-  const handleUpload = async () => {
-    await uploadFiles(nameResource, typeResource, filesCourse[0]);
-    if (!error) {
-      uploadResource(dataResource);
-      if (setIsVisible) {
-        setIsVisible(false);
-      }
-    }
+  const handleUpload = () => {
+    // await uploadFiles(nameResource, typeResource, filesCourse[0]);
+    // if (!error) {
+    //   uploadResource(dataResource);
+    //   if (setIsVisible) {
+    //     setIsVisible(false);
+    //   }
+    // }
   };
 
   return (
@@ -111,4 +110,4 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
   );
 };
 
-export const UploadCourse = React.memo(Component);
+export const UploadResource = React.memo(Component);

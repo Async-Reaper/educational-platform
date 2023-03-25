@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sidebar } from 'widgets/sidebar';
 import { User } from 'entities';
-import { Auth, UploadCourse } from 'features';
+import { Auth, UploadResource } from 'features';
 import cls from './styles.module.scss';
 
 const Component = () => (
@@ -12,7 +12,7 @@ const Component = () => (
            ? (
               <div>
                  <User />
-                 <UploadCourse />
+                 <UploadResource />
               </div>
            )
            : (

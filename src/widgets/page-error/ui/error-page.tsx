@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/libs/helpers/classNames';
 
 type ErrorPageProps = {
@@ -6,8 +5,6 @@ type ErrorPageProps = {
 };
 
 function Component({ className }: ErrorPageProps) {
-  const { t } = useTranslation();
-
   const reloadPage = () => {
     location.reload();
   };
@@ -16,9 +13,9 @@ function Component({ className }: ErrorPageProps) {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
      <div className={classNames('', [className], {})}>
-        <p>{t('Произошла непредвиденная ошибка')}</p>
+        <p>Произошла непредвиденная ошибка</p>
         <button onClick={reloadPage}>
-           {t('Обновить страницу')}
+           Обновить страницу
         </button>
      </div>
   );

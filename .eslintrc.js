@@ -9,7 +9,7 @@ module.exports = {
       ecmaVersion: 'latest',
       sourceType: 'module',
    },
-   plugins: ['react', 'i18next'],
+   plugins: ['react'],
    overrides: [
       {
          extends: ['airbnb-typescript'],
@@ -36,7 +36,6 @@ module.exports = {
       '@typescript-eslint/no-use-before-define': ['error'],
       '@typescript-eslint/no-unused-expressions': ['off'],
       '@typescript-eslint/indent': ['error', 3],
-      'i18next/no-literal-string': ['off', { markupOnly: true }],
       'import/extensions': 'off',
       'import/no-unresolved': ['off', { caseSensitive: false }],
       'import/prefer-default-export': 'off',

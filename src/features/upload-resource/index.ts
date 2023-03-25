@@ -1,0 +1,1 @@
+export { UploadResource } from './ui';

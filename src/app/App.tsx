@@ -1,10 +1,9 @@
 import './styles/index.scss';
 import { classNames } from 'shared/libs/helpers/classNames';
-import { AppRouter, MainLayout, StoreProvider } from 'app/providers';
+import { AppRouter, MainLayout } from 'app/providers';
 import { Suspense } from 'react';
 import { setupStore } from 'app/store';
 import { Provider } from 'react-redux';
-import '../../json-server/firebase';
 
 function App() {
   const store = setupStore();

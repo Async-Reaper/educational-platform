@@ -1,4 +1,5 @@
 import type webpack from 'webpack';
+import ImageMinimizerPlugin from 'image-minimizer-webpack-plugin';
 import { type BuildOptions } from './types/config';
 import buildPlugins from './buildPlugins';
 import buildLoaders from './buildLoaders';
@@ -21,6 +22,9 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       rules: buildLoaders(options),
     },
     resolve: buildResolvers(options),
+    performance: {
+      hints: false,
+    },
     devtool: isDev
       ? 'inline-source-map'
       : undefined,

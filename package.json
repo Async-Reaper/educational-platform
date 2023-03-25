@@ -1,11 +1,12 @@
 {
   "name": "Education",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Igor Popcov",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --env port=4200",
+    "start:prod": "webpack serve --env mode=production",
+    "start:dev": "webpack serve --env mode=development --env port=4200",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
@@ -22,6 +23,7 @@
     "@svgr/cli": "5.5.0",
     "@svgr/webpack": "6.5.1",
     "@types/jest": "^29.4.0",
+    "@types/lodash": "^4.14.191",
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

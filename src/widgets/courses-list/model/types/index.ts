@@ -1,8 +1,9 @@
-export type CourseType = {
+export type CoursesType = {
   id: number;
-  title: string;
+  name: string;
+  description: string;
 };
 
-export type CourseSchema = {
-  data: CourseType[];
+export type CoursesSchema = {
+  data?: CoursesType[] | null
 };

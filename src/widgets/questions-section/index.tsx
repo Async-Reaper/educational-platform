@@ -39,7 +39,7 @@ const Component = () => {
            </QuestionsInner>
         </Container>
         <ModalWindow isVisible={isVisible} setIsVisible={() => setIsVisible(!isVisible)}>
-           <AskQuestions />
+           <AskQuestions setVisible={setIsVisible} />
         </ModalWindow>
      </SectionWrapper>
   );

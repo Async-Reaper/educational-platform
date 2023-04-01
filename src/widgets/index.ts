@@ -1,4 +1,4 @@
-export { Header } from './header';
+export { Header } from './header/ui';
 export { TopSection } from './top-section';
 export { LessonsSection } from './lessons-section';
 export { QuestionsSection } from './questions-section';

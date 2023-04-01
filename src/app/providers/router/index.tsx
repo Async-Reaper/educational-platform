@@ -1,16 +1,17 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from 'app/config';
+import {
+  CoursePage, MainPage, PlatformPage, PrivateCabinet,
+} from 'pages';
 
 function Component() {
   return (
      <Suspense fallback={<>Loading...</>}>
         <Routes>
-           {
-          Object.values(routeConfig).map(({ path, element }) => (
-             <Route key={path} path={path} element={element} />
-  			 ))
-        }
+           <Route path='/' element={<MainPage />} />
+           <Route path='/platform' element={<PlatformPage />} />
+           <Route path='/private-cabinet' element={<PrivateCabinet />} />
+           <Route path='/course/:id' element={<CoursePage />} />
         </Routes>
      </Suspense>
   );

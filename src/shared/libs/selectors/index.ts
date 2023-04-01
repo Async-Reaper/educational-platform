@@ -1,0 +1,1 @@
+export { getStatusRequest } from './getStatusRequest';

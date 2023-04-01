@@ -1,0 +1,55 @@
+ <div className={cls.course__content}>
+               <div className={cls.themes__wrapper}>
+                  <div className={cls.themes__list}>
+                     {
+                         dataCourse?.data?.topics.map((topic) => (
+                            <div className={cls.theme__item}>
+                               <div className={cls.theme__title}>
+                                  <Typography variant='small' tag='span'>
+                                     {topic.name}
+                                  </Typography>
+                               </div>
+                               <div className={cls.theme_variants__list}>
+                                  <div
+                                    className={cls.theme_variant__item}
+                                  >
+                                     <Typography variant='small'>
+                                        Видео
+                                     </Typography>
+                                  </div>
+                                  <div
+                                    className={cls.theme_variant__item}
+                                  >
+                                     <Typography variant='small'>
+                                        Презентации
+                                     </Typography>
+                                  </div>
+                                  <div
+                                    className={cls.theme_variant__item}
+                                  >
+                                     <Typography variant='small'>
+                                        Лекции
+                                     </Typography>
+                                  </div>
+                                  <div
+                                    className={cls.theme_variant__item}
+                                  >
+                                     <Typography variant='small'>
+                                        Тренажеры
+                                     </Typography>
+                                  </div>
+                               </div>
+                            </div>
+                         ))
+                        }
+                  </div>
+               </div>
+
+               {
+                   (typeResource === 'video') && (
+                   <div>
+                      <div>video</div>
+                   </div>
+                   )
+                }
+             </div>

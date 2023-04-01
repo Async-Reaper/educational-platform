@@ -3,6 +3,18 @@
     text-align: center;
 }
 
+.lessons__wrapper {
+    text-align: center;
+
+    .lesson__wrapper {
+        margin: 0 0 50px;
+    }
+
+    .lesson_title__wrapper {
+        margin: 0 0 10px;
+    }
+}
+
 .course__content {
     display: flex;
     gap: 40px;
@@ -76,7 +88,7 @@
 
     .video__lessons {
         text-align: center;
-        margin: 0 0 50px;
+        margin: 0 0 20px;
 
         video {
             width: 600px;

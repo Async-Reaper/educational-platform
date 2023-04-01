@@ -1,147 +1,123 @@
 import React, { useEffect, useState } from 'react';
 import { Sidebar } from 'widgets/sidebar';
-import { Typography } from 'shared/ui';
-import { ColoredIcon } from 'shared/libs/icons';
-import { getCourse } from 'pages/course-page/api';
+import { Button, ModalWindow, Typography } from 'shared/ui';
+import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useParams } from 'react-router-dom';
+import { getCourse } from 'pages/course-page/model/api';
+import { getCourseSelector } from 'pages/course-page/model/selector';
+import { CreateTopic } from 'features';
 import cls from './styles.module.scss';
+import {CommentsList} from "widgets/comments-list";
 
-type CourseFile = {
-  title: string;
-  file: string;
-};
-
-type Course = {
-  title: string,
-  files: {
-    lecture: CourseFile[],
-    presentation: CourseFile[],
-    video: CourseFile[]
-  };
-};
-
-enum CourseEnum {
-  'Программирование' = 'programming',
-  'Веб-дизайн' = 'web_design',
-  'Средства защиты информации' = 'secure_information',
-  '3Д моделирование' = '3d_modeling',
-}
-type CourseType =
-    | 'programming'
-    | 'web_design'
-    | 'secure_information'
-    | '3d_modeling';
 const Component = () => {
-  let courseName: CourseType;
-  const [course, setCourse] = useState<Course>();
+  const dispatch = useAppDispatch();
+  const { id } = useParams();
+  const dataCourse = getCourseSelector();
 
-  if (JSON.parse(localStorage.getItem('course') || '') == 'Программирование') {
-    courseName = 'programming';
-  } else if (JSON.parse(localStorage.getItem('course') || '') == 'Веб-дизайн') {
-    courseName = 'web_design';
-  } else if (JSON.parse(localStorage.getItem('course') || '') == 'Средства защиты информации') {
-    courseName = 'secure_information';
-  } else if (JSON.parse(localStorage.getItem('course') || '') == '3Д моделирование') {
-    courseName = '3d_modeling';
-  }
-  const data = async () => {
-    const res = await getCourse(courseName);
-    setCourse(res);
-  };
+  const [isVisibleCreateTopic, setIsVisibleCreateTopic] = useState(false);
+  const [isVisibleAddLink, setIsVisibleAddLink] = useState(false);
 
   useEffect(() => {
-    data();
+    dispatch(getCourse(id));
   }, []);
-
-  const variants = [
-    {
-      name: 'Введение в программирование',
-    },
-    {
-      name: 'Переменные и блоки',
-    },
-      {
-          name: 'Переменные и блоки',
-      },
-      {
-          name: 'Переменные и блоки',
-      },
-      {
-          name: 'Переменные и блоки',
-      },
-      {
-          name: 'Переменные и блоки',
-      },
-      {
-          name: 'Переменные и блоки',
-      },
-  ];
 
   return (
      <div className='page_platform'>
         <Sidebar />
         <div className='page_platform__content'>
            <div className={cls.course__name}>
-              <Typography variant='h3' color='violet-primary'>
-                 {JSON.parse(localStorage.getItem('course') || '')}
+              <Typography variant='h2' color='violet-primary'>
+                 {dataCourse?.data?.name}
               </Typography>
            </div>
-           <div className={cls.course__content}>
-              <div className={cls.themes__wrapper}>
-                 <div className={cls.themes__list}>
-                    {
-                           variants.map((variant) => (
-                              <div className={cls.theme__item}>
-                                 <div className={cls.theme__title}>
-                                    <Typography variant='small' tag='span'>
-                                       {variant.name}
-                                    </Typography>
-                                 </div>
-                                 <div className={cls.theme_variants__list}>
-                                    <div className={cls.theme_variant__item}>
-                                       <Typography variant='small'>
-                                          Видео
-                                       </Typography>
-                                    </div>
-                                    <div className={cls.theme_variant__item}>
-                                       <Typography variant='small'>
-                                          Презентации
-                                       </Typography>
-                                    </div>
-                                    <div className={cls.theme_variant__item}>
-                                       <Typography variant='small'>
-                                          Лекции
-                                       </Typography>
-                                    </div>
-                                    <div className={cls.theme_variant__item}>
-                                       <Typography variant='small'>
-                                          Тренажеры
-                                       </Typography>
-                                    </div>
-                                 </div>
-                              </div>
+           <div className={cls.lessons__wrapper}>
+              {
+                    dataCourse?.data?.topics.map((topic) => (
+                       <div className={cls.lesson__wrapper}>
+                          <div className={cls.lesson_title__wrapper}>
+                             <Typography variant='h3' color='violet-primary'>
+                                {topic.name}
+                             </Typography>
+                          </div>
+                          <div>
+                             {topic.resources.map((resource) => (
+                                <div>
+                                   {resource.resource_type === 'video'
+                                            && (
+                                            <>
+                                               <div className={cls.variant_learning__wrapper}>
+                                                  <div className={cls.video__lessons}>
+                                                     {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                                                     <video
+                                                       src={`http://localhost:8000/${resource.file}`}
+                                                       controls
+                                                     >
+                                                        <source src={`http://localhost:8000/${resource.file}`} />
+                                                     </video>
+                                                  </div>
+                                               </div>
+                                               <CommentsList id={resource.id} />
+                                            </>
+                                            )}
+                                   { resource.resource_type === 'lecture'
+                                            && (
+                                            <>
+                                               <a
+                                                 href={`http://localhost:8000/${resource.file}`}
+                                                 target='_blank'
+                                                 download
+                                                 rel='noreferrer'
+                                               >
+                                                  {resource.resource_type }
+                                               </a>
+                                               <CommentsList id={resource.id} />
+                                            </>
+                                            )}
+                                   { resource.resource_type === 'presentation'
+                                            && (
+                                            <>
+                                               <a
+                                                 href={`http://localhost:8000/${resource.file}`}
+                                                 target='_blank'
+                                                 download
+                                                 rel='noreferrer'
+                                               >
+                                                  {resource.resource_type }
+                                               </a>
+                                               <CommentsList id={resource.id} />
+                                            </>
+                                            )}
 
-                           ))
-                       }
-
-                 </div>
-              </div>
-              <div className={cls.variant_learning__wrapper}>
-                 <div className={cls.video__lessons}>
-                    <video
-                      src={course?.files.video[0].file}
-                      controls
-                    >
-                       <source src={course?.files.video[0].file} />
-                    </video>
-                    <Typography variant='h3' color='gray-primary'>
-                       {course?.files.video[0].title}
-                    </Typography>
-                 </div>
-              </div>
+                                </div>
+                             ))}
+                             {topic.training_apparatuses.map((training_apparatus) => training_apparatus && (
+                             <a
+                               href={training_apparatus.link}
+                               target='_blank'
+                               rel='noreferrer'
+                             >
+                                {training_apparatus.description}
+                             </a>
+                             ))}
+                          </div>
+                       </div>
+                    ))
+                }
            </div>
+           {
+                localStorage.getItem('token')
+                && (
+                <Button onClick={() => setIsVisibleCreateTopic(true)}>
+                   Создать тему
+                </Button>
+                )
+            }
         </div>
+        <ModalWindow isVisible={isVisibleCreateTopic} setIsVisible={setIsVisibleCreateTopic}>
+           <CreateTopic id={id} setVisible={setIsVisibleCreateTopic} />
+        </ModalWindow>
      </div>
   );
 };
 
-export const CoursePage = Component;
+export const CoursePage = React.memo(Component);

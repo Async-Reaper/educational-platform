@@ -10,6 +10,9 @@ const userSlice = createSlice({
     getUserInfo(state, action: PayloadAction<UserType>) {
       state.data = action.payload;
     },
+    logout(state) {
+      state.data = null;
+    },
   },
 });
 

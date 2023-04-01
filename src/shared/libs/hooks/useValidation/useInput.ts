@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useValidation } from './useValidation';
 
 export const useInput = (state: string, validation: any) => {
@@ -6,7 +6,7 @@ export const useInput = (state: string, validation: any) => {
   const [isDirty, setIsDirty] = useState<boolean>(false);
   const valid = useValidation(value, validation);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     setValue(e.target.value);
   };
 

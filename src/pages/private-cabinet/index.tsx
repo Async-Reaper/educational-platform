@@ -1,14 +1,14 @@
 import React from 'react';
 import { Sidebar } from 'widgets/sidebar';
-import { User } from 'entities';
 import { Auth, UploadResource } from 'features';
+import { User } from 'entities';
 import cls from './styles.module.scss';
 
 const Component = () => (
    <div className='page_platform'>
       <Sidebar />
       <div className='page_platform__content'>
-         {localStorage.getItem('user')
+         {localStorage.getItem('token')
            ? (
               <div>
                  <User />
@@ -20,8 +20,6 @@ const Component = () => (
                  <Auth />
               </div>
            )}
-         {/* <TheirCourses /> */}
-
       </div>
    </div>
 );

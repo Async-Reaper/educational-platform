@@ -1,3 +1,4 @@
 export type UploadResource = {
-  id: number
+  resource_file: File;
+  resource_type: 'presentation ' | 'video' | 'lecture';
 };

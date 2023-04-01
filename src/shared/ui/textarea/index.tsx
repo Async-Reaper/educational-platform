@@ -7,7 +7,7 @@ interface Props {
   className?: string;
   value?: string | number;
   label?: ReactNode
-  onChange?: (arg: any) => void;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   autofocus?: boolean;
   readonly?: boolean;
 }
@@ -24,10 +24,6 @@ export const TextArea = memo((props: Props) => {
     ...otherProps
   } = props;
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    onChange?.(e.target.value);
-  };
-
   return (
      <div className={classNames(cls.textarea_wrapper, [className])}>
         {label && (
@@ -37,7 +33,7 @@ export const TextArea = memo((props: Props) => {
         )}
         <textarea
           value={value}
-          onChange={onChangeHandler}
+          onChange={onChange}
           placeholder={placeholder}
           className={cls.textarea}
           {...otherProps}

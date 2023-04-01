@@ -1,12 +1,11 @@
 import { type RouteProps } from 'react-router-dom';
 import {
-  CoursePage, MainPage, PlatformPage, PrivateCabinet, UserPage,
+  CoursePage, MainPage, PlatformPage, PrivateCabinet,
 } from 'pages';
 
 export enum AppRoutes {
   MAIN = 'MAIN',
   PLATFORM = 'PLATFORM',
-  PLATFORM_USER = 'PLATFORM_USER',
   PLATFORM_COURSE = 'PLATFORM_COURSE',
   PRIVATE_CABINET = 'PRIVATE_CABINET',
 }
@@ -15,8 +14,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.PLATFORM]: '/platform',
   [AppRoutes.PRIVATE_CABINET]: '/private-cabinet',
-  [AppRoutes.PLATFORM_USER]: '/user/:id',
-  [AppRoutes.PLATFORM_COURSE]: '/course',
+  [AppRoutes.PLATFORM_COURSE]: '/course/:id',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -27,10 +25,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PLATFORM]: {
     path: RoutePath.PLATFORM,
     element: <PlatformPage />,
-  },
-  [AppRoutes.PLATFORM_USER]: {
-    path: RoutePath.PLATFORM_USER,
-    element: <UserPage />,
   },
   [AppRoutes.PRIVATE_CABINET]: {
     path: RoutePath.PRIVATE_CABINET,

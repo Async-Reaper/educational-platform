@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import {
-  Button, ErrorText, Input, Typography,
-} from 'shared/ui';
+import React, { useEffect } from 'react';
+import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/libs/hooks/useValidation/useInput';
 import { AuthData } from 'features/auth/model/types';
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
 import { auth } from 'features/auth/model/api';
+import { getStatusRequest } from 'shared/libs/selectors';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -13,8 +12,8 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible }) => {
-  const [res, setRes] = useState<any>({});
   const dispatch = useAppDispatch();
+  const { success, error } = getStatusRequest();
   const email = useInput('', { isEmpty: true, emailValid: true });
   const password = useInput('', { isEmpty: true });
 
@@ -23,25 +22,23 @@ const Component: React.FC<Props> = ({ setVisible }) => {
     password: password.value,
   };
 
-  const handleAuth = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
-    // e.preventDefault();
+  const handleAuth = () => {
     email.onBlur();
     password.onBlur();
     if (
       !email.emailValid
-          && !password.passwordValid
+          && !email.isEmpty
           && !password.isEmpty
     ) {
       dispatch(auth(authData));
     }
-    if (res.message !== undefined) {
-      if (setVisible) {
-        setVisible(false);
-      }
-    } else if (setVisible) {
-      setVisible(true);
-    }
   };
+
+  useEffect(() => {
+    if (setVisible) {
+      success && setVisible(false);
+    }
+  }, [success]);
 
   return (
      <div className={cls.auth__wrapper}>
@@ -66,20 +63,15 @@ const Component: React.FC<Props> = ({ setVisible }) => {
            {(password.isDirty && password.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
         </div>
 
-        <Button full variant='xs' background='violet-primary' onClick={(e) => handleAuth(e)}>
+        <Button full variant='xs' background='violet-primary' onClick={handleAuth}>
            Вход
         </Button>
-
         {
-        res.message !== undefined
-        && (
-        <div className={cls.auth__error}>
-           <Typography>
-              {res.message}
-           </Typography>
-        </div>
-        )
-    }
+             error
+                 && (
+                 <ErrorText>Неправильный логин или пароль</ErrorText>
+                 )
+         }
      </div>
   );
 };

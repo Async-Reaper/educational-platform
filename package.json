@@ -4,8 +4,9 @@
   "main": "index.js",
   "author": "Igor Popcov",
   "license": "MIT",
+  "homepage":"./build",
   "scripts": {
-    "start:prod": "webpack serve --env mode=production",
+    "start:prod": "webpack serve --env mode=production --host 0.0.0.0",
     "start:dev": "webpack serve --env mode=development --env port=4200",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -37,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.0.0",
     "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "eslint": "8.2.0",
     "eslint-config-airbnb": "^19.0.4",

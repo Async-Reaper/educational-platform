@@ -13,6 +13,7 @@ interface Props {
   acceptType?: any;
   onChange: any
   filesInfo: any[];
+  name?: string;
 }
 
 const Component = (props: Props) => {
@@ -22,6 +23,7 @@ const Component = (props: Props) => {
     acceptType = fileTypes,
     onChange,
     filesInfo,
+    name,
   } = props;
 
   const [drop, setDrop] = useState(false);
@@ -63,6 +65,7 @@ const Component = (props: Props) => {
               </div>
               <output id='#list' className={cls.list} />
               <input
+                name={name}
                 type='file'
                 multiple={multiple}
                 onChange={onChange}

@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:8000/';
+export const API_URL = 'https://oo0.ru/';
 
 export const LOGIN_ENDPOINT = '/api/users/user/login/';
 
@@ -16,7 +16,7 @@ export const CHANGE_EMAIL_ENDPOINT = '/api/users/user/email/';
 
 export const CHANGE_PASSWORD_ENDPOINT = '/api/users/user/password/';
 
-export const UPLOAD_RESOURCE_ENDPOINT = '/api/courses/course/topic/1/resource/';
+export const UPLOAD_RESOURCE_ENDPOINT = '/api/courses/course/topic/';
 
 export const CREATE_TOPIC_ENDPOINT = 'api/courses/course/';
 
@@ -26,4 +26,4 @@ export const GET_ALL_COMMENTS_ENDPOINT = '/api/feedback/resource/';
 
 export const ADD_COMMENT_ENDPOINT = '/api/feedback/resource/';
 
-export const ADD_ANSWER_ENDPOINT = '/api/feedback/resource/comment/';
+export const ADD_ANSWER_ENDPOINT = 'api/feedback/resource/comment/';

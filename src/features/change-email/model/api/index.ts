@@ -2,6 +2,7 @@ import { API_URL, CHANGE_EMAIL_ENDPOINT } from 'shared/libs/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { ChangeEmailType } from 'features/change-email/model/types';
+import { getInfoUser } from 'entities/user';
 
 export const changeEmail = (data: ChangeEmailType) => async (dispatch: AppDispatch) => {
   try {
@@ -14,7 +15,7 @@ export const changeEmail = (data: ChangeEmailType) => async (dispatch: AppDispat
       },
     });
     const resultResponse = response.data;
-
+    dispatch(getInfoUser());
     dispatch(requestActions.successRequest());
   } catch (e) {
     dispatch(requestActions.errorRequest());

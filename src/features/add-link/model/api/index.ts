@@ -15,6 +15,6 @@ export const addLink = (data: AddLinkType, id: number) => async (dispatch: AppDi
 
     dispatch(requestActions.successRequest());
   } catch (e) {
-    console.log(e);
+    dispatch(requestActions.errorRequest());
   }
 };

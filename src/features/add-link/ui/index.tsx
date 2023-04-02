@@ -60,7 +60,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
            {(description.isDirty && description.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
         </div>
         <Button full variant='xs' background='violet-primary' onClick={handleChangeEmail}>
-           Создать тему
+           Добавить тренажер
         </Button>
         {
                 error

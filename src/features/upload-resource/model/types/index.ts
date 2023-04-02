@@ -1,4 +1,4 @@
-export type UploadResource = {
-  resource_file: File;
-  resource_type: 'presentation ' | 'video' | 'lecture';
+export type UploadResourceType = {
+  resource_file: File | null;
+  resource_type: 'presentation ' | 'video' | 'lecture' | any;
 };

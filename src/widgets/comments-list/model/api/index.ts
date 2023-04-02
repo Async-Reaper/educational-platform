@@ -1,16 +1,14 @@
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { API_URL, GET_ALL_COMMENTS_ENDPOINT } from 'shared/libs/constants/baseURL';
-import { CommentType } from 'widgets/comments-list/model/types';
-import { commentsActions } from 'widgets/comments-list/model/slice';
 
-export const getAllComments = (id: any) => async (dispatch: AppDispatch) => {
+export const getAllComments = (idRes: any, setRes: any) => async (disp: AppDispatch) => {
   try {
-    dispatch(requestActions.fetchRequest());
-    const response = await axios.get<CommentType[]>(`${API_URL + GET_ALL_COMMENTS_ENDPOINT + id}/comments`);
+    disp(requestActions.fetchRequest());
+    const response = await axios.get(`${API_URL + GET_ALL_COMMENTS_ENDPOINT + idRes}/comments`);
     const resultResponse = response.data;
-    dispatch(commentsActions.getAllComments(resultResponse));
-    dispatch(requestActions.successRequest());
+    setRes(resultResponse);
+    disp(requestActions.successRequest());
   } catch (e) {
     console.log(e);
   }

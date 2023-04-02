@@ -1,5 +1,52 @@
-.courses__wrapper {
+.comments__wrapper {
+    text-align: left;
+
+    .comments__title {
+        margin: 0 0 20px;
+    }
+
+    .comment {
+        margin: 0 0 20px;
+    }
+
+    .comment_item__wrapper {
+        margin: 0 0 15px;
+    }
+
+    .comment__header {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 10px;
+    }
+
+    .answer__btn {
+        width: max-content;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            color: var(--color-violet-primary);
+        }
+    }
+
+    .answers__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .answer__title {
+        margin: 0 0 10px;
+    }
+
     .answer__wrapper {
-        background: var(--color-black-bg);
+        padding: 0 0 0 30px;
+        border-radius: 7px;
+
+        .answer__header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     }
 }

@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import {
-  Button, DragDrop, Input, Typography,
+  Button, DragDrop, ErrorText, Typography,
 } from 'shared/ui';
+import { UploadResourceType } from 'features/upload-resource/model/types';
+import { uploadResourceApi } from 'features/upload-resource/model/api';
+import { getStatusRequest } from 'shared/libs/selectors';
+import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
 import cls from './styles.module.scss';
 
 interface Props {
+  id: number;
   setIsVisible?: (arg: boolean) => void
 }
 
-const Component: React.FC<Props> = ({ setIsVisible }) => {
+const Component: React.FC<Props> = ({ setIsVisible, id }) => {
+  const { success, error } = getStatusRequest();
+  const dispatch = useAppDispatch();
   const [filesCourse, setFilesCourse] = useState<any>([]);
-  const [error, setError] = useState<boolean>();
-  const [titleResource, setTitleResource] = useState<string>('');
-  const [nameResource, setNameResource] = useState<string>('');
-  const [typeResource, setTypeResource] = useState<string>('');
+  const [typeResource, setTypeResource] = useState<'presentation ' | 'video' | 'lecture' | any>('video');
+
+  const [form, setForm] = useState();
 
   // eslint-disable-next-line @typescript-eslint/no-shadow
   const uploadResource = (evt: any) => {
@@ -31,60 +37,34 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
     }
   };
 
-  const dataResource = {
-    titleResource,
-    nameResource,
-    typeResource,
-    filesCourse: '',
-  };
+  useEffect(() => {
+    if (setIsVisible) {
+      success && setIsVisible(false);
+    }
+  }, [success]);
+
+
+  const dataResource = new FormData();
 
   const handleUpload = () => {
-    // await uploadFiles(nameResource, typeResource, filesCourse[0]);
-    // if (!error) {
-    //   uploadResource(dataResource);
-    //   if (setIsVisible) {
-    //     setIsVisible(false);
-    //   }
-    // }
+    dataResource.append('resource_type', typeResource);
+    dataResource.append('resource_file', filesCourse[0]);
+
+    if (filesCourse.length !== 0) {
+      dispatch(uploadResourceApi(dataResource, id));
+    }
   };
 
   return (
      <div className={cls.upload_course__wrapper}>
-        <Input
-          value={titleResource}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitleResource(e.target.value)}
-          placeholder='Название вашего ресурса'
-        />
         <div className={cls.select__wrapper}>
            <select
+             name='resource_type'
              className={cls.select}
-             onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setNameResource(e.target.value)}
-           >
-              <option className={cls.select_option} disabled defaultValue='course' selected>
-                 Курс куда вы хотите загрузить ресурс
-              </option>
-              <option className={cls.select_option} value='programming'>
-                 Программирование
-              </option>
-              <option className={cls.select_option} value='web-design'>
-                 Веб-дизайн
-              </option>
-              <option className={cls.select_option} value='secure-information'>
-                 Средства защиты информации
-              </option>
-              <option className={cls.select_option} value='3d-modeling'>
-                 3Д моделирование
-              </option>
-           </select>
-        </div>
-        <div className={cls.select__wrapper}>
-           <select
-             className={cls.select}
+             defaultValue='video'
+             value={typeResource}
              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTypeResource(e.target.value)}
            >
-              <option className={cls.select_option} disabled defaultValue='course' selected>
-                 Вид вашего ресурса
-              </option>
               <option className={cls.select_option} value='presentation'>
                  Презентация
               </option>
@@ -97,15 +77,25 @@ const Component: React.FC<Props> = ({ setIsVisible }) => {
            </select>
         </div>
         <DragDrop
+          name='resource_file'
           onChange={uploadResource}
           filesInfo={filesCourse}
           multiple={false}
           labelText='Загрузите ресурс'
-          acceptType='.pdf, .mp4'
+          acceptType={typeResource === 'video'
+            ? '.mp4'
+            : '.pdf'}
         />
-        <Button onClick={handleUpload} disabled={error} variant='xs' background='violet-primary'>
+        {(filesCourse.length === 0) && <ErrorText>Поле не должно быть пустым</ErrorText>}
+        <Button onClick={handleUpload} variant='xs' background='violet-primary'>
            <Typography variant='h3'>Загрузить ресурс</Typography>
         </Button>
+        {
+             error
+             && (
+             <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+             )
+         }
      </div>
   );
 };

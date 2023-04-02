@@ -11,4 +11,4 @@ const Component: FC<Props> = ({ children }) => (
    </div>
 );
 
-export const CoursesList = React.memo(Component);
+export const CoursesListWrapper = React.memo(Component);

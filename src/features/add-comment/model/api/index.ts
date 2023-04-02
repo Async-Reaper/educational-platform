@@ -6,7 +6,7 @@ import { AddCommentType } from 'features/add-comment/model/types';
 export const addComment = (data: AddCommentType, id: number) => async (dispatch: AppDispatch) => {
   try {
     dispatch(requestActions.fetchRequest());
-    const response = await axios.post(`${API_URL + ADD_COMMENT_ENDPOINT + id}/comment//`, data);
+    const response = await axios.post(`${API_URL + ADD_COMMENT_ENDPOINT + id}/comment/`, data);
 
     dispatch(requestActions.successRequest());
   } catch (e) {

@@ -1,4 +1,4 @@
-export { CoursesList } from './wrappers/courses-list';
+export { CoursesListWrapper } from './wrappers/courses-list';
 export { SectionWrapper } from './wrappers/section-wraperr';
 export { CoursesWrapper } from './wrappers/courses-wrapper';
 export { UploadCourseWrapper } from './wrappers/upload-course-wrapper';

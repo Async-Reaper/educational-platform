@@ -9,6 +9,7 @@ import dateFormat from 'dateformat';
 import { ChangeEmail, ChangePassword } from 'features';
 import cls from './styles.module.scss';
 import ava from '../img/ava.png';
+import {API_URL} from "shared/libs/constants/baseURL";
 
 const Component = () => {
   const data = getInfoUserSelector();
@@ -26,7 +27,7 @@ const Component = () => {
   return (
      <div className={cls.user_info}>
         <div className={cls.top_info_part}>
-           <Avatar src={data?.icon || ava} variant='xl' />
+           <Avatar src={`${API_URL}${data?.icon}` || ava} variant='xl' />
            <Typography variant='h1' color='violet-primary'>
               #
               {data?.id}

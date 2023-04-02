@@ -2,6 +2,7 @@ import { CreateTopicType } from 'features/create-topic/model/types';
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { API_URL, CREATE_TOPIC_ENDPOINT } from 'shared/libs/constants/baseURL';
+import { getCourse } from 'pages/course-page/model/api';
 
 export const createTopic = (data: CreateTopicType, id: any) => async (dispatch: AppDispatch) => {
   try {
@@ -12,7 +13,7 @@ export const createTopic = (data: CreateTopicType, id: any) => async (dispatch: 
         Signature: JSON.parse(localStorage.getItem('signature') || ''),
       },
     });
-
+    dispatch(getCourse(id));
     dispatch(requestActions.successRequest());
   } catch (e) {
     console.log(e);

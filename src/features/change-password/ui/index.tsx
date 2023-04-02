@@ -78,7 +78,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
         {
               error
               && (
-              <ErrorText>Неправильный логин или пароль</ErrorText>
+              <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
               )
           }
      </div>

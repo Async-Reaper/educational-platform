@@ -23,7 +23,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
     person_name: personName.value,
   };
 
-  const handleAuth = () => {
+  const handleAddComment = () => {
     text.onBlur();
     personName.onBlur();
     if (
@@ -61,8 +61,8 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
            />
            {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
         </div>
-        <Button full variant='xs' background='violet-primary' onClick={handleAuth}>
-           Вход
+        <Button full variant='xs' background='violet-primary' onClick={handleAddComment}>
+           Оставить комментарий
         </Button>
         {
              error

@@ -1,5 +1,3 @@
-import { UserType } from 'entities/user';
-
 export type CommentType = {
   id: number,
   answers: Answer[],

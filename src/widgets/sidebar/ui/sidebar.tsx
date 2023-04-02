@@ -17,12 +17,12 @@ const Component = () => (
             </AppLink>
          </div>
          <div className={cls.home_link__wrapper}>
-            <AppLink to='/'>
+            <AppLink to='/platform'>
                <Icon name='home' color='gray-secondary' size={55} />
             </AppLink>
          </div>
          <div className={cls.message_link__wrapper}>
-            <AppLink to='/platform'>
+            <AppLink to='/'>
                <Icon name='back' color='gray-secondary' size={55} />
             </AppLink>
          </div>

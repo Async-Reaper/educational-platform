@@ -7,14 +7,14 @@ interface Props {
 }
 const Component: FC<Props> = ({ children }) => (
    <div className={cls.black__gradient}>
-      <div className={cls.wave__section}>
-         <ColoredIcon
-           className={cls.section__wave}
-           name='section_wave'
-           width={window.innerWidth}
-           height={100}
-         />
-      </div>
+      {/*<div className={cls.wave__section}>*/}
+      {/*   <ColoredIcon*/}
+      {/*     className={cls.section__wave}*/}
+      {/*     name='section_wave'*/}
+      {/*     width={window.innerWidth}*/}
+      {/*     height={100}*/}
+      {/*   />*/}
+      {/*</div>*/}
       {children}
    </div>
 );

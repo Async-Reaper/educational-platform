@@ -1,23 +1,14 @@
-import { Course } from 'entities/course';
 import React, { useState } from 'react';
-import {
-  AppLink, Button, Container, ModalWindow, Typography,
-} from 'shared/ui';
-import { UploadResource } from 'features';
+import { Container } from 'shared/ui';
 import { SectionWrapper } from 'widgets/courses-section/ui/wrappers/section-wraperr';
 import {
-  CoursesList,
-  CoursesWrapper,
-  SectionTitle,
-  UploadButtonWrapper,
-  UploadCourseWrapper,
-  UploadDescription,
+  CoursesListWrapper, CoursesWrapper, SectionTitle,
 } from 'widgets/courses-section/ui';
-import { Icon } from 'shared/libs/icons';
 import programming from './img/programming.png';
 import webDesign from './img/web-design.png';
 import secureInformation from './img/secure-information.png';
 import Modeling from './img/3d-modeling.png';
+import {CoursesList} from "widgets/courses-list";
 
 const Component = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,29 +40,11 @@ const Component = () => {
         <Container>
            <CoursesWrapper>
               <SectionTitle />
-              <CoursesList>
-                 {
-                      coursesData.map((course) => (
-                         <AppLink to='/course'>
-                            <Course name={course.title} src={course.src} />
-                         </AppLink>
-                      ))
-                  }
-              </CoursesList>
+              {/*<CoursesListWrapper>*/}
+                 <CoursesList />
+              {/*</CoursesListWrapper>*/}
            </CoursesWrapper>
-           <UploadCourseWrapper>
-              <UploadDescription />
-              <UploadButtonWrapper>
-                 <Button variant='m' background='white-bg' onClick={() => setIsVisible(true)}>
-                    <Typography tag='strong' variant='h3'>Загрузить ресурс</Typography>
-                    <Icon name='lightness' size={36} />
-                 </Button>
-              </UploadButtonWrapper>
-           </UploadCourseWrapper>
         </Container>
-        <ModalWindow isVisible={isVisible} setIsVisible={setIsVisible}>
-           <UploadResource setIsVisible={setIsVisible} />
-        </ModalWindow>
      </SectionWrapper>
   );
 };

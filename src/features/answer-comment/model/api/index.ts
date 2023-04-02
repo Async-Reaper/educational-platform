@@ -2,7 +2,6 @@ import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { ADD_ANSWER_ENDPOINT, API_URL } from 'shared/libs/constants/baseURL';
 import { AnswerCommentType } from 'features/answer-comment/model/types';
-import { getAllComments } from 'widgets/comments-list/model/api';
 
 export const answerComment = (data: AnswerCommentType, id: number) => async (dispatch: AppDispatch) => {
   try {
@@ -14,6 +13,7 @@ export const answerComment = (data: AnswerCommentType, id: number) => async (dis
       },
     });
     dispatch(requestActions.successRequest());
+    window.location.reload();
   } catch (e) {
     dispatch(requestActions.errorRequest());
   }

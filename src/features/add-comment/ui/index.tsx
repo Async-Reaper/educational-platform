@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/libs/hooks/useValidation/useInput';
 import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { AddCommentType } from 'features/add-comment/model/types';
 import { addComment } from 'features/add-comment/model/api';
+import { CommentType } from 'widgets/comments-list';
+import { getAllComments } from 'widgets/comments-list/model/api';
 import cls from './styles.module.scss';
 
 interface Props {

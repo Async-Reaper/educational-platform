@@ -7,7 +7,7 @@ export const addComment = (data: AddCommentType, id: number) => async (dispatch:
   try {
     dispatch(requestActions.fetchRequest());
     const response = await axios.post(`${API_URL + ADD_COMMENT_ENDPOINT + id}/comment/`, data);
-
+    window.location.reload();
     dispatch(requestActions.successRequest());
   } catch (e) {
     console.log(e);

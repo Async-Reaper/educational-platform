@@ -6,6 +6,7 @@ import { AnswerComment } from 'features/answer-comment/ui';
 import dateFormat from 'dateformat';
 import { CommentType } from 'widgets/comments-list';
 import { getAllComments } from 'widgets/comments-list/model/api';
+import { API_URL } from 'shared/libs/constants/baseURL';
 import cls from './styles.module.scss';
 import ava from '../../../entities/user/img/ava.png';
 
@@ -67,7 +68,7 @@ const Component: React.FC<Props> = ({ id }) => {
                  {comment.answers.map((answer) => (
                     <div className={cls.answer__wrapper}>
                        <div className={cls.answer__header}>
-                          <Avatar variant='xs' src={answer.teacher.icon || ava} />
+                          <Avatar variant='xs' src={`${API_URL}${answer.teacher.icon}` || ava} />
                           <div>
                              <Typography color='black-bg' tag='span'>{answer.teacher.full_name}</Typography>
                              <Typography color='black-light'>{answer.text}</Typography>

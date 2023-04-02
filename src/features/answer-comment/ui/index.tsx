@@ -18,7 +18,6 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   const dispatch = useAppDispatch();
   const { success, error } = getStatusRequest();
   const text = useInput('', { isEmpty: true });
-
   const answerCommentData: AnswerCommentType = {
     text: text.value,
   };

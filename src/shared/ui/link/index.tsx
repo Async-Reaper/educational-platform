@@ -3,11 +3,10 @@ import React, { type FC } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
-export enum Variants {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  RED = 'red',
-}
+export type Variants =
+  | 'primary'
+  | 'secondary'
+  | 'red'
 
 type Props = {
   className?: string;
@@ -20,7 +19,7 @@ const Component: FC<Props> = (props) => {
     to,
     className = '',
     children,
-    variant = Variants.PRIMARY,
+    variant = 'primary',
     active = false,
     ...otherProps
   } = props;
@@ -31,7 +30,7 @@ const Component: FC<Props> = (props) => {
        className={classNames(
          cls.app_link,
          [className],
-         { [cls[variant]]: true, [cls.active]: active },
+         { [cls[variant]]: variant, [cls.active]: active },
        )}
        {...otherProps}
      >

@@ -1,5 +1,6 @@
 .comments__wrapper {
     text-align: left;
+    border-radius: 5px;
 
     .comments__title {
         margin: 0 0 20px;
@@ -16,13 +17,13 @@
     .comment__header {
         display: flex;
         flex-direction: column;
-        margin: 0 0 10px;
     }
 
     .answer__btn {
         width: max-content;
         cursor: pointer;
         transition: all 0.3s;
+        color: var(--color-black-bg);
 
         &:hover {
             color: var(--color-violet-primary);
@@ -40,12 +41,12 @@
     }
 
     .answer__wrapper {
-        padding: 0 0 0 30px;
+        padding: 0 0 0 20px;
         border-radius: 7px;
 
         .answer__header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
         }
     }

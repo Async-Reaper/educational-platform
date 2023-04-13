@@ -3,9 +3,9 @@ import { getStatusRequest } from 'shared/libs/selectors';
 import {
   Button, ErrorText, Input, Typography,
 } from 'shared/ui';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
+import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangeEmailType } from 'features/change-email/model/types';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { changeEmail } from 'features/change-email/model/api';
 import cls from './styles.module.scss';
 

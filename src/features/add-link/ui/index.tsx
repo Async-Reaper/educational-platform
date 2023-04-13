@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import cls from 'features/change-email/ui/styles.module.scss';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
+import { useInput } from 'shared/hooks/useValidation/useInput';
 import { addLink } from 'features/add-link/model/api';
 import { AddLinkType } from 'features/add-link/model/types';
 
 interface Props {
   setVisible?: (arg: boolean) => void;
-  id: number
+  id: number | undefined
 }
 
 const Component: React.FC<Props> = ({ setVisible, id }) => {

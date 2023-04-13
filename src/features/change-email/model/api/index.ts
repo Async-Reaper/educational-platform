@@ -1,4 +1,4 @@
-import { API_URL, CHANGE_EMAIL_ENDPOINT } from 'shared/libs/constants/baseURL';
+import { API_URL, CHANGE_EMAIL_ENDPOINT } from 'shared/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { ChangeEmailType } from 'features/change-email/model/types';

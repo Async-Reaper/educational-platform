@@ -1,2 +1,2 @@
 export { CoursesList } from './ui';
-export { CoursesType, CoursesSchema } from './model/types';
+export type { CoursesType, CoursesSchema } from './model/types';

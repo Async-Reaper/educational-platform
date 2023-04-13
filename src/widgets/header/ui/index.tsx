@@ -4,7 +4,7 @@ import {
   Button, Container, ModalWindow, Typography,
 } from 'shared/ui';
 import { Auth, Logout } from 'features';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getInfoUser, getInfoUserSelector } from 'entities/user';
 import { getStatusRequest } from 'shared/libs/selectors';
 import cls from './styles.module.scss';
@@ -39,7 +39,7 @@ const Component: FC<Props> = () => {
                        ? (
                           <>
                              <Typography>
-                                {userData?.email}
+                                {userData?.data?.email}
                              </Typography>
                              <Logout />
                           </>

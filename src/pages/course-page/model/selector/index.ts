@@ -1,3 +1,4 @@
-import { useAppSelector } from 'shared/libs/hooks/useAppSelector';
+import { useAppSelector } from 'shared/hooks/useAppSelector';
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 export const getCourseSelector = () => useAppSelector((state) => state.course);

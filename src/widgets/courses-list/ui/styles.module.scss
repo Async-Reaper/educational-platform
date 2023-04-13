@@ -5,6 +5,10 @@
     gap: 35px;
     grid-auto-flow: row;
 
+    .course__link {
+        justify-self: center;
+    }
+
     .course__wrapper {
         padding: 0 15px;
         height: 150px;

@@ -8,7 +8,7 @@ interface Props {
 
 const Component: FC<Props> = ({ children }) => (
    <div className={cls.error_text__wrapper}>
-      <Typography variant='body' tag='span'>
+      <Typography variant='small' tag='span'>
          *
          {children}
       </Typography>

@@ -14,12 +14,12 @@ body {
 }
 
 .page_platform {
-    background: rgba(155, 83, 200, 0.14);
+    background: var(--color-white-bg);
     min-height: 100vh;
 }
 
 .page_platform__content {
     position: relative;
     padding: 20px;
-    margin: 0 0 0 120px;
+    margin: 0 0 0 140px;
 }

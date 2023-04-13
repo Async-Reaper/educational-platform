@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { AppLink, Typography } from 'shared/ui';
 import { getAllCoursesSelector } from 'widgets/courses-list/model/selector/getAllCoursesSelector';
 import { CoursesType } from 'widgets/courses-list/model/types';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getAllCourse } from 'widgets/courses-list/model/api/getAllCourse';
 import cls from './styles.module.scss';
 
@@ -17,7 +17,7 @@ const Component = () => {
   return (
      <div className={cls.courses__wrapper}>
         {coursesList.data?.map((course: CoursesType) => (
-           <AppLink to={`/course/${course.id}`}>
+           <AppLink to={`/course/${course.id}`} className={cls.course__link}>
               <div aria-label={course.id.toString()} className={cls.course__wrapper}>
                  <div
                    className='course__title'

@@ -1,4 +1,3 @@
-export { Accordion } from './accordion';
 export { AppLink } from './link';
 export { Avatar } from './avatar';
 export { BlackBG } from './black-bg';
@@ -15,3 +14,6 @@ export { TextArea } from './textarea';
 export { ErrorText } from './error-text';
 export { Toggle } from './toggle';
 export { Typography } from './typography';
+export { Loader } from './loader';
+export { Toolbar } from './toolbar';
+export { LinearProgress } from './linear-progress';

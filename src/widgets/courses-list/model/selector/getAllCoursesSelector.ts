@@ -1,3 +1,3 @@
-import { useAppSelector } from 'shared/libs/hooks/useAppSelector';
+import { useAppSelector } from 'shared/hooks/useAppSelector';
 
 export const getAllCoursesSelector = () => useAppSelector((state) => state.courses);

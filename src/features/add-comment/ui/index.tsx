@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useInput } from 'shared/hooks/useValidation/useInput';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { AddCommentType } from 'features/add-comment/model/types';
 import { addComment } from 'features/add-comment/model/api';
-import { CommentType } from 'widgets/comments-list';
-import { getAllComments } from 'widgets/comments-list/model/api';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -40,7 +38,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
     if (setVisible) {
       success && setVisible(false);
     }
-  }, [success]);
+  }, [setVisible, success]);
 
   return (
      <div className={cls.auth__wrapper}>

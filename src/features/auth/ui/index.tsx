@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
+import { useInput } from 'shared/hooks/useValidation/useInput';
 import { AuthData } from 'features/auth/model/types';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { auth } from 'features/auth/model/api';
 import { getStatusRequest } from 'shared/libs/selectors';
 import cls from './styles.module.scss';

@@ -1,23 +1,24 @@
 .avatar {
     display: flex;
     flex-direction: column;
-    border-radius: var(--border-radius-md);
     width: fit-content;
     text-align: center;
     grid-gap: 5px;
     position: relative;
     background: var(--color-white-bg);
+    border-radius: var(--border-radius-md);
+    z-index: 999;
+
+    &.rounded {
+        border-radius: 50px;
+    }
 
     .avatarImage {
         aspect-ratio: 1;
         width: 100%;
         height: auto;
         object-fit: contain;
-        border-radius: var(--border-radius-md);
-
-        &.rounded {
-            border-radius: var(--border-radius-rounded);
-        }
+        border-radius: inherit;
     }
 
     &.variant {

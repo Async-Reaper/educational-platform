@@ -5,9 +5,9 @@ interface Props {
   children: ReactNode;
 }
 const Component: FC<Props> = ({ children }) => (
-   <div className={cls.section__wrapper}>
+   <section className={cls.section__wrapper}>
       {children}
-   </div>
+   </section>
 );
 
 export const SectionWrapper = React.memo(Component);

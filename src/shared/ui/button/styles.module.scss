@@ -5,6 +5,7 @@
 
     border-radius: var(--border-radius-over);
     cursor: pointer;
+    position: relative;
     z-index: 999999;
     width: max-content;
     transition: all 0.3s;

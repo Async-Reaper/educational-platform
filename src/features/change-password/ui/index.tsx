@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
+import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangePasswordType } from 'features/change-password/model/types';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { changePassword } from 'features/change-password/model/api';
 import cls from './styles.module.scss';
 
@@ -37,8 +37,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
     newPassword.onBlur();
     repeatNewPassword.onBlur();
     if (
-      !newPassword.emailValid
-            && !newPassword.isEmpty
+      !newPassword.isEmpty
             && !repeatNewPassword.isEmpty
             && !password.isEmpty
     ) {

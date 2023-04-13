@@ -1,3 +1,4 @@
-import { useAppSelector } from 'shared/libs/hooks/useAppSelector';
+import { useAppSelector } from 'shared/hooks/useAppSelector';
 
-export const getInfoUserSelector = () => useAppSelector((state) => state.user.data);
+// eslint-disable-next-line react-hooks/rules-of-hooks
+export const getInfoUserSelector = () => useAppSelector((state) => state.user);

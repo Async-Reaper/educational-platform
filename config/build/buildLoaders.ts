@@ -1,71 +1,45 @@
 import webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { type BuildOptions } from './types/config';
+import { buildCssLoader } from './loaders/buildCssLoader';
+import { BuildOptions } from './types/config';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
-export default function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
-
-  const fileLoader = {
-    test: /\.(?:ico|gif|png|jpg|jpeg)$/,
-    type: 'asset/resource',
-  };
-
-  const fontsLoader = {
-    test: /\.(woff(2)?|eot|ttf|otf)$/,
-    type: 'asset/inline',
-  };
 
   const svgLoader = {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   };
 
-  const babelLoader = {
-    test: /\.m?js$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          ['@babel/preset-env', { targets: 'defaults' }],
-        ],
-      },
-    },
-  };
+  const babelLoader = buildBabelLoader(options);
 
-  const cssLoader = {
-    test: /\.(sa|sc|c)ss$/,
-    use: [
-      isDev
-        ? 'style-loader'
-        : MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          modules: {
-            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-            localIdentName: isDev
-              ? '[path][name]__[local]--[hash:base64:5]'
-              : '[hash:base64:5]',
-          },
-        },
-      },
-      'sass-loader',
-    ],
-  };
+  const cssLoader = buildCssLoader(isDev);
 
-  const tsLoader = {
+  // Если не используем тайпскрипт - нужен babel-loader
+  const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
   };
 
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+
   return [
-    tsLoader,
-    babelLoader,
-    cssLoader,
-    svgLoader,
     fileLoader,
-    fontsLoader,
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+    },
+    svgLoader,
+    babelLoader,
+    typescriptLoader,
+    cssLoader,
   ];
 }

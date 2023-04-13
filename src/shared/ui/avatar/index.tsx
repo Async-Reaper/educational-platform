@@ -9,7 +9,6 @@ type Props = {
   variant?: Variant;
   rounded?: boolean;
   src: any;
-  isOnline?: boolean;
 };
 
 const Component: FC<Props> = (props) => {
@@ -17,23 +16,15 @@ const Component: FC<Props> = (props) => {
     variant = 'l',
     src = '',
     rounded = false,
-    isOnline = false,
   } = props;
 
   return (
-     <div className={classNames(cls.avatar, [cls[`variant--${variant}`]])}>
+     <div className={classNames(cls.avatar, [cls[`variant--${variant}`]], { [cls.rounded]: rounded })}>
         <img
-          className={classNames(cls.avatarImage, [], { [cls.rounded]: rounded })}
+          className={classNames(cls.avatarImage, [])}
           src={src}
           alt='User avatar'
         />
-        {isOnline && variant !== 'xs'
-          ? (
-             <div className={classNames(cls.status)}>
-                <ColoredIcon name='status_online' size={16} />
-             </div>
-          )
-          : null}
      </div>
   );
 };

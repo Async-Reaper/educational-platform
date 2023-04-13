@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { useInput } from 'shared/libs/hooks/useValidation/useInput';
-import { useAppDispatch } from 'shared/libs/hooks/useAppDispatch';
+import { useInput } from 'shared/hooks/useValidation/useInput';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { answerComment } from 'features/answer-comment/model/api';
 import { AnswerCommentType } from 'features/answer-comment/model/types';

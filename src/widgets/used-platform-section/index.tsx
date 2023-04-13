@@ -1,20 +1,23 @@
 import React from 'react';
-import { Button, Container, Typography } from 'shared/ui';
-import { ColoredIcon, Icon } from 'shared/libs/icons';
+import {Container} from 'shared/ui';
 import {
-  Bookmark, DescriptionWrapper,
-  ExaminationCourse, ExaminationTextItem, PayIcons, RunSignup,
-  SectionWrapper, SignupItemIcons,
-  Title,
-  TitleWrapper,
-  UsedInner,
-  UsedItem,
-  UsedList,
-  UsedTitle,
-  UsedTitleWrapper,
+    Bookmark,
+    DescriptionWrapper,
+    ExaminationCourse,
+    ExaminationTextItem,
+    SectionWrapper,
+    Title,
+    TitleWrapper,
+    UsedInner,
+    UsedItem,
+    UsedList,
+    UsedTitle,
+    UsedTitleWrapper,
 } from 'widgets/used-platform-section/ui';
+import {Element} from "react-scroll";
 
 const Component = () => (
+    <Element name={'additional'}>
    <SectionWrapper>
       <Container>
          <UsedInner>
@@ -44,6 +47,7 @@ const Component = () => (
          </UsedInner>
       </Container>
    </SectionWrapper>
+</Element>
 );
 
 export const UsedPlatformSection = React.memo(Component);

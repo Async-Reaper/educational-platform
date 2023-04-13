@@ -15,7 +15,12 @@
 }
 
 .secondary {
-    color: var(--inverted-primary-color);
+    color: var(--color-violet-primary);
+    transition: all .3s;
+
+    &:hover {
+        color: var(--color-violet-secondary);
+    }
 }
 
 .red {

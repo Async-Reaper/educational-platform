@@ -12,27 +12,30 @@ import {
   TestWrapper, IconsInner, Icons,
 } from 'widgets/test-section/ui';
 import { OpenTestBtn } from 'features';
+import {Element} from "react-scroll";
 
 const Component = () => (
-   <TestWrapper>
-      <Container>
-         <TestInner>
-            <IconsWrapper>
-               <IconsTitle />
-               <IconsInner>
-                  <Icons />
-               </IconsInner>
-            </IconsWrapper>
-            <ContentWrapper>
-               <ContentTitle />
-               <ContentDescription />
-               <TestBtnWrapper>
-                  <OpenTestBtn />
-               </TestBtnWrapper>
-            </ContentWrapper>
-         </TestInner>
-      </Container>
-   </TestWrapper>
+    <Element name={'test'}>
+       <TestWrapper>
+          <Container>
+             <TestInner>
+                <IconsWrapper>
+                   <IconsTitle />
+                   <IconsInner>
+                      <Icons />
+                   </IconsInner>
+                </IconsWrapper>
+                <ContentWrapper>
+                   <ContentTitle />
+                   <ContentDescription />
+                   <TestBtnWrapper>
+                      <OpenTestBtn />
+                   </TestBtnWrapper>
+                </ContentWrapper>
+             </TestInner>
+          </Container>
+       </TestWrapper>
+    </Element>
 );
 
 export const TestSection = React.memo(Component);

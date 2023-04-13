@@ -7,3 +7,5 @@ export { ChangeEmail } from './change-email';
 export { ChangePassword } from './change-password';
 export { AddLink } from './add-link';
 export { CreateTopic } from './create-topic';
+export { DeleteTopic } from './delete-topic';
+export { DeleteResource } from './delete-resource';

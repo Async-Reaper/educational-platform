@@ -1,6 +1,6 @@
 import { AskQuestionType } from 'features/ask-questions/model/types';
 import axios from 'axios';
-import { API_URL, ASK_QUESTIONS_ENDPOINT } from 'shared/libs/constants/baseURL';
+import { API_URL, ASK_QUESTIONS_ENDPOINT } from 'shared/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
 
 export const askQuestions = (data: AskQuestionType) => async (dispatch: AppDispatch) => {

@@ -1,30 +1,33 @@
 import React from 'react';
 import { Icon } from 'shared/libs/icons';
 import cls from './styles.module.scss';
+import {Link} from "react-scroll";
 
 const Component = () => (
    <div className={cls.link__sectionWrapper}>
-      <div className={cls.link__sectionBackground}>
-         <div className={cls.link__section}>
-            <a href='#section1'>
-               <Icon
-                 className={cls.link__sectionIcon}
-                 name='arrow_bottom'
-                 width={14}
-                 color='gray-primary'
-               />
-            </a>
-         </div>
-      </div>
-      <div className={cls.border__link}>
-         <Icon
-           className={cls.border__linkIcon}
-           name='border_arrow_bottom'
-           width={85}
-           height={65}
-           color='violet-primary'
-         />
-      </div>
+      <Link to={'lesson'} spy={true} smooth={true} duration={500}>
+          <div className={cls.link__sectionBackground}>
+              <div className={cls.link__section}>
+                  <a>
+                      <Icon
+                          className={cls.link__sectionIcon}
+                          name='arrow_bottom'
+                          width={14}
+                          color='gray-primary'
+                      />
+                  </a>
+              </div>
+          </div>
+      </Link>
+          <div className={cls.border__link}>
+              <Icon
+                  className={cls.border__linkIcon}
+                  name='border_arrow_bottom'
+                  width={85}
+                  height={65}
+                  color='violet-primary'
+              />
+          </div>
    </div>
 );
 

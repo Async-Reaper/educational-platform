@@ -1,6 +1,6 @@
 import { type RouteProps } from 'react-router-dom';
 import {
-  CoursePage, MainPage, PlatformPage, PrivateCabinet,
+  CoursePage, MainPage, PlatformPage, PrivateCabinet, TopicPage,
 } from 'pages';
 
 export enum AppRoutes {
@@ -8,6 +8,7 @@ export enum AppRoutes {
   PLATFORM = 'PLATFORM',
   PLATFORM_COURSE = 'PLATFORM_COURSE',
   PRIVATE_CABINET = 'PRIVATE_CABINET',
+  TOPIC = 'TOPIC',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -15,6 +16,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.PLATFORM]: '/platform',
   [AppRoutes.PRIVATE_CABINET]: '/private-cabinet',
   [AppRoutes.PLATFORM_COURSE]: '/course/:id',
+  [AppRoutes.TOPIC]: '/course/:id/topic/:id',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -33,5 +35,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PLATFORM_COURSE]: {
     path: RoutePath.PLATFORM_COURSE,
     element: <CoursePage />,
+  },
+  [AppRoutes.TOPIC]: {
+    path: RoutePath.TOPIC,
+    element: <TopicPage />,
   },
 };

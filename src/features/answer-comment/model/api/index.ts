@@ -1,6 +1,6 @@
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
-import { ADD_ANSWER_ENDPOINT, API_URL } from 'shared/libs/constants/baseURL';
+import { ADD_ANSWER_ENDPOINT, API_URL } from 'shared/constants/baseURL';
 import { AnswerCommentType } from 'features/answer-comment/model/types';
 
 export const answerComment = (data: AnswerCommentType, id: number) => async (dispatch: AppDispatch) => {

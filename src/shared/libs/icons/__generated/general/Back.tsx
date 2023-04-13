@@ -12,9 +12,9 @@ export const BackIcon = React.memo(
     return (
       <svg width={size} height={size} fill="none" {...props}>
         <path
-          d="M19.5 35.45h12.3c4.25 0 7.7-3.45 7.7-7.7s-3.45-7.7-7.7-7.7H14.875m3.55 3.875l-3.925-3.95 3.925-3.925M19.5 52h15C47 52 52 47 52 34.5v-15C52 7 47 2 34.5 2h-15C7 2 2 7 2 19.5v15C2 47 7 52 19.5 52z"
+          d="M16 28.76h9.84c3.4 0 6.16-2.76 6.16-6.16 0-3.4-2.76-6.16-6.16-6.16H12.3m2.84 3.1L12 16.38l3.14-3.14M16 42h12c10 0 14-4 14-14V16C42 6 38 2 28 2H16C6 2 2 6 2 16v12c0 10 4 14 14 14z"
           stroke={color}
-          strokeWidth={3.75}
+          strokeWidth={2.93}
           strokeLinecap="round"
           strokeLinejoin="round"
         />

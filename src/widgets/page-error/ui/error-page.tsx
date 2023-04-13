@@ -6,6 +6,7 @@ type ErrorPageProps = {
 
 function Component({ className }: ErrorPageProps) {
   const reloadPage = () => {
+      // eslint-disable-next-line no-restricted-globals
     location.reload();
   };
 

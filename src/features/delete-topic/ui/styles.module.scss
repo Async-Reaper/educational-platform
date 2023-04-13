@@ -1,0 +1,11 @@
+.delete_topic__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .buttons__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

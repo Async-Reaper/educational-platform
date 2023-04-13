@@ -1,0 +1,63 @@
+$currentColor: var(--color-violet-primary);
+
+.pure_material_progress_linear {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 0.25em;
+  color: var(--color-gray-secondary);
+  background-color: $currentColor;
+  font-size: 16px;
+}
+
+.pure_material_progress_linear::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+/* Determinate */
+.pure_material_progress_linear::-webkit-progress-value {
+  background-color: $currentColor;
+  transition: all 0.2s;
+}
+
+.pure_material_progress_linear::-moz-progress-bar {
+  background-color: $currentColor;
+  transition: all 0.2s;
+}
+
+.pure_material_progress_linear::-ms-fill {
+  border: none;
+  background-color: $currentColor;
+  transition: all 0.2s;
+}
+
+/* Indeterminate */
+.pure_material_progress_linear:indeterminate {
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, transparent 50%, $currentColor 50%, $currentColor 60%, transparent 60%, transparent 71.5%, $currentColor 71.5%, $currentColor 84%, transparent 84%);
+  animation: pure_material_progress_linear 2s infinite linear;
+}
+
+.pure_material_progress_linear:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+}
+
+.pure_material_progress_linear:indeterminate::-ms-fill {
+  animation-name: none;
+}
+
+@keyframes pure_material_progress_linear {
+  0% {
+    background-size: 200% 100%;
+    background-position: left -31.25% top 0%;
+  }
+  50% {
+    background-size: 800% 100%;
+    background-position: left -49% top 0%;
+  }
+  100% {
+    background-size: 400% 100%;
+    background-position: left -102% top 0%;
+  }
+}

@@ -1,0 +1,1 @@
+export { DeleteTopic } from './ui';

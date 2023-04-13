@@ -1,3 +1,0 @@
-export {
-  CoursePage,
-} from './ui';

@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-interface Slice {
+export interface RequestSlice {
   loading: boolean,
   success: boolean,
   error: boolean
 }
 
-const initialState: Slice = {
+const initialState: RequestSlice = {
   loading: false,
   success: false,
   error: false,

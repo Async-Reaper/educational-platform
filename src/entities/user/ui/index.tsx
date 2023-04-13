@@ -50,6 +50,7 @@ const Component: React.FC<Props> = ({ user }) => {
            <div className={cls.info_item}>
               <Typography variant='body' color='black-bg'>Дата регистрации:</Typography>
               <Typography variant='body' color='violet-primary'>
+                 {/* eslint-disable-next-line no-unsafe-optional-chaining */}
                  {dateReg.slice(0, dateReg?.length - 8)}
               </Typography>
            </div>

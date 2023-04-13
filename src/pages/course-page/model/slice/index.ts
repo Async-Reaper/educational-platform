@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { CourseSchema, CourseType } from 'pages/course-page/model/types';
-import { TopicsType } from '../../../topic-page/model/types';
 
 const initialState: CourseSchema = {};
 

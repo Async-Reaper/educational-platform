@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { API_URL, USER_INFO_ENDPOINT } from 'shared/libs/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
+import { API_URL, USER_INFO_ENDPOINT } from 'shared/constants/baseURL';
 import { userActions } from '../slice';
 import { UserType } from '../types';
 

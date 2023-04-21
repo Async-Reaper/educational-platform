@@ -1,9 +1,8 @@
 import axios, { AxiosError } from 'axios';
 import { API_URL, USER_INFO_ENDPOINT } from 'shared/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
-import { userActions } from '../model/slice';
-import { UserType } from '../model/types';
-import { deleteCookie, setCookie } from '../../../shared/libs/cookie';
+import { userActions, UserType } from 'entities/user';
+import { deleteCookie, setCookie } from 'shared/libs/cookie';
 
 export const getInfoUser = () => async (dispatch: AppDispatch) => {
   try {
@@ -28,6 +27,7 @@ export const getInfoUser = () => async (dispatch: AppDispatch) => {
         deleteCookie('token');
         deleteCookie('full_name');
         deleteCookie('is_teacher');
+        window.location.reload();
       }
     }
   }

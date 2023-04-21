@@ -8,8 +8,8 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     modules: [options.paths.src, 'node_modules'],
     mainFiles: ['index'],
     alias: {
-      mixins: `${options.paths.src}/1.app/styles/_mixins.scss`,
-      size: `${options.paths.src}/1.app/styles/size.scss`,
+      mixins: `${options.paths.src}/app/styles/_mixins.scss`,
+      size: `${options.paths.src}/app/styles/size.scss`,
     },
   };
 }

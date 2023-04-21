@@ -1,4 +1,4 @@
-export const API_URL = 'https://oo0.ru/';
+export const API_URL = 'http://localhost:8000/';
 
 export const LOGIN_ENDPOINT = '/api/users/user/login/';
 

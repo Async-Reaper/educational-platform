@@ -1,0 +1,34 @@
+@import "mixins";
+.header {
+    padding: 36px 0;
+
+    .header__inner {
+        @include flex-space;
+
+        .header__logo {
+            @include flex-space;
+
+            grid-gap: 8px;
+
+            .logo__text {
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 22px;
+                max-width: 510px;
+            }
+        }
+
+        .buttons__group {
+            @include flex-space;
+
+            grid-gap: 21px;
+        }
+    }
+
+    .header_user__settings {
+        position: relative;
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+    }
+}

@@ -1,7 +1,9 @@
 import { type RouteProps } from 'react-router-dom';
-import {
-  CoursePage, MainPage, PlatformPage, PrivateCabinet, TopicPage,
-} from 'pages';
+import { MainPage } from 'pages/main-page';
+import { PlatformPage } from 'pages/platform-page';
+import { PrivateCabinet } from 'pages/private-cabinet';
+import { CoursePage } from 'pages/course-page';
+import { TopicPage } from 'pages/topic-page';
 
 export enum AppRoutes {
   MAIN = 'MAIN',

@@ -1,0 +1,5 @@
+@import "mixins";
+
+.top__sectionBody {
+    @include flex-space;
+}

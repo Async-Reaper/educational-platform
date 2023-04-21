@@ -14,6 +14,7 @@ export { TextArea } from './textarea';
 export { ErrorText } from './error-text';
 export { Toggle } from './toggle';
 export { Typography } from './typography';
-export { Loader } from './loader';
+export { LoaderPage } from './loader-page';
+// eslint-disable-next-line import/no-cycle
 export { Toolbar } from './toolbar';
 export { LinearProgress } from './linear-progress';

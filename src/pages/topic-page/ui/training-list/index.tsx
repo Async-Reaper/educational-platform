@@ -4,7 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import cls from '../styles.module.scss';
 import { API_URL } from '../../../../shared/constants/baseURL';
 import { ModalWindow, Typography } from '../../../../shared/ui';
-import { TrainingApparatuses } from '../../model/types';
+import { TrainingApparatuses } from '../../../../entities/topic/model/types';
 import { Comments } from '../comments';
 import { getCookie } from '../../../../shared/libs/cookie';
 

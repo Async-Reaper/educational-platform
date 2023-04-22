@@ -5,12 +5,14 @@ import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { RequestSlice } from 'shared/libs/slices/requestSlice/requestSlice';
 import { CoursesSchema } from 'widgets/courses-list';
-import { CourseSchema } from 'pages/course-page/model/types';
-import { TopicSchema } from 'pages/topic-page/model/types';
+import { CourseSchema } from 'entities/course/model/types';
+import { TopicSchema } from 'entities/topic/model/types';
 import { CommentSchema } from 'widgets/comments-list';
 import { UserSchema } from 'entities/user';
+import { AuthSchema } from 'features/auth/model/types';
 
 export interface StateSchema {
+  auth: AuthSchema,
   user: UserSchema,
   request: RequestSlice,
   courses: CoursesSchema,

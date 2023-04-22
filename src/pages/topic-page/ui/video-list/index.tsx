@@ -6,7 +6,7 @@ import { API_URL } from '../../../../shared/constants/baseURL';
 import { ModalWindow, Typography } from '../../../../shared/ui';
 import { AddComment } from '../../../../features/add-comment/ui';
 import { CommentsList } from '../../../../widgets/comments-list';
-import { ResourceType } from '../../model/types';
+import { ResourceType } from '../../../../entities/topic/model/types';
 import { Comments } from '../comments';
 import { getCookie } from '../../../../shared/libs/cookie';
 

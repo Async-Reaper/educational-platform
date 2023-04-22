@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'shared/ui';
-import { OpenTestBtn } from 'features';
 import { Element } from 'react-scroll';
 import {
   ContentDescription,
@@ -13,6 +12,7 @@ import {
   TestInner,
   TestWrapper,
 } from 'pages/main-page/ui/test-section/ui';
+import { OpenTestBtn } from './ui/elements/open-test-btn';
 
 const Component = () => (
    <Element name='test'>

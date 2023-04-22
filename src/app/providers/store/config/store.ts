@@ -3,10 +3,11 @@ import { $api } from 'shared/protocols/api/api';
 import { CombinedState, Reducer } from 'redux';
 import { userReducer } from 'entities/user';
 import { requestReducer } from 'shared/libs/slices';
-import { coursesReducer } from 'widgets/courses-list/model/slice';
-import { courseReducer } from 'pages/course-page/model/slice';
-import { topicReducer } from 'pages/topic-page/model/slice';
-import { commentsReducer } from 'widgets/comments-list/model/slice';
+import { coursesReducer } from 'widgets/courses-list';
+import { courseReducer } from 'entities/course/';
+import { topicReducer } from 'entities/topic/';
+import { commentsReducer } from 'widgets/comments-list';
+import { authReducer } from 'features/auth';
 import { createReducerManager } from './reducerManager';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
@@ -16,6 +17,7 @@ export function createReduxStore(
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
+    auth: authReducer,
     user: userReducer,
     request: requestReducer,
     courses: coursesReducer,

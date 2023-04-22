@@ -22,7 +22,7 @@ const Component: React.FC<Props> = ({ setVisible, idTopic, idCourse }) => {
   }, [setVisible, success]);
 
   const handleDeleteTopic = () => {
-    dispatch(deleteTopic(idTopic, idCourse));
+    dispatch(deleteTopic(idTopic));
   };
 
   return (

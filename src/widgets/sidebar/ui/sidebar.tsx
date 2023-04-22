@@ -5,7 +5,7 @@ import { Logout } from 'features';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import LoginIcon from '@mui/icons-material/Login';
 import cls from './styles.module.scss';
-import ava from '../../../entities/user/img/ava.png';
+import ava from '../../../../public/images/user/ava.png';
 import { getInfoUser, getInfoUserSelector } from '../../../entities/user';
 import { API_URL } from '../../../shared/constants/baseURL';
 

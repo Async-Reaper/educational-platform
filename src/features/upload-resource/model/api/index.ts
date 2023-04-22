@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { API_URL, UPLOAD_RESOURCE_ENDPOINT } from 'shared/constants/baseURL';
 import { requestActions } from 'shared/libs/slices';
-import { getTopic } from '../../../../pages/topic-page/model/api';
+import { getTopic } from 'entities/topic/model/api';
 
 export const uploadResourceApi = (data: FormData, id: number | undefined) => async (dispatch: AppDispatch) => {
   try {

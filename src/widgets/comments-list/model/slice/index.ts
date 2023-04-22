@@ -1,15 +1,30 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CommentSchema, CommentType } from 'widgets/comments-list/model/types';
+import { CommentSchema, CommentType } from 'widgets/comments-list';
+import { getAllComments } from 'widgets/comments-list/model/api';
 
-const initialState: CommentSchema = {};
+const initialState: CommentSchema = {
+  data: null,
+  isLoading: false,
+  error: undefined,
+};
 
 const commentsSlice = createSlice({
-  name: 'get all comments',
+  name: 'comments',
   initialState,
-  reducers: {
-    getAllComments(state, action: PayloadAction<CommentType[]>) {
-      state.data = action.payload;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getAllComments.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getAllComments.fulfilled, (state, action: PayloadAction<CommentType[]>) => {
+        state.isLoading = false;
+        state.data = action.payload;
+      })
+      .addCase(getAllComments.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

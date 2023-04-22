@@ -1,20 +1,27 @@
-import { requestActions } from 'shared/libs/slices';
-import axios from 'axios';
 import { API_URL, DELETE_TOPIC_ENDPOINT } from 'shared/constants/baseURL';
-import { getCourse } from '../../../../pages/course-page/model/api';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { AuthAnswer } from 'features/auth/model/types';
+import { ThunkConfig } from 'app/providers/store';
 
-export const deleteTopic = (idTopic?: number | undefined, idCourse?: any) => async (dispatch: AppDispatch) => {
-  try {
-    dispatch(requestActions.fetchRequest());
-    const response = await axios.delete(API_URL + DELETE_TOPIC_ENDPOINT + idTopic, {
-      headers: {
-        Token: JSON.parse(localStorage.getItem('token') || ''),
-        Signature: JSON.parse(localStorage.getItem('signature') || ''),
-      },
-    });
-    dispatch(getCourse(idCourse));
-    dispatch(requestActions.successRequest());
-  } catch (e) {
-    dispatch(requestActions.errorRequest());
-  }
-};
+export const deleteTopic = createAsyncThunk<
+AuthAnswer,
+number | undefined,
+ThunkConfig<string>
+>(
+  'topic/deleteTopic',
+  async (idTopic, thunkApi) => {
+    const { extra, rejectWithValue } = thunkApi;
+    try {
+      const response = await extra.api.delete(API_URL + DELETE_TOPIC_ENDPOINT + idTopic, {
+        headers: {
+          Token: JSON.parse(localStorage.getItem('token') || ''),
+          Signature: JSON.parse(localStorage.getItem('signature') || ''),
+        },
+      });
+      return response.data;
+    } catch (e) {
+      console.log(e);
+      return rejectWithValue('error');
+    }
+  },
+);

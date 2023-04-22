@@ -13,4 +13,6 @@ export interface UserType {
 
 export interface UserSchema {
   data?: UserType | null;
+  isLoading: boolean;
+  error?: string;
 }

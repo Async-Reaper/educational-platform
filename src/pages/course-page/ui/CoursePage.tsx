@@ -3,8 +3,8 @@ import { Sidebar } from 'widgets/sidebar';
 import { AppLink, ModalWindow, Typography } from 'shared/ui';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useParams } from 'react-router-dom';
-import { getCourse } from 'pages/course-page/model/api';
-import { getCourseSelector } from 'pages/course-page/model/selector';
+import { getCourse } from 'entities/course/model/api';
+import { getCourseSelector } from 'entities/course/model/selector/getCourseSelector/getCourseSelector';
 import { CreateTopic, DeleteTopic } from 'features';
 import { getCookie } from 'shared/libs/cookie';
 import cls from './styles.module.scss';
@@ -49,73 +49,73 @@ const Component = () => {
               </div>
               <div className={cls.topics__list}>
                  {
-                            getCookie('is_teacher') === 'true'
-                            && (
-                            <>
-                               <div
-                                 className={cls.add_topic__wrapper}
-                                 onClick={() => setIsVisibleCreateTopic(true)}
-                               >
-                                  <div className={cls.add_topic__btn}>
-                                     <Typography variant='small' uppercase tag='strong'>
-                                        Добавить новую тему
-                                     </Typography>
-                                  </div>
-                               </div>
-                               <ModalWindow
-                                 isVisible={isVisibleCreateTopic}
-                                 setIsVisible={setIsVisibleCreateTopic}
-                               >
-                                  <CreateTopic id={dataCourse?.data?.id} setVisible={setIsVisibleCreateTopic} />
-                               </ModalWindow>
-                            </>
-                            )
-                        }
+                    getCookie('is_teacher') === 'true'
+                    && (
+                    <>
+                       <div
+                         className={cls.add_topic__wrapper}
+                         onClick={() => setIsVisibleCreateTopic(true)}
+                       >
+                          <div className={cls.add_topic__btn}>
+                             <Typography variant='small' uppercase tag='strong'>
+                                Добавить новую тему
+                             </Typography>
+                          </div>
+                       </div>
+                       <ModalWindow
+                         isVisible={isVisibleCreateTopic}
+                         setIsVisible={setIsVisibleCreateTopic}
+                       >
+                          <CreateTopic id={dataCourse?.data?.id} setVisible={setIsVisibleCreateTopic} />
+                       </ModalWindow>
+                    </>
+                    )
+                }
                  {
-                            dataCourse?.data?.topics.map((topic) => (
-                               <div className={cls.topic__wrapper}>
-                                  <div>
-                                     <Typography variant='body' color='black-bg'>{topic.name}</Typography>
-                                  </div>
-                                  <div className={cls.topic__buttons}>
-                                     <AppLink variant='secondary' to={`/course/${id}/topic/${topic.id}`}>
-                                        <Typography
-                                          tag='span'
-                                          variant='small'
-                                          color='violet-primary'
-                                        >
-                                           Перейти
-                                        </Typography>
-                                     </AppLink>
-                                     {
-                                            getCookie('is_teacher') === 'true'
-                                            && (
-                                            <>
-                                               <div
-                                                 className={cls.delete_topic__btn}
-                                                 onClick={() => showDeleteTopic(topic.id)}
-                                               >
-                                                  <Typography tag='span' variant='small'>
-                                                     Удалить
-                                                  </Typography>
-                                               </div>
-                                               <ModalWindow
-                                                 isVisible={isVisibleDeleteTopic}
-                                                 setIsVisible={setIsVisibleDeleteTopic}
-                                               >
-                                                  <DeleteTopic
-                                                    idTopic={idTopic}
-                                                    idCourse={dataCourse?.data?.id}
-                                                    setVisible={setIsVisibleDeleteTopic}
-                                                  />
-                                               </ModalWindow>
-                                            </>
-                                            )
-                                        }
-                                  </div>
-                               </div>
-                            ))
-                        }
+                    dataCourse?.data?.topics.map((topic) => (
+                       <div className={cls.topic__wrapper}>
+                          <div>
+                             <Typography variant='body' color='black-bg'>{topic.name}</Typography>
+                          </div>
+                          <div className={cls.topic__buttons}>
+                             <AppLink variant='secondary' to={`/course/${id}/topic/${topic.id}`}>
+                                <Typography
+                                  tag='span'
+                                  variant='small'
+                                  color='violet-primary'
+                                >
+                                   Перейти
+                                </Typography>
+                             </AppLink>
+                             {
+                                    getCookie('is_teacher') === 'true'
+                                    && (
+                                    <>
+                                       <div
+                                         className={cls.delete_topic__btn}
+                                         onClick={() => showDeleteTopic(topic.id)}
+                                       >
+                                          <Typography tag='span' variant='small'>
+                                             Удалить
+                                          </Typography>
+                                       </div>
+                                       <ModalWindow
+                                         isVisible={isVisibleDeleteTopic}
+                                         setIsVisible={setIsVisibleDeleteTopic}
+                                       >
+                                          <DeleteTopic
+                                            idTopic={idTopic}
+                                            idCourse={dataCourse?.data?.id}
+                                            setVisible={setIsVisibleDeleteTopic}
+                                          />
+                                       </ModalWindow>
+                                    </>
+                                    )
+                                }
+                          </div>
+                       </div>
+                    ))
+                }
               </div>
            </div>
         </div>

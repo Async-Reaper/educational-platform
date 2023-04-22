@@ -2,7 +2,7 @@ import { CreateTopicType } from 'features/create-topic/model/types';
 import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
 import { API_URL, CREATE_TOPIC_ENDPOINT } from 'shared/constants/baseURL';
-import { getCourse } from 'pages/course-page/model/api';
+import { getCourse } from 'entities/course/model/api';
 
 export const createTopic = (data: CreateTopicType, id: any) => async (dispatch: AppDispatch) => {
   try {

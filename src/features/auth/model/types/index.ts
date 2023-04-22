@@ -7,3 +7,9 @@ export type AuthAnswer = {
   token: string;
   signature: string;
 };
+
+export type AuthSchema = {
+  data?: AuthAnswer;
+  isLoading: boolean;
+  error?: string;
+};

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import AddCommentIcon from '@mui/icons-material/AddComment';
+import { ModalWindow, Typography } from 'shared/ui';
+import { AddComment } from 'features/add-comment/ui';
+import { CommentsList } from 'widgets';
 import cls from '../styles.module.scss';
-import { ModalWindow, Typography } from '../../../../shared/ui';
-import { AddComment } from '../../../../features/add-comment/ui';
-import { CommentsList } from '../../../../widgets/comments-list';
 
 interface Props {
   id: number;

@@ -1,1 +1,1 @@
-export { AddAnswerComment } from './ui';
+export { ModalAnswerComment } from './ui/modal';

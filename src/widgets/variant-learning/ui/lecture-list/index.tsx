@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { DeleteResource } from 'features';
 import DeleteIcon from '@mui/icons-material/Delete';
-import cls from '../styles.module.scss';
-import { API_URL } from '../../../../shared/constants/baseURL';
-import { ModalWindow, Typography } from '../../../../shared/ui';
-import { ResourceType } from '../../../../entities/topic/model/types';
+import { API_URL } from 'shared/constants/baseURL';
+import { ModalWindow, Typography } from 'shared/ui';
+import { ResourceType } from 'entities/topic/model/types';
+import { getCookie } from 'shared/libs/cookie';
 import { Comments } from '../comments';
-import { getCookie } from '../../../../shared/libs/cookie';
-import { ColoredIcon, Icon } from '../../../../shared/libs/icons';
+import cls from '../../../../pages/topic-page/ui/styles.module.scss';
 
 interface Props {
   lectures: ResourceType[] | undefined

@@ -19,6 +19,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   const personName = useInput('', { isEmpty: true });
 
   const addCommentData: AddCommentType = {
+    idResource: id,
     text: text.value,
     person_name: personName.value,
   };
@@ -30,7 +31,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
       !text.isEmpty
           && !personName.isEmpty
     ) {
-      dispatch(addComment(addCommentData, id));
+      dispatch(addComment(addCommentData));
     }
   };
 

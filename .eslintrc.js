@@ -46,6 +46,7 @@ module.exports = {
       '@typescript-eslint/no-shadow': 'warn',
       'no-restricted-globals': 'off',
       'no-restricted-syntax': 'off',
+      'react/destructuring-assignment': 'off',
       'react/button-has-type': 'off',
       'react/default-props-match-prop-types': 'off',
       'react/react-in-jsx-scope': 'off',

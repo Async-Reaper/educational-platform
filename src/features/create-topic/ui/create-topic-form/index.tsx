@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import cls from 'features/change-email/ui/styles.module.scss';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { createTopic } from 'features/create-topic/model/api';
 import { CreateTopicType } from 'features/create-topic/model/types';
+import cls from './styles.module.scss';
 
 interface Props {
   setVisible?: (arg: boolean) => void;
@@ -40,7 +40,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   };
 
   return (
-     <div className={cls.change_email__wrapper}>
+     <div className={cls.create_topic__wrapper}>
         <div>
            <Input
              type='text'
@@ -72,4 +72,4 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   );
 };
 
-export const CreateTopic = React.memo(Component);
+export const CreateTopicForm = React.memo(Component);

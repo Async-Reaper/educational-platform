@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button, ErrorText, Typography } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { deleteTopic } from '../model/api';
+import { deleteTopic } from '../../model/api';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -46,4 +46,4 @@ const Component: React.FC<Props> = ({ setVisible, idTopic, idCourse }) => {
   );
 };
 
-export const DeleteTopic = React.memo(Component);
+export const DeleteTopicForm = React.memo(Component);

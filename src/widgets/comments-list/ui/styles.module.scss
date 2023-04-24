@@ -19,17 +19,6 @@
         flex-direction: column;
     }
 
-    .answer__btn {
-        width: max-content;
-        cursor: pointer;
-        transition: all 0.3s;
-        color: var(--color-black-bg);
-
-        &:hover {
-            color: var(--color-violet-primary);
-        }
-    }
-
     .answers__wrapper {
         display: flex;
         flex-direction: column;

@@ -1,10 +1,10 @@
 import React, { type FC, useState } from 'react';
-import { ModalWindow, Typography } from 'shared/ui';
+import { Typography } from 'shared/ui';
 import { getCookie } from 'shared/libs/cookie';
 import { CommentType } from 'widgets/comments-list';
 // @ts-ignore
 import dateFormat from 'dateformat';
-import { AddAnswerComment } from 'features/add-answer-comment';
+import { ModalAnswerComment } from 'features';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -42,11 +42,8 @@ const Component: FC<Props> = ({ comment }) => {
                 )
             }
         <div>
-           <ModalWindow isVisible={isVisibleAnswer} setIsVisible={setIsVisibleAnswer}>
-              <AddAnswerComment id={comment.id} setVisible={setIsVisibleAnswer} />
-           </ModalWindow>
+           <ModalAnswerComment commentId={comment.id} isVisible={isVisibleAnswer} setIsVisible={setIsVisibleAnswer} />
         </div>
-        <div className={cls.comment__content} />
      </div>
   );
 };

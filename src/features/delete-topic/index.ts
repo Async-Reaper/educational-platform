@@ -1,1 +1,1 @@
-export { DeleteTopic } from './ui';
+export { DeleteTopicModal } from './ui/delete-topic-modal';

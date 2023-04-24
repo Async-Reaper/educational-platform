@@ -1,0 +1,14 @@
+.add_comment__btn {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0 0 10px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--color-black-bg);
+
+  &:hover {
+    color: var(--color-violet-primary);
+  }
+}

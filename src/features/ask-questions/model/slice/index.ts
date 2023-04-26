@@ -15,6 +15,7 @@ const askQuestionsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAskQuestions.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchAskQuestions.fulfilled, (state) => {

@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { fetchAnswerComment } from 'features/add-answer-comment/model/api';
 import { AnswerCommentType } from 'features/add-answer-comment/model/types';
+import { getStatusAddAnswerSelector } from 'features/add-answer-comment';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -14,14 +14,16 @@ interface Props {
 
 const Component: React.FC<Props> = ({ setVisible, id }) => {
   const dispatch = useAppDispatch();
-  const { success, error } = getStatusRequest();
+  const statusAddAnswer = getStatusAddAnswerSelector();
+
   const text = useInput('', { isEmpty: true });
   const answerCommentData: AnswerCommentType = {
     id,
     text: text.value,
   };
 
-  const handleAuth = () => {
+  const handleAnswerComment = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     text.onBlur();
     if (
       !text.isEmpty
@@ -32,12 +34,12 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      statusAddAnswer.isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [statusAddAnswer.isSuccess]);
 
   return (
-     <form className={cls.auth__wrapper}>
+     <form className={cls.auth__wrapper} onSubmit={(e) => handleAnswerComment(e)}>
         <div>
            <Input
              type='text'
@@ -48,11 +50,11 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
            {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
         </div>
 
-        <Button full variant='xs' background='violet-primary' onClick={handleAuth}>
+        <Button full variant='xs' background='violet-primary'>
            Ответить
         </Button>
         {
-             error
+            statusAddAnswer.error
                  && (
                  <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )

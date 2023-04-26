@@ -1,0 +1,20 @@
+.popup__wrapper {
+  position: absolute;
+  transform: translateY(-100px);
+  transition: all .3s;
+  width: 300px;
+  padding: 10px;
+  background: rgb(193 227 193);
+  border-radius: 5px;
+  right: 50%;
+  left: 50%;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  .popup_content {
+    text-align: center;
+    color: #1A291AFF;
+  }
+}

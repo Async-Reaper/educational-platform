@@ -2,16 +2,16 @@ import { AuthAnswer } from 'features/auth/model/types';
 import { API_URL, LOGOUT_ENDPOINT } from 'shared/constants/baseURL';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
-import { deleteCookie } from 'shared/libs/cookie';
+import { logoutActions } from 'features/logout';
 
 export const fetchLogout = createAsyncThunk<
 AuthAnswer,
 number | undefined,
 ThunkConfig<string>
 >(
-  'topic/deleteTopic',
+  'user/logout',
   async (idTopic, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
+    const { extra, rejectWithValue, dispatch } = thunkApi;
     try {
       const response = await extra.api.delete(API_URL + LOGOUT_ENDPOINT, {
         headers: {
@@ -20,6 +20,7 @@ ThunkConfig<string>
         },
       });
 
+      dispatch(logoutActions.logout());
       return response.data;
     } catch (e) {
       console.log(e);

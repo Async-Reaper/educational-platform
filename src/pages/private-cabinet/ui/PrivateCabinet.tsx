@@ -4,35 +4,51 @@ import { Auth, ChangeEmail, ChangePassword } from 'features';
 import { getInfoUser, getInfoUserSelector } from 'entities/user';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import {
-  Avatar, Button, ModalWindow, Typography,
+  Avatar, Button, ModalWindow, PopupWindow, Typography,
 } from 'shared/ui';
 import { API_URL } from 'shared/constants/baseURL';
 // @ts-ignore
 import dateFormat from 'dateformat';
+import { authSelector } from 'features/auth';
+import { getStatusChangeEmailSelector } from 'features/change-email';
 import cls from './styles.module.scss';
 import ava from '../../../../public/images/user/ava.png';
 
 const Component = () => {
   const user = getInfoUserSelector();
+
+  const statusChangeEmail = getStatusChangeEmailSelector();
+
+  const authData = authSelector();
+
   const dispatch = useAppDispatch();
   const token: string = localStorage.getItem('token') || '';
 
   const [isVisibleChangeEmail, setIsVisibleChangeEmail] = useState(false);
+  const [isPopupChangeEmail, setIsPopupChangeEmail] = useState(false);
+
   const [isVisibleChangePassword, setIsVisibleChangePassword] = useState(false);
 
   const dateReg: string = dateFormat(user?.data?.registration_date, 'isoDateTime').replace(/T/, ' ');
 
   useEffect(() => {
-    dispatch(getInfoUser());
-  }, [dispatch]);
+    (authData.data || user.data) && dispatch(getInfoUser());
+
+    statusChangeEmail.isSuccess && setIsPopupChangeEmail(true);
+  }, [dispatch, token, statusChangeEmail.isSuccess]);
 
   return (
      <div className='page_platform'>
         <Sidebar />
         <div className='page_platform__content'>
-           {user.data
+           {user.data || token
              ? (
                 <div className={cls.user_info}>
+                   <PopupWindow
+                     popupText='Смена адреса прошла успешно'
+                     isVisible={isPopupChangeEmail}
+                     setIsVisible={setIsPopupChangeEmail}
+                   />
                    <div className={cls.top_info_part}>
                       <Avatar
                         src={user?.data?.icon

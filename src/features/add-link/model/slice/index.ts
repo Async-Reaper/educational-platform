@@ -15,6 +15,7 @@ const addLinkSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAddLink.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchAddLink.fulfilled, (state) => {

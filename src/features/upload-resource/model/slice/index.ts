@@ -17,6 +17,7 @@ const uploadResourceSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchUploadResource.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchUploadResource.fulfilled, (state) => {

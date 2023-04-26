@@ -17,6 +17,7 @@ const createTopicSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCreateTopic.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchCreateTopic.fulfilled, (state) => {

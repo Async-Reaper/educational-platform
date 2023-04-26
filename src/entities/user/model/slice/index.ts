@@ -2,6 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { UserSchema, UserType } from 'entities/user/model/types';
 import { getInfoUser } from 'entities/user/model/api/getInfoUser';
 import { deleteCookie, setCookie } from 'shared/libs/cookie';
+import { logoutActions } from 'features/logout';
+import { changeEmailActions } from 'features/change-email';
 
 const initialState: UserSchema = {
   data: null,
@@ -34,6 +36,14 @@ const userSlice = createSlice({
           deleteCookie('full_name');
           deleteCookie('is_teacher');
           window.location.reload();
+        }
+      })
+      .addCase(logoutActions.logout, (state) => {
+        state.data = null;
+      })
+      .addCase(changeEmailActions.changeEmail, (state, action) => {
+        if (state.data) {
+          state.data.email = action.payload;
         }
       });
   },

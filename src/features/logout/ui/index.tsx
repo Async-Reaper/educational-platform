@@ -3,6 +3,7 @@ import { Button, Toolbar, Typography } from 'shared/ui';
 import { fetchLogout } from 'features/logout/model/api/logout';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { userActions } from 'entities/user';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -26,7 +27,9 @@ const Component: FC<Props> = (props) => {
     isIcon = false,
   } = props;
 
-  const handleLogout = () => dispatch(fetchLogout());
+  const handleLogout = () => {
+    dispatch(fetchLogout());
+  };
 
   return (
      <>

@@ -2,7 +2,6 @@ import { ADD_ANSWER_ENDPOINT, API_URL } from 'shared/constants/baseURL';
 import { AnswerCommentType } from 'features/add-answer-comment/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
-import { addAnswerCommentActions } from 'features/add-answer-comment/model/slice';
 
 export const fetchAnswerComment = createAsyncThunk<
 void,

@@ -3,6 +3,7 @@ export type ChangeEmailType = {
 };
 
 export type ChangeEmailSchema = {
+  email: string;
   isSuccess: boolean,
   isLoading: boolean,
   error?: string;

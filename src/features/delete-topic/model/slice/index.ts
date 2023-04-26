@@ -15,6 +15,7 @@ const deleteTopicSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchDeleteTopic.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchDeleteTopic.fulfilled, (state) => {

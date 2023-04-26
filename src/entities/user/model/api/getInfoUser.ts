@@ -21,7 +21,6 @@ ThunkConfig<string>
       });
       return response.data;
     } catch (e) {
-      console.log(e);
       if (e instanceof AxiosError) {
         if (e?.response?.data.detail.match(/token|authentication/i)) {
           return rejectWithValue('token');

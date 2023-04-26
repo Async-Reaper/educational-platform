@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {FormEvent, useEffect} from 'react';
 import { getStatusRequest } from 'shared/libs/selectors';
 import {
   Button, ErrorText, Input, Typography,
@@ -6,7 +6,8 @@ import {
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangeEmailType } from 'features/change-email/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import {fetchChangeEmail} from 'features/change-email/model/api/changeEmail';
+import { fetchChangeEmail } from 'features/change-email/model/api/changeEmail';
+import { getStatusChangeEmailSelector } from 'features/change-email';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -14,7 +15,7 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible }) => {
-  const { success, error } = getStatusRequest();
+  const statusChangeEmail = getStatusChangeEmailSelector();
   const dispatch = useAppDispatch();
   const email = useInput('', { isEmpty: true, emailValid: true });
 
@@ -24,11 +25,12 @@ const Component: React.FC<Props> = ({ setVisible }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      statusChangeEmail.isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [statusChangeEmail.isSuccess, statusChangeEmail.error]);
 
-  const handleChangeEmail = () => {
+  const handleChangeEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     email.onBlur();
     if (
       !email.emailValid
@@ -39,7 +41,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
   };
 
   return (
-     <div className={cls.change_email__wrapper}>
+     <form className={cls.change_email__wrapper} onSubmit={(e) => handleChangeEmail(e)}>
         <div>
            <Input
              type='email'
@@ -51,22 +53,16 @@ const Component: React.FC<Props> = ({ setVisible }) => {
            {(email.isDirty && email.emailValid) && <ErrorText>Некорректный адрес</ErrorText>}
         </div>
 
-        <Button full variant='xs' background='violet-primary' onClick={handleChangeEmail}>
+        <Button full variant='xs' background='violet-primary'>
            Сменить почту
         </Button>
         {
-              error
+            statusChangeEmail.error
               && (
-              <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+              <ErrorText>{statusChangeEmail.error}</ErrorText>
               )
           }
-        {
-             success
-             && (
-             <Typography>Смена адреса прошла успешна</Typography>
-             )
-         }
-     </div>
+     </form>
   );
 };
 

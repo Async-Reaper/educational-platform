@@ -15,6 +15,7 @@ const changePasswordSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchChangePassword.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchChangePassword.fulfilled, (state) => {

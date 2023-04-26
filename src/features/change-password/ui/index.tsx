@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {FormEvent, useEffect} from 'react';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
@@ -32,7 +32,8 @@ const Component: React.FC<Props> = ({ setVisible }) => {
     }
   }, [success]);
 
-  const handleChangePassword = () => {
+  const handleChangePassword = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     password.onBlur();
     newPassword.onBlur();
     repeatNewPassword.onBlur();
@@ -46,7 +47,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
   };
 
   return (
-     <div className={cls.change_password__wrapper}>
+     <form className={cls.change_password__wrapper} onSubmit={(e) => handleChangePassword(e)}>
         <div>
            <Input
              type='email'
@@ -71,7 +72,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
            {(repeatNewPassword.isDirty && repeatNewPassword.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
         </div>
 
-        <Button full variant='xs' background='violet-primary' onClick={handleChangePassword}>
+        <Button full variant='xs' background='violet-primary'>
            Сменить пароль
         </Button>
         {
@@ -80,7 +81,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
               <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
               )
           }
-     </div>
+     </form>
   );
 };
 

@@ -15,6 +15,7 @@ const addAnswerCommentSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAnswerComment.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchAnswerComment.fulfilled, (state) => {

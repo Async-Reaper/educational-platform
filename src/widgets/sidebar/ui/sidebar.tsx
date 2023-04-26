@@ -4,10 +4,10 @@ import { AppLink, Avatar, Toolbar } from 'shared/ui';
 import { Logout } from 'features';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import LoginIcon from '@mui/icons-material/Login';
+import { getInfoUser, getInfoUserSelector } from 'entities/user';
+import { API_URL } from 'shared/constants/baseURL';
 import cls from './styles.module.scss';
 import ava from '../../../../public/images/user/ava.png';
-import { getInfoUser, getInfoUserSelector } from '../../../entities/user';
-import { API_URL } from '../../../shared/constants/baseURL';
 
 const Component = () => {
   const user = getInfoUserSelector();
@@ -23,8 +23,9 @@ const Component = () => {
   const onHideVisibleClue = useCallback(() => {
     setIsVisibleClue(false);
   }, []);
+
   useEffect(() => {
-    token && dispatch(getInfoUser());
+    (token || user.data) && dispatch(getInfoUser());
   }, [dispatch, token]);
 
   return (
@@ -38,11 +39,11 @@ const Component = () => {
            <div className={cls.sidebar_link__wrapper}>
               <AppLink to='/private-cabinet'>
                  {
-                            user.data
+                            user.data || token
                               ? (
                                  <Avatar
-                                   src={user.data.icon
-                                     ? `${API_URL}${user.data.icon}`
+                                   src={user.data?.icon
+                                     ? `${API_URL}${user.data?.icon}`
                                      : ava}
                                    variant='l'
                                    rounded
@@ -64,7 +65,7 @@ const Component = () => {
            </div>
            <div className={cls.logout_wrapper}>
               {
-                        user.data
+                        user.data || token
                           ? <Logout isIcon />
                           : (
                              <AppLink

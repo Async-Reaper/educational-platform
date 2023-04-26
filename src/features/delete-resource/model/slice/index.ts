@@ -17,6 +17,7 @@ const deleteResourceSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchDeleteResource.pending, (state) => {
+        state.isSuccess = false;
         state.isLoading = true;
       })
       .addCase(fetchDeleteResource.fulfilled, (state) => {

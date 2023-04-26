@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 import { getCourse } from 'entities/course/model/api';
 import { getCourseSelector } from 'entities/course';
 import { TopicList } from 'widgets';
+import { getStatusCreateTopicSelector } from 'features/create-topic';
+import { getStatusDeleteTopicSelector } from 'features/delete-topic';
 import cls from './styles.module.scss';
 
 const Component = () => {
@@ -13,9 +15,12 @@ const Component = () => {
   const { id } = useParams();
   const dataCourse = getCourseSelector();
 
+  const statusCreateTopic = getStatusCreateTopicSelector();
+  const statusDeleteTopic = getStatusDeleteTopicSelector();
+
   useEffect(() => {
     dispatch(getCourse(id));
-  }, []);
+  }, [statusCreateTopic.isSuccess, statusDeleteTopic.isSuccess]);
 
   return (
      <div className='page_platform'>

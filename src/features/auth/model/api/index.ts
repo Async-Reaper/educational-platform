@@ -15,7 +15,6 @@ ThunkConfig<string>
       const response = await extra.api.post(API_URL + LOGIN_ENDPOINT, data);
       return response.data;
     } catch (e) {
-      console.log(e);
       return rejectWithValue('error');
     }
   },

@@ -1,14 +1,14 @@
 import { API_URL, GET_ALL_COMMENTS_ENDPOINT } from 'shared/constants/baseURL';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
-import { CommentType } from 'widgets/comments-list';
+import { CommentType } from 'entities/comments/model/types';
 
 export const getAllComments = createAsyncThunk<
 CommentType[],
 number | undefined,
 ThunkConfig<string>
 >(
-  'comment/getAllComment',
+  'comment/getAllComment/:id',
   async (idResource, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 

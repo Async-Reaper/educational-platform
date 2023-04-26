@@ -6,7 +6,7 @@ import {
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangeEmailType } from 'features/change-email/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { changeEmail } from 'features/change-email/model/api';
+import {fetchChangeEmail} from 'features/change-email/model/api/changeEmail';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -34,7 +34,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
       !email.emailValid
             && !email.isEmpty
     ) {
-      dispatch(changeEmail(changeEmailData));
+      dispatch(fetchChangeEmail(changeEmailData));
     }
   };
 

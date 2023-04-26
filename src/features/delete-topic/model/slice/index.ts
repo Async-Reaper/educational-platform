@@ -1,18 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { CourseSchema } from 'entities/course/model/types';
+import { DeleteTopicSchema } from 'features/delete-topic/model/types';
+import { fetchDeleteTopic } from 'features/delete-topic/model/api/deleteTopic';
 
-const initialState: CourseSchema = {
-  data: undefined,
+const initialState: DeleteTopicSchema = {
+  isSuccess: false,
   isLoading: false,
+  error: undefined,
 };
 
 const deleteTopicSlice = createSlice({
-  name: '',
+  name: 'topic/deleteTopic',
   initialState,
-  reducers: {
-    deleteTopic(state, action) {
-      state.data?.topics.filter((topic) => topic.id !== action.payload);
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchDeleteTopic.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchDeleteTopic.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+      })
+      .addCase(fetchDeleteTopic.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

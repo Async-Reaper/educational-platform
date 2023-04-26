@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { Typography } from 'shared/ui';
-import { getAllComments } from 'widgets/comments-list/model/api';
 import { Comment } from 'widgets/comments-list/ui/comment';
 import { AnswerComment } from 'widgets/comments-list/ui/answer-comment';
-import { getAllCommentsSelector } from 'widgets/comments-list/model/selectors';
+import { getAllComments, getAllCommentsSelector } from 'entities/comments';
+import { getStatusAddCommentSelector } from 'features/add-comment';
+import { getStatusAddAnswerSelector } from 'features/add-answer-comment';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -14,11 +15,13 @@ interface Props {
 const Component: React.FC<Props> = ({ id }) => {
   const dispatch = useAppDispatch();
 
+  const statusAddComment = getStatusAddCommentSelector();
+  const statusAddAnswerComment = getStatusAddAnswerSelector();
   const comments = getAllCommentsSelector();
 
   useEffect(() => {
     dispatch(getAllComments(id));
-  }, [dispatch, id]);
+  }, [dispatch, id, statusAddComment.isSuccess, statusAddAnswerComment.isSuccess]);
 
   return (
      <div className={cls.comments__wrapper}>

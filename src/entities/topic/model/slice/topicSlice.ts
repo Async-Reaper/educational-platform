@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getTopic } from 'entities/topic/model/api';
-import { deleteTopic } from 'features/delete-topic/model/api';
+import { fetchDeleteTopic } from 'features/delete-topic/model/api/deleteTopic';
 import { TopicSchema, TopicsType } from '../types';
 
 const initialState: TopicSchema = {
@@ -25,14 +25,14 @@ const topicSlice = createSlice({
       .addCase(getTopic.rejected, (state, action) => {
         state.error = action.payload;
       })
-      .addCase(deleteTopic.pending, (state) => {
+      .addCase(fetchDeleteTopic.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(deleteTopic.fulfilled, (state) => {
+      .addCase(fetchDeleteTopic.fulfilled, (state) => {
         state.isLoading = false;
         state.data = undefined;
       })
-      .addCase(deleteTopic.rejected, (state, action) => {
+      .addCase(fetchDeleteTopic.rejected, (state, action) => {
         state.error = action.payload;
       });
     // .addCase(deleteTopicActions.deleteTopic, (state,));

@@ -1,10 +1,10 @@
 import React, { type FC, useState } from 'react';
 import { Typography } from 'shared/ui';
 import { getCookie } from 'shared/libs/cookie';
-import { CommentType } from 'widgets/comments-list';
 // @ts-ignore
 import dateFormat from 'dateformat';
 import { ModalAnswerComment } from 'features';
+import { CommentType } from 'entities/comments/model/types';
 import cls from './styles.module.scss';
 
 interface Props {

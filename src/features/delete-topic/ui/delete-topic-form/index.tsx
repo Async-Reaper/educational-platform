@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Button, ErrorText, Typography } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { deleteTopic } from '../../model/api';
+import { getStatusDeleteTopicSelector } from 'features/delete-topic';
+import { fetchDeleteTopic } from '../../model/api/deleteTopic';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -12,22 +13,24 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible, idTopic, idCourse }) => {
-  const { success, error } = getStatusRequest();
   const dispatch = useAppDispatch();
+  const statusDeleteTopic = getStatusDeleteTopicSelector();
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      statusDeleteTopic.isSuccess && setVisible(false);
     }
-  }, [setVisible, success]);
+  }, [setVisible, statusDeleteTopic.isSuccess]);
 
   const handleDeleteTopic = () => {
-    dispatch(deleteTopic(idTopic));
+    dispatch(fetchDeleteTopic(idTopic));
   };
 
   return (
      <div className={cls.delete_topic__wrapper}>
-        <Typography tag='span' variant='small' color='violet-primary'>Вы действительно хотите удалить данную тему?</Typography>
+        <Typography tag='span' variant='small' color='violet-primary'>
+           Вы действительно хотите удалить данную тему?
+        </Typography>
         <div className={cls.buttons__wrapper}>
            <Button full variant='xs' background='violet-primary' onClick={handleDeleteTopic}>
               Да
@@ -37,7 +40,7 @@ const Component: React.FC<Props> = ({ setVisible, idTopic, idCourse }) => {
            </Button>
         </div>
         {
-            error
+            statusDeleteTopic.error
                 && (
                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                 )

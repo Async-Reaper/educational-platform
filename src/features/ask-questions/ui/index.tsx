@@ -6,7 +6,7 @@ import { useInput } from 'shared/hooks/useValidation/useInput';
 import { AskQuestionType } from 'features/ask-questions/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
-import { askQuestions } from 'features/ask-questions/model/api/askQuestions';
+import { fetchAskQuestions } from 'features/ask-questions/model/api/askQuestions';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -37,7 +37,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
             && !name.isEmpty
             && !question.isEmpty
     ) {
-      dispatch(askQuestions(dataAskQuestions));
+      dispatch(fetchAskQuestions(dataAskQuestions));
     }
   };
 

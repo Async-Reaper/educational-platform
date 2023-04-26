@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
 
 export const addComment = createAsyncThunk<
-    AddCommentType,
+AddCommentType,
 AddCommentType,
 ThunkConfig<string>
 >(

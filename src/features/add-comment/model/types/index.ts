@@ -3,3 +3,9 @@ export type AddCommentType = {
   person_name: string;
   text: string;
 };
+
+export type AddCommentSchema = {
+  isSuccess: boolean,
+  isLoading: boolean,
+  error?: string;
+};

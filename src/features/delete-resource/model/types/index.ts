@@ -1,4 +1,5 @@
-export type AddLinkType = {
-  link: string;
-  description: string;
+export type DeleteResourceSchema = {
+  isSuccess: boolean,
+  isLoading: boolean,
+  error?: string;
 };

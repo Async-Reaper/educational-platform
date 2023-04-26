@@ -1,18 +1,18 @@
-import { API_URL, DELETE_TOPIC_ENDPOINT } from 'shared/constants/baseURL';
+import { API_URL, CHANGE_EMAIL_ENDPOINT } from 'shared/constants/baseURL';
+import { ChangeEmailType } from 'features/change-email/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AuthAnswer } from 'features/auth/model/types';
 import { ThunkConfig } from 'app/providers/store';
 
-export const deleteTopic = createAsyncThunk<
-AuthAnswer,
-number | undefined,
+export const fetchChangeEmail = createAsyncThunk<
+void,
+ChangeEmailType,
 ThunkConfig<string>
 >(
-  'topic/deleteTopic',
-  async (idTopic, thunkApi) => {
+  'comment/addComment',
+  async (data, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.delete(API_URL + DELETE_TOPIC_ENDPOINT + idTopic, {
+      const response = await extra.api.put(API_URL + CHANGE_EMAIL_ENDPOINT, data, {
         headers: {
           Token: JSON.parse(localStorage.getItem('token') || ''),
           Signature: JSON.parse(localStorage.getItem('signature') || ''),
@@ -20,7 +20,6 @@ ThunkConfig<string>
       });
       return response.data;
     } catch (e) {
-      console.log(e);
       return rejectWithValue('error');
     }
   },

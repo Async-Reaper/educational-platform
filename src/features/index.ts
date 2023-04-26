@@ -1,11 +1,11 @@
+export { AddLink } from './add-link';
 export { AskQuestions } from './ask-questions';
-export { ModalAnswerComment } from './add-answer-comment';
-export { UploadResource } from './upload-resource';
 export { Auth } from './auth/ui';
 export { Logout } from './logout';
 export { ChangeEmail } from './change-email';
 export { ChangePassword } from './change-password';
-export { AddLink } from './add-link';
 export { CreateTopicModal } from './create-topic';
 export { DeleteTopicModal } from './delete-topic';
 export { DeleteResource } from './delete-resource';
+export { ModalAnswerComment } from './add-answer-comment';
+export { UploadResource } from './upload-resource';

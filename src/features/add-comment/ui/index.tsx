@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { AddCommentType } from 'features/add-comment/model/types';
 import { addComment } from 'features/add-comment/model/api';
+import { getStatusAddCommentSelector } from 'features/add-comment';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -14,7 +14,8 @@ interface Props {
 
 const Component: React.FC<Props> = ({ setVisible, id }) => {
   const dispatch = useAppDispatch();
-  const { success, error } = getStatusRequest();
+  const statusAddComment = getStatusAddCommentSelector();
+
   const text = useInput('', { isEmpty: true });
   const personName = useInput('', { isEmpty: true });
 
@@ -37,9 +38,10 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      statusAddComment.isSuccess && setVisible(false);
     }
-  }, [setVisible, success]);
+  }, [setVisible, statusAddComment.isSuccess]);
 
   return (
      <div className={cls.auth__wrapper}>
@@ -66,7 +68,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
            Оставить комментарий
         </Button>
         {
-             error
+            statusAddComment.error
                  && (
                  <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )

@@ -1,12 +1,9 @@
-import React, {
-  FC, useCallback, useEffect, useState,
-} from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { Button, Toolbar, Typography } from 'shared/ui';
-import { logout } from 'features/logout/model/api/logout';
+import { fetchLogout } from 'features/logout/model/api/logout';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import LogoutIcon from '@mui/icons-material/Logout';
 import cls from './styles.module.scss';
-import { getInfoUser } from '../../../entities/user';
 
 interface Props {
   isIcon?: boolean
@@ -29,7 +26,7 @@ const Component: FC<Props> = (props) => {
     isIcon = false,
   } = props;
 
-  const handleLogout = () => dispatch(logout());
+  const handleLogout = () => dispatch(fetchLogout());
 
   return (
      <>

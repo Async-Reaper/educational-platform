@@ -4,7 +4,7 @@ import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangePasswordType } from 'features/change-password/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { changePassword } from 'features/change-password/model/api';
+import { fetchChangePassword } from 'features/change-password/model/api/changePassword';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -41,7 +41,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
             && !repeatNewPassword.isEmpty
             && !password.isEmpty
     ) {
-      dispatch(changePassword(changePasswordData));
+      dispatch(fetchChangePassword(changePasswordData));
     }
   };
 

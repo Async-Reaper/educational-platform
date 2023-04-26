@@ -4,7 +4,7 @@ import { Button, ErrorText, Input } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
-import { addLink } from 'features/add-link/model/api';
+import { fetchAddLink } from 'features/add-link/model/api';
 import { AddLinkType } from 'features/add-link/model/types';
 
 interface Props {
@@ -19,6 +19,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   const description = useInput('', { isEmpty: true });
 
   const dataAddLink: AddLinkType = {
+    id,
     link: link.value,
     description: description.value,
   };
@@ -35,7 +36,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
     if (!link.isEmpty
             && !description.isEmpty
     ) {
-      dispatch(addLink(dataAddLink, id));
+      dispatch(fetchAddLink(dataAddLink));
     }
   };
 

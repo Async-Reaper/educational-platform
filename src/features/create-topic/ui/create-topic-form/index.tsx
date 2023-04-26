@@ -3,8 +3,11 @@ import { Button, ErrorText, Input } from 'shared/ui';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
-import { createTopic } from 'features/create-topic/model/api';
 import { CreateTopicType } from 'features/create-topic/model/types';
+import { fetchCreateTopic } from 'features/create-topic/model/api/createTopic';
+import {
+  getStatusCreateTopicSelector,
+} from 'features/create-topic/model/selectors/getStatusCreateTopicSelector/getStatusCreateTopicSelector';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -13,21 +16,24 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible, id }) => {
-  const { success, error } = getStatusRequest();
   const dispatch = useAppDispatch();
   const name = useInput('', { isEmpty: true });
   const description = useInput('', { isEmpty: true });
 
+  const statusCreateTopic = getStatusCreateTopicSelector();
+
   const dataCreateTopic: CreateTopicType = {
+    id,
     name: name.value,
     description: description.value,
   };
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      statusCreateTopic.isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [setVisible, statusCreateTopic.isSuccess]);
 
   const handleChangeEmail = () => {
     name.onBlur();
@@ -35,7 +41,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
     if (!name.isEmpty
             && !description.isEmpty
     ) {
-      dispatch(createTopic(dataCreateTopic, id));
+      dispatch(fetchCreateTopic(dataCreateTopic));
     }
   };
 
@@ -63,7 +69,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
            Создать тему
         </Button>
         {
-                error
+                statusCreateTopic.error
                 && (
                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                 )

@@ -3,7 +3,7 @@ import { Avatar, Typography } from 'shared/ui';
 // @ts-ignore
 import dateFormat from 'dateformat';
 import { API_URL } from 'shared/constants/baseURL';
-import { AnswerType } from 'widgets/comments-list/model/types';
+import { AnswerType } from 'entities/comments/model/types';
 import cls from './styles.module.scss';
 import ava from '../../../../../public/images/user/ava.png';
 

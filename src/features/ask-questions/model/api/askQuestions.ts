@@ -1,15 +1,21 @@
 import { AskQuestionType } from 'features/ask-questions/model/types';
-import axios from 'axios';
 import { API_URL, ASK_QUESTIONS_ENDPOINT } from 'shared/constants/baseURL';
-import { requestActions } from 'shared/libs/slices';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ThunkConfig } from 'app/providers/store';
 
-export const askQuestions = (data: AskQuestionType) => async (dispatch: AppDispatch) => {
-  try {
-    dispatch(requestActions.fetchRequest());
-    const response = await axios.post(API_URL + ASK_QUESTIONS_ENDPOINT, data);
-    const resultResponse = response.data;
-    dispatch(requestActions.successRequest());
-  } catch (e) {
-    dispatch(requestActions.errorRequest());
-  }
-};
+export const fetchAskQuestions = createAsyncThunk<
+void,
+AskQuestionType,
+ThunkConfig<string>
+>(
+  'comment/addComment',
+  async (data, thunkApi) => {
+    const { extra, rejectWithValue } = thunkApi;
+    try {
+      const response = await extra.api.post(API_URL + ASK_QUESTIONS_ENDPOINT, data);
+      return response.data;
+    } catch (e) {
+      return rejectWithValue('error');
+    }
+  },
+);

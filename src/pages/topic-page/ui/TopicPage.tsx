@@ -9,25 +9,32 @@ import { getTopicSelector } from 'entities/topic/model/selector';
 import { getTopic } from 'entities/topic/model/api';
 import { VariantLearning } from 'widgets';
 import { NavigateBack } from 'pages/topic-page/ui/navigate-back';
+import {
+  getStatusCreateTopicSelector,
+} from 'features/create-topic/';
+import { getStatusDeleteTopicSelector } from 'features/delete-topic';
 import cls from './styles.module.scss';
 
 const Component = memo(() => {
   const { id } = useParams();
   const dataTopic = getTopicSelector();
+  const statusCreateDataTopic = getStatusCreateTopicSelector();
+  const statusDeleteDataTopic = getStatusDeleteTopicSelector();
+
   const dispatch = useAppDispatch();
 
   const [typeLearn, setTypeLearn] = useState<string>();
 
   const getAllTopicHandler = useCallback(() => {
     dispatch(getTopic(id));
-  }, [dispatch, id]);
+  }, [dispatch, id, statusCreateDataTopic.isSuccess, statusDeleteDataTopic.isSuccess]);
 
   useEffect(() => {
     getAllTopicHandler();
     if (localStorage.getItem('type_learn')) {
       setTypeLearn(JSON.parse(localStorage.getItem('type_learn') || ''));
     }
-  }, [dispatch, getAllTopicHandler, id, typeLearn]);
+  }, [dispatch, getAllTopicHandler, id, typeLearn, statusCreateDataTopic.isSuccess, statusDeleteDataTopic.isSuccess]);
 
   const setTypeLearnHandler = useCallback((params: string) => {
     setTypeLearn(params);

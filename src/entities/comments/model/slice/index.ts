@@ -1,11 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CommentSchema, CommentType } from 'widgets/comments-list';
-import { getAllComments } from 'widgets/comments-list/model/api';
-import { addComment } from 'features/add-comment/model/api';
-import { AddCommentType } from 'features/add-comment';
+import { getAllComments } from 'entities/comments/model/api';
+import { CommentSchema, CommentType } from 'entities/comments/model/types';
 
 const initialState: CommentSchema = {
-  data: null,
+  data: [],
   isLoading: false,
   error: undefined,
 };
@@ -13,7 +11,9 @@ const initialState: CommentSchema = {
 const commentsSlice = createSlice({
   name: 'comments',
   initialState,
-  reducers: {},
+  reducers: {
+
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getAllComments.pending, (state) => {
@@ -26,7 +26,7 @@ const commentsSlice = createSlice({
       .addCase(getAllComments.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      })
+      });
   },
 });
 

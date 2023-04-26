@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Button, DragDrop, ErrorText, Input, LinearProgress, Typography,
+  Button, DragDrop, ErrorText, Input, Typography,
 } from 'shared/ui';
-import { uploadResourceApi } from 'features/upload-resource/model/api';
+import { fetchUploadResource } from 'features/upload-resource/model/api/uploadResource';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
+import { UploadResourceType } from 'features/upload-resource/model/types';
+import { getStatusUploadResourceSelector } from 'features/upload-resource';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -15,7 +17,7 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setIsVisible, id, transTypeResource }) => {
-  const { success, error, loading } = getStatusRequest();
+  const statusUploadResource = getStatusUploadResourceSelector();
   const dispatch = useAppDispatch();
   const nameResource = useInput('', { isEmpty: true });
   const descriptionResource = useInput('', { isEmpty: true });
@@ -40,9 +42,9 @@ const Component: React.FC<Props> = ({ setIsVisible, id, transTypeResource }) => 
 
   useEffect(() => {
     if (setIsVisible) {
-      success && setIsVisible(false);
+      statusUploadResource.isSuccess && setIsVisible(false);
     }
-  }, [setIsVisible, success]);
+  }, [setIsVisible, statusUploadResource.isSuccess]);
 
   const dataResource = new FormData();
 
@@ -53,8 +55,13 @@ const Component: React.FC<Props> = ({ setIsVisible, id, transTypeResource }) => 
     dataResource.append('resource_type', transTypeResource || typeResource);
     dataResource.append('resource_file', filesCourse[0]);
 
+    const dataUpload: UploadResourceType = {
+      id,
+      dataUpload: dataResource,
+    };
+
     if (filesCourse.length !== 0 && nameResource.value !== '') {
-      dispatch(uploadResourceApi(dataResource, id));
+      dispatch(fetchUploadResource(dataUpload));
     }
   };
 
@@ -119,7 +126,7 @@ const Component: React.FC<Props> = ({ setIsVisible, id, transTypeResource }) => 
            <Typography variant='body'>Загрузить ресурс</Typography>
         </Button>
         {
-                error
+            statusUploadResource.error
                 && (
                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                 )

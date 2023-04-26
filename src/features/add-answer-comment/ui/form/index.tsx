@@ -3,7 +3,7 @@ import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
-import { answerComment } from 'features/add-answer-comment/model/api';
+import { fetchAnswerComment } from 'features/add-answer-comment/model/api';
 import { AnswerCommentType } from 'features/add-answer-comment/model/types';
 import cls from './styles.module.scss';
 
@@ -17,6 +17,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   const { success, error } = getStatusRequest();
   const text = useInput('', { isEmpty: true });
   const answerCommentData: AnswerCommentType = {
+    id,
     text: text.value,
   };
 
@@ -25,7 +26,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
     if (
       !text.isEmpty
     ) {
-      dispatch(answerComment(answerCommentData, id));
+      dispatch(fetchAnswerComment(answerCommentData));
     }
   };
 
@@ -36,7 +37,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
   }, [success]);
 
   return (
-     <div className={cls.auth__wrapper}>
+     <form className={cls.auth__wrapper}>
         <div>
            <Input
              type='text'
@@ -56,7 +57,7 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
                  <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )
          }
-     </div>
+     </form>
   );
 };
 

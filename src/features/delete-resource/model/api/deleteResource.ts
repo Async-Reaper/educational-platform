@@ -7,7 +7,7 @@ void,
 number | undefined,
 ThunkConfig<string>
 >(
-  'comment/addComment',
+  'resource/deleteResource',
   async (idResource, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {

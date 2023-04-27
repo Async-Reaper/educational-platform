@@ -18,6 +18,7 @@ import { changeEmailReducer } from 'features/change-email';
 import { changePasswordReducer } from 'features/change-password';
 import { logoutReducer } from 'features/logout';
 import { uploadResourceReducer } from 'features/upload-resource';
+import { deleteResourceReducer } from 'features/delete-resource';
 import { createReducerManager } from './reducerManager';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
@@ -46,7 +47,7 @@ export function createReduxStore(
 
     // Async reducers for resource
     addLink: addLinkReducer,
-    deleteResource: deleteTopicReducer,
+    deleteResource: deleteResourceReducer,
     uploadResource: uploadResourceReducer,
 
     // Async reducers for user

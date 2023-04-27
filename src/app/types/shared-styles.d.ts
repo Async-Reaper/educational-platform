@@ -6,4 +6,6 @@ declare type Colors =
     | 'violet-primary'
     | 'violet-secondary'
     | 'white-bg'
-    | 'black-bg';
+    | 'black-bg'
+    | 'red-primary'
+    | 'red-secondary';

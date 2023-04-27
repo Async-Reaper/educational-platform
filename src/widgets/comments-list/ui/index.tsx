@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { Typography } from 'shared/ui';
 import { Comment } from 'widgets/comments-list/ui/comment';
@@ -19,9 +19,13 @@ const Component: React.FC<Props> = ({ id }) => {
   const statusAddAnswerComment = getStatusAddAnswerSelector();
   const comments = getAllCommentsSelector();
 
-  useEffect(() => {
+  const handleGetAllComment = useCallback(() => {
     dispatch(getAllComments(id));
-  }, [dispatch, id, statusAddComment.isSuccess, statusAddAnswerComment.isSuccess]);
+  }, [dispatch, id]);
+
+  useEffect(() => {
+    handleGetAllComment();
+  }, [statusAddComment.isSuccess, statusAddAnswerComment.isSuccess]);
 
   return (
      <div className={cls.comments__wrapper}>

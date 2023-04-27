@@ -9,7 +9,7 @@ const initialState: CreateTopicSchema = {
 };
 
 const deleteResourceSlice = createSlice({
-  name: 'resource/deleteTopic',
+  name: 'resource/deleteResource',
   initialState,
   reducers: {
 

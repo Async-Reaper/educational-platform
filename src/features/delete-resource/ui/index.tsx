@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Button, ErrorText, Typography } from 'shared/ui';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusDeleteResource } from 'features/delete-resource/model/selectors';
 import { fetchDeleteResource } from '../model/api/deleteResource';

@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react';
-import { ModalWindow, Typography } from 'shared/ui';
+import React, { FC, useEffect, useState } from 'react';
+import { ModalWindow, PopupWindow, Typography } from 'shared/ui';
 import { getCookie } from 'shared/libs/cookie';
 import { AddLink, UploadResource } from 'features';
 import { Icon } from 'shared/libs/icons';
@@ -9,6 +9,8 @@ import { PresentationList } from 'widgets/variant-learning/ui/presentation-list'
 import { TrainingsList } from 'widgets/variant-learning/ui/training-list';
 import { getTopicSelector } from 'entities/topic';
 import { VariantLearningList } from 'widgets/variant-learning/ui/variant-learning-list';
+import { getStatusUploadResourceSelector } from 'features/upload-resource';
+import { getStatusDeleteResource } from 'features/delete-resource/model/selectors';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -21,9 +23,37 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
   const [isVisibleAddLink, setIsVisibleAddLink] = useState(false);
   const dataTopic = getTopicSelector();
 
+  const [isShowPopupUploadResource, setIsShowPopupUploadResource] = useState(true);
+  const statusUploadResource = getStatusUploadResourceSelector();
+
+  const [isShowPopupDeleteResource, setIsShowPopupDeleteResource] = useState(false);
+  const statusDeleteResource = getStatusDeleteResource();
+
+  useEffect(() => {
+    if (statusUploadResource.isSuccess) {
+      setIsShowPopupUploadResource(true);
+    }
+  }, [statusUploadResource.isSuccess, isShowPopupUploadResource]);
+
+  useEffect(() => {
+    if (statusDeleteResource.isSuccess) {
+      setIsShowPopupDeleteResource(true);
+    }
+  }, [statusDeleteResource.isSuccess, isShowPopupDeleteResource]);
+
   return (
      <div>
         <div className={cls.themes__list}>
+           <PopupWindow
+             popupText='Ресурс успешно загружен'
+             isVisible={isShowPopupUploadResource}
+             setIsVisible={setIsShowPopupUploadResource}
+           />
+           <PopupWindow
+             popupText='Ресурс успешно удален'
+             isVisible={isShowPopupDeleteResource}
+             setIsVisible={setIsShowPopupDeleteResource}
+           />
            {
                     !typeLearn
                     && (

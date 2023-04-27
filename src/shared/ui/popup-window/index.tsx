@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import { Typography } from 'shared/ui';
+import { Icon } from 'shared/libs/icons';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -15,8 +16,8 @@ const Component: FC<Props> = ({ popupText, isVisible, setIsVisible }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsVisible(false);
-    }, 5000);
-  }, []);
+    }, 3000);
+  }, [isVisible, setIsVisible]);
 
   return (
      <div
@@ -24,9 +25,13 @@ const Component: FC<Props> = ({ popupText, isVisible, setIsVisible }) => {
        onClick={() => setIsVisible(false)}
      >
         <div className={cls.popup_content}>
+           <Icon name='check' />
            <Typography variant='small' tag='span'>
               {popupText}
            </Typography>
+        </div>
+        <div className={cls.popup_close}>
+           <Icon name='plus' color='red-primary' />
         </div>
      </div>
   );

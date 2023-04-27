@@ -8,7 +8,7 @@ void,
 UploadResourceType,
 ThunkConfig<string>
 >(
-  'topic/deleteTopic',
+  'resource/uploadResource',
   async (data, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     const { id, dataUpload } = data;

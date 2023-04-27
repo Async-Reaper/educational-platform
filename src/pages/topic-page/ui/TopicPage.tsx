@@ -13,11 +13,17 @@ import {
   getStatusCreateTopicSelector,
 } from 'features/create-topic/';
 import { getStatusDeleteTopicSelector } from 'features/delete-topic';
+import { getStatusUploadResourceSelector } from 'features/upload-resource';
+import { getStatusDeleteResource } from 'features/delete-resource/model/selectors';
 import cls from './styles.module.scss';
 
 const Component = memo(() => {
   const { id } = useParams();
   const dataTopic = getTopicSelector();
+
+  const statusUploadResource = getStatusUploadResourceSelector();
+  const statusDeleteResource = getStatusDeleteResource();
+
   const statusCreateDataTopic = getStatusCreateTopicSelector();
   const statusDeleteDataTopic = getStatusDeleteTopicSelector();
 
@@ -34,7 +40,16 @@ const Component = memo(() => {
     if (localStorage.getItem('type_learn')) {
       setTypeLearn(JSON.parse(localStorage.getItem('type_learn') || ''));
     }
-  }, [dispatch, getAllTopicHandler, id, typeLearn, statusCreateDataTopic.isSuccess, statusDeleteDataTopic.isSuccess]);
+  }, [
+    dispatch,
+    getAllTopicHandler,
+    id,
+    typeLearn,
+    statusCreateDataTopic.isSuccess,
+    statusDeleteDataTopic.isSuccess,
+    statusUploadResource.isSuccess,
+    statusDeleteResource.isSuccess,
+  ]);
 
   const setTypeLearnHandler = useCallback((params: string) => {
     setTypeLearn(params);

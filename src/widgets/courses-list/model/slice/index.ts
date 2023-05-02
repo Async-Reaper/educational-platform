@@ -4,7 +4,7 @@ import { CoursesSchema, CoursesType } from 'widgets/courses-list/model/types';
 const initialState: CoursesSchema = {};
 
 const coursesSlice = createSlice({
-  name: 'get all courses',
+  name: 'course/getAllCourses',
   initialState,
   reducers: {
     getAllCourses(state, action: PayloadAction<CoursesType[]>) {

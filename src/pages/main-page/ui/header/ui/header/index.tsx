@@ -10,6 +10,7 @@ import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getInfoUser, getInfoUserSelector } from 'entities/user';
 import cls from './styles.module.scss';
 import { HeaderToolbar } from '../header-toolbar';
+import {authSelector} from "features/auth";
 
 interface Props {
 
@@ -19,6 +20,7 @@ const Component: FC<Props> = () => {
   const dispatch = useAppDispatch();
   const [isVisibleLogin, setIsVisibleLogin] = React.useState(false);
   const userData = getInfoUserSelector();
+  const authData = authSelector();
   const token: string = localStorage.getItem('token') || '';
 
   const [isVisibleToolbar, setIsVisibleToolbar] = useState(false);
@@ -33,7 +35,7 @@ const Component: FC<Props> = () => {
 
   useEffect(() => {
     token && dispatch(getInfoUser());
-  }, []);
+  }, [authData.data]);
 
   return (
      <div className={cls.header}>

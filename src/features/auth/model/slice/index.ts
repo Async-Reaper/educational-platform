@@ -5,6 +5,7 @@ import { setCookie } from 'shared/libs/cookie';
 
 const initialState: AuthSchema = {
   data: undefined,
+  isSuccess: false,
   isLoading: false,
   error: undefined,
 };
@@ -22,6 +23,7 @@ const authSlice = createSlice({
         fetchAuthUser.fulfilled,
         (state, action: PayloadAction<AuthAnswer>) => {
           state.isLoading = false;
+          state.isSuccess = true;
           state.data = action.payload;
           setCookie('username', state.data.token);
           localStorage.setItem('token', JSON.stringify(state.data.token));

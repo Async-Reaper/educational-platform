@@ -10,6 +10,7 @@ export type AuthAnswer = {
 
 export type AuthSchema = {
   data?: AuthAnswer;
+  isSuccess: boolean;
   isLoading: boolean;
   error?: string;
 };

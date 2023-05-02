@@ -5,6 +5,7 @@ import { AuthData } from 'features/auth/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusRequest } from 'shared/libs/selectors';
 import { fetchAuthUser } from 'features/auth/model/api';
+import { authSelector } from 'features/auth';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 
 const Component: React.FC<Props> = ({ setVisible }) => {
   const dispatch = useAppDispatch();
-  const { success, error } = getStatusRequest();
+  const statusAuth = authSelector();
   const email = useInput('', { isEmpty: true, emailValid: true });
   const password = useInput('', { isEmpty: true });
 
@@ -37,9 +38,9 @@ const Component: React.FC<Props> = ({ setVisible }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      statusAuth.isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [statusAuth.isSuccess]);
 
   return (
      <form className={cls.auth__wrapper} onSubmit={(e) => handleAuth(e)}>
@@ -68,7 +69,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
            Вход
         </Button>
         {
-             error
+             statusAuth.error
                  && (
                  <ErrorText>Неправильный логин или пароль</ErrorText>
                  )

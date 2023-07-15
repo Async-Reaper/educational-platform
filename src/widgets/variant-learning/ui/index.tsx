@@ -23,7 +23,7 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
   const [isVisibleAddLink, setIsVisibleAddLink] = useState(false);
   const dataTopic = getTopicSelector();
 
-  const [isShowPopupUploadResource, setIsShowPopupUploadResource] = useState(true);
+  const [isShowPopupUploadResource, setIsShowPopupUploadResource] = useState(false);
   const statusUploadResource = getStatusUploadResourceSelector();
 
   const [isShowPopupDeleteResource, setIsShowPopupDeleteResource] = useState(false);

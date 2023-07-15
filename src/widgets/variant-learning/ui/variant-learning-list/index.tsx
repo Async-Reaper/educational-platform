@@ -4,10 +4,10 @@ import { getCookie } from 'shared/libs/cookie';
 import { Image, ModalWindow, Typography } from 'shared/ui';
 import { UploadResource } from 'features';
 import { TopicSchema } from 'entities/topic/model/types';
-import video from '../../../../../public/images/common/video.png';
-import lecture from '../../../../../public/images/common/lecture.png';
-import presentation from '../../../../../public/images/common/presentation.png';
-import training from '../../../../../public/images/common/training.png';
+import video from '../../../../../public/images/common/video.webp';
+import lecture from '../../../../../public/images/common/lecture.webp';
+import presentation from '../../../../../public/images/common/presentation.webp';
+import training from '../../../../../public/images/common/training.webp';
 
 interface Props {
   setTypeLearnHandler: (params: string) => void;

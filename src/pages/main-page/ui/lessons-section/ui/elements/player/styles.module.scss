@@ -1,56 +1,38 @@
 .player {
-    width: 688px;
-    height: 420px;
-    background: var(--color-gray-secondary);
-    border-radius: 20px 20px 0 0;
-    position: relative;
+  width: 688px;
+  height: 420px;
+  background: var(--color-gray-secondary);
+  border-radius: 20px 20px 0 0;
+  position: relative;
 
-    .center {
-        .play {
-            position: absolute;
-            top: 180px;
-            left: 317px;
-        }
-
-        .radar__circleSmall {
-            position: absolute;
-            top: 140px;
-            left: 267px;
-            animation: infinite 3s linear damping-radar;
-        }
-
-        .radar__circleBig {
-            position: absolute;
-            top: 100px;
-            left: 225px;
-            animation: infinite 3s linear damping-radar;
-        }
-    }
+  iframe {
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 @keyframes damping-radar {
-    0% {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 
-    25% {
-        opacity: 0.5;
-        transform: rotate(45deg);
-    }
+  25% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+  }
 
-    50% {
-        opacity: 0.25;
-        transform: rotate(90deg);
-    }
+  50% {
+    opacity: 0.25;
+    transform: rotate(90deg);
+  }
 
-    75% {
-        opacity: 0.5;
-        transform: rotate(45deg);
-    }
+  75% {
+    opacity: 0.5;
+    transform: rotate(45deg);
+  }
 
-    100% {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
 }

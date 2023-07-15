@@ -5,15 +5,15 @@ export interface LessonItem {
 
 export const lessons: LessonItem[] = [
   {
-    name: 'Курс по JavaScript',
-    link: 'https://www.youtube.com/watch?v=CxgOKJh4zWE',
+    name: 'Как повысить эффективность?',
+    link: 'https://www.youtube.com/watch?v=Jvsgfb7ZEdQ',
   },
   {
-    name: 'Курс по C#',
-    link: 'https://www.youtube.com/watch?v=w8rRhAup4kg&t=1s',
+    name: '22 совета продуктивности',
+    link: 'https://www.youtube.com/watch?v=edpN-WbBBiU',
   },
   {
-    name: 'Курс по дизайну',
-    link: 'https://www.youtube.com/watch?v=nHfw145LaL8',
+    name: 'Топ 10 профессий 2023',
+    link: 'https://www.youtube.com/watch?v=FC2KljkhvKY',
   },
 ];

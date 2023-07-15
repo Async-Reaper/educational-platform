@@ -1,5 +1,3 @@
-export const API_URL = 'http://localhost:8000';
-
 export const LOGIN_ENDPOINT = '/api/users/user/login/';
 
 export const LOGOUT_ENDPOINT = '/api/users/user/logout/';

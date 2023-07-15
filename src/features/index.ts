@@ -1,7 +1,6 @@
 export { AddLink } from './add-link';
 export { AskQuestions } from './ask-questions';
 export { Auth } from './auth/ui';
-export { Logout } from './logout';
 export { ChangeEmail } from './change-email';
 export { ChangePassword } from './change-password';
 export { CreateTopicModal } from './create-topic';

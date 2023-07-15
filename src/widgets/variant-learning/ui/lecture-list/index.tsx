@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { DeleteResource } from 'features';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { API_URL } from 'shared/constants/baseURL';
 import { ModalWindow, Typography } from 'shared/ui';
 import { ResourceType } from 'entities/topic/model/types';
 import { getCookie } from 'shared/libs/cookie';
@@ -43,7 +42,7 @@ const Component: React.FC<Props> = ({ lectures }) => {
                     </Typography>
                     <a
                       className={cls.link}
-                      href={`${API_URL}${lecture.file}`}
+                      href={`${__API__}${lecture.file}`}
                       target='_blank'
                       download
                       rel='noreferrer'

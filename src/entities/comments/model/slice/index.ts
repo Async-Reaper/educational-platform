@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getAllComments } from 'entities/comments/model/api';
+import { getAllComments } from 'entities/comments/model/api/getAllComments';
 import { CommentSchema, CommentType } from 'entities/comments/model/types';
 
 const initialState: CommentSchema = {

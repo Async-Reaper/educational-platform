@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import cls from 'features/change-email/ui/styles.module.scss';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { fetchAddLink } from 'features/add-link/model/api';
 import { AddLinkType } from 'features/add-link/model/types';
+import { getStatusAddLinkSelector } from 'features/add-link';
 
 interface Props {
   setVisible?: (arg: boolean) => void;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible, id }) => {
-  const { success, error } = getStatusRequest();
+  const { isSuccess, error } = getStatusAddLinkSelector();
   const dispatch = useAppDispatch();
   const link = useInput('', { isEmpty: true });
   const description = useInput('', { isEmpty: true });
@@ -26,9 +26,9 @@ const Component: React.FC<Props> = ({ setVisible, id }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [isSuccess]);
 
   const handleChangeEmail = () => {
     link.onBlur();

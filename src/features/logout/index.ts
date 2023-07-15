@@ -1,4 +1,4 @@
-export { Logout } from './ui';
+export { LogoutModal } from './ui/LogoutModal/LogoutModal';
 
 export {
   logoutActions,

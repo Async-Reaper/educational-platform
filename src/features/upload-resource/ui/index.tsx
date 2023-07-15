@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Button, DragDrop, ErrorText, Input, Typography,
+  Button, DragDrop, ErrorText, Input, Typography, 
 } from 'shared/ui';
 import { fetchUploadResource } from 'features/upload-resource/model/api/uploadResource';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { UploadResourceType } from 'features/upload-resource/model/types';

@@ -1,4 +1,4 @@
-import { API_URL, CHANGE_EMAIL_ENDPOINT } from 'shared/constants/baseURL';
+import { CHANGE_EMAIL_ENDPOINT } from 'shared/constants/baseURL';
 import { ChangeEmailType } from 'features/change-email/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -14,7 +14,7 @@ ThunkConfig<string>
   async (data, thunkApi) => {
     const { extra, rejectWithValue, dispatch } = thunkApi;
     try {
-      const response = await extra.api.put(API_URL + CHANGE_EMAIL_ENDPOINT, data, {
+      const response = await extra.api.put(CHANGE_EMAIL_ENDPOINT, data, {
         headers: {
           Token: JSON.parse(localStorage.getItem('token') || ''),
           Signature: JSON.parse(localStorage.getItem('signature') || ''),

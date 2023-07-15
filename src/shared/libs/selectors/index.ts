@@ -1,1 +1,0 @@
-export { getStatusRequest } from './getStatusRequest';

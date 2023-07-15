@@ -1,6 +1,6 @@
 export const useIconColor = (color?: Colors) => {
     if (!color) {
-        return '#141414';
+        return 'var(--color-primary)';
     }
 
     return `var(--color-${color})`;

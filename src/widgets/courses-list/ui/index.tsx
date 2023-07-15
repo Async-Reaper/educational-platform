@@ -19,6 +19,7 @@ const Component = () => {
         {coursesList.data?.map((course: CoursesType) => (
            <AppLink to={`/course/${course.id}`} className={cls.course__link}>
               <div aria-label={course.id.toString()} className={cls.course__wrapper}>
+                 <div className={cls.course_bookmark} />
                  <div
                    className='course__title'
                  >

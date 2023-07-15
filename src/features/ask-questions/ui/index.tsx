@@ -5,8 +5,8 @@ import {
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { AskQuestionType } from 'features/ask-questions/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { fetchAskQuestions } from 'features/ask-questions/model/api/askQuestions';
+import { getStatusAskQuestionsSelector } from 'features/ask-questions';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -18,7 +18,7 @@ const Component: React.FC<Props> = ({ setVisible }) => {
   const name = useInput('', { isEmpty: true });
   const question = useInput('', { isEmpty: true });
 
-  const { success } = getStatusRequest();
+  const { isSuccess } = getStatusAskQuestionsSelector();
   const dispatch = useAppDispatch();
 
   const dataAskQuestions: AskQuestionType = {
@@ -43,9 +43,9 @@ const Component: React.FC<Props> = ({ setVisible }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [isSuccess]);
 
   return (
      <div className={cls.auth__wrapper}>

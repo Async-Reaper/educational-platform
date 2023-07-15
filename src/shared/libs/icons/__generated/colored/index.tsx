@@ -11,6 +11,7 @@ import {DottedPlayerIcon as dotted_player} from './DottedPlayer';
 import {LectureIcon as lecture} from './Lecture';
 import {LineIcon as line} from './Line';
 import {LogoIcon as logo} from './Logo';
+import {MegaphoneIcon as megaphone} from './Megaphone';
 import {MeshIcon as mesh} from './Mesh';
 import {Message3DIcon as message_3_d} from './Message3D';
 import {MiddlePillarIcon as middle_pillar} from './MiddlePillar';
@@ -45,6 +46,7 @@ export type IconName =
   | 'lecture'
   | 'line'
   | 'logo'
+  | 'megaphone'
   | 'mesh'
   | 'message_3_d'
   | 'middle_pillar'
@@ -81,6 +83,7 @@ export const iconSet: {
   lecture,
   line,
   logo,
+  megaphone,
   mesh,
   message_3_d,
   middle_pillar,

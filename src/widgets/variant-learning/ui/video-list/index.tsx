@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { DeleteResource } from 'features';
 import DeleteIcon from '@mui/icons-material/Delete';
 import cls from '../../../../pages/topic-page/ui/styles.module.scss';
-import { API_URL } from '../../../../shared/constants/baseURL';
 import { ModalWindow, Typography } from '../../../../shared/ui';
-import { AddComment } from '../../../../features/add-comment/ui';
-import { CommentsList } from '../../../comments-list';
 import { ResourceType } from '../../../../entities/topic/model/types';
 import { Comments } from '../comments';
 import { getCookie } from '../../../../shared/libs/cookie';
@@ -41,10 +38,10 @@ const Component: React.FC<Props> = ({ videos }) => {
                     <Typography tag='span' variant='body' color='black-bg'>{video.description}</Typography>
                  </div>
                  <video
-                   src={`${API_URL}${video.file}`}
+                   src={`${__API__}${video.file}`}
                    controls
                  >
-                    <source src={`${API_URL}${video.file}`} />
+                    <source src={`${__API__}${video.file}`} />
                  </video>
                  <Comments id={video.id} />
               </div>

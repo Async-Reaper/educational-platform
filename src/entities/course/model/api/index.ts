@@ -1,4 +1,4 @@
-import { API_URL, GET_COURSE_ID_ENDPOINT } from 'shared/constants/baseURL';
+import { GET_COURSE_ID_ENDPOINT } from 'shared/constants/baseURL';
 import { CourseType } from 'entities/course/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -12,7 +12,7 @@ ThunkConfig<string>
   async (id, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.get(API_URL + GET_COURSE_ID_ENDPOINT + id);
+      const response = await extra.api.get( GET_COURSE_ID_ENDPOINT + id);
       return response.data;
     } catch (e) {
       console.log(e);

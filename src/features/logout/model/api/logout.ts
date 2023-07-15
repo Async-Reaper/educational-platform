@@ -1,5 +1,5 @@
 import { AuthAnswer } from 'features/auth/model/types';
-import { API_URL, LOGOUT_ENDPOINT } from 'shared/constants/baseURL';
+import { LOGOUT_ENDPOINT } from 'shared/constants/baseURL';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
 import { logoutActions } from 'features/logout';
@@ -13,7 +13,7 @@ ThunkConfig<string>
   async (idTopic, thunkApi) => {
     const { extra, rejectWithValue, dispatch } = thunkApi;
     try {
-      const response = await extra.api.delete(API_URL + LOGOUT_ENDPOINT, {
+      const response = await extra.api.delete(LOGOUT_ENDPOINT, {
         headers: {
           Token: JSON.parse(localStorage.getItem('token') || ''),
           Signature: JSON.parse(localStorage.getItem('signature') || ''),

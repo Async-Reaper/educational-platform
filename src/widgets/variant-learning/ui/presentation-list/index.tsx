@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { DeleteResource } from 'features';
+import React, {useState} from 'react';
+import {DeleteResource} from 'features';
 import DeleteIcon from '@mui/icons-material/Delete';
 import cls from '../../../../pages/topic-page/ui/styles.module.scss';
-import { API_URL } from '../../../../shared/constants/baseURL';
-import { ModalWindow, Typography } from '../../../../shared/ui';
-import { ResourceType } from '../../../../entities/topic/model/types';
-import { Comments } from '../comments';
-import { getCookie } from '../../../../shared/libs/cookie';
-import { ColoredIcon } from '../../../../shared/libs/icons';
+import {ModalWindow, Typography} from '../../../../shared/ui';
+import {ResourceType} from '../../../../entities/topic/model/types';
+import {Comments} from '../comments';
+import {getCookie} from '../../../../shared/libs/cookie';
 
 interface Props {
   presentations: ResourceType[] | undefined
@@ -43,7 +41,7 @@ const Component: React.FC<Props> = ({ presentations }) => {
                  </Typography>
                  <a
                    className={cls.link}
-                   href={`${API_URL}${presentation.file}`}
+                   href={`${__API__}${presentation.file}`}
                    target='_blank'
                    download
                    rel='noreferrer'

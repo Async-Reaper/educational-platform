@@ -3,7 +3,6 @@ import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { AuthData } from 'features/auth/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { fetchAuthUser } from 'features/auth/model/api';
 import { authSelector } from 'features/auth';
 import cls from './styles.module.scss';

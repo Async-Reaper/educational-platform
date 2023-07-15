@@ -1,4 +1,4 @@
-import { API_URL, CHANGE_PASSWORD_ENDPOINT } from 'shared/constants/baseURL';
+import { CHANGE_PASSWORD_ENDPOINT } from 'shared/constants/baseURL';
 import { ChangePasswordType } from 'features/change-password/model/types';
 import { deleteCookie } from 'shared/libs/cookie';
 import { createAsyncThunk } from '@reduxjs/toolkit';
@@ -13,7 +13,7 @@ ThunkConfig<string>
   async (data, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.put(API_URL + CHANGE_PASSWORD_ENDPOINT, data, {
+      const response = await extra.api.put(CHANGE_PASSWORD_ENDPOINT, data, {
         headers: {
           Token: JSON.parse(localStorage.getItem('token') || ''),
           Signature: JSON.parse(localStorage.getItem('signature') || ''),

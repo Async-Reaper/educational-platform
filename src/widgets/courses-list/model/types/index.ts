@@ -5,5 +5,7 @@ export type CoursesType = {
 };
 
 export type CoursesSchema = {
-  data?: CoursesType[] | null
+  data?: CoursesType[] | null;
+  isLoading: boolean;
+  error: string
 };

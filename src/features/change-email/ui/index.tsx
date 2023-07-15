@@ -1,8 +1,5 @@
-import React, {FormEvent, useEffect} from 'react';
-import { getStatusRequest } from 'shared/libs/selectors';
-import {
-  Button, ErrorText, Input, Typography,
-} from 'shared/ui';
+import React, { FormEvent, useEffect } from 'react';
+import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangeEmailType } from 'features/change-email/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';

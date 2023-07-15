@@ -1,4 +1,4 @@
-import { API_URL, GET_TOPIC_ENDPOINT } from 'shared/constants/baseURL';
+import { GET_TOPIC_ENDPOINT } from 'shared/constants/baseURL';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
 import { TopicsType } from '../types';
@@ -12,7 +12,7 @@ ThunkConfig<string>
   async (id, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.get(API_URL + GET_TOPIC_ENDPOINT + id);
+      const response = await extra.api.get(GET_TOPIC_ENDPOINT + id);
       return response.data;
     } catch (e) {
       console.log(e);

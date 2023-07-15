@@ -1,22 +1,26 @@
-import { requestActions } from 'shared/libs/slices';
 import axios from 'axios';
-import { API_URL, GET_ALL_COURSES_ENDPOINT } from 'shared/constants/baseURL';
-import { coursesActions } from 'widgets/courses-list/model/slice';
+import { GET_ALL_COURSES_ENDPOINT } from 'shared/constants/baseURL';
+import { coursesActions } from 'widgets/courses-list/model/slice/coursesListSlice';
 import { CoursesType } from 'widgets/courses-list/model/types';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ThunkConfig } from 'app/providers/store';
 
-export const getAllCourse = () => async (dispatch: AppDispatch) => {
-  try {
-    dispatch(requestActions.fetchRequest());
-    const response = await axios.get<CoursesType[]>(API_URL + GET_ALL_COURSES_ENDPOINT, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Cross-Origin-Opener-Policy': 'same-origin'
-      }
-    });
-    const resultResponse = response.data;
-    dispatch(coursesActions.getAllCourses(resultResponse));
-    dispatch(requestActions.successRequest());
-  } catch (e) {
-    console.log(e);
-  }
-};
+export const getAllCourse = createAsyncThunk<
+any,
+void,
+ThunkConfig<any>
+>(
+  'course/getAllCourses',
+  async (_, thunkApi) => {
+    const { dispatch, extra } = thunkApi;
+
+    try {
+      const response = await extra.api.get(GET_ALL_COURSES_ENDPOINT);
+      const resultResponse = response.data;
+
+      dispatch(coursesActions.getAllCourses(resultResponse));
+    } catch (e) {
+      console.log(e);
+    }
+  },
+);

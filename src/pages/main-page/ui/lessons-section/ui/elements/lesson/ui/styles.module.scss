@@ -1,6 +1,7 @@
 .lesson {
     display: flex;
     align-items: center;
+    width: max-content;
     grid-gap: 30px;
 
     .video {
@@ -8,8 +9,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 112px;
-        height: 112px;
+        width: 40px;
+        height: 40px;
         background: var(--color-gray-secondary);
         box-shadow: 0 30px 30px rgb(109 94 88 / 25%);
         border-radius: 21.4724px;
@@ -22,7 +23,8 @@
 
         .play__icon {
             position: absolute;
-            left: 52px;
+            left: 15px;
+            top: 12px;
         }
     }
 }

@@ -6,13 +6,12 @@ import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import {
   Avatar, Button, ModalWindow, PopupWindow, Typography,
 } from 'shared/ui';
-import { API_URL } from 'shared/constants/baseURL';
 // @ts-ignore
 import dateFormat from 'dateformat';
 import { authSelector } from 'features/auth';
 import { getStatusChangeEmailSelector } from 'features/change-email';
 import cls from './styles.module.scss';
-import ava from '../../../../public/images/user/ava.png';
+import ava from '../../../../public/images/mock/ava.png';
 
 const Component = () => {
   const user = getInfoUserSelector();
@@ -52,7 +51,7 @@ const Component = () => {
                    <div className={cls.top_info_part}>
                       <Avatar
                         src={user?.data?.icon
-                          ? `${API_URL}${user?.data?.icon}`
+                          ? `${__API__}${user?.data?.icon}`
                           : ava}
                         variant='xl'
                       />

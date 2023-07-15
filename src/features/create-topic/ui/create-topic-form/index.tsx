@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { CreateTopicType } from 'features/create-topic/model/types';

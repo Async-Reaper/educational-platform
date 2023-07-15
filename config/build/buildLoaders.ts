@@ -15,7 +15,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
   const cssLoader = buildCssLoader(isDev);
 
-  // Если не используем тайпскрипт - нужен babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -23,7 +22,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   const fileLoader = {
-    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    test: /\.(png|jpe?g|gif|woff2|woff|webp)$/i,
     use: [
       {
         loader: 'file-loader',

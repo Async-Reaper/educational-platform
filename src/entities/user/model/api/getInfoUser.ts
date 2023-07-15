@@ -1,4 +1,4 @@
-import { API_URL, USER_INFO_ENDPOINT } from 'shared/constants/baseURL';
+import { USER_INFO_ENDPOINT } from 'shared/constants/baseURL';
 import { UserType } from 'entities/user';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -13,7 +13,7 @@ ThunkConfig<string>
   async (_, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
     try {
-      const response = await extra.api.get<UserType>(API_URL + USER_INFO_ENDPOINT, {
+      const response = await extra.api.get<UserType>(USER_INFO_ENDPOINT, {
         headers: {
           Token: JSON.parse(localStorage.getItem('token') || ''),
           Signature: JSON.parse(localStorage.getItem('signature') || ''),

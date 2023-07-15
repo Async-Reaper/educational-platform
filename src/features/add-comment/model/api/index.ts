@@ -1,4 +1,4 @@
-import { ADD_COMMENT_ENDPOINT, API_URL } from 'shared/constants/baseURL';
+import { ADD_COMMENT_ENDPOINT } from 'shared/constants/baseURL';
 import { AddCommentType } from 'features/add-comment/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -13,7 +13,7 @@ ThunkConfig<string>
     const { extra, rejectWithValue } = thunkApi;
     const { idResource, text, person_name } = data;
     try {
-      const response = await extra.api.post(`${API_URL + ADD_COMMENT_ENDPOINT + idResource}/comment/`, {
+      const response = await extra.api.post(`${ADD_COMMENT_ENDPOINT + idResource}/comment/`, {
         text,
         person_name,
       });

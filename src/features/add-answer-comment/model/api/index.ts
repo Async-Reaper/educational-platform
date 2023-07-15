@@ -1,4 +1,4 @@
-import { ADD_ANSWER_ENDPOINT, API_URL } from 'shared/constants/baseURL';
+import { ADD_ANSWER_ENDPOINT } from 'shared/constants/baseURL';
 import { AnswerCommentType } from 'features/add-answer-comment/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -13,7 +13,7 @@ ThunkConfig<string>
     const { extra, rejectWithValue } = thunkApi;
     const { id, text } = data;
     try {
-      const response = await extra.api.post(`${API_URL + ADD_ANSWER_ENDPOINT + id}/answer/`, {
+      const response = await extra.api.post(`${ADD_ANSWER_ENDPOINT + id}/answer/`, {
         text,
       }, {
         headers: {

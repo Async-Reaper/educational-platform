@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Component: FC<Props> = ({ lesson }) => (
-   <a href={lesson.link} className={cls.lesson}>
+   <a href={lesson.link} target='_blank' className={cls.lesson}>
       <div className={cls.video}>
          <ColoredIcon
            className={cls.play__icon}

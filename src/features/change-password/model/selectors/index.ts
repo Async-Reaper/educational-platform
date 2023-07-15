@@ -1,3 +1,3 @@
 export {
-  getStatusChangeEmailSelector,
+  getStatusChangePasswordSelector,
 } from './getStatusChangePasswordSelector/index';

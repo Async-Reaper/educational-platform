@@ -1,4 +1,4 @@
-import { ADD_LINK_ENDPOINT, API_URL } from 'shared/constants/baseURL';
+import { ADD_LINK_ENDPOINT } from 'shared/constants/baseURL';
 import { AddLinkType } from 'features/add-link/model/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
@@ -13,7 +13,7 @@ ThunkConfig<string>
     const { extra, rejectWithValue } = thunkApi;
     const { id, link, description } = data;
     try {
-      const response = await extra.api.post(`${API_URL + ADD_LINK_ENDPOINT + id}/training_apparatus/`, {
+      const response = await extra.api.post(`${ADD_LINK_ENDPOINT + id}/training_apparatus/`, {
         link,
         description,
       }, {

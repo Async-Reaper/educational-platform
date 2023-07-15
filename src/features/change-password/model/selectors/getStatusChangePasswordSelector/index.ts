@@ -1,3 +1,3 @@
 import { useAppSelector } from 'shared/hooks/useAppSelector';
 
-export const getStatusChangeEmailSelector = () => useAppSelector((state) => state.changeEmail);
+export const getStatusChangePasswordSelector = () => useAppSelector((state) => state.changePassword);

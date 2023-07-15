@@ -1,4 +1,3 @@
-export { LessonsAdditional } from './elements/lessons-additional';
 export { LessonsList } from './wrappers/lessons-list';
 export { LessonsWrapper } from './wrappers/lessons-wrapper';
 export { PlayerBenefits } from './elements/player-benefits';

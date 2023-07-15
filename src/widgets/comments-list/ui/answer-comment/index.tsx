@@ -2,10 +2,9 @@ import React, { type FC } from 'react';
 import { Avatar, Typography } from 'shared/ui';
 // @ts-ignore
 import dateFormat from 'dateformat';
-import { API_URL } from 'shared/constants/baseURL';
 import { AnswerType } from 'entities/comments/model/types';
 import cls from './styles.module.scss';
-import ava from '../../../../../public/images/user/ava.png';
+import ava from '../../../../../public/images/mock/ava.png';
 
 interface Props {
   answerComment: AnswerType;
@@ -17,7 +16,7 @@ const Component: FC<Props> = ({ answerComment }) => (
          <Avatar
            variant='xs'
            src={answerComment.teacher.icon
-             ? `${API_URL}${answerComment.teacher.icon}`
+             ? `${__API__}${answerComment.teacher.icon}`
              : ava}
          />
          <div>

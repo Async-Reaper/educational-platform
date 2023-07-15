@@ -1,7 +1,7 @@
-import { API_URL, UPLOAD_RESOURCE_ENDPOINT } from 'shared/constants/baseURL';
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ThunkConfig } from 'app/providers/store';
-import { UploadResourceType } from 'features/upload-resource/model/types';
+import {UPLOAD_RESOURCE_ENDPOINT} from 'shared/constants/baseURL';
+import {createAsyncThunk} from '@reduxjs/toolkit';
+import {ThunkConfig} from 'app/providers/store';
+import {UploadResourceType} from 'features/upload-resource/model/types';
 
 export const fetchUploadResource = createAsyncThunk<
 void,
@@ -14,7 +14,7 @@ ThunkConfig<string>
     const { id, dataUpload } = data;
     try {
       const response = await extra.api.post(
-        `${API_URL + UPLOAD_RESOURCE_ENDPOINT + id}/resource/`,
+        `${UPLOAD_RESOURCE_ENDPOINT + id}/resource/`,
         {
           name: dataUpload.get('name'),
           description: dataUpload.get('description'),

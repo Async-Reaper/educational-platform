@@ -1,10 +1,12 @@
-import React, {FormEvent, useEffect} from 'react';
-import { getStatusRequest } from 'shared/libs/selectors';
+import React, { FormEvent, useEffect } from 'react';
 import { Button, ErrorText, Input } from 'shared/ui';
 import { useInput } from 'shared/hooks/useValidation/useInput';
 import { ChangePasswordType } from 'features/change-password/model/types';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { fetchChangePassword } from 'features/change-password/model/api/changePassword';
+import {
+  getStatusChangePasswordSelector,
+} from 'features/change-password/model/selectors/getStatusChangePasswordSelector';
 import cls from './styles.module.scss';
 
 interface Props {
@@ -12,7 +14,7 @@ interface Props {
 }
 
 const Component: React.FC<Props> = ({ setVisible }) => {
-  const { success, error } = getStatusRequest();
+  const { isSuccess, error } = getStatusChangePasswordSelector();
 
   const password = useInput('', { isEmpty: true, emailValid: true });
   const newPassword = useInput('', { isEmpty: true, passwordValid: true });
@@ -28,9 +30,9 @@ const Component: React.FC<Props> = ({ setVisible }) => {
 
   useEffect(() => {
     if (setVisible) {
-      success && setVisible(false);
+      isSuccess && setVisible(false);
     }
-  }, [success]);
+  }, [isSuccess]);
 
   const handleChangePassword = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

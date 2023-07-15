@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { SVGAttributes } from 'react';
+import {SVGAttributes} from 'react';
 
-import { useIconColor } from './useIconColor';
-import { PlusIcon } from '../__generated/general/Plus';
+import {useIconColor} from './useIconColor';
+import {PlusIcon} from '../__generated/general/Plus';
 
 export type IconProps<IconName> = Omit<SVGAttributes<SVGElement>, 'color'> & {
   /** color of icon */
@@ -46,13 +46,11 @@ export const createIconComponent = <
         size = defaultSize,
         ...props
     }) => {
-        // eslint-disable-next-line no-prototype-builtins
         const isIconPresentInSet = iconSet.hasOwnProperty(name);
 
         const endColor = useIconColor(color);
 
         if (!isIconPresentInSet) {
-            // eslint-disable-next-line no-console
             console.warn(`${componentName}: icon with name="${name}" was not found!;`);
         }
 

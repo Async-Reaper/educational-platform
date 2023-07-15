@@ -4,7 +4,7 @@ import cls from './styles.module.scss';
 
 const Component = () => (
    <div className={cls.icons__title}>
-      <Typography tag='h1' variant='h2' color='gray-primary'>Тест нашего эксперта</Typography>
+      <Typography tag='h1' variant='h2' color='gray-primary'>Тест-опросник</Typography>
    </div>
 );
 

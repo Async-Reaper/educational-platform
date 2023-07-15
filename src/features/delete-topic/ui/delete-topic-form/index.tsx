@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Button, ErrorText, Typography } from 'shared/ui';
-import { getStatusRequest } from 'shared/libs/selectors';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { getStatusDeleteTopicSelector } from 'features/delete-topic';
 import { fetchDeleteTopic } from '../../model/api/deleteTopic';

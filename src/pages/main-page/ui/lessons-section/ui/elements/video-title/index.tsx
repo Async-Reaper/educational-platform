@@ -5,7 +5,7 @@ import cls from './styles.module.scss';
 const Component = () => (
    <div className={cls.videoTitle}>
       <Typography tag='h2' variant='h2' color='gray-primary'>
-         Изучите видеоуроки
+         Первый шаг к успеху - эффективность!
       </Typography>
    </div>
 );

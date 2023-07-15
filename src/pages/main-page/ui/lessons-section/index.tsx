@@ -6,7 +6,6 @@ import { Player } from 'pages/main-page/ui/lessons-section/ui/elements/player';
 import { lessons } from 'pages/main-page/ui/lessons-section/model/lessons';
 import { Lesson } from 'pages/main-page/ui/lessons-section/ui/elements/lesson/ui';
 import {
-  LessonsAdditional,
   LessonsList,
   LessonsWrapper,
   PlayerBenefits,
@@ -34,7 +33,6 @@ const Component = () => (
                      {
                             lessons.map((lesson) => <Lesson lesson={lesson} />)
                          }
-                     <LessonsAdditional />
                   </LessonsList>
                </VideoLessonsWrapper>
             </LessonsInner>

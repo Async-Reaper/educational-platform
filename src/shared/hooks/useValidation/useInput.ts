@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useValidation } from './useValidation';
 
 export const useInput = (state: string, validation: any) => {
@@ -6,9 +6,9 @@ export const useInput = (state: string, validation: any) => {
   const [isDirty, setIsDirty] = useState<boolean>(false);
   const valid = useValidation(value, validation);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+  const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setValue(e.target.value);
-  };
+  }, [value, setValue]);
 
   const onClick = (): void => {
     setIsDirty(true);

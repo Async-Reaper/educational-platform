@@ -1,0 +1,24 @@
+.error_page {
+  min-height: 100vh;
+  background: var(--color-black-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .error__wrapper {
+    background: var(--color-white-bg);
+    color: var(--color-black-bg);
+    padding: 10px;
+    border-radius: var(--border-radius-md);
+
+    .error__text {
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    .reload_button {
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 import { type RouteProps } from 'react-router-dom';
-import { MainPage } from 'pages/main-page';
-import { PlatformPage } from 'pages/platform-page';
-import { PrivateCabinet } from 'pages/private-cabinet';
-import { CoursePage } from 'pages/course-page';
-import { TopicPage } from 'pages/topic-page';
+import { MainPage } from 'pages/MainPage';
+import { PlatformPage } from 'pages/PlatformPage';
+import { PrivateCabinet } from 'pages/PrivateCabinet';
+import { CoursePage } from 'pages/CoursePage';
+import { TopicPage } from 'pages/TopicPage';
+import { TestPage } from 'pages/TestPage';
+import { GroupedCoursePage } from 'pages/GroupedCoursePage';
 
 export enum AppRoutes {
   MAIN = 'MAIN',
@@ -11,6 +13,8 @@ export enum AppRoutes {
   PLATFORM_COURSE = 'PLATFORM_COURSE',
   PRIVATE_CABINET = 'PRIVATE_CABINET',
   TOPIC = 'TOPIC',
+  GROUPED_COURSE = 'GROUPED_COURSE',
+  TEST = 'TEST',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -19,6 +23,8 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.PRIVATE_CABINET]: '/private-cabinet',
   [AppRoutes.PLATFORM_COURSE]: '/course/:id',
   [AppRoutes.TOPIC]: '/course/:id/topic/:id',
+  [AppRoutes.GROUPED_COURSE]: '/course/grouped-course',
+  [AppRoutes.TEST]: '/test',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -41,5 +47,13 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.TOPIC]: {
     path: RoutePath.TOPIC,
     element: <TopicPage />,
+  },
+  [AppRoutes.GROUPED_COURSE]: {
+    path: RoutePath.GROUPED_COURSE,
+    element: <GroupedCoursePage />,
+  },
+  [AppRoutes.TEST]: {
+    path: RoutePath.TEST,
+    element: <TestPage />,
   },
 };

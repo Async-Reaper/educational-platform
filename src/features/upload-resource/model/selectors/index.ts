@@ -1,3 +1,0 @@
-export {
-  getStatusUploadResourceSelector,
-} from './getStatusUploadResourceSelector';

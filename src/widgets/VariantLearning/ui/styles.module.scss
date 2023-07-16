@@ -1,0 +1,78 @@
+.select_theme {
+  text-align: left;
+  margin: 0 0 15px;
+}
+
+.variant_learning__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  gap: 10px;
+
+  .variant_learning {
+    cursor: pointer;
+    background: var(--color-white-bg);
+    box-shadow: 0px 0px 20px var(--color-gray-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 217px;
+    gap: 15px;
+    transition: all .3s;
+
+    &:hover {
+      background: var(--color-gray-secondary);
+    }
+
+    .image__wrapper {
+      max-width: 50px;
+    }
+  }
+
+  .create_resource__wrapper {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px #E1E4ED;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s;
+    width: 270px;
+    height: 100px;
+    color: var(--color-black-bg);
+
+    &:hover {
+      background: var(--color-violet-primary);
+      color: var(--color-white-bg);
+    }
+  }
+}
+
+.themes__list_title {
+  margin: 0 0 20px;
+}
+
+.add_resource__btn {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-black-bg);
+  }
+}
+
+.video__lessons {
+  margin: 0 0 20px;
+
+  video {
+    width: 500px;
+    background: var(--color-black-bg);
+    border-radius: var(--border-radius-md);
+  }
+}

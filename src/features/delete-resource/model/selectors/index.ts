@@ -1,3 +1,0 @@
-export {
-  getStatusDeleteResource,
-} from './getStatusDeleteResource';

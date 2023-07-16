@@ -1,3 +1,0 @@
-export {
-  getStatusLogoutSelector,
-} from './getStatusLogoutSelector';

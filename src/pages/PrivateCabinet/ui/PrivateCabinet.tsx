@@ -40,61 +40,59 @@ const Component = () => {
   }, [dispatch, token, statusChangeEmail]);
 
   return (
-     <div className='page_platform'>
-        <Sidebar />
-        <div className='page_platform__content'>
-           {user || token
-             ? (
-                <div className={cls.user_info}>
-                   <PopupWindow
-                     popupText='Смена адреса прошла успешно'
-                     isVisible={isPopupChangeEmail}
-                     setIsVisible={setIsPopupChangeEmail}
+     <div>
+        {user || token
+          ? (
+             <div className={cls.user_info}>
+                <PopupWindow
+                  popupText='Смена адреса прошла успешно'
+                  isVisible={isPopupChangeEmail}
+                  setIsVisible={setIsPopupChangeEmail}
+                />
+                <div className={cls.top_info_part}>
+                   <Avatar
+                     src={user?.icon
+                       ? `${__API__}${user?.icon}`
+                       : ava}
+                     variant='xl'
                    />
-                   <div className={cls.top_info_part}>
-                      <Avatar
-                        src={user?.icon
-                          ? `${__API__}${user?.icon}`
-                          : ava}
-                        variant='xl'
-                      />
-                      <Typography variant='h1' color='violet-primary'>
-                         #
-                         {user?.id}
+                   <Typography variant='h1' color='violet-primary'>
+                      #
+                      {user?.id}
+                   </Typography>
+                </div>
+                <div className={cls.other__info}>
+                   <div className={cls.info_item}>
+                      <Typography variant='body' color='black-bg'>ФИО:</Typography>
+                      <Typography variant='body' color='violet-primary'>
+                         {user?.full_name}
                       </Typography>
                    </div>
-                   <div className={cls.other__info}>
-                      <div className={cls.info_item}>
-                         <Typography variant='body' color='black-bg'>ФИО:</Typography>
-                         <Typography variant='body' color='violet-primary'>
-                            {user?.full_name}
-                         </Typography>
-                      </div>
-                      <div className={cls.info_item}>
-                         <Typography variant='body' color='black-bg'>Почта:</Typography>
-                         <Typography variant='body' color='violet-primary'>
-                            {user?.email}
-                         </Typography>
-                      </div>
-                      <div className={cls.info_item}>
-                         <Typography variant='body' color='black-bg'>Дата регистрации:</Typography>
-                         <Typography variant='body' color='violet-primary'>
-                            {/* eslint-disable-next-line no-unsafe-optional-chaining */}
-                            {dateReg.slice(0, dateReg?.length - 8)}
-                         </Typography>
-                      </div>
-                      <div className={cls.info_item}>
-                         <Button variant='xs' onClick={openChangeEmail}>
-                            Сменить
-                            почту
-                         </Button>
-                         <Button variant='xs' onClick={openChangePassword}>
-                            Сменить
-                            пароль
-                         </Button>
-                      </div>
+                   <div className={cls.info_item}>
+                      <Typography variant='body' color='black-bg'>Почта:</Typography>
+                      <Typography variant='body' color='violet-primary'>
+                         {user?.email}
+                      </Typography>
                    </div>
-                   {
+                   <div className={cls.info_item}>
+                      <Typography variant='body' color='black-bg'>Дата регистрации:</Typography>
+                      <Typography variant='body' color='violet-primary'>
+                         {/* eslint-disable-next-line no-unsafe-optional-chaining */}
+                         {dateReg.slice(0, dateReg?.length - 8)}
+                      </Typography>
+                   </div>
+                   <div className={cls.info_item}>
+                      <Button variant='xs' onClick={openChangeEmail}>
+                         Сменить
+                         почту
+                      </Button>
+                      <Button variant='xs' onClick={openChangePassword}>
+                         Сменить
+                         пароль
+                      </Button>
+                   </div>
+                </div>
+                {
                     isOpenChangeEmail
                       && (
                       <ChangeEmailModal
@@ -103,7 +101,7 @@ const Component = () => {
                       />
                       )
                   }
-                   {
+                {
                     isOpenChangePassword
                       && (
                       <ChangePasswordModal
@@ -112,14 +110,13 @@ const Component = () => {
                       />
                       )
                   }
-                </div>
-             )
-             : (
-                <div className={cls.auth__wrapper}>
-                   <AuthFormAsync onSuccess={closeAuth} />
-                </div>
-             )}
-        </div>
+             </div>
+          )
+          : (
+             <div className={cls.auth__wrapper}>
+                <AuthFormAsync onSuccess={closeAuth} />
+             </div>
+          )}
      </div>
   );
 };

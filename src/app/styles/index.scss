@@ -14,8 +14,10 @@ body {
 }
 
 .page_platform {
-    background: var(--color-white-bg);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, auto));
     min-height: 100vh;
+    background: var(--color-white-bg);
 }
 
 .page_platform__content {

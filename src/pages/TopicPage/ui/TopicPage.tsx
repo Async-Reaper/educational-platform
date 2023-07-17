@@ -4,7 +4,6 @@ import React, {
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Typography } from 'shared/ui';
-import { Sidebar } from 'widgets/Sidebar';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { topicData, getTopic } from 'entities/Topic';
 import { deleteTopicIsSuccess } from 'features/DeleteTopic';
@@ -56,16 +55,14 @@ const Component = memo(() => {
   }, []);
 
   return (
-     <div className='page_platform'>
-        <Sidebar />
-        <div className='page_platform__content'>
-           <NavigateBack typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
-           <div className={cls.topic__name}>
-              <Typography variant='h3' color='violet-primary'>
-                 {dataTopic?.name}
-              </Typography>
-           </div>
-           {
+     <>
+        <NavigateBack typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
+        <div className={cls.topic__name}>
+           <Typography variant='h3' color='violet-primary'>
+              {dataTopic?.name}
+           </Typography>
+        </div>
+        {
                 !typeLearn
                 && (
                 <div className={cls.topic__description}>
@@ -75,9 +72,8 @@ const Component = memo(() => {
                 </div>
                 )
             }
-           <VariantLearning typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
-        </div>
-     </div>
+        <VariantLearning typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
+     </>
   );
 });
 

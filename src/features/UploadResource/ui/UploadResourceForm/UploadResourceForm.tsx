@@ -80,7 +80,7 @@ const UploadResource = ({ id, transTypeResource, onSuccess }: Props) => {
         onSuccess();
       }
     }
-  }, [dispatch, onSuccess]);
+  }, [dataResource, dispatch, onSuccess]);
 
   return (
      <DynamicModuleLoader

@@ -38,7 +38,7 @@ const AddCommentForm = ({ id, onSuccess }: Props) => {
     if (response.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }
-  }, [dispatch, onSuccess]);
+  }, [addCommentData, dispatch, onSuccess]);
 
   const validateAddComment = useCallback(() => {
     text.onBlur();

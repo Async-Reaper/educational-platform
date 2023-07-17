@@ -52,7 +52,7 @@ const ChangePasswordForm = ({ onSuccess }: Props) => {
      <form className={cls.change_password__wrapper} onSubmit={(e) => validateDataChangePassword(e)}>
         <div>
            <Input
-             type='email'
+             type='password'
              value={password.value}
              onChange={password.onChange}
              label='Старый пароль'

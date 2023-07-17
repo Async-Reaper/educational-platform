@@ -17,5 +17,4 @@ export { Typography } from './typography';
 export { LoaderPage } from './loader-page';
 // eslint-disable-next-line import/no-cycle
 export { Toolbar } from './toolbar';
-export { LinearProgress } from './linear-progress';
 export { PopupWindow } from './popup-window';

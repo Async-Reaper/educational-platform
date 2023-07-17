@@ -37,7 +37,7 @@ const AskQuestions = ({ onSuccess }: Props) => {
     if (response.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }
-  }, [dispatch, onSuccess]);
+  }, [dataAskQuestions, dispatch, onSuccess]);
 
   const validateAskQuestionsData = useCallback(() => {
     email.onBlur();

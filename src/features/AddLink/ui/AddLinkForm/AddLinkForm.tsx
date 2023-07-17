@@ -38,7 +38,7 @@ const AddLinkForm = ({ id, onSuccess }: Props) => {
     if (response.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }
-  }, [onSuccess, dispatch]);
+  }, [dataAddLink, onSuccess, dispatch]);
 
   const validateDataChangeEmail = useCallback(() => {
     link.onBlur();

@@ -1,0 +1,10 @@
+.back__link {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  margin: 0 0 10px;
+
+  .icon__wrapper {
+    transform: rotate(180deg);
+  }
+}

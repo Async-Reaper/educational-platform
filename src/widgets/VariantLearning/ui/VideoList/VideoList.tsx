@@ -6,7 +6,7 @@ import { Typography } from 'shared/ui';
 import { ResourceType } from 'entities/Topic/model/types';
 import { getCookie } from 'shared/libs/cookie';
 import { Comments } from '../Comments/Comments';
-import cls from '../../../../pages/TopicPage/ui/styles.module.scss';
+import cls from '../styles.module.scss';
 
 interface Props {
   videos: ResourceType[] | undefined

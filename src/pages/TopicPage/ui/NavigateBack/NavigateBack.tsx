@@ -1,8 +1,8 @@
 import React, { FC, useCallback } from 'react';
-import cls from 'pages/TopicPage/ui/styles.module.scss';
 import { Icon } from 'shared/libs/icons';
 import { Typography } from 'shared/ui';
 import { useNavigate } from 'react-router-dom';
+import cls from './styles.module.scss';
 
 interface Props {
   typeLearn: any;

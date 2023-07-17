@@ -51,6 +51,55 @@
   }
 }
 
+
+.resource_text_info__wrapper {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 5px;
+  padding: 0 0 0 5px;
+}
+
+.resources__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max-content, 520px));
+  gap: 10px;
+}
+
+.resource__wrapper {
+  height: max-content;
+  box-shadow: 0 0 10px var(--color-gray-secondary);
+  width: max-content;
+  max-width: 520px;
+  padding: 10px;
+  border-radius: var(--border-radius-lg);
+}
+
+.delete_topic__btn {
+  cursor: pointer;
+  color: var(--color-red-primary);
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px;
+}
+
+.themes__list_title {
+  margin: 0 0 5px;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--color-violet-primary);
+  margin: 0 0 10px;
+  transition: all .3s;
+  display: block;
+  width: max-content;
+
+  &:hover {
+    color: var(--color-violet-secondary);
+  }
+}
+
+
 .themes__list_title {
   margin: 0 0 20px;
 }

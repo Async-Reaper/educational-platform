@@ -13,7 +13,7 @@ import { deleteResourceIsSuccess } from 'features/DeleteResource';
 import { createTopicIsSuccess } from 'features/CreateTopic';
 import { VariantLearning } from 'widgets/VariantLearning';
 
-import { NavigateBack } from './navigate-back';
+import { NavigateBack } from './NavigateBack/NavigateBack';
 import cls from './styles.module.scss';
 
 const Component = memo(() => {

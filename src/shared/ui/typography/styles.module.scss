@@ -1,4 +1,4 @@
-@import "../../../app/styles/mixins";
+@import "mixins";
 
 .text {
     position: relative;
@@ -22,72 +22,34 @@
     &.variant {
         &--h1 {
             font-weight: 700;
-            font-size: var(--font-size-h1);
-            line-height: 48px;
 
-            @include phones-xs{}
-
-            @include phones{}
-
-            @include tablets{}
-
-            @include laptop {
-                font-size: var(--font-size-h1);
-            }
-
-            @include desktop{}
-
-            @include desktop-xl{}
+            @include adaptive("font-size", 40, 24);
+            @include adaptive("line-height", 48, 32);
         }
 
         &--h2 {
             font-weight: 700;
-            font-size: var(--font-size-h2);
-            line-height: 42px;
+            @include adaptive("font-size", 32, 18);
+            @include adaptive("line-height", 42, 24);
 
-            @include phones-xs{}
-
-            @include phones{}
-
-            @include tablets{}
-
-            @include laptop {
-                font-size: var(--font-size-h2);
-            }
-
-            @include desktop{}
-
-            @include desktop-xl{}
         }
 
         &--h3 {
             font-weight: 500;
-            font-size: var(--font-size-h3);
-            line-height: 32px;
-
-            @include phones-xs{}
-
-            @include phones{}
-
-            @include tablets{}
-
-            @include laptop {
-                font-size: var(--font-size-h3);
-            }
-
-            @include desktop{}
-
-            @include desktop-xl{}
+            @include adaptive("font-size", 24, 16);
+            @include adaptive("line-height", 32, 22);
         }
 
         &--body {
-            font-size: var(--font-size-body);
             font-weight: 400;
+            @include adaptive("font-size", 18, 13);
+            @include adaptive("line-height", 24, 18);
         }
 
         &--small {
-            font-size: var(--font-size-small);
             font-weight: 300;
+            @include adaptive("font-size", 14, 7);
+            @include adaptive("line-height", 16, 10);
         }
     }
 

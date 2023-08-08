@@ -16,6 +16,9 @@
   .content__buttons {
     @include flex-space;
 
-    max-width: 585px;
+    @include tablets {
+      @include flex-center;
+    }
+    gap: 15px;
   }
 }

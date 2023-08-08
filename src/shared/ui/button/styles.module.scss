@@ -1,4 +1,4 @@
-@import "../../../app/styles/mixins";
+@import "mixins";
 
 .button {
     @include flex-space;
@@ -40,11 +40,24 @@
     &.variant {
         &--xs {
             padding: 7px 19px;
+
         }
 
         &--l {
-            padding: 20px 50px;
-            min-width: 277px;
+            @include desktop {
+                padding: 20px 50px;
+                min-width: 277px;
+            }
+
+            @include laptop {
+                padding: 15px 35px;
+                min-width: 200px;
+            }
+
+            @include phones {
+                padding: 10px 25px;
+                min-width: 100px;
+            }
         }
 
         &--m {

@@ -9,6 +9,10 @@
     .images__bg {
       position: relative;
       width: 100%;
+
+      @include tablets {
+        display: none;
+      }
     }
   }
   .bottom__icon {

@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux';
 import { useModal } from 'shared/hooks/useModal/useModal';
 import cls from './styles.module.scss';
 import { HeaderToolbar } from './HeaderToolbar/HeaderToolbar';
+import { HeaderLogo } from './HeaderLogo/HeaderLogo';
 
 interface Props {
 
@@ -46,12 +47,7 @@ const Component: FC<Props> = () => {
      <div className={cls.header}>
         <Container>
            <div className={cls.header__inner}>
-              <div className={cls.header__logo}>
-                 <ColoredIcon name='logo' size={59} />
-                 <small className={cls.logo__text}>
-                    Кузбасский колледж архитектуры, строительства и цифровых технологий
-                 </small>
-              </div>
+              <HeaderLogo />
               <div className={cls.buttons__group}>
                  {
                      user

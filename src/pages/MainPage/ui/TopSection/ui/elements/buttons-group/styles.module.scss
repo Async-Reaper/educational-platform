@@ -1,7 +1,0 @@
-@import "mixins";
-
-.content__buttons {
-    @include flex-space;
-
-    max-width: 585px;
-}

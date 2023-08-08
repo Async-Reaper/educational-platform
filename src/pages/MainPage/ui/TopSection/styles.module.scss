@@ -1,0 +1,20 @@
+@import "mixins";
+
+.top_section__wrapper {
+    z-index: 999;
+
+  .top_section__body {
+    @include flex-space;
+
+    .images__bg {
+      position: relative;
+      width: 100%;
+    }
+  }
+  .bottom__icon {
+    position: absolute;
+    top: 300px;
+    z-index: 99;
+  }
+}
+

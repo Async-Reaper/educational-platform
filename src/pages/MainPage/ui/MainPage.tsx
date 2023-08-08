@@ -1,12 +1,12 @@
 import { BlackBG, BlackGradient } from 'shared/ui';
-import { Header } from 'pages/MainPage/ui/Header';
-import { TopSection } from 'pages/MainPage/ui/TopSection';
-import { LessonsSection } from 'pages/MainPage/ui/LessonsSection';
-import { TestSection } from 'pages/MainPage/ui/TestSection';
-import { CoursesSection } from 'pages/MainPage/ui/CoursesSection';
-import { QuestionsSection } from 'pages/MainPage/ui/QuestionsSection';
-import { UsedPlatformSection } from 'pages/MainPage/ui/UsedPlatformSection';
-import { Footer } from 'pages/MainPage/ui/Footer';
+import { Header } from 'widgets/Header';
+import { TopSection } from './TopSection/TopSection';
+import { LessonsSection } from './LessonsSection/LessonsSection';
+import { TestSection } from './TestSection/TestSection';
+import { CoursesSection } from './CoursesSection/CoursesSection';
+import { QuestionsSection } from './QuestionsSection/QuestionsSection';
+import { UsedPlatformSection } from './UsedPlatformSection/UsedPlatformSection';
+import { Footer } from './Footer/Footer';
 
 function Component() {
   return (

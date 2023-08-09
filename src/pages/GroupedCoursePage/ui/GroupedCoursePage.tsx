@@ -22,7 +22,7 @@ const Component = () => {
            <div className={cls.back_icon}>
               <ColoredIcon name='play_button_player' size={16} />
            </div>
-           <Typography tag='span' variant='small'>
+           <Typography tag='span' variant='body'>
               Назад к курсам
            </Typography>
         </div>

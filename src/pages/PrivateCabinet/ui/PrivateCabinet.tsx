@@ -83,12 +83,14 @@ const Component = () => {
                    </div>
                    <div className={cls.info_item}>
                       <Button variant='xs' onClick={openChangeEmail}>
-                         Сменить
-                         почту
+                         <Typography>
+                            Сменить почту
+                         </Typography>
                       </Button>
                       <Button variant='xs' onClick={openChangePassword}>
-                         Сменить
-                         пароль
+                         <Typography>
+                            Сменить пароль
+                         </Typography>
                       </Button>
                    </div>
                 </div>

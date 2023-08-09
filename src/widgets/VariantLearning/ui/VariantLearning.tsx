@@ -48,22 +48,32 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
   return (
      <div>
         <div className={cls.themes__list}>
-           <PopupWindow
-             popupText='Ресурс успешно загружен'
-             isVisible={isShowPopupUploadResource}
-             setIsVisible={setIsShowPopupUploadResource}
-           />
-           <PopupWindow
-             popupText='Ресурс успешно удален'
-             isVisible={isShowPopupDeleteResource}
-             setIsVisible={setIsShowPopupDeleteResource}
-           />
+           {
+                isShowPopupUploadResource
+                && (
+                <PopupWindow
+                  popupText='Ресурс успешно загружен'
+                  isVisible={isShowPopupUploadResource}
+                  setIsVisible={setIsShowPopupUploadResource}
+                />
+                )
+            }
+           {
+                isShowPopupDeleteResource
+                && (
+                <PopupWindow
+                  popupText='Ресурс успешно удален'
+                  isVisible={isShowPopupDeleteResource}
+                  setIsVisible={setIsShowPopupDeleteResource}
+                />
+                )
+            }
            {
                     !typeLearn
                     && (
                     <>
                        <div className={cls.select_theme}>
-                          <Typography variant='body' tag='strong' color='violet-primary' uppercase>
+                          <Typography variant='h3' tag='strong' color='violet-primary' uppercase>
                              Выберите способ обучения
                           </Typography>
                        </div>

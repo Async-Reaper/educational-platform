@@ -14,8 +14,6 @@ body {
 }
 
 .page_platform {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min-content, auto));
     min-height: 100vh;
     background: var(--color-white-bg);
 }
@@ -23,5 +21,5 @@ body {
 .page_platform__content {
     position: relative;
     padding: 20px;
-    margin: 0 0 0 140px;
+    //margin: 0 0 0 140px;
 }

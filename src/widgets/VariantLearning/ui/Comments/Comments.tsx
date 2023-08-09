@@ -17,7 +17,7 @@ const Component = ({ id }: Props) => {
      <>
         <div className={cls.add_comment__btn} onClick={open}>
            <AddCommentIcon />
-           <Typography variant='small' tag='span'>Оставить комментарий</Typography>
+           <Typography variant='body' tag='span'>Оставить комментарий</Typography>
         </div>
         <CommentsList id={id} />
 

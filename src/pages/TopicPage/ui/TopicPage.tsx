@@ -66,7 +66,7 @@ const Component = memo(() => {
                 !typeLearn
                 && (
                 <div className={cls.topic__description}>
-                   <Typography tag='span' variant='small' color='gray-primary'>
+                   <Typography tag='span' variant='body' color='gray-primary'>
                       {dataTopic?.description}
                    </Typography>
                 </div>

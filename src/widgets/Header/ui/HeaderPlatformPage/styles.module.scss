@@ -1,0 +1,29 @@
+@import "mixins";
+
+.header__inner {
+  @include flex-space;
+  padding: 10px 25px;
+  border-bottom: 1px solid var(--color-violet-secondary);
+
+  @include phones {
+    padding: 5px 15px;
+  }
+
+  .header__links {
+    @include flex-space;
+    gap: 15px;
+
+    @include phones {
+      gap: 5px;
+    }
+  }
+
+  .header__private {
+    @include flex-space;
+    gap: 15px;
+
+    @include phones {
+      gap: 10px;
+    }
+  }
+}

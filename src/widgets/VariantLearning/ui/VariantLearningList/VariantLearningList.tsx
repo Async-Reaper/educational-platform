@@ -52,7 +52,7 @@ const Component = ({ setTypeLearnHandler, dataTopic }: Props) => {
                 && (
                 <div className={cls.variant_learning} onClick={() => setTypeLearnHandler('video')}>
                    <div>
-                      <Typography tag='span' variant='small' color='black-bg'>Видео</Typography>
+                      <Typography tag='span' variant='body' color='black-bg'>Видео</Typography>
                    </div>
                    <div className={cls.image__wrapper}>
                       <Image src={video} name='' />
@@ -68,7 +68,7 @@ const Component = ({ setTypeLearnHandler, dataTopic }: Props) => {
                   onClick={() => setTypeLearnHandler('lecture')}
                 >
                    <div>
-                      <Typography tag='span' variant='small' color='black-bg'>Лекции</Typography>
+                      <Typography tag='span' variant='body' color='black-bg'>Лекции</Typography>
                    </div>
                    <div className={cls.image__wrapper}>
                       <Image src={lecture} name='' />
@@ -84,7 +84,7 @@ const Component = ({ setTypeLearnHandler, dataTopic }: Props) => {
                   onClick={() => setTypeLearnHandler('presentation')}
                 >
                    <div>
-                      <Typography tag='span' variant='small' color='black-bg'>
+                      <Typography tag='span' variant='body' color='black-bg'>
                          Презентации
                       </Typography>
                    </div>
@@ -102,7 +102,7 @@ const Component = ({ setTypeLearnHandler, dataTopic }: Props) => {
                   onClick={() => setTypeLearnHandler('training')}
                 >
                    <div>
-                      <Typography tag='span' variant='small' color='black-bg'>
+                      <Typography tag='span' variant='body' color='black-bg'>
                          Тренажеры
                       </Typography>
                    </div>

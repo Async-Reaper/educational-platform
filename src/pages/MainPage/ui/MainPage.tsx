@@ -1,5 +1,5 @@
 import { BlackBG, BlackGradient } from 'shared/ui';
-import { Header } from 'widgets/Header';
+import { HeaderMainPage } from 'widgets/Header';
 import { TopSection } from './TopSection/TopSection';
 import { LessonsSection } from './LessonsSection/LessonsSection';
 import { TestSection } from './TestSection/TestSection';
@@ -12,7 +12,7 @@ function Component() {
   return (
      <div>
         <BlackBG>
-           <Header />
+           <HeaderMainPage />
            <TopSection />
         </BlackBG>
         <LessonsSection />

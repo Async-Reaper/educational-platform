@@ -60,7 +60,7 @@
 
 .resources__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(max-content, 520px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     gap: 10px;
 }
 
@@ -68,7 +68,7 @@
     height: max-content;
     box-shadow: 0 0 10px var(--color-gray-secondary);
     width: max-content;
-    max-width: 520px;
+    max-width: 100%;
     padding: 10px;
     border-radius: var(--border-radius-lg);
 }
@@ -118,7 +118,7 @@
     margin: 0 0 20px;
 
     video {
-        max-width: 450px;
+        width: 100%;
         background: var(--color-black-bg);
         border-radius: var(--border-radius-md);
     }

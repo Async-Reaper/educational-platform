@@ -28,7 +28,7 @@ const Component: FC<Props> = ({ answerComment }) => (
                {answerComment.teacher.full_name}
             </Typography>
             <Typography color='black-light' variant='body'>{answerComment.text}</Typography>
-            <Typography tag='span' variant='small' color='violet-primary'>
+            <Typography tag='span' variant='body' color='violet-primary'>
                {dateFormat(answerComment.creation_date, 'isoDateTime')
                  .replace(/T/, ' ')
                // eslint-disable-next-line no-unsafe-optional-chaining

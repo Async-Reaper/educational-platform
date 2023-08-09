@@ -105,4 +105,4 @@ const Component: FC<Props> = () => {
   );
 };
 
-export const Header = React.memo(Component);
+export const HeaderMainPage = React.memo(Component);

@@ -51,7 +51,9 @@ const Component = ({ trainings }: Props) => {
                    download
                    rel='noreferrer'
                  >
-                    Ссылка
+                     <Typography tag='span' variant='body' color='black-bg'>
+                         Ссылка
+                     </Typography>
                  </a>
               </div>
               <Comments id={training.id} />

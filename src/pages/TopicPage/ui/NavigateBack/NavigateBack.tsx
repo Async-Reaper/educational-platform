@@ -27,7 +27,7 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
                            <Icon name='play' color='violet-primary' width={16} height={18.5} />
                         </div>
                         <div>
-                           <Typography tag='span' variant='small' color='gray-primary'>
+                           <Typography tag='span' variant='body' color='gray-primary'>
                               Выбрать другой способ обучения
                            </Typography>
                         </div>
@@ -39,7 +39,7 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
                            <Icon name='play' color='violet-primary' width={16} height={18.5} />
                         </div>
                         <div>
-                           <Typography tag='span' variant='small' color='gray-primary'>
+                           <Typography tag='span' variant='body' color='gray-primary'>
                               Выбрать другую тему
                            </Typography>
                         </div>

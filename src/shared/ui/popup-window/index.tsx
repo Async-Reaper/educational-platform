@@ -1,6 +1,4 @@
-import React, {
-  type FC, useCallback, useEffect, useState,
-} from 'react';
+import React, { type FC, useEffect } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import { Typography } from 'shared/ui';
 import { Icon } from 'shared/libs/icons';

@@ -29,7 +29,7 @@ const Component: FC<Props> = ({ comment }) => {
               <Typography color='black-light' variant='body'>{comment.text}</Typography>
            </div>
            <div>
-              <Typography tag='span' variant='small' color='violet-primary'>
+              <Typography tag='span' variant='body' color='violet-primary'>
                  {/* eslint-disable-next-line max-len,no-unsafe-optional-chaining */}
                  {dateFormat(comment.creation_date, 'isoDateTime').replace(/T/, ' ').slice(0, comment?.creation_date?.length - 8)}
               </Typography>
@@ -39,7 +39,7 @@ const Component: FC<Props> = ({ comment }) => {
                 getCookie('is_teacher') === 'true'
                 && (
                 <div className={cls.answer__btn} onClick={open}>
-                   <Typography tag='span' variant='small' color='black-dark'>Ответить</Typography>
+                   <Typography tag='span' variant='body' color='black-dark'>Ответить</Typography>
                 </div>
                 )
             }

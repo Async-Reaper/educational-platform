@@ -32,7 +32,7 @@
 
 .courses__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 300px));
     grid-template-rows: 1fr 1fr;
     gap: 35px;
     grid-auto-flow: row;
@@ -44,7 +44,7 @@
     .course__wrapper {
         padding: 0 15px;
         height: 150px;
-        width: 340px;
+        width: 300px;
         display: flex;
         align-items: center;
         border-radius: 10px;

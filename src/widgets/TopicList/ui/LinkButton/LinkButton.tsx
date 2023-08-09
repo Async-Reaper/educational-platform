@@ -10,7 +10,7 @@ const Component: FC<Props> = ({ courseId, topicId }) => (
    <AppLink variant='secondary' to={`/course/${courseId}/topic/${topicId}`}>
       <Typography
         tag='span'
-        variant='small'
+        variant='body'
         color='violet-primary'
       >
          Перейти

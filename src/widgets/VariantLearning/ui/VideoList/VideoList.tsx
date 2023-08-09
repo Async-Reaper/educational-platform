@@ -42,7 +42,7 @@ const Component: React.FC<Props> = ({ videos }) => {
                }
               <div className={cls.video__lessons}>
                  <div className={cls.resource_text_info__wrapper}>
-                    <Typography tag='span' variant='body' color='violet-primary'>{video.name}</Typography>
+                    <Typography tag='span' variant='h3' color='violet-primary'>{video.name}</Typography>
                     <Typography tag='span' variant='body' color='black-bg'>{video.description}</Typography>
                  </div>
                  <video

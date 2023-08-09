@@ -41,7 +41,7 @@ const Component = ({ presentations }: Props) => {
                    )
                }
               <div className={cls.resource_text_info__wrapper}>
-                 <Typography tag='span' variant='body' color='violet-primary'>
+                 <Typography tag='span' variant='h3' color='violet-primary'>
                     {presentation.name}
                  </Typography>
                  <Typography tag='span' variant='body' color='black-bg'>
@@ -54,7 +54,9 @@ const Component = ({ presentations }: Props) => {
                    download
                    rel='noreferrer'
                  >
-                    Ссылка
+                     <Typography tag='span' variant='body' color='black-bg'>
+                         Ссылка
+                     </Typography>
                  </a>
               </div>
               <Comments id={presentation.id} />

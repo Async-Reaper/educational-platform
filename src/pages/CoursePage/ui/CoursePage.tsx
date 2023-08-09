@@ -24,18 +24,18 @@ const Component = () => {
   return (
      <>
         <div className={cls.course__name}>
-           <Typography variant='h3' color='violet-primary'>
+           <Typography variant='h2' color='violet-primary'>
               {dataCourse?.name}
            </Typography>
         </div>
         <div className={cls.course__description}>
-           <Typography tag='span' variant='small' color='gray-primary'>
+           <Typography tag='span' variant='body' color='gray-primary'>
               {dataCourse?.description}
            </Typography>
         </div>
         <div className={cls.themes__list}>
            <div className={cls.themes__list_title}>
-              <Typography tag='span' variant='body' color='violet-primary'>
+              <Typography tag='span' variant='h3' color='violet-primary'>
                  Доступные темы
               </Typography>
            </div>

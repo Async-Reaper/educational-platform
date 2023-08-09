@@ -4,8 +4,6 @@ import cls from './styles.module.scss';
 const Component = () => (
    <div className={cls.player}>
       <iframe
-        width='688'
-        height='420'
         src='https://www.youtube.com/embed/YH01ldFrVRo'
         title='YouTube video player'
         frameBorder='0'

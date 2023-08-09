@@ -9,6 +9,10 @@
 
     .title__wrapper {
         margin: 0 0 105px;
+
+        @include tablets {
+            margin: 0 0 60px
+        }
     }
 
     .used__list {

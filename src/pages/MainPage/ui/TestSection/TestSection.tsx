@@ -13,7 +13,7 @@ const Component = () => (
             <div className={cls.test__inner}>
                <div className={cls.icons__wrapper}>
                   <div className={cls.icons__title}>
-                     <Typography tag='h1' variant='h2' color='gray-primary'>Тест-опросник</Typography>
+                     <Typography tag='h1' variant='h1' color='gray-primary'>Тест-опросник</Typography>
                   </div>
                   <div className={cls.icons__inner}>
                      <Icons />

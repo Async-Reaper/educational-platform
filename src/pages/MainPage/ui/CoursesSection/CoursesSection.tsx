@@ -9,7 +9,7 @@ const Component = () => (
       <Container>
          <div className={cls.courses__wrapper}>
             <div className={cls.section__title}>
-               <Typography tag='h3' variant='h2' color='gray-primary'>Наши курсы</Typography>
+               <Typography tag='h2' variant='h1' color='gray-primary'>Наши курсы</Typography>
             </div>
             <CoursesList />
          </div>

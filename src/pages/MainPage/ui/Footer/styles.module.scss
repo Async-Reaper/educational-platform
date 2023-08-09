@@ -3,6 +3,10 @@
 .section__wrapper {
     padding: 0 0 82px;
 
+    @include tablets {
+        padding: 0 0 41px;
+    }
+
     .footer__inner {
         @include flex-column;
         gap: 100px;

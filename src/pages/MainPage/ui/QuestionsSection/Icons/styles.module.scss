@@ -1,5 +1,10 @@
+@import "mixins";
+
 .questions__icons {
     position: relative;
+    @include tablets {
+        display: none;
+    }
 
     .message_3_d {
         position: absolute;

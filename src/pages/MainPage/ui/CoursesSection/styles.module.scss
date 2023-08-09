@@ -1,11 +1,16 @@
+@import "mixins";
+
 .section__wrapper {
     background: var(--color-white-bg);
     padding: 100px 0;
 
+    @include tablets {
+        padding: 60px 0;
+    }
+
     .courses__wrapper {
-        display: flex;
-        flex-direction: column;
-        grid-gap: 46px;
+        @include flex-column;
+        gap: 46px;
         padding: 0 0 40px;
         position: relative;
 
@@ -19,6 +24,17 @@
             border-radius: 50px;
             transform: rotate(24.48deg);
             left: 35%;
+
+            @include laptop {
+                top: 230px;
+                left: 37%;
+                width: 280px;
+                height: 280px;
+            }
+
+            @include tablets {
+                display: none;
+            }
         }
 
         &::before {
@@ -32,6 +48,16 @@
             transform: rotate(24.48deg);
             left: 33%;
             bottom: 32px;
+
+            @include laptop {
+                width: 320px;
+                height: 320px;
+                bottom: 100px;
+            }
+
+            @include tablets {
+                display: none;
+            }
         }
     }
 }

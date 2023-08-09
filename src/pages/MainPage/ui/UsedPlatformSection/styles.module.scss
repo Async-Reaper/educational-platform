@@ -4,8 +4,7 @@
     padding: 0 0 80px;
 
     .used__inner {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
 
     .title__wrapper {
@@ -14,6 +13,11 @@
 
     .used__list {
         @include flex-space;
+
+        @include tablets {
+            @include flex-column;
+            gap: 15px;
+        }
     }
 
     .used__item {

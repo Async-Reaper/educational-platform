@@ -4,6 +4,10 @@
     position: relative;
     padding: 150px 0;
 
+    @include tablets {
+        padding: 100px 0;
+    }
+
     .questions__inner {
         @include flex-start;
 

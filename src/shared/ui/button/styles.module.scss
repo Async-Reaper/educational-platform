@@ -3,6 +3,7 @@
 .button {
     @include flex-space;
 
+    gap: 5px;
     border-radius: var(--border-radius-over);
     cursor: pointer;
     position: relative;

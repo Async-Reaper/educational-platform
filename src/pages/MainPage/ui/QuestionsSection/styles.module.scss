@@ -1,48 +1,54 @@
+@import "mixins";
+
 .section__wrapper {
-  position: relative;
-  padding: 150px 0;
-
-  .questions__inner {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    grid-gap: 80px;
+    padding: 150px 0;
 
-    &::after {
-      position: absolute;
-      content: "04";
-      top: 245px;
-      left: 0;
-      height: 290px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      font-size: 381.633px;
-      line-height: 122px;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: linear-gradient(161.72deg, #fff -20.29%, rgb(255 255 255 / 0%) 116.82%);
-      opacity: 0.9;
-    }
+    .questions__inner {
+        @include flex-start;
 
-    .questions__content {
-      display: flex;
-      flex-direction: column;
-      width: fit-content;
-    }
+        position: relative;
+        gap: 80px;
 
-    .title__wrapper {
-      width: min-content;
-      margin: 0 0 40px;
-      text-shadow: 0 4px 50px rgb(122 41 172 / 53%);
-    }
+        &::after {
+            position: absolute;
+            content: "04";
+            top: 245px;
+            left: 0;
+            height: 290px;
 
-    .description__wrapper {
-      margin: 0 0 38px;
-      max-width: 650px;
+            @include flex-center;
+
+            font-weight: 700;
+            font-size: 381.633px;
+            line-height: 122px;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: linear-gradient(161.72deg, #fff -20.29%, rgb(255 255 255 / 0%) 116.82%);
+            opacity: 0.9;
+
+            @include tablets {
+                display: none;
+            }
+        }
+
+        .questions__content {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        .title__wrapper {
+            width: min-content;
+            margin: 0 0 40px;
+            text-shadow: 0 4px 50px rgb(122 41 172 / 53%);
+        }
+
+        .description__wrapper {
+            margin: 0 0 38px;
+            max-width: 650px;
+        }
     }
-  }
 }

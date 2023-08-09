@@ -1,31 +1,30 @@
 .question__wrapper {
-  padding: 25px;
+    padding: 25px;
 
-  .test__title {
-    margin: 0 auto 25px;
-  }
-
-  .questions__list {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    margin: 0 0 25px;
-
-    .question__content {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-
-      .question__variant {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .question__label {
-        color: var(--color-black-bg);
-      }
+    .test__title {
+        margin: 0 auto 25px;
     }
-  }
 
+    .questions__list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin: 0 0 25px;
+
+        .question__content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .question__variant {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .question__label {
+                color: var(--color-black-bg);
+            }
+        }
+    }
 }

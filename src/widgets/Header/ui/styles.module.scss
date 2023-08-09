@@ -8,6 +8,7 @@
 
         .buttons__group {
             @include flex-space;
+
             gap: 21px;
         }
     }

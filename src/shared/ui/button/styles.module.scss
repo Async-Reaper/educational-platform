@@ -40,7 +40,6 @@
     &.variant {
         &--xs {
             padding: 7px 19px;
-
         }
 
         &--l {
@@ -62,11 +61,33 @@
 
         &--m {
             padding: 21px 60px;
-            grid-gap: 40px;
+            gap: 40px;
+
+            @include desktop {
+                padding: 20px 50px;
+            }
+
+            @include laptop {
+                padding: 15px 35px;
+            }
+
+            @include phones {
+                padding: 10px 25px;
+            }
         }
 
         &--xl {
-            padding: 30px 73px;
+            @include desktop {
+                padding: 30px 73px;
+            }
+
+            @include laptop {
+                padding: 20px 55px;
+            }
+
+            @include phones {
+                padding: 15px 40px;
+            }
         }
     }
 

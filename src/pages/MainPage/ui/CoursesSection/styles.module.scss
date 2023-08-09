@@ -1,37 +1,37 @@
 .section__wrapper {
-  background: var(--color-white-bg);
-  padding: 100px 0;
+    background: var(--color-white-bg);
+    padding: 100px 0;
 
-  .courses__wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 46px;
-    padding: 0 0 40px;
-    position: relative;
+    .courses__wrapper {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 46px;
+        padding: 0 0 40px;
+        position: relative;
 
-    &::after {
-      position: absolute;
-      content: '';
-      width: 400px;
-      height: 400px;
-      background: #EBDDF4;
-      opacity: 0.8;
-      border-radius: 50px;
-      transform: rotate(24.48deg);
-      left: 35%;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 400px;
+            height: 400px;
+            background: #ebddf4;
+            opacity: 0.8;
+            border-radius: 50px;
+            transform: rotate(24.48deg);
+            left: 35%;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 450px;
+            height: 450px;
+            opacity: 0.8;
+            border: 2px solid #e8ddff;
+            border-radius: 50px;
+            transform: rotate(24.48deg);
+            left: 33%;
+            bottom: 32px;
+        }
     }
-
-    &::before {
-      position: absolute;
-      content: '';
-      width: 450px;
-      height: 450px;
-      opacity: 0.8;
-      border: 2px solid #E8DDFF;
-      border-radius: 50px;
-      transform: rotate(24.48deg);
-      left: 33%;
-      bottom: 32px;
-    }
-  }
 }

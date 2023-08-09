@@ -8,6 +8,7 @@
 
     .link__sectionBackground {
         @include flex-center;
+
         position: absolute;
         cursor: pointer;
         bottom: -35px;
@@ -19,6 +20,7 @@
 
         .link__section {
             @include flex-center;
+
             position: absolute;
             bottom: -8px;
             left: 5px;

@@ -1,33 +1,33 @@
 .toolbar {
-  position: absolute;
-  bottom: 50px;
-  transition: all .52s;
-  display: none;
-  transform: translateY(-50px);
-  width: max-content;
+    position: absolute;
+    bottom: 50px;
+    transition: all 0.52s;
+    display: none;
+    transform: translateY(-50px);
+    width: max-content;
 
-  &.active {
-    display: flex;
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
-  .toolbar__bottom {
-    position: relative;
-    padding: 4px;
-    background: var(--color-violet-secondary);
-    color: var(--color-white-bg);
-    border-radius: 5px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -10px;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid var(--color-violet-secondary);
-      transform: translateX(-50%);
-      left: 50%;
+    &.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+
+    .toolbar__bottom {
+        position: relative;
+        padding: 4px;
+        background: var(--color-violet-secondary);
+        color: var(--color-white-bg);
+        border-radius: 5px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--color-violet-secondary);
+            transform: translateX(-50%);
+            left: 50%;
+        }
+    }
 }

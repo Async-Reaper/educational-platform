@@ -1,127 +1,125 @@
 .select_theme {
-  text-align: left;
-  margin: 0 0 15px;
+    text-align: left;
+    margin: 0 0 15px;
 }
 
 .variant_learning__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 270px);
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 10px;
 
-  .variant_learning {
-    cursor: pointer;
-    background: var(--color-white-bg);
-    box-shadow: 0px 0px 20px var(--color-gray-secondary);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 217px;
-    gap: 15px;
-    transition: all .3s;
+    .variant_learning {
+        cursor: pointer;
+        background: var(--color-white-bg);
+        box-shadow: 0 0 20px var(--color-gray-secondary);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 217px;
+        gap: 15px;
+        transition: all 0.3s;
 
-    &:hover {
-      background: var(--color-gray-secondary);
+        &:hover {
+            background: var(--color-gray-secondary);
+        }
+
+        .image__wrapper {
+            max-width: 50px;
+        }
     }
 
-    .image__wrapper {
-      max-width: 50px;
-    }
-  }
+    .create_resource__wrapper {
+        background: #fff;
+        box-shadow: 0 0 20px #e1e4ed;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 270px;
+        height: 100px;
+        color: var(--color-black-bg);
 
-  .create_resource__wrapper {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 20px #E1E4ED;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all .3s;
-    width: 270px;
-    height: 100px;
-    color: var(--color-black-bg);
-
-    &:hover {
-      background: var(--color-violet-primary);
-      color: var(--color-white-bg);
+        &:hover {
+            background: var(--color-violet-primary);
+            color: var(--color-white-bg);
+        }
     }
-  }
 }
 
-
 .resource_text_info__wrapper {
-  display: flex;
-  flex-direction: column;
-  grid-gap: 5px;
-  padding: 0 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    padding: 0 0 0 5px;
 }
 
 .resources__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(max-content, 520px));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 520px));
+    gap: 10px;
 }
 
 .resource__wrapper {
-  height: max-content;
-  box-shadow: 0 0 10px var(--color-gray-secondary);
-  width: max-content;
-  max-width: 520px;
-  padding: 10px;
-  border-radius: var(--border-radius-lg);
+    height: max-content;
+    box-shadow: 0 0 10px var(--color-gray-secondary);
+    width: max-content;
+    max-width: 520px;
+    padding: 10px;
+    border-radius: var(--border-radius-lg);
 }
 
 .delete_topic__btn {
-  cursor: pointer;
-  color: var(--color-red-primary);
-  display: flex;
-  align-items: center;
-  margin: 0 0 5px;
+    cursor: pointer;
+    color: var(--color-red-primary);
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
 }
 
 .themes__list_title {
-  margin: 0 0 5px;
+    margin: 0 0 5px;
 }
 
 .link {
-  text-decoration: underline;
-  color: var(--color-violet-primary);
-  margin: 0 0 10px;
-  transition: all .3s;
-  display: block;
-  width: max-content;
+    text-decoration: underline;
+    color: var(--color-violet-primary);
+    margin: 0 0 10px;
+    transition: all 0.3s;
+    display: block;
+    width: max-content;
 
-  &:hover {
-    color: var(--color-violet-secondary);
-  }
+    &:hover {
+        color: var(--color-violet-secondary);
+    }
 }
 
-
 .themes__list_title {
-  margin: 0 0 20px;
+    margin: 0 0 20px;
 }
 
 .add_resource__btn {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  cursor: pointer;
-  transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s;
 
-  &:hover {
-    color: var(--color-black-bg);
-  }
+    &:hover {
+        color: var(--color-black-bg);
+    }
 }
 
 .video__lessons {
-  margin: 0 0 20px;
+    margin: 0 0 20px;
 
-  video {
-    max-width: 450px;
-    background: var(--color-black-bg);
-    border-radius: var(--border-radius-md);
-  }
+    video {
+        max-width: 450px;
+        background: var(--color-black-bg);
+        border-radius: var(--border-radius-md);
+    }
 }

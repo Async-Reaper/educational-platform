@@ -7,6 +7,7 @@ $minScreen: 320;
 @mixin adaptive($property, $maxSize, $minSize) {
     $size: #{$minSize + px};
     $minScreenPx: #{$minScreen + px};
+
     #{$property}: calc($size + ($maxSize - $minSize) * ((100vw - $minScreenPx) / ($maxContainer - $minScreen)));
 }
 

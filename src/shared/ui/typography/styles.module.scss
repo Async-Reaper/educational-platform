@@ -4,6 +4,7 @@
     position: relative;
     z-index: 9999;
     color: inherit;
+
     //word-break: break-all;
     &.inline {
         display: inline-block;
@@ -29,25 +30,28 @@
 
         &--h2 {
             font-weight: 700;
+
             @include adaptive("font-size", 32, 18);
             @include adaptive("line-height", 42, 24);
-
         }
 
         &--h3 {
             font-weight: 500;
+
             @include adaptive("font-size", 24, 16);
             @include adaptive("line-height", 32, 22);
         }
 
         &--body {
             font-weight: 400;
+
             @include adaptive("font-size", 18, 13);
             @include adaptive("line-height", 24, 18);
         }
 
         &--small {
             font-weight: 300;
+
             @include adaptive("font-size", 14, 7);
             @include adaptive("line-height", 16, 10);
         }

@@ -1,112 +1,114 @@
 @import "mixins";
 
 .lessons__wrapper {
-  background: var(--color-white-bg);
-  padding: 111px 0 0;
+    background: var(--color-white-bg);
+    padding: 111px 0 0;
 
-  @include phones {
-    padding: 50px 0 0;
-  }
-
-  .lessons__inner {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "01";
-      top: 130px;
-      right: 0;
-      height: 233px;
-      @include flex-center;
-      font-weight: 700;
-      font-size: 324.743px;
-      line-height: 104px;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-image: linear-gradient(161.72deg, #ddc9ff -20.29%, rgb(221 201 255 / 0%) 116.82%);
-      opacity: 0.9;
-
-      @include tablets {
-        display: none;
-      }
+    @include phones {
+        padding: 50px 0 0;
     }
 
-    .top_icon {
-      text-align: center;
-      margin: 0 0 36px;
-    }
+    .lessons__inner {
+        position: relative;
 
-    .lessons__sectionTitle {
-      margin: 0 0 155px;
-      text-align: center;
+        &::after {
+            position: absolute;
+            content: "01";
+            top: 130px;
+            right: 0;
+            height: 233px;
 
-      @include tablets {
-        margin: 0 0 95px;
-      }
+            @include flex-center;
 
-      @include phones {
-        margin: 0 0 75px;
-      }
+            font-weight: 700;
+            font-size: 324.743px;
+            line-height: 104px;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(161.72deg, #ddc9ff -20.29%, rgb(221 201 255 / 0%) 116.82%);
+            opacity: 0.9;
 
-      h1 {
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: 64px;
-        line-height: 72px;
-        color: var(--color-gray-primary);
-
-        @include tablets {
-          font-size: 54px;
+            @include tablets {
+                display: none;
+            }
         }
 
-        @include phones {
-          font-size: 48px;
+        .top_icon {
+            text-align: center;
+            margin: 0 0 36px;
         }
 
+        .lessons__sectionTitle {
+            margin: 0 0 155px;
+            text-align: center;
 
-        span {
-          color: var(--color-violet-primary);
+            @include tablets {
+                margin: 0 0 95px;
+            }
+
+            @include phones {
+                margin: 0 0 75px;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 64px;
+                line-height: 72px;
+                color: var(--color-gray-primary);
+
+                @include tablets {
+                    font-size: 54px;
+                }
+
+                @include phones {
+                    font-size: 48px;
+                }
+
+                span {
+                    color: var(--color-violet-primary);
+                }
+            }
         }
-      }
+
+        .video__title {
+            margin: 0 0 32px;
+        }
+
+        .video_lessons__wrapper {
+            @include flex-start;
+
+            gap: 30px;
+            position: relative;
+            z-index: 9999;
+
+            @include laptop {
+                @include flex-column;
+            }
+
+            @include tablets {
+                @include flex-column;
+            }
+        }
+
+        .player__wrapper {
+            background: #fdfdfd;
+            box-shadow: 0 30px 30px rgb(109 94 88 / 25%);
+            border-radius: 20px;
+        }
+
+        .player__benefits {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 30px;
+        }
+
+        .lessons__list {
+            @include flex-column;
+
+            grid-gap: 27px;
+        }
     }
-
-    .video__title {
-      margin: 0 0 32px;
-    }
-
-    .video_lessons__wrapper {
-      @include flex-start;
-      gap: 30px;
-      position: relative;
-      z-index: 9999;
-
-      @include laptop {
-        @include flex-column;
-      }
-
-      @include tablets {
-        @include flex-column;
-      }
-    }
-
-    .player__wrapper {
-      background: #fdfdfd;
-      box-shadow: 0 30px 30px rgb(109 94 88 / 25%);
-      border-radius: 20px;
-
-    }
-
-    .player__benefits {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 16px 30px;
-    }
-
-    .lessons__list {
-      @include flex-column;
-      grid-gap: 27px;
-    }
-  }
 }

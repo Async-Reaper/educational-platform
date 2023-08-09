@@ -1,15 +1,14 @@
 .logout__modal {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  .logout__text {
-    color: var(--color-violet-primary);
-  }
-
-  .logout__buttons {
     display: flex;
-    justify-content: space-between;
-  }
-}
+    flex-direction: column;
+    gap: 10px;
 
+    .logout__text {
+        color: var(--color-violet-primary);
+    }
+
+    .logout__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}

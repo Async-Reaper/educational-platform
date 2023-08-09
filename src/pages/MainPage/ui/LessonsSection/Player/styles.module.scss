@@ -1,52 +1,52 @@
 @import "mixins";
 
 .player {
-  width: 688px;
-  height: 420px;
-  background: var(--color-gray-secondary);
-  border-radius: 20px 20px 0 0;
-  position: relative;
+    width: 688px;
+    height: 420px;
+    background: var(--color-gray-secondary);
+    border-radius: 20px 20px 0 0;
+    position: relative;
 
-  @include tablets {
-    width: 100%;
-    height: 320px;
-  }
+    @include tablets {
+        width: 100%;
+        height: 320px;
+    }
 
-  @include phones {
-    width: 100%;
-    height: 220px;
-  }
+    @include phones {
+        width: 100%;
+        height: 220px;
+    }
 
-  iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 10px 0 0;
-  }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+    }
 }
 
 @keyframes damping-radar {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
 
-  25% {
-    opacity: 0.5;
-    transform: rotate(45deg);
-  }
+    25% {
+        opacity: 0.5;
+        transform: rotate(45deg);
+    }
 
-  50% {
-    opacity: 0.25;
-    transform: rotate(90deg);
-  }
+    50% {
+        opacity: 0.25;
+        transform: rotate(90deg);
+    }
 
-  75% {
-    opacity: 0.5;
-    transform: rotate(45deg);
-  }
+    75% {
+        opacity: 0.5;
+        transform: rotate(45deg);
+    }
 
-  100% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
 }

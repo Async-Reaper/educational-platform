@@ -1,24 +1,27 @@
 @import "mixins";
 
 .content__wrapper {
-  @include flex-column;
-  gap: 120px;
-
-  .content__text {
     @include flex-column;
-    gap: 8px;
 
-    span {
-      color: var(--color-violet-primary);
+    gap: 120px;
+
+    .content__text {
+        @include flex-column;
+
+        gap: 8px;
+
+        span {
+            color: var(--color-violet-primary);
+        }
     }
-  }
 
-  .content__buttons {
-    @include flex-space;
+    .content__buttons {
+        @include flex-space;
 
-    @include tablets {
-      @include flex-center;
+        @include tablets {
+            @include flex-center;
+        }
+
+        gap: 15px;
     }
-    gap: 15px;
-  }
 }

@@ -1,4 +1,5 @@
 import React, { type FC, type ReactNode } from 'react';
+import cls from './styles.module.scss';
 
 type Props = {
   children: ReactNode
@@ -6,7 +7,7 @@ type Props = {
 
 // eslint-disable-next-line react/function-component-definition
 const Component: FC<Props> = ({ children }) => (
-   <main>
+   <main className={cls.content}>
       {children}
    </main>
 );

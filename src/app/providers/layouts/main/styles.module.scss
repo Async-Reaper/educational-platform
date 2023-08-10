@@ -1,0 +1,13 @@
+@import "mixins";
+
+.content {
+  min-height: 100vh;
+  background: var(--color-white-bg);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+
+  @include tablets {
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px 1fr;
+  }
+}

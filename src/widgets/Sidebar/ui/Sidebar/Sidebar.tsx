@@ -18,12 +18,14 @@ const Component = () => {
   }, [dispatch, token]);
 
   return (
-     <div className={cls.sidebar_wrapper}>
-        <SidebarLogo />
-        <div className={cls.sidebar_links__wrapper}>
-           <SidebarAvatar user={user} token={token} />
-           <SidebarLinks />
-           <SidebarLogout user={user} token={token} />
+     <div className={cls.sidebar}>
+        <div className={cls.sidebar_wrapper}>
+           <SidebarLogo />
+           <div className={cls.sidebar_links__wrapper}>
+              <SidebarAvatar user={user} token={token} />
+              <SidebarLinks />
+              <SidebarLogout user={user} token={token} />
+           </div>
         </div>
      </div>
   );

@@ -24,11 +24,9 @@ const AppRouter = () => {
   const renderWithWrapper = React.useCallback((route: RouteProps) => {
     const elementWithSidebar = (
        <Suspense fallback={<LoaderPage />}>
-          <div className='page_platform'>
-             {element}
-             <div className='page_platform__content'>
-                {route.element}
-             </div>
+          {element}
+          <div className='page_platform__content'>
+             {route.element}
           </div>
        </Suspense>
     );

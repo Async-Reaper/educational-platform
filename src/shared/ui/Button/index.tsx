@@ -1,18 +1,10 @@
-import React, {
-  Dispatch, type FC, ReactNode, SetStateAction,
-} from 'react';
+import React, { type FC, ReactNode } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
-type Variant =
-    | 'xs'
-    | 'l'
-    | 'm'
-    | 'xl';
-
 type Props = {
-  variant?: Variant
-  background?: Colors;
+  variant?: DesignSystemSize
+  background?: DesignSystemColors;
   border?: boolean;
   children: ReactNode;
   full?: boolean;
@@ -34,18 +26,23 @@ const Component: FC<Props> = (props) => {
     ...otherProps
   } = props;
 
+  const additional = [
+    cls[`variant--${variant}`],
+    cls[`background--${background}`],
+  ];
+
+  const mods = {
+    [cls.full]: full,
+    [cls.border]: border,
+  };
+
   return (
      <button
        ref={ref}
        className={classNames(
          cls.button,
-         [cls[`variant--${variant}`],
-           cls[`background--${background}`],
-         ],
-         {
-           [cls.full]: full,
-           [cls.border]: border,
-         },
+         additional,
+         mods,
        )}
        {...otherProps}
        onClick={() => onClick && onClick()}

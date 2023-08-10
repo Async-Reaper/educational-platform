@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Sidebar } from 'widgets/Sidebar';
 import { getInfoUser, userData } from 'entities/User';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import {

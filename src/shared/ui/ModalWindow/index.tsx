@@ -1,7 +1,7 @@
 import React from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
-import { Portal } from '../portal';
+import { Portal } from '../Portal';
 
 interface Props {
   children: React.ReactNode;

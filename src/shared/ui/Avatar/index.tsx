@@ -1,12 +1,9 @@
 import React, { type FC } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
-import { ColoredIcon } from 'shared/libs/icons';
 import cls from './styles.module.scss';
 
-type Variant = 'xs' | 'l' | 'xl';
-
 type Props = {
-  variant?: Variant;
+  variant?: DesignSystemSize;
   rounded?: boolean;
   src: any;
 };
@@ -18,8 +15,16 @@ const Component: FC<Props> = (props) => {
     rounded = false,
   } = props;
 
+  const additional = [
+    cls[`variant--${variant}`],
+  ];
+
+  const mods = {
+    [cls.rounded]: rounded,
+  };
+
   return (
-     <div className={classNames(cls.avatar, [cls[`variant--${variant}`]], { [cls.rounded]: rounded })}>
+     <div className={classNames(cls.avatar, additional, mods)}>
         <img
           className={classNames(cls.avatarImage, [])}
           src={src}

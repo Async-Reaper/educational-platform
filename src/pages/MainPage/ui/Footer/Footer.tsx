@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppLink, Container, Typography } from 'shared/ui';
-import { Social } from 'shared/ui/social';
+import { Social } from 'shared/ui/Social';
 
 import cls from './styles.module.scss';
 

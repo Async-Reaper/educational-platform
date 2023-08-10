@@ -2,17 +2,12 @@ import React, { Dispatch, type FC, SetStateAction } from 'react';
 import { classNames } from 'shared/libs/helpers/classNames';
 import cls from './styles.module.scss';
 
-type Variant =
-   | 'xs'
-   | 'l'
-   | 'xl';
-
 type Props = {
-  variant?: Variant;
+  variant?: DesignSystemSize;
   isActive: boolean;
   handler: Dispatch<SetStateAction<boolean>>,
-  color?: Colors,
-  background?: Colors,
+  color?: DesignSystemColors,
+  background?: DesignSystemColors,
 };
 
 const Component: FC<Props> = (props) => {
@@ -28,15 +23,27 @@ const Component: FC<Props> = (props) => {
     handler((prevState) => !prevState)
   );
 
+  const addToggle = [
+    cls[`variant--${variant}`],
+    cls[`background--${background}`],
+  ];
+  const modsToggle = {
+    [cls.active]: isActive,
+  };
+
+  const addToggleSlider = [
+    cls[`variant--${variant}`],
+    cls[`color--${color}`],
+  ];
+
   return (
      <div
        onClick={changeToggle}
-       className={classNames(cls.toggle, [cls[`variant--${variant}`],
-         cls[`background--${background}`]], { [cls.active]: isActive })}
+       className={classNames(cls.toggle, addToggle, modsToggle)}
      >
         <div className={classNames(
           cls.toggleSlider,
-          [cls[`variant--${variant}`], cls[`color--${color}`]],
+          addToggleSlider,
         )}
         />
      </div>

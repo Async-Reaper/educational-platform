@@ -7,7 +7,7 @@ type Tag = 'h1' | 'h2' | 'h3' | 'span' | 'strong' | 'b';
 type Variant = 'h1' | 'h2' | 'h3' | 'body' | 'small';
 
 type Props = {
-  color?: Colors;
+  color?: DesignSystemColors;
   tag?: Tag;
   variant?: Variant;
   children: ReactNode;
@@ -30,13 +30,25 @@ const Component: FC<Props> = (props) => {
 
   const ComponentUi = tag;
 
+  const additional = [
+    cls[`variant--${variant}`],
+    cls[`color--${color}`],
+    cls[`tag--${tag}`],
+  ];
+
+  const mods = {
+    [cls.uppercase]: uppercase,
+    [cls.noWrap]: noWrap,
+    [cls.inline]: inline,
+  };
+
   return (
      <ComponentUi
        className={
             classNames(
               cls.text,
-              [cls[`variant--${variant}`], cls[`color--${color}`], cls[`tag--${tag}`]],
-              { [cls.uppercase]: uppercase, [cls.noWrap]: noWrap, [cls.inline]: inline },
+              additional,
+              mods,
             )
           }
        {...otherProps}

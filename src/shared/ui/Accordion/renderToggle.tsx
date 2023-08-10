@@ -5,7 +5,7 @@ import { Typography } from 'shared/ui';
 import { ToggleProps } from './types';
 import styles from './styles.module.scss';
 
-import { IconWrapper } from '../icon-wrapper';
+import { IconWrapper } from '../IconWrapper';
 
 export const renderToggleDefault: React.FC<ToggleProps> = ({
   isExpanded,

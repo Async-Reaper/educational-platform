@@ -8,6 +8,7 @@ import { routeConfig } from 'shared/config/routeConfig';
 import { Sidebar } from 'widgets/Sidebar';
 import { useResize } from 'shared/hooks/useResize/useResize';
 import { HeaderPlatformPage } from 'widgets/Header';
+import { MainLayout } from 'app/providers';
 
 const AppRouter = () => {
   const [element, setElement] = useState<ReactNode>(<Sidebar />);
@@ -24,10 +25,12 @@ const AppRouter = () => {
   const renderWithWrapper = React.useCallback((route: RouteProps) => {
     const elementWithSidebar = (
        <Suspense fallback={<LoaderPage />}>
-          {element}
-          <div className='page_platform__content'>
-             {route.element}
-          </div>
+          <MainLayout>
+             {element}
+             <div className='page_platform__content'>
+                {route.element}
+             </div>
+          </MainLayout>
        </Suspense>
     );
 

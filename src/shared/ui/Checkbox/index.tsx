@@ -3,17 +3,12 @@ import { classNames } from 'shared/libs/helpers/classNames';
 import { Icon } from 'shared/libs/icons';
 import cls from './styles.module.scss';
 
-type Variant =
-  'xs' |
-  'l' |
-  'xl';
-
 type Props = {
-  variant?: Variant;
+  variant?: DesignSystemSize;
   isActive: boolean;
   handler: Dispatch<SetStateAction<boolean>>;
-  color?: Colors;
-  background?: Colors;
+  color?: DesignSystemColors;
+  background?: DesignSystemColors;
 };
 
 const Component: FC<Props> = (props) => {

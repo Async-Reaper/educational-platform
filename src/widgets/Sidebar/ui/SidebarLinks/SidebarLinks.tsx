@@ -29,7 +29,7 @@ const Component = () => {
         {
             links.map((link) => (
                <AppLink to={link.path}>
-                  <Icon name={link.iconName} size={46} color='violet-primary' />
+                  <Icon name={link.iconName} size={50} color='violet-primary' />
                </AppLink>
             ))
         }

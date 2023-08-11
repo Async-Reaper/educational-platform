@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AppLink, Typography } from 'shared/ui';
-import { ColoredIcon } from 'shared/libs/icons';
+import { ColoredIcon, Icon } from 'shared/libs/icons';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch';
 import { CoursesType, getAllCourse } from 'widgets/CoursesList';
@@ -20,7 +20,7 @@ const Component = () => {
      <>
         <div className={cls.link_back} onClick={() => navigate(-1)}>
            <div className={cls.back_icon}>
-              <ColoredIcon name='play_button_player' size={16} />
+              <Icon name='play' color='violet-primary' width={16} height={18} />
            </div>
            <Typography tag='span' variant='body'>
               Назад к курсам

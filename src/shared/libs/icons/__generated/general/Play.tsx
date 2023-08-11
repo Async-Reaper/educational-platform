@@ -11,10 +11,17 @@ export const PlayIcon = React.memo(
   }) => {
     return (
       <svg width={size} height={size} fill="none" {...props}>
-        <path
-          d="M16.174 8.46a1.086 1.086 0 010 1.882L2.33 18.335a1.086 1.086 0 01-1.63-.94V1.407C.7.572 1.607.05 2.33.468L16.174 8.46z"
-          fill={color}
-        />
+        <g clipPath="url(#play_svg__a)">
+          <path
+            d="M21.174 10.46a1.086 1.086 0 010 1.882L7.329 20.335a1.086 1.086 0 01-1.628-.94V3.407c0-.836.905-1.358 1.628-.94l13.845 7.993z"
+            fill={color}
+          />
+        </g>
+        <defs>
+          <clipPath id="play_svg__a">
+            <path fill="#fff" d="M0 0h24v24H0z" />
+          </clipPath>
+        </defs>
       </svg>
     );
   }

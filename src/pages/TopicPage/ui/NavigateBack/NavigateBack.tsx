@@ -24,7 +24,7 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
                   ? (
                      <div className={cls.back__link} onClick={() => setTypeLearnHandler('')}>
                         <div className={cls.icon__wrapper}>
-                           <Icon name='play' color='violet-primary' width={16} height={18.5} />
+                           <Icon name='play' color='violet-primary' width={16} height={18} />
                         </div>
                         <div>
                            <Typography tag='span' variant='body' color='gray-primary'>
@@ -36,7 +36,7 @@ const Component: FC<Props> = ({ typeLearn, setTypeLearnHandler }) => {
                   : (
                      <div className={cls.back__link} onClick={backToCourse}>
                         <div className={cls.icon__wrapper}>
-                           <Icon name='play' color='violet-primary' width={16} height={18.5} />
+                           <Icon name='play' color='violet-primary' width={16} height={18} />
                         </div>
                         <div>
                            <Typography tag='span' variant='body' color='gray-primary'>

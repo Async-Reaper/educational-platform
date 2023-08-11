@@ -12,9 +12,9 @@ export const HomeIcon = React.memo(
     return (
       <svg width={size} height={size} fill="none" {...props}>
         <path
-          d="M15.333 42V28.667a4.444 4.444 0 014.445-4.445h4.444a4.444 4.444 0 014.445 4.445V42M6.444 22H2L22 2l20 20h-4.444v15.556A4.445 4.445 0 0133.11 42H10.89a4.445 4.445 0 01-4.445-4.444V22z"
+          d="M6.333 17v-5.333a1.778 1.778 0 011.778-1.778H9.89a1.779 1.779 0 011.778 1.778V17m-8.89-8H1l8-8 8 8h-1.778v6.222A1.779 1.779 0 0113.444 17H4.556a1.778 1.778 0 01-1.778-1.778V9h0z"
           stroke={color}
-          strokeWidth={2.93}
+          strokeWidth={1.5}
           strokeLinecap="round"
           strokeLinejoin="round"
         />

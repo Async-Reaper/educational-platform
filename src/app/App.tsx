@@ -6,7 +6,10 @@ import { LoaderPage } from 'shared/ui';
 
 function App() {
   return (
-     <div className={classNames('', ['theme'], { hovered: false })}>
+     <div
+       className={classNames('', ['theme'], { hovered: false })}
+       data-testid='app'
+     >
         <Suspense fallback={<LoaderPage />}>
            <AppRouter />
         </Suspense>

@@ -9,7 +9,7 @@ export function buildBabelLoader(options: BuildOptions) {
     use: {
       loader: 'babel-loader',
       options: {
-        presets: ['@babel/preset-env'],
+        presets: [['@babel/preset-env'], '@babel/preset-typescript',],
         plugins: [
           isDev && require.resolve('react-refresh/babel'),
         ].filter(Boolean),

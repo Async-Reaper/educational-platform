@@ -26,7 +26,7 @@
             right: 0;
             height: 233px;
             font-weight: 700;
-            font-size: 324.743px;
+            font-size: 324px;
             line-height: 104px;
             color: transparent;
             -webkit-text-fill-color: transparent;
@@ -46,6 +46,7 @@
         }
 
         .icons__inner {
+            max-width: 650px;
             position: relative;
 
             @include tablets {

@@ -6,7 +6,7 @@ import {PlusIcon} from '../__generated/general/Plus';
 
 export type IconProps<IconName> = Omit<SVGAttributes<SVGElement>, 'color'> & {
   /** color of icon */
-  color?: Colors
+  color?: DesignSystemColors
   /**
    * size of icon (outer boundaries)
    * @default 24
@@ -56,7 +56,7 @@ export const createIconComponent = <
 
         const IconComponent = isIconPresentInSet ? iconSet[name] : fallbackIconComponent;
 
-        return <IconComponent color={endColor} size={size} {...props} />;
+        return <IconComponent color={endColor} size={size} viewBox="0 0 24 24" {...props} />;
     };
 
     IconComponent.displayName = componentName;

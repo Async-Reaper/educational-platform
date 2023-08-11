@@ -1,4 +1,4 @@
-export const useIconColor = (color?: Colors) => {
+export const useIconColor = (color?: DesignSystemColors) => {
     if (!color) {
         return 'var(--color-primary)';
     }

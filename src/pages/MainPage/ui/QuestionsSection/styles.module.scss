@@ -16,15 +16,15 @@
 
         &::after {
             position: absolute;
-            content: "04";
-            top: 245px;
+            content: "03";
+            bottom: 0;
             left: 0;
             height: 290px;
 
             @include flex-center;
 
             font-weight: 700;
-            font-size: 381.633px;
+            font-size: 324px;
             line-height: 122px;
             color: transparent;
             -webkit-text-fill-color: transparent;
@@ -53,6 +53,13 @@
         .description__wrapper {
             margin: 0 0 38px;
             max-width: 650px;
+        }
+
+        .questions__image__wrapper {
+            max-width: 650px;
+            @include tablets {
+                display: none;
+            }
         }
     }
 }

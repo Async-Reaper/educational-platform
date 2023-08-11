@@ -11,35 +11,35 @@ export const TestCheckedIcon = React.memo(
   }) => {
     return (
       <svg width={size} height={size} fill="none" {...props}>
-        <circle cx={5.819} cy={5.819} r={5.819} fill="#fff" />
-        <circle cx={5.819} cy={22.113} r={5.819} fill="#D5ABFF" />
-        <circle cx={5.819} cy={38.407} r={5.819} fill="#D5ABFF" />
+        <circle cx={3.872} cy={6.872} r={1.872} fill="#fff" />
+        <circle cx={3.872} cy={12.113} r={1.872} fill="#D5ABFF" />
+        <circle cx={3.872} cy={17.355} r={1.872} fill="#D5ABFF" />
         <rect
-          x={14.781}
-          y={3.836}
-          width={49.219}
-          height={3.938}
-          rx={1.969}
+          x={6.755}
+          y={6.234}
+          width={15.832}
+          height={1.267}
+          rx={0.633}
           fill="#fff"
         />
         <rect
-          x={14.781}
-          y={19.836}
-          width={49.219}
-          height={3.938}
-          rx={1.969}
+          x={6.755}
+          y={11.381}
+          width={15.832}
+          height={1.267}
+          rx={0.633}
           fill="#D5ABFF"
         />
         <rect
-          x={14.781}
-          y={36.836}
-          width={49.219}
-          height={3.938}
-          rx={1.969}
+          x={6.755}
+          y={16.849}
+          width={15.832}
+          height={1.267}
+          rx={0.633}
           fill="#D5ABFF"
         />
         <path
-          d="M4 6.53l1.617 1.617L8.58 3.836"
+          d="M3.287 7.1l.52.52.953-1.386"
           stroke="#9B53C8"
           strokeWidth={1.078}
           strokeLinecap="round"

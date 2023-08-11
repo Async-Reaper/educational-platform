@@ -3,9 +3,9 @@ import { Button, Container, Typography } from 'shared/ui';
 import { Icon } from 'shared/libs/icons';
 import { useModal } from 'shared/hooks/useModal/useModal';
 import { AskQuestionsModal } from 'features/AskQuestions';
+import questionsImage from '../../../../../public/images/common/questions-image.webp';
 
 import cls from './styles.module.scss';
-import { QuestionsIcons } from './Icons';
 
 const Component = () => {
   const { isOpen, open, close } = useModal();
@@ -32,7 +32,9 @@ const Component = () => {
                     <Icon name='questions' color='white-bg' size={47} />
                  </Button>
               </div>
-              <QuestionsIcons />
+              <div className={cls.questions__image__wrapper}>
+                 <img src={questionsImage} />
+              </div>
            </div>
         </Container>
         {

@@ -2,7 +2,8 @@ import React from 'react';
 import { Container, Typography } from 'shared/ui';
 import { Element } from 'react-scroll';
 
-import { Icons } from './Icons';
+import testImg from '../../../../../public/images/common/test-section.webp';
+
 import { OpenTestBtn } from './OpenTestBtn';
 import cls from './styles.module.scss';
 
@@ -16,7 +17,7 @@ const Component = () => (
                      <Typography tag='h1' variant='h1' color='gray-primary'>Тест-опросник</Typography>
                   </div>
                   <div className={cls.icons__inner}>
-                     <Icons />
+                     <img src={testImg} />
                   </div>
                </div>
                <div className={cls.content__wrapper}>

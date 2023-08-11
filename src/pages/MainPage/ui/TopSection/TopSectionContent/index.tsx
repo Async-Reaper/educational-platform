@@ -26,7 +26,7 @@ const Component = () => (
                <Typography tag='span' variant='body'>
                   К курсам
                </Typography>
-               <Icon name='arrow_right' width={30} color='violet-primary' />
+               <Icon name='arrow_right' width={40} color='violet-primary' />
             </Button>
          </AppLink>
       </div>

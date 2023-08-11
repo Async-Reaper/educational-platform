@@ -21,28 +21,6 @@
         border-radius: inherit;
     }
 
-    &.variant {
-        &--xs {
-            max-width: 36px;
-            max-height: 36px;
-        }
-
-        &--l {
-            max-width: 46px;
-            max-height: 46px;
-        }
-
-        &--m {
-            max-width: 60px;
-            max-height: 60px;
-        }
-
-        &--xl {
-            max-width: 80px;
-            max-height: 80px;
-        }
-    }
-
     .status {
         position: absolute;
         bottom: 0;
@@ -50,4 +28,6 @@
         display: flex;
         justify-content: center;
     }
+
+    @import "./styles/size.module";
 }

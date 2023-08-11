@@ -22,7 +22,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   const fileLoader = {
-    test: /\.(png|jpe?g|gif|woff2|woff|webp)$/i,
+    test: /\.(png|jpe?g|gif|woff2|woff|webp|svg)$/i,
     use: [
       {
         loader: 'file-loader',
@@ -33,7 +33,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   return [
     fileLoader,
     {
-      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
       type: 'asset/resource',
     },
     svgLoader,

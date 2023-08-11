@@ -5,12 +5,10 @@ import {ArrowRightIcon as arrow_right} from './ArrowRight';
 import {ArrowRoundedIcon as arrow_rounded} from './ArrowRounded';
 import {BackPlayerIcon as back_player} from './BackPlayer';
 import {BackIcon as back} from './Back';
-import {BorderArrowBottomIcon as border_arrow_bottom} from './BorderArrowBottom';
 import {CheckRoundedIcon as check_rounded} from './CheckRounded';
 import {CheckIcon as check} from './Check';
 import {DocsIcon as docs} from './Docs';
 import {FlagRightIcon as flag_right} from './FlagRight';
-import {FullScreenIcon as full_screen} from './FullScreen';
 import {GuardIcon as guard} from './Guard';
 import {HomeIcon as home} from './Home';
 import {LightnessIcon as lightness} from './Lightness';
@@ -41,12 +39,10 @@ export type IconName =
   | 'arrow_rounded'
   | 'back_player'
   | 'back'
-  | 'border_arrow_bottom'
   | 'check_rounded'
   | 'check'
   | 'docs'
   | 'flag_right'
-  | 'full_screen'
   | 'guard'
   | 'home'
   | 'lightness'
@@ -79,12 +75,10 @@ export const iconSet: {
   arrow_rounded,
   back_player,
   back,
-  border_arrow_bottom,
   check_rounded,
   check,
   docs,
   flag_right,
-  full_screen,
   guard,
   home,
   lightness,

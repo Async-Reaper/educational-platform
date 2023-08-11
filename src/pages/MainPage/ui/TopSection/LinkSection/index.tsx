@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'shared/libs/icons';
+import {ColoredIcon, Icon} from 'shared/libs/icons';
 import { Link } from 'react-scroll';
 import cls from './styles.module.scss';
 
@@ -12,22 +12,13 @@ const Component = () => (
                   <Icon
                     className={cls.link__sectionIcon}
                     name='arrow_bottom'
-                    width={14}
+                    width={30}
                     color='gray-primary'
                   />
                </a>
             </div>
          </div>
       </Link>
-      <div className={cls.border__link}>
-         <Icon
-           className={cls.border__linkIcon}
-           name='border_arrow_bottom'
-           width={85}
-           height={65}
-           color='violet-primary'
-         />
-      </div>
    </div>
 );
 

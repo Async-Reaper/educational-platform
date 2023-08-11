@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Icon } from 'shared/libs/icons';
-import { ToggleProps } from './types';
+import { type ToggleProps } from './types';
 import cls from './styles.module.scss';
 
 export const renderToggleDefault: React.FC<ToggleProps> = ({

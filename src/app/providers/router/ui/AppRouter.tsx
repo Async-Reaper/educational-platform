@@ -1,9 +1,6 @@
-import React, {
-  ReactNode, Suspense, useEffect, useState,
-} from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Route, RouteProps, Routes } from 'react-router-dom';
 import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
-import { LoaderPage } from 'shared/ui';
 import { routeConfig } from 'shared/config/routeConfig';
 import { Sidebar } from 'widgets/Sidebar';
 import { useResize } from 'shared/hooks/useResize/useResize';
@@ -14,30 +11,20 @@ const AppRouter = () => {
   const [element, setElement] = useState<ReactNode>(<Sidebar />);
   const { width } = useResize();
 
-  useEffect(() => {
-    if (width < 700) {
-      setElement(<HeaderPlatformPage />);
-    } else {
-      setElement(<Sidebar />);
-    }
-  }, [width, setElement]);
-
   const renderWithWrapper = React.useCallback((route: RouteProps) => {
     const elementWithSidebar = (
-       <Suspense fallback={<LoaderPage />}>
-          <MainLayout>
-             {element}
-             <div className='page_platform__content'>
-                {route.element}
-             </div>
-          </MainLayout>
-       </Suspense>
+       <MainLayout>
+          {element}
+          <div className='page_platform__content'>
+             {route.element}
+          </div>
+       </MainLayout>
     );
 
     const elementNonSidebar = (
-       <Suspense fallback={<LoaderPage />}>
+       <>
           {route.element}
-       </Suspense>
+       </>
     );
 
     return (
@@ -47,15 +34,23 @@ const AppRouter = () => {
          element={(
             <RequireAuth>
                {
-                   (route.path === '/' || route.path === '/test')
-                     ? elementNonSidebar
-                     : elementWithSidebar
-               }
+                            (route.path === '/' || route.path === '/test')
+                              ? elementNonSidebar
+                              : elementWithSidebar
+                        }
             </RequireAuth>
-)}
+                )}
        />
     );
   }, [element]);
+
+  useEffect(() => {
+    if (width < 700) {
+      setElement(<HeaderPlatformPage />);
+    } else {
+      setElement(<Sidebar />);
+    }
+  }, [width, setElement]);
 
   return (
      <Routes>

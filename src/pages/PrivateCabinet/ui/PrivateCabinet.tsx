@@ -39,7 +39,7 @@ const Component = () => {
   }, [dispatch, token, statusChangeEmail]);
 
   return (
-     <div>
+     <div data-testid='private-cabinet-page'>
         {user || token
           ? (
              <div className={cls.user_info}>

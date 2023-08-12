@@ -22,7 +22,7 @@ const Component = () => {
   }, [statusCreateTopic, statusDeleteTopic]);
 
   return (
-     <>
+     <div data-testid='course-id-page'>
         <div className={cls.course__name}>
            <Typography variant='h2' color='violet-primary'>
               {dataCourse?.name}
@@ -41,7 +41,7 @@ const Component = () => {
            </div>
            <TopicList idCourse={Number(id)} />
         </div>
-     </>
+     </div>
   );
 };
 

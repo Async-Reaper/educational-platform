@@ -8,7 +8,6 @@ function App() {
   return (
      <div
        className={classNames('', ['theme'], { hovered: false })}
-       data-testid='app'
      >
         <Suspense fallback={<LoaderPage />}>
            <AppRouter />

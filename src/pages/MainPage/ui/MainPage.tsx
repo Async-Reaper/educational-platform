@@ -10,7 +10,7 @@ import { Footer } from './Footer/Footer';
 
 function Component() {
   return (
-     <div>
+     <div data-testid='main-page'>
         <BlackBG>
            <HeaderMainPage />
            <TopSection />

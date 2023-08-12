@@ -17,7 +17,7 @@ const Component = () => {
   const navigate = useNavigate();
 
   return (
-     <>
+     <div data-testid='course-grouped-page'>
         <div className={cls.link_back} onClick={() => navigate(-1)}>
            <div className={cls.back_icon}>
               <Icon name='play' color='violet-primary' width={16} height={18} />
@@ -42,7 +42,7 @@ const Component = () => {
               </AppLink>
            ))}
         </div>
-     </>
+     </div>
   );
 };
 

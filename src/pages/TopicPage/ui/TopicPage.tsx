@@ -55,7 +55,7 @@ const Component = memo(() => {
   }, []);
 
   return (
-     <>
+     <div data-testid='topic-id-page'>
         <NavigateBack typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
         <div className={cls.topic__name}>
            <Typography variant='h3' color='violet-primary'>
@@ -73,7 +73,7 @@ const Component = memo(() => {
                 )
             }
         <VariantLearning typeLearn={typeLearn} setTypeLearnHandler={setTypeLearnHandler} />
-     </>
+     </div>
   );
 });
 

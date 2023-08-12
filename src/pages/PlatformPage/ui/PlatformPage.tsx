@@ -6,7 +6,7 @@ const PlatformPage = () => {
     localStorage.setItem('type_learn', '');
   }, []);
   return (
-     <div>
+     <div data-testid='platform-page'>
         <CoursesList />
      </div>
   );

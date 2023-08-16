@@ -34,12 +34,12 @@ const AppRouter = () => {
          element={(
             <RequireAuth>
                {
-                            (route.path === '/' || route.path === '/test')
-                              ? elementNonSidebar
-                              : elementWithSidebar
-                        }
+                    (route.path === '/' || route.path === '/test')
+                      ? elementNonSidebar
+                      : elementWithSidebar
+                }
             </RequireAuth>
-                )}
+        )}
        />
     );
   }, [element]);

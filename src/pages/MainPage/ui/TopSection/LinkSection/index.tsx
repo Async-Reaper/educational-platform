@@ -1,5 +1,5 @@
 import React from 'react';
-import {ColoredIcon, Icon} from 'shared/libs/icons';
+import { Icon } from 'shared/libs/icons';
 import { Link } from 'react-scroll';
 import cls from './styles.module.scss';
 

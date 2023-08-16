@@ -7,6 +7,14 @@ import { TopicPage } from 'pages/TopicPage';
 import { TestPage } from 'pages/TestPage';
 import { GroupedCoursePage } from 'pages/GroupedCoursePage';
 
+
+// interface Params {
+//   path: string;
+//   element: ReactNode;
+//  auth: boolean;
+//   role: 'mentee' | 'mentor' | 'all'
+// }
+
 export enum AppRoutes {
   MAIN = 'MAIN',
   PLATFORM = 'PLATFORM',

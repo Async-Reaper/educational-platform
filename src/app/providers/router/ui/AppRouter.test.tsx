@@ -1,5 +1,6 @@
 import { testingRender } from 'shared/config/testingConfig/testingConfig';
 import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 const mockedDataGroupedCourse = [
   {

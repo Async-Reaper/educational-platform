@@ -53,9 +53,14 @@ const AddAnswerComment: React.FC<Props> = ({ onSuccess, id }) => {
        reducers={initialReducers}
        removeAfterUnmount
      >
-        <form className={cls.auth__wrapper} onSubmit={(e) => validateDataAnswerComment(e)}>
+        <form
+          data-testid='add-answer-comment-form'
+          className={cls.auth__wrapper}
+          onSubmit={(e) => validateDataAnswerComment(e)}
+        >
            <div>
               <Input
+                data-testid='text-input'
                 type='text'
                 value={text.value}
                 onChange={text.onChange}
@@ -64,7 +69,12 @@ const AddAnswerComment: React.FC<Props> = ({ onSuccess, id }) => {
               {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
            </div>
 
-           <Button full variant='xs' background='violet-primary'>
+           <Button
+             data-testid='btn-request'
+             full
+             variant='xs'
+             background='violet-primary'
+           >
               Ответить
            </Button>
            {

@@ -23,6 +23,8 @@ const addAnswerCommentSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(addAnswerComment.rejected, (state, action: PayloadAction<any>) => {
+        state.isSuccess = false;
+        state.isLoading = false;
         state.error = action.payload;
       });
   },

@@ -10,6 +10,7 @@ interface Props {
 
 export const AddAnswerCommentModal = ({ isOpen, onClose, commentId }: Props) => (
    <ModalWindow
+     dataTestId='modal-add-answer'
      isOpen={isOpen}
      onClose={onClose}
    >

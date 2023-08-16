@@ -7,6 +7,7 @@ interface Props {
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  dataTestId?: string;
 }
 
 const Component: React.FC<Props> = (props) => {
@@ -14,6 +15,7 @@ const Component: React.FC<Props> = (props) => {
     isOpen = false,
     onClose,
     children,
+    dataTestId,
   } = props;
 
   return (
@@ -21,6 +23,7 @@ const Component: React.FC<Props> = (props) => {
         <div
           className={classNames(cls.modal_window__wrapper, [], { [cls.active]: isOpen })}
           onClick={onClose}
+          data-testid={dataTestId}
         >
            <div className={cls.modal_window__content} onClick={(event) => event.stopPropagation()}>
               {children}

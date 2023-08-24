@@ -1,16 +1,16 @@
 .social {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 50px;
 
-  .social__link {
-    path {
-      transition: all .3s;
+    .social__link {
+        path {
+            transition: all 0.3s;
 
-      &:hover {
-        fill: var(--color-violet-primary);
-      }
+            &:hover {
+                fill: var(--color-violet-primary);
+            }
+        }
     }
-  }
 }

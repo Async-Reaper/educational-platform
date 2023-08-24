@@ -8,14 +8,14 @@ AuthAnswer,
 AuthData,
 ThunkConfig<string>
 >(
-  'user/auth',
-  async (data, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.post(LOGIN_ENDPOINT, data);
-      return response.data;
-    } catch (e) {
-      return rejectWithValue('error');
-    }
-  },
+   'user/auth',
+   async (data, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
+      try {
+         const response = await extra.api.post(LOGIN_ENDPOINT, data);
+         return response.data;
+      } catch (e) {
+         return rejectWithValue('error');
+      }
+   },
 );

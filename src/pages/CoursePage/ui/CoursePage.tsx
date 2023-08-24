@@ -10,39 +10,39 @@ import { TopicList } from 'widgets/TopicList';
 import cls from './styles.module.scss';
 
 const Component = () => {
-  const dispatch = useAppDispatch();
-  const { id } = useParams();
+   const dispatch = useAppDispatch();
+   const { id } = useParams();
 
-  const dataCourse = useSelector(courseData);
-  const statusCreateTopic = useSelector(createTopicIsSuccess);
-  const statusDeleteTopic = useSelector(deleteTopicIsSuccess);
+   const dataCourse = useSelector(courseData);
+   const statusCreateTopic = useSelector(createTopicIsSuccess);
+   const statusDeleteTopic = useSelector(deleteTopicIsSuccess);
 
-  useEffect(() => {
-    dispatch(getCourse(id));
-  }, [statusCreateTopic, statusDeleteTopic]);
+   useEffect(() => {
+      dispatch(getCourse(id));
+   }, [statusCreateTopic, statusDeleteTopic]);
 
-  return (
-     <>
-        <div className={cls.course__name}>
-           <Typography variant='h2' color='violet-primary'>
-              {dataCourse?.name}
-           </Typography>
-        </div>
-        <div className={cls.course__description}>
-           <Typography tag='span' variant='body' color='gray-primary'>
-              {dataCourse?.description}
-           </Typography>
-        </div>
-        <div className={cls.themes__list}>
-           <div className={cls.themes__list_title}>
-              <Typography tag='span' variant='h3' color='violet-primary'>
-                 Доступные темы
-              </Typography>
-           </div>
-           <TopicList idCourse={Number(id)} />
-        </div>
-     </>
-  );
+   return (
+      <>
+         <div className={cls.course__name}>
+            <Typography variant='h2' color='violet-primary'>
+               {dataCourse?.name}
+            </Typography>
+         </div>
+         <div className={cls.course__description}>
+            <Typography tag='span' variant='body' color='gray-primary'>
+               {dataCourse?.description}
+            </Typography>
+         </div>
+         <div className={cls.themes__list}>
+            <div className={cls.themes__list_title}>
+               <Typography tag='span' variant='h3' color='violet-primary'>
+                  Доступные темы
+               </Typography>
+            </div>
+            <TopicList idCourse={Number(id)} />
+         </div>
+      </>
+   );
 };
 
 export default Component;

@@ -1,11 +1,11 @@
 export {
-  deleteTopicErrors,
+   deleteTopicErrors,
 } from './deleteTopicErrors/deleteTopicErrors';
 
 export {
-  deleteTopicIsLoading,
+   deleteTopicIsLoading,
 } from './deleteTopicIsLoading/deleteTopicIsLoading';
 
 export {
-  deleteTopicIsSuccess,
+   deleteTopicIsSuccess,
 } from './deleteTopicIsSuccess/deleteTopicIsSuccess';

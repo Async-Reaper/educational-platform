@@ -4,8 +4,8 @@ import { Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
 interface Props {
-  children: ReactNode
-  isVisible: boolean;
+   children: ReactNode
+   isVisible: boolean;
 }
 
 const Component: React.FC<Props> = ({ children, isVisible }) => (

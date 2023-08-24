@@ -11,70 +11,70 @@ import { changeEmailReducer } from '../../model/slice/changeEmailSlice';
 import cls from './styles.module.scss';
 
 interface Props {
-  onSuccess: () => void;
+   onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
-  changeEmailForm: changeEmailReducer,
+   changeEmailForm: changeEmailReducer,
 };
 
 const ChangeEmail = ({ onSuccess }: Props) => {
-  const error = useSelector(changeEmailErrors);
-  const dispatch = useAppDispatch();
-  const email = useInput('', { isEmpty: true, emailValid: true });
+   const error = useSelector(changeEmailErrors);
+   const dispatch = useAppDispatch();
+   const email = useInput('', { isEmpty: true, emailValid: true });
 
-  const changeEmailData: ChangeEmailType = {
-    new_user_email: email.value,
-  };
+   const changeEmailData: ChangeEmailType = {
+      new_user_email: email.value,
+   };
 
-  const handleChangeEmail = useCallback(async () => {
-    const response = await dispatch(changeEmail(changeEmailData));
+   const handleChangeEmail = useCallback(async () => {
+      const response = await dispatch(changeEmail(changeEmailData));
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [changeEmailData, dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [changeEmailData, dispatch, onSuccess]);
 
-  const validateDataChangeEmail = useCallback((e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    email.onBlur();
-    if (
-      !email.emailValid
+   const validateDataChangeEmail = useCallback((e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      email.onBlur();
+      if (
+         !email.emailValid
           && !email.isEmpty
-    ) {
-      handleChangeEmail();
-    }
-  }, [email, handleChangeEmail]);
+      ) {
+         handleChangeEmail();
+      }
+   }, [email, handleChangeEmail]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <form className={cls.wrapper} onSubmit={(e) => validateDataChangeEmail(e)}>
-           <div>
-              <Input
-                type='email'
-                value={email.value}
-                onChange={email.onChange}
-                label='Новая почта'
-              />
-              {(email.isDirty && email.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
-              {(email.isDirty && email.emailValid) && <ErrorText>Некорректный адрес</ErrorText>}
-           </div>
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <form className={cls.wrapper} onSubmit={(e) => validateDataChangeEmail(e)}>
+            <div>
+               <Input
+                  type='email'
+                  value={email.value}
+                  onChange={email.onChange}
+                  label='Новая почта'
+               />
+               {(email.isDirty && email.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
+               {(email.isDirty && email.emailValid) && <ErrorText>Некорректный адрес</ErrorText>}
+            </div>
 
-           <Button full variant='xs' background='violet-primary'>
-              Сменить почту
-           </Button>
-           {
-                 error
+            <Button full variant='xs' background='violet-primary'>
+               Сменить почту
+            </Button>
+            {
+               error
                  && (
-                 <ErrorText>{error}</ErrorText>
+                    <ErrorText>{error}</ErrorText>
                  )
-             }
-        </form>
-     </DynamicModuleLoader>
-  );
+            }
+         </form>
+      </DynamicModuleLoader>
+   );
 };
 
 export default ChangeEmail;

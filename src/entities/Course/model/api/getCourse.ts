@@ -8,15 +8,15 @@ CourseType,
 string | undefined,
 ThunkConfig<string>
 >(
-  'course/getCourse',
-  async (id, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.get(GET_COURSE_ID_ENDPOINT + id);
-      return response.data;
-    } catch (e) {
-      console.log(e);
-      return rejectWithValue('error');
-    }
-  },
+   'course/getCourse',
+   async (id, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
+      try {
+         const response = await extra.api.get(GET_COURSE_ID_ENDPOINT + id);
+         return response.data;
+      } catch (e) {
+         console.log(e);
+         return rejectWithValue('error');
+      }
+   },
 );

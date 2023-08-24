@@ -1,5 +1,5 @@
 import {
-  AnyAction, EnhancedStore, Reducer, ReducersMapObject,
+   AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
@@ -22,53 +22,53 @@ import { DeleteResourceSchema } from 'features/DeleteResource';
 import { UploadResourceSchema } from 'features/UploadResource';
 
 export interface StateSchema {
-  user: UserSchema,
-  courses: CoursesSchema,
-  course: CourseSchema,
-  topic: TopicSchema,
-  comments: CommentSchema,
+   user: UserSchema,
+   courses: CoursesSchema,
+   course: CourseSchema,
+   topic: TopicSchema,
+   comments: CommentSchema,
 
-  // topic
-  authForm?: AuthSchema,
-  createTopicForm?: CreateTopicSchema,
-  deleteTopicForm?: DeleteTopicSchema,
+   // topic
+   authForm?: AuthSchema,
+   createTopicForm?: CreateTopicSchema,
+   deleteTopicForm?: DeleteTopicSchema,
 
-  // comment
-  addCommentForm?: AddCommentSchema,
-  addAnswerCommentForm?: AnswerCommentSchema,
-  askQuestionsForm?: AskQuestionSchema,
+   // comment
+   addCommentForm?: AddCommentSchema,
+   addAnswerCommentForm?: AnswerCommentSchema,
+   askQuestionsForm?: AskQuestionSchema,
 
-  // resources
-  addLinkForm?: AddLinkSchema
-  deleteResourceForm?: DeleteResourceSchema,
-  uploadResourceForm?: UploadResourceSchema,
+   // resources
+   addLinkForm?: AddLinkSchema
+   deleteResourceForm?: DeleteResourceSchema,
+   uploadResourceForm?: UploadResourceSchema,
 
-  // user
-  changeEmailForm?: ChangeEmailSchema,
-  changePasswordForm?: ChangePasswordSchema,
-  logoutForm?: LogoutSchema
+   // user
+   changeEmailForm?: ChangeEmailSchema,
+   changePasswordForm?: ChangePasswordSchema,
+   logoutForm?: LogoutSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
 
 export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 export interface ReducerManager {
-  getReducerMap: () => ReducersMapObject<StateSchema>;
-  reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
-  add: (key: StateSchemaKey, reducer: Reducer) => void;
-  remove: (key: StateSchemaKey) => void;
-  getMountedReducers: () => MountedReducers
+   getReducerMap: () => ReducersMapObject<StateSchema>;
+   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
+   add: (key: StateSchemaKey, reducer: Reducer) => void;
+   remove: (key: StateSchemaKey) => void;
+   getMountedReducers: () => MountedReducers
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
-  reducerManager: ReducerManager;
+   reducerManager: ReducerManager;
 }
 
 export interface ThunkExtraArg {
-  api: AxiosInstance;
+   api: AxiosInstance;
 }
 
 export interface ThunkConfig<T> {
-  rejectValue: T;
-  extra: ThunkExtraArg;
+   rejectValue: T;
+   extra: ThunkExtraArg;
 }

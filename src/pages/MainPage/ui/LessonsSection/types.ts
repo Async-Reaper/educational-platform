@@ -1,4 +1,4 @@
 export interface ILessonItem {
-  name: string;
-  link: string;
+   name: string;
+   link: string;
 }

@@ -5,13 +5,13 @@ import { Suspense } from 'react';
 import { LoaderPage } from 'shared/ui';
 
 function App() {
-  return (
-     <div className={classNames('', ['theme'], { hovered: false })}>
-        <Suspense fallback={<LoaderPage />}>
-           <AppRouter />
-        </Suspense>
-     </div>
-  );
+   return (
+      <div className={classNames('', ['theme'], { hovered: false })}>
+         <Suspense fallback={<LoaderPage />}>
+            <AppRouter />
+         </Suspense>
+      </div>
+   );
 }
 
 export default App;

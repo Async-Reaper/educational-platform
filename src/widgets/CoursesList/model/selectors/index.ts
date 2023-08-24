@@ -1,11 +1,11 @@
 export {
-  coursesListData,
+   coursesListData,
 } from './coursesListData/coursesListData';
 
 export {
-  coursesListError,
+   coursesListError,
 } from './coursesListError/coursesListError';
 
 export {
-  coursesIsLoading,
+   coursesIsLoading,
 } from './coursesListIsLoading/coursesIsLoading';

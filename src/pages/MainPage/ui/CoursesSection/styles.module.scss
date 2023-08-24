@@ -10,6 +10,7 @@
 
     .courses__wrapper {
         @include flex-column;
+
         gap: 46px;
         padding: 0 0 40px;
         position: relative;

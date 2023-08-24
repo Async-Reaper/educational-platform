@@ -1,11 +1,11 @@
 export {
-  changePasswordErrors,
+   changePasswordErrors,
 } from './changePasswordErrors/changePasswordErrors';
 
 export {
-  changePasswordIsLoading,
+   changePasswordIsLoading,
 } from './changePasswordIsLoading/changePasswordIsLoading';
 
 export {
-  changePasswordIsSuccess,
+   changePasswordIsSuccess,
 } from './changePasswordIsSuccess/changePasswordIsSuccess';

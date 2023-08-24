@@ -1,13 +1,13 @@
 export { ChangePasswordModal } from './ui/ChangePasswordModal/ChangePasswordModal';
 
 export {
-  changePasswordReducer,
-  changePasswordActions,
+   changePasswordReducer,
+   changePasswordActions,
 } from './model/slice/changePasswordSlice';
 
 export {
-  ChangePasswordType,
-  ChangePasswordSchema,
+   ChangePasswordType,
+   ChangePasswordSchema,
 } from './model/types';
 
 export * from './model/selectors';

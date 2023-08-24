@@ -1,15 +1,15 @@
 export {
-  changeEmailData,
+   changeEmailData,
 } from './changeEmailData/changeEmailData';
 
 export {
-  changeEmailErrors,
+   changeEmailErrors,
 } from './changeEmailErrors/changeEmailErrors';
 
 export {
-  changeEmailIsLoading,
+   changeEmailIsLoading,
 } from './changeEmailIsLoading/changeEmailIsLoading';
 
 export {
-  changeEmailIsSuccess,
+   changeEmailIsSuccess,
 } from './changeEmailIsSuccess/changeEmailIsSuccess';

@@ -57,6 +57,7 @@
 
         .questions__image__wrapper {
             max-width: 650px;
+
             @include tablets {
                 display: none;
             }

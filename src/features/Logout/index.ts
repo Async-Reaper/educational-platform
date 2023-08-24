@@ -1,12 +1,12 @@
 export { LogoutModal } from './ui/LogoutModal/LogoutModal';
 
 export {
-  logoutActions,
-  logoutReducer,
+   logoutActions,
+   logoutReducer,
 } from './model/slice/logoutSlice';
 
 export {
-  LogoutSchema,
+   LogoutSchema,
 } from './model/types';
 
 export * from './model/selectors';

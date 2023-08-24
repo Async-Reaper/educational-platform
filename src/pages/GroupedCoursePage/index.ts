@@ -1,3 +1,3 @@
 export {
-    GroupedCoursePageAsync as GroupedCoursePage
-} from './ui/GroupedCoursePage.async'
+   GroupedCoursePageAsync as GroupedCoursePage,
+} from './ui/GroupedCoursePage.async';

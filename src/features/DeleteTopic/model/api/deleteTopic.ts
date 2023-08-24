@@ -7,20 +7,20 @@ void,
 number | undefined,
 ThunkConfig<string>
 >(
-  'topic/deleteTopic',
-  async (idTopic, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.delete(DELETE_TOPIC_ENDPOINT + idTopic, {
-        headers: {
-          Token: JSON.parse(localStorage.getItem('token') || ''),
-          Signature: JSON.parse(localStorage.getItem('signature') || ''),
-        },
-      });
-      return response.data;
-    } catch (e) {
-      console.log(e);
-      return rejectWithValue('error');
-    }
-  },
+   'topic/deleteTopic',
+   async (idTopic, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
+      try {
+         const response = await extra.api.delete(DELETE_TOPIC_ENDPOINT + idTopic, {
+            headers: {
+               Token: JSON.parse(localStorage.getItem('token') || ''),
+               Signature: JSON.parse(localStorage.getItem('signature') || ''),
+            },
+         });
+         return response.data;
+      } catch (e) {
+         console.log(e);
+         return rejectWithValue('error');
+      }
+   },
 );

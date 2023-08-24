@@ -1,16 +1,16 @@
 export { DeleteTopicModal } from './ui/DeleteTopicModal/DeleteTopicModal';
 
 export {
-  deleteTopic,
+   deleteTopic,
 } from './model/api/deleteTopic';
 
 export {
-  deleteTopicActions,
-  deleteTopicReducer,
+   deleteTopicActions,
+   deleteTopicReducer,
 } from './model/slice/deleteTopicSlice';
 
 export {
-  DeleteTopicSchema,
+   DeleteTopicSchema,
 } from './model/types';
 
 export * from './model/selectors';

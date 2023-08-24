@@ -8,24 +8,24 @@ import { TopSectionContent } from './TopSectionContent';
 import cls from './styles.module.scss';
 
 const Component = () => {
-  const widthScreen = useResize().width;
+   const widthScreen = useResize().width;
 
-  return (
-     <div className={cls.top_section__wrapper}>
-        <Container>
-           <div className={cls.top_section__body}>
-              <TopSectionContent />
-              <div className={cls.images__bg}>
-                 <Image src={iMacWebp} name='iMac' />
-              </div>
-           </div>
-           <LinkSection />
-        </Container>
-        <div className={cls.bottom__icon}>
-           <ColoredIcon name='wave' width={widthScreen} height={731} />
-        </div>
-     </div>
-  );
+   return (
+      <div className={cls.top_section__wrapper}>
+         <Container>
+            <div className={cls.top_section__body}>
+               <TopSectionContent />
+               <div className={cls.images__bg}>
+                  <Image src={iMacWebp} name='iMac' />
+               </div>
+            </div>
+            <LinkSection />
+         </Container>
+         <div className={cls.bottom__icon}>
+            <ColoredIcon name='wave' width={widthScreen} height={731} />
+         </div>
+      </div>
+   );
 };
 
 export const TopSection = React.memo(Component);

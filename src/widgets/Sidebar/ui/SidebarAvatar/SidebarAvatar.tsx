@@ -5,25 +5,25 @@ import { UserType } from 'entities/User';
 import ava from '../../../../../public/images/mock/ava.png';
 
 interface Props {
-  user: UserType | undefined | null;
-  token: string;
+   user: UserType | undefined | null;
+   token: string;
 }
 
 const Component = ({ user, token }: Props) => (
    <AppLink to='/private-cabinet'>
       {
-                user || token
-                  ? (
-                     <Avatar
-                       src={user?.icon
-                         ? `${__API__}${user?.icon}`
-                         : ava}
-                       variant='l'
-                       rounded
-                     />
-                  )
-                  : <Icon name='user' color='violet-primary' size={46} />
-            }
+         user || token
+            ? (
+               <Avatar
+                  src={user?.icon
+                     ? `${__API__}${user?.icon}`
+                     : ava}
+                  variant='l'
+                  rounded
+               />
+            )
+            : <Icon name='user' color='violet-primary' size={46} />
+      }
    </AppLink>
 );
 

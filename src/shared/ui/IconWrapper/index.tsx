@@ -3,8 +3,8 @@ import React from 'react';
 import cls from './styles.module.scss';
 
 interface Props {
-  icon: React.ReactNode
-  rotate?: number
+   icon: React.ReactNode
+   rotate?: number
 }
 
 const Component: React.FC<Props> = ({ icon, rotate = 0 }) => (

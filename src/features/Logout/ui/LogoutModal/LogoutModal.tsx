@@ -3,14 +3,14 @@ import { ModalWindow } from 'shared/ui';
 import { LogoutFormAsync } from '../LogoutForm/LogoutForm.async';
 
 interface Props {
-  isOpen: boolean;
-  onClose: () => void;
+   isOpen: boolean;
+   onClose: () => void;
 }
 
 const Component = ({ isOpen, onClose }: Props) => (
    <ModalWindow
-     isOpen={isOpen}
-     onClose={onClose}
+      isOpen={isOpen}
+      onClose={onClose}
    >
       <LogoutFormAsync onSuccess={onClose} />
    </ModalWindow>

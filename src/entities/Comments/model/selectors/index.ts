@@ -1,11 +1,11 @@
 export {
-  commentsData,
+   commentsData,
 } from './commentsData/commentsData';
 
 export {
-  commentsIsLoading,
+   commentsIsLoading,
 } from './commentsIsLoading/commentsIsLoading';
 
 export {
-  commentsError,
+   commentsError,
 } from './commentsError/commentsError';

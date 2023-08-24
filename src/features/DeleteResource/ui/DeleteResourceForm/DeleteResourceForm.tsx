@@ -9,52 +9,52 @@ import { deleteResource } from '../../model/api/deleteResource';
 import cls from './styles.module.scss';
 
 interface Props {
-  id: number
-  onSuccess: () => void;
+   id: number
+   onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
-  deleteResourceForm: deleteResourceReducer,
+   deleteResourceForm: deleteResourceReducer,
 };
 
 const DeleteResource = ({ id, onSuccess }: Props) => {
-  const error = useSelector(deleteResourceErrors);
-  const dispatch = useAppDispatch();
+   const error = useSelector(deleteResourceErrors);
+   const dispatch = useAppDispatch();
 
-  const handleDeleteResource = useCallback(async () => {
-    const response = await dispatch(deleteResource(id));
+   const handleDeleteResource = useCallback(async () => {
+      const response = await dispatch(deleteResource(id));
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [dispatch, onSuccess]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <div className={cls.wrapper}>
-           <Typography tag='span' variant='small' color='violet-primary'>
-              Вы действительно хотите удалить данный ресурс?
-           </Typography>
-           <div className={cls.buttons__wrapper}>
-              <Button full variant='xs' background='violet-primary' onClick={handleDeleteResource}>
-                 Да
-              </Button>
-              <Button full variant='xs' background='violet-primary' onClick={onSuccess}>
-                 Нет
-              </Button>
-           </div>
-           {
-                 error
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <div className={cls.wrapper}>
+            <Typography tag='span' variant='small' color='violet-primary'>
+               Вы действительно хотите удалить данный ресурс?
+            </Typography>
+            <div className={cls.buttons__wrapper}>
+               <Button full variant='xs' background='violet-primary' onClick={handleDeleteResource}>
+                  Да
+               </Button>
+               <Button full variant='xs' background='violet-primary' onClick={onSuccess}>
+                  Нет
+               </Button>
+            </div>
+            {
+               error
                  && (
-                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+                    <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )
-             }
-        </div>
-     </DynamicModuleLoader>
-  );
+            }
+         </div>
+      </DynamicModuleLoader>
+   );
 };
 
 export default DeleteResource;

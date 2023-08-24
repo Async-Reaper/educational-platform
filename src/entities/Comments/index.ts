@@ -1,15 +1,15 @@
 export {
-  commentsActions, commentsReducer,
+   commentsActions, commentsReducer,
 } from './model/slice/commentsSlice';
 
 export {
-  getAllComments,
+   getAllComments,
 } from './model/api/getAllComments';
 
 export {
-  CommentType,
-  CommentSchema,
-  AnswerType,
+   CommentType,
+   CommentSchema,
+   AnswerType,
 } from './model/types';
 
 export * from './model/selectors';

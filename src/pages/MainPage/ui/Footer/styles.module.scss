@@ -9,6 +9,7 @@
 
     .footer__inner {
         @include flex-column;
+
         gap: 100px;
 
         .footer__content {
@@ -16,6 +17,7 @@
 
             @include phones {
                 @include flex-column;
+
                 align-items: flex-start;
                 gap: 20px;
             }
@@ -23,6 +25,7 @@
 
         .part__content {
             @include flex-column;
+
             gap: 20px;
         }
 

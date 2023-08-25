@@ -7,19 +7,19 @@ void,
 number | undefined,
 ThunkConfig<string>
 >(
-  'resource/deleteResource',
-  async (idResource, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.delete(`${DELETE_RESOURCE_ENDPOINT + idResource}/`, {
-        headers: {
-          Token: JSON.parse(localStorage.getItem('token') || ''),
-          Signature: JSON.parse(localStorage.getItem('signature') || ''),
-        },
-      });
-      return response.data;
-    } catch (e) {
-      return rejectWithValue('error');
-    }
-  },
+   'resource/deleteResource',
+   async (idResource, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
+      try {
+         const response = await extra.api.delete(`${DELETE_RESOURCE_ENDPOINT + idResource}/`, {
+            headers: {
+               Token: JSON.parse(localStorage.getItem('token') || ''),
+               Signature: JSON.parse(localStorage.getItem('signature') || ''),
+            },
+         });
+         return response.data;
+      } catch (e) {
+         return rejectWithValue('error');
+      }
+   },
 );

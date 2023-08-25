@@ -8,15 +8,15 @@ TopicsType,
 string | number | undefined,
 ThunkConfig<string>
 >(
-  'topic/getTopic',
-  async (id, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.get(GET_TOPIC_ENDPOINT + id);
-      return response.data;
-    } catch (e) {
-      console.log(e);
-      return rejectWithValue('error');
-    }
-  },
+   'topic/getTopic',
+   async (id, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
+      try {
+         const response = await extra.api.get(GET_TOPIC_ENDPOINT + id);
+         return response.data;
+      } catch (e) {
+         console.log(e);
+         return rejectWithValue('error');
+      }
+   },
 );

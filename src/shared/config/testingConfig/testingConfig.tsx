@@ -6,19 +6,19 @@ import { ReactNode } from 'react';
 import { createReduxStore, StateSchema } from 'app/providers/store';
 
 interface IOptions {
-  route: string;
-  initialState?: StateSchema
+   route: string;
+   initialState?: StateSchema
 }
 
 export const testingRender = (component: ReactNode | null, options: IOptions) => {
-  const store = createReduxStore(options?.initialState);
+   const store = createReduxStore(options?.initialState);
 
-  return render(
-     <Provider store={store}>
-        <MemoryRouter initialEntries={[options.route]}>
-           <AppRouter />
-           {component}
-        </MemoryRouter>
-     </Provider>,
-  );
+   return render(
+      <Provider store={store}>
+         <MemoryRouter initialEntries={[options.route]}>
+            <AppRouter />
+            {component}
+         </MemoryRouter>
+      </Provider>,
+   );
 };

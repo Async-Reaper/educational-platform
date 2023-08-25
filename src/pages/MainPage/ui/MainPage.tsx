@@ -9,22 +9,22 @@ import { UsedPlatformSection } from './UsedPlatformSection/UsedPlatformSection';
 import { Footer } from './Footer/Footer';
 
 function Component() {
-  return (
-     <div data-testid='main-page'>
-        <BlackBG>
-           <HeaderMainPage />
-           <TopSection />
-        </BlackBG>
-        <LessonsSection />
-        <TestSection />
-        <CoursesSection />
-        <BlackGradient>
-           <QuestionsSection />
-           <UsedPlatformSection />
-           <Footer />
-        </BlackGradient>
-     </div>
-  );
+   return (
+      <div data-testid='main-page'>
+         <BlackBG>
+            <HeaderMainPage />
+            <TopSection />
+         </BlackBG>
+         <LessonsSection />
+         <TestSection />
+         <CoursesSection />
+         <BlackGradient>
+            <QuestionsSection />
+            <UsedPlatformSection />
+            <Footer />
+         </BlackGradient>
+      </div>
+   );
 }
 
 export default Component;

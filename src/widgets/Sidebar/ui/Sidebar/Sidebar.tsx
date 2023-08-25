@@ -9,26 +9,26 @@ import { SidebarLogout } from '../SidebarLogout/SidebarLogout';
 import cls from './Sidebar.module.scss';
 
 const Component = () => {
-  const user = useSelector(userData);
-  const dispatch = useAppDispatch();
-  const token: string = localStorage.getItem('token') || '';
+   const user = useSelector(userData);
+   const dispatch = useAppDispatch();
+   const token: string = localStorage.getItem('token') || '';
 
-  useEffect(() => {
-    (token || user) && dispatch(getInfoUser());
-  }, [dispatch, token]);
+   useEffect(() => {
+      (token || user) && dispatch(getInfoUser());
+   }, [dispatch, token]);
 
-  return (
-     <div className={cls.sidebar}>
-        <div className={cls.sidebar_wrapper}>
-           <SidebarLogo />
-           <div className={cls.sidebar_links__wrapper}>
-              <SidebarAvatar user={user} token={token} />
-              <SidebarLinks />
-              <SidebarLogout user={user} token={token} />
-           </div>
-        </div>
-     </div>
-  );
+   return (
+      <div className={cls.sidebar}>
+         <div className={cls.sidebar_wrapper}>
+            <SidebarLogo />
+            <div className={cls.sidebar_links__wrapper}>
+               <SidebarAvatar user={user} token={token} />
+               <SidebarLinks />
+               <SidebarLogout user={user} token={token} />
+            </div>
+         </div>
+      </div>
+   );
 };
 
 export const Sidebar = React.memo(Component);

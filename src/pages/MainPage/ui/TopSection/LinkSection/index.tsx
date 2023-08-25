@@ -8,12 +8,13 @@ const Component = () => (
       <Link to='lesson' spy smooth duration={500}>
          <div className={cls.link__sectionBackground}>
             <div className={cls.link__section}>
-               <a>
+               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+               <a href='#'>
                   <Icon
-                    className={cls.link__sectionIcon}
-                    name='arrow_bottom'
-                    width={30}
-                    color='gray-primary'
+                     className={cls.link__sectionIcon}
+                     name='arrow_bottom'
+                     width={30}
+                     color='gray-primary'
                   />
                </a>
             </div>

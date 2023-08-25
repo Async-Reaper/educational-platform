@@ -16,7 +16,8 @@
     "icons:optimise": "yarn svgo -f src/shared/libs/icons/__sources --recursive",
     "icons:transpile": "yarn svgr src/shared/libs/icons/__sources -d ./src/shared/libs/icons/__generated --config-file ./src/shared/libs/icons/__svgr/configs/svgr.universal.js --typescript",
     "icons": "yarn icons:optimise && yarn icons:transpile",
-    "test:unit": "jest --config ./config/jest/jest.config.ts"
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
@@ -25,8 +26,6 @@
     "@babel/preset-typescript": "^7.16.7",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/cli": "5.5.0",
     "@svgr/webpack": "6.5.1",
@@ -54,14 +53,16 @@
     "eslint": "8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
+    "install": "^0.13.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.2",
     "mini-css-extract-plugin": "^2.7.2",
@@ -84,6 +85,8 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
     "@reduxjs/toolkit": "^1.9.3",
     "axios": "^1.3.4",
     "dateformat": "^5.0.3",

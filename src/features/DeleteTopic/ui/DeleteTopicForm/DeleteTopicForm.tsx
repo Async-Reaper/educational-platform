@@ -9,53 +9,53 @@ import { deleteTopicReducer } from '../../model/slice/deleteTopicSlice';
 import cls from './styles.module.scss';
 
 interface Props {
-  idTopic: number | undefined;
-  onSuccess: () => void;
+   idTopic: number | undefined;
+   onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
-  deleteTopicForm: deleteTopicReducer,
+   deleteTopicForm: deleteTopicReducer,
 };
 
 const DeleteTopicForm: React.FC<Props> = ({ idTopic, onSuccess }) => {
-  const dispatch = useAppDispatch();
+   const dispatch = useAppDispatch();
 
-  const error = useSelector(deleteTopicErrors);
+   const error = useSelector(deleteTopicErrors);
 
-  const handleDeleteTopic = useCallback(async () => {
-    const response = await dispatch(deleteTopic(idTopic));
+   const handleDeleteTopic = useCallback(async () => {
+      const response = await dispatch(deleteTopic(idTopic));
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [dispatch, onSuccess]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <div className={cls.delete_topic__wrapper}>
-           <Typography tag='span' variant='small' color='violet-primary'>
-              Вы действительно хотите удалить данную тему?
-           </Typography>
-           <div className={cls.buttons__wrapper}>
-              <Button full variant='xs' background='violet-primary' onClick={handleDeleteTopic}>
-                 Да
-              </Button>
-              <Button full variant='xs' background='violet-primary' onClick={onSuccess}>
-                 Нет
-              </Button>
-           </div>
-           {
-                 error
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <div className={cls.delete_topic__wrapper}>
+            <Typography tag='span' variant='small' color='violet-primary'>
+               Вы действительно хотите удалить данную тему?
+            </Typography>
+            <div className={cls.buttons__wrapper}>
+               <Button full variant='xs' background='violet-primary' onClick={handleDeleteTopic}>
+                  Да
+               </Button>
+               <Button full variant='xs' background='violet-primary' onClick={onSuccess}>
+                  Нет
+               </Button>
+            </div>
+            {
+               error
                  && (
-                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+                    <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )
-             }
-        </div>
-     </DynamicModuleLoader>
-  );
+            }
+         </div>
+      </DynamicModuleLoader>
+   );
 };
 
 export default DeleteTopicForm;

@@ -1,11 +1,11 @@
 export {
-  deleteResourceErrors,
+   deleteResourceErrors,
 } from './deleteResourceErrors/deleteResourceErrors';
 
 export {
-  deleteResourceIsLoading,
+   deleteResourceIsLoading,
 } from './deleteResourceIsLoading/deleteResourceIsLoading';
 
 export {
-  deleteResourceIsSuccess,
+   deleteResourceIsSuccess,
 } from './deleteResourceIsSuccess/deleteResourceIsSuccess';

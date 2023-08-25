@@ -1,13 +1,13 @@
 export { AddLinkModal } from './ui/AddLinkModal/AddLinkModal';
 
 export {
-  addLinkActions,
-  addLinkReducer,
+   addLinkActions,
+   addLinkReducer,
 } from './model/slice/addLinkSlice';
 
 export {
-  AddLinkType,
-  AddLinkSchema,
+   AddLinkType,
+   AddLinkSchema,
 } from './model/types';
 
 export * from './model/selectors';

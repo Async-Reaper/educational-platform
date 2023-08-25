@@ -4,27 +4,27 @@ import { ReducersMapObject } from '@reduxjs/toolkit';
 import { createReduxStore, StateSchema } from 'app/providers/store';
 
 interface StoreProviderProps {
-  children?: ReactNode;
-  initialState?: DeepPartial<StateSchema>;
-  asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
+   children?: ReactNode;
+   initialState?: DeepPartial<StateSchema>;
+   asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 }
 
 export const StoreProvider = (props: StoreProviderProps) => {
-  const {
-    children,
-    initialState,
-    asyncReducers,
-  } = props;
+   const {
+      children,
+      initialState,
+      asyncReducers,
+   } = props;
 
-  const store = createReduxStore(
-    initialState as StateSchema,
-    asyncReducers as ReducersMapObject<StateSchema>,
-  );
+   const store = createReduxStore(
+      initialState as StateSchema,
+      asyncReducers as ReducersMapObject<StateSchema>,
+   );
 
-  return (
-     <Provider store={store}>
-        {/* @ts-ignore */}
-        {children}
-     </Provider>
-  );
+   return (
+      <Provider store={store}>
+         {/* @ts-ignore */}
+         {children}
+      </Provider>
+   );
 };

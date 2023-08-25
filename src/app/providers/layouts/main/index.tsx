@@ -2,7 +2,7 @@ import React, { type FC, type ReactNode } from 'react';
 import cls from './styles.module.scss';
 
 type Props = {
-  children: ReactNode
+   children: ReactNode
 };
 
 // eslint-disable-next-line react/function-component-definition

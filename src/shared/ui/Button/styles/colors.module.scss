@@ -1,64 +1,64 @@
 &.background {
-  &--gray-primary {
-    background-color: var(--color-gray-primary);
-  }
-
-  &--gray-secondary {
-    background-color: var(--color-gray-secondary);
-  }
-
-  &--black-light {
-    background-color: var(--color-black-light);
-  }
-
-  &--black-dark {
-    background-color: var(--color-black-dark);
-  }
-
-  &--violet-primary {
-    background: var(--color-violet-primary);
-    transition: all 0.4s;
-
-    &:disabled {
-      background: var(--color-gray-primary) !important;
-      color: var(--color-white-bg) !important;
-      transition: none;
-      box-shadow: none;
-      cursor: auto;
+    &--gray-primary {
+        background-color: var(--color-gray-primary);
     }
 
-    &:hover {
-      background: var(--color-white-bg);
-      color: var(--color-violet-primary);
-
-      svg {
-        stroke: var(--color-violet-primary);
-        fill: var(--color-violet-primary);
-      }
+    &--gray-secondary {
+        background-color: var(--color-gray-secondary);
     }
-  }
 
-  &--violet-secondary {
-    background-color: var(--color-violet-secondary);
-  }
-
-  &--white-bg {
-    background-color: var(--color-white-bg);
-    color: var(--color-violet-primary);
-    transition: all 0.4s;
-
-    &:hover {
-      background: var(--color-violet-primary);
-      color: var(--color-white-bg);
-
-      svg {
-        stroke: var(--color-white-bg);
-        fill: var(--color-white-bg);
-      }
+    &--black-light {
+        background-color: var(--color-black-light);
     }
-  }
 
-  &--black-bg {
-    background-color: var(--color-black-bg);
-  }
+    &--black-dark {
+        background-color: var(--color-black-dark);
+    }
+
+    &--violet-primary {
+        background: var(--color-violet-primary);
+        transition: all 0.4s;
+
+        &:disabled {
+            background: var(--color-gray-primary) !important;
+            color: var(--color-white-bg) !important;
+            transition: none;
+            box-shadow: none;
+            cursor: auto;
+        }
+
+        &:hover {
+            background: var(--color-white-bg);
+            color: var(--color-violet-primary);
+
+            svg {
+                stroke: var(--color-violet-primary);
+                fill: var(--color-violet-primary);
+            }
+        }
+    }
+
+    &--violet-secondary {
+        background-color: var(--color-violet-secondary);
+    }
+
+    &--white-bg {
+        background-color: var(--color-white-bg);
+        color: var(--color-violet-primary);
+        transition: all 0.4s;
+
+        &:hover {
+            background: var(--color-violet-primary);
+            color: var(--color-white-bg);
+
+            svg {
+                stroke: var(--color-white-bg);
+                fill: var(--color-white-bg);
+            }
+        }
+    }
+
+    &--black-bg {
+        background-color: var(--color-black-bg);
+    }
 }

@@ -1,11 +1,11 @@
 export {
-  topicData,
+   topicData,
 } from './topicData/topicData';
 
 export {
-  topicErrors,
+   topicErrors,
 } from './topicErrors/topicErrors';
 
 export {
-  topicIsLoading,
+   topicIsLoading,
 } from './topicIsLoading/topicIsLoading';

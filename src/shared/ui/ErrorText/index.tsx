@@ -3,7 +3,7 @@ import { Typography } from 'shared/ui';
 import cls from './styles.module.scss';
 
 interface Props {
-  children: ReactNode
+   children: ReactNode
 }
 
 const Component: FC<Props> = ({ children }) => (

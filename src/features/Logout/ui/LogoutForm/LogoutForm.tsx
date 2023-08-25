@@ -7,46 +7,46 @@ import { logoutReducer } from '../../model/slice/logoutSlice';
 import cls from './styles.module.scss';
 
 interface Props {
-  onSuccess: () => void;
+   onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
-  logoutForm: logoutReducer,
+   logoutForm: logoutReducer,
 };
 
 const LogoutForm = ({ onSuccess }: Props) => {
-  const dispatch = useAppDispatch();
+   const dispatch = useAppDispatch();
 
-  const handleLogout = useCallback(async () => {
-    const response = await dispatch(logout());
+   const handleLogout = useCallback(async () => {
+      const response = await dispatch(logout());
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [dispatch, onSuccess]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <div className={cls.logout__modal}>
-           <div className={cls.logout__text}>
-              <Typography>
-                 Вы действительно хотите выйти?
-              </Typography>
-           </div>
-           <div className={cls.logout__buttons}>
-              <Button variant='xs' border onClick={handleLogout}>
-                 Да
-              </Button>
-              <Button variant='xs' onClick={onSuccess}>
-                 Нет
-              </Button>
-           </div>
-        </div>
-     </DynamicModuleLoader>
-  );
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <div className={cls.logout__modal}>
+            <div className={cls.logout__text}>
+               <Typography>
+                  Вы действительно хотите выйти?
+               </Typography>
+            </div>
+            <div className={cls.logout__buttons}>
+               <Button variant='xs' border onClick={handleLogout}>
+                  Да
+               </Button>
+               <Button variant='xs' onClick={onSuccess}>
+                  Нет
+               </Button>
+            </div>
+         </div>
+      </DynamicModuleLoader>
+   );
 };
 
 export default LogoutForm;

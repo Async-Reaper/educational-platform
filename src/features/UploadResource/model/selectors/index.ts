@@ -1,11 +1,11 @@
 export {
-  uploadResourceError,
+   uploadResourceError,
 } from './uploadResourceError/uploadResourceError';
 
 export {
-  uploadResourceIsLoading,
+   uploadResourceIsLoading,
 } from './uploadResourceIsLoading/uploadResourceIsLoading';
 
 export {
-  uploadResourceIsSuccess,
+   uploadResourceIsSuccess,
 } from './uploadResourceIsSuccess/uploadResourceIsSuccess';

@@ -1,10 +1,10 @@
 export type UploadResourceType = {
-  id: number | undefined;
-  dataUpload: FormData;
+   id: number | undefined;
+   dataUpload: FormData;
 };
 
 export type UploadResourceSchema = {
-  isSuccess: boolean,
-  isLoading: boolean,
-  error?: string;
-}
+   isSuccess: boolean,
+   isLoading: boolean,
+   error?: string;
+};

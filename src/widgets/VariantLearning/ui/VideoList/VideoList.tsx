@@ -9,54 +9,55 @@ import { Comments } from '../Comments/Comments';
 import cls from '../styles.module.scss';
 
 interface Props {
-  videos: ResourceType[] | undefined
+   videos: ResourceType[] | undefined
 }
 
 const Component: React.FC<Props> = ({ videos }) => {
-  const { isOpen, open, close } = useModal();
+   const { isOpen, open, close } = useModal();
 
-  return (
-     <div className={cls.resources__list}>
-        {videos?.map((video) => (
-           <div className={cls.resource__wrapper}>
-              {
-                        getCookie('is_teacher') === 'true'
+   return (
+      <div className={cls.resources__list}>
+         {videos?.map((video) => (
+            <div key={video.id} className={cls.resource__wrapper}>
+               {
+                  getCookie('is_teacher') === 'true'
                         && (
-                        <div className={cls.delete_topic__btn} onClick={open}>
-                           <DeleteIcon />
-                           <Typography tag='span' variant='small'>
-                              Удалить
-                           </Typography>
-                        </div>
+                           <div className={cls.delete_topic__btn} onClick={open}>
+                              <DeleteIcon />
+                              <Typography tag='span' variant='small'>
+                                 Удалить
+                              </Typography>
+                           </div>
                         )
-                    }
-              {
-                   isOpen
+               }
+               {
+                  isOpen
                    && (
-                   <DeleteResourceModal
-                     id={video.id}
-                     isOpen={isOpen}
-                     onClose={close}
-                   />
+                      <DeleteResourceModal
+                         id={video.id}
+                         isOpen={isOpen}
+                         onClose={close}
+                      />
                    )
                }
-              <div className={cls.video__lessons}>
-                 <div className={cls.resource_text_info__wrapper}>
-                    <Typography tag='span' variant='h3' color='violet-primary'>{video.name}</Typography>
-                    <Typography tag='span' variant='body' color='black-bg'>{video.description}</Typography>
-                 </div>
-                 <video
-                   src={`${__API__}${video.file}`}
-                   controls
-                 >
-                    <source src={`${__API__}${video.file}`} />
-                 </video>
-                 <Comments id={video.id} />
-              </div>
-           </div>
-        ))}
-     </div>
-  );
+               <div className={cls.video__lessons}>
+                  <div className={cls.resource_text_info__wrapper}>
+                     <Typography tag='span' variant='h3' color='violet-primary'>{video.name}</Typography>
+                     <Typography tag='span' variant='body' color='black-bg'>{video.description}</Typography>
+                  </div>
+                  {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+                  <video
+                     src={`${__API__}${video.file}`}
+                     controls
+                  >
+                     <source src={`${__API__}${video.file}`} />
+                  </video>
+                  <Comments id={video.id} />
+               </div>
+            </div>
+         ))}
+      </div>
+   );
 };
 
 export const VideoList = React.memo(Component);

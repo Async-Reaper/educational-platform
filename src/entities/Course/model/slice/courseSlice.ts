@@ -3,28 +3,28 @@ import { CourseSchema, CourseType } from '../types';
 import { getCourse } from '../api/getCourse';
 
 const initialState: CourseSchema = {
-  isLoading: false,
-  error: undefined,
+   isLoading: false,
+   error: undefined,
 };
 
 const courseSlice = createSlice({
-  name: 'course',
-  initialState,
-  reducers: {
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(getCourse.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getCourse.fulfilled, (state, action: PayloadAction<CourseType>) => {
-        state.isLoading = false;
-        state.data = action.payload;
-      })
-      .addCase(getCourse.rejected, (state, action) => {
-        state.error = action.payload;
-      });
-  },
+   name: 'course',
+   initialState,
+   reducers: {
+   },
+   extraReducers: (builder) => {
+      builder
+         .addCase(getCourse.pending, (state) => {
+            state.isLoading = true;
+         })
+         .addCase(getCourse.fulfilled, (state, action: PayloadAction<CourseType>) => {
+            state.isLoading = false;
+            state.data = action.payload;
+         })
+         .addCase(getCourse.rejected, (state, action) => {
+            state.error = action.payload;
+         });
+   },
 });
 
 export const { actions: courseActions } = courseSlice;

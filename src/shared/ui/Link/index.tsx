@@ -6,37 +6,37 @@ import cls from './styles.module.scss';
 export type Variants =
   | 'primary'
   | 'secondary'
-  | 'red'
+  | 'red';
 
 type Props = {
-  className?: string;
-  variant?: Variants;
-  active?: boolean
+   className?: string;
+   variant?: Variants;
+   active?: boolean
 } & LinkProps;
 
 const Component: FC<Props> = (props) => {
-  const {
-    to,
-    className = '',
-    children,
-    variant = 'primary',
-    active = false,
-    ...otherProps
-  } = props;
+   const {
+      to,
+      className = '',
+      children,
+      variant = 'primary',
+      active = false,
+      ...otherProps
+   } = props;
 
-  return (
-     <Link
-       to={to}
-       className={classNames(
-         cls.app_link,
-         [className],
-         { [cls[variant]]: variant, [cls.active]: active },
-       )}
-       {...otherProps}
-     >
-        {children}
-     </Link>
-  );
+   return (
+      <Link
+         to={to}
+         className={classNames(
+            cls.app_link,
+            [className],
+            { [cls[variant]]: variant, [cls.active]: active },
+         )}
+         {...otherProps}
+      >
+         {children}
+      </Link>
+   );
 };
 
 export const AppLink = React.memo(Component);

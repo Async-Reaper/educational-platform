@@ -8,18 +8,20 @@
         padding: 100px 0 70px;
     }
 
-
     .test__inner {
         position: relative;
+
         @include flex-start;
 
         @include phones {
             @include flex-column;
+
             gap: 25px;
         }
 
         &::after {
             @include flex-space;
+
             position: absolute;
             content: "02";
             top: -145px;
@@ -42,6 +44,7 @@
 
         .icons__wrapper {
             @include flex-column;
+
             gap: 18px;
         }
 
@@ -56,6 +59,7 @@
 
         .content__wrapper {
             @include flex-column;
+
             gap: 24px;
             max-width: 379px;
 

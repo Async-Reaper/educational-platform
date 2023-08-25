@@ -1,19 +1,21 @@
-import { addAnswerCommentIsLoading } from 'features/AddAnswerComment';
+import { addAnswerCommentIsLoading } from './addAnswerCommentIsLoading';
 
 describe('Add answer comment loading (selector)', () => {
-  test('Start loading', () => {
-    expect(addAnswerCommentIsLoading(
-      {
-        addAnswerCommentForm: { isLoading: true },
-      },
-    )).toBe(true);
-  });
+   test('Start loading', () => {
+      const isLoading = addAnswerCommentIsLoading({
+         addAnswerCommentForm: { 
+            isLoading: true,
+         },
+      } as any);
+      expect(isLoading).toBe(true);
+   });
 
-  test('End loading', () => {
-    expect(addAnswerCommentIsLoading(
-      {
-        addAnswerCommentForm: { isLoading: false },
-      },
-    )).toBe(false);
-  });
+   test('End loading', () => {
+      const isLoading = addAnswerCommentIsLoading({
+         addAnswerCommentForm: {
+            isLoading: false,
+         },
+      } as any);
+      expect(isLoading).toBe(false);
+   });
 });

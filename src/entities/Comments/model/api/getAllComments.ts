@@ -8,16 +8,16 @@ CommentType[],
 number | undefined,
 ThunkConfig<string>
 >(
-  'comment/getAllComment/:id',
-  async (idResource, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
+   'comment/getAllComment/:id',
+   async (idResource, thunkApi) => {
+      const { extra, rejectWithValue } = thunkApi;
 
-    try {
-      const response = await extra.api.get(`${GET_ALL_COMMENTS_ENDPOINT + idResource}/comments/`);
-      return response.data;
-    } catch (e) {
-      console.log(e);
-      return rejectWithValue('error');
-    }
-  },
+      try {
+         const response = await extra.api.get(`${GET_ALL_COMMENTS_ENDPOINT + idResource}/comments/`);
+         return response.data;
+      } catch (e) {
+         console.log(e);
+         return rejectWithValue('error');
+      }
+   },
 );

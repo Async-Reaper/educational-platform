@@ -1,53 +1,53 @@
 &.variant {
-  &--xs {
-    padding: 7px 19px;
-  }
-
-  &--l {
-    @include desktop {
-      padding: 20px 50px;
-      min-width: 277px;
+    &--xs {
+        padding: 7px 19px;
     }
 
-    @include laptop {
-      padding: 15px 35px;
-      min-width: 200px;
+    &--l {
+        @include desktop {
+            padding: 20px 50px;
+            min-width: 277px;
+        }
+
+        @include laptop {
+            padding: 15px 35px;
+            min-width: 200px;
+        }
+
+        @include phones {
+            padding: 10px 25px;
+            min-width: 100px;
+        }
     }
 
-    @include phones {
-      padding: 10px 25px;
-      min-width: 100px;
-    }
-  }
+    &--m {
+        padding: 21px 60px;
+        gap: 40px;
 
-  &--m {
-    padding: 21px 60px;
-    gap: 40px;
+        @include desktop {
+            padding: 20px 50px;
+        }
 
-    @include desktop {
-      padding: 20px 50px;
-    }
+        @include laptop {
+            padding: 15px 35px;
+        }
 
-    @include laptop {
-      padding: 15px 35px;
-    }
-
-    @include phones {
-      padding: 10px 25px;
-    }
-  }
-
-  &--xl {
-    @include desktop {
-      padding: 30px 73px;
+        @include phones {
+            padding: 10px 25px;
+        }
     }
 
-    @include laptop {
-      padding: 20px 55px;
-    }
+    &--xl {
+        @include desktop {
+            padding: 30px 73px;
+        }
 
-    @include phones {
-      padding: 15px 40px;
+        @include laptop {
+            padding: 20px 55px;
+        }
+
+        @include phones {
+            padding: 15px 40px;
+        }
     }
-  }
 }

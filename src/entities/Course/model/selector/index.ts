@@ -1,11 +1,11 @@
 export {
-  courseData,
+   courseData,
 } from './courseData/courseData';
 
 export {
-  courseErrors,
+   courseErrors,
 } from './courseErrors/courseErrors';
 
 export {
-  courseIsLoading,
+   courseIsLoading,
 } from './courseIsLoading/courseIsLoading';

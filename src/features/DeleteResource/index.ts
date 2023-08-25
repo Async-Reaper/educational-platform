@@ -1,12 +1,12 @@
 export { DeleteResourceModal } from './ui/DeleteResourceModal/DeleteResourceModal';
 
 export {
-  DeleteResourceSchema,
+   DeleteResourceSchema,
 } from './model/types';
 
 export {
-  deleteResourceReducer,
-  deleteResourceActions,
+   deleteResourceReducer,
+   deleteResourceActions,
 } from './model/slice/deleteReducerSlice';
 
 export * from './model/selectors';

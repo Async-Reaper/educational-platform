@@ -7,26 +7,26 @@ import { CommentsList } from 'widgets/CommentList';
 import cls from './styles.module.scss';
 
 interface Props {
-  id: number;
+   id: number;
 }
 
 const Component = ({ id }: Props) => {
-  const { isOpen, open, close } = useModal();
+   const { isOpen, open, close } = useModal();
 
-  return (
-     <>
-        <div className={cls.add_comment__btn} onClick={open}>
-           <AddCommentIcon />
-           <Typography variant='body' tag='span'>Оставить комментарий</Typography>
-        </div>
-        <CommentsList id={id} />
+   return (
+      <>
+         <div className={cls.add_comment__btn} onClick={open}>
+            <AddCommentIcon />
+            <Typography variant='body' tag='span'>Оставить комментарий</Typography>
+         </div>
+         <CommentsList id={id} />
 
-        {
-             isOpen
+         {
+            isOpen
                  && <AddCommentModal isOpen={isOpen} onClose={close} id={id} />
          }
-     </>
-  );
+      </>
+   );
 };
 
 export const Comments = React.memo(Component);

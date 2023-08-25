@@ -11,81 +11,71 @@ import { addAnswerCommentReducer } from '../../model/slice/addAnswerCommentSlice
 import cls from './styles.module.scss';
 
 interface Props {
-  id: number;
-  onSuccess: () => void
+   id: number;
+   onSuccess: () => void
 }
 
 const initialReducers: ReducersList = {
-  addAnswerCommentForm: addAnswerCommentReducer,
+   addAnswerCommentForm: addAnswerCommentReducer,
 };
 
 const AddAnswerComment: React.FC<Props> = ({ onSuccess, id }) => {
-  const dispatch = useAppDispatch();
-  const errors = useSelector(addAnswerCommentError);
+   const dispatch = useAppDispatch();
+   const errors = useSelector(addAnswerCommentError);
 
-  const text = useInput('', { isEmpty: true });
+   const text = useInput('', { isEmpty: true });
 
-  const answerCommentData: AnswerCommentType = {
-    id,
-    text: text.value,
-  };
+   const answerCommentData: AnswerCommentType = {
+      id,
+      text: text.value,
+   };
 
-  const handleAnswerComment = useCallback(async () => {
-    const response = await dispatch(addAnswerComment(answerCommentData));
+   const handleAnswerComment = useCallback(async () => {
+      const response = await dispatch(addAnswerComment(answerCommentData));
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [answerCommentData, dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [answerCommentData, dispatch, onSuccess]);
 
-  const validateDataAnswerComment = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    text.onBlur();
-    if (
-      !text.isEmpty
-    ) {
-      handleAnswerComment();
-    }
-  }, [text, handleAnswerComment]);
+   const validateDataAnswerComment = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      text.onBlur();
+      if (
+         !text.isEmpty
+      ) {
+         handleAnswerComment();
+      }
+   }, [text, handleAnswerComment]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <form
-          data-testid='add-answer-comment-form'
-          className={cls.auth__wrapper}
-          onSubmit={(e) => validateDataAnswerComment(e)}
-        >
-           <div>
-              <Input
-                data-testid='text-input'
-                type='text'
-                value={text.value}
-                onChange={text.onChange}
-                label='Ваш ответ'
-              />
-              {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
-           </div>
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <form className={cls.auth__wrapper} onSubmit={(e) => validateDataAnswerComment(e)}>
+            <div>
+               <Input
+                  type='text'
+                  value={text.value}
+                  onChange={text.onChange}
+                  label='Ваш ответ'
+               />
+               {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
+            </div>
 
-           <Button
-             data-testid='btn-request'
-             full
-             variant='xs'
-             background='violet-primary'
-           >
-              Ответить
-           </Button>
-           {
+            <Button full variant='xs' background='violet-primary'>
+               Ответить
+            </Button>
+            {
                errors
                  && (
-                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+                    <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )
-         }
-        </form>
-     </DynamicModuleLoader>
-  );
+            }
+         </form>
+      </DynamicModuleLoader>
+   );
 };
 
 export default AddAnswerComment;

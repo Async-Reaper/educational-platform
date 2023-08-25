@@ -1,12 +1,12 @@
 export { AuthModal } from './ui/AuthModal/AuthModal';
 
 export {
-  authActions,
-  authReducer,
+   authActions,
+   authReducer,
 } from './model/slice/authSlice';
 
 export {
-  AuthAnswer, AuthData, AuthSchema,
+   AuthAnswer, AuthData, AuthSchema,
 } from './model/types';
 
 export * from './model/selectors';

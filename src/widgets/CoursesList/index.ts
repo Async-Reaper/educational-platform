@@ -1,12 +1,12 @@
 export { CoursesList } from './ui/CoursesList';
 
 export {
-  getAllCourse,
+   getAllCourse,
 } from './model/api/getAllCourse';
 
 export {
-  coursesActions,
-  coursesReducer,
+   coursesActions,
+   coursesReducer,
 } from './model/slice/coursesListSlice';
 
 export type { CoursesType, CoursesSchema } from './model/types';

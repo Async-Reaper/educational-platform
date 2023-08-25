@@ -1,3 +1,3 @@
 export {
-  TopicPageAsync as TopicPage,
+   TopicPageAsync as TopicPage,
 } from './ui/TopicPage.async';

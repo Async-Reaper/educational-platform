@@ -11,83 +11,83 @@ import { addCommentReducer } from '../../model/slice/addCommentSlice';
 import cls from './styles.module.scss';
 
 interface Props {
-  id: number;
-  onSuccess: () => void;
+   id: number;
+   onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
-  addCommentForm: addCommentReducer,
+   addCommentForm: addCommentReducer,
 };
 
 const AddCommentForm = ({ id, onSuccess }: Props) => {
-  const dispatch = useAppDispatch();
-  const error = useSelector(addCommentError);
+   const dispatch = useAppDispatch();
+   const error = useSelector(addCommentError);
 
-  const text = useInput('', { isEmpty: true });
-  const personName = useInput('', { isEmpty: true });
+   const text = useInput('', { isEmpty: true });
+   const personName = useInput('', { isEmpty: true });
 
-  const addCommentData: AddCommentType = {
-    idResource: id,
-    text: text.value,
-    person_name: personName.value,
-  };
+   const addCommentData: AddCommentType = {
+      idResource: id,
+      text: text.value,
+      person_name: personName.value,
+   };
 
-  const handleAddComment = useCallback(async () => {
-    const response = await dispatch(addComment(addCommentData));
+   const handleAddComment = useCallback(async () => {
+      const response = await dispatch(addComment(addCommentData));
 
-    if (response.meta.requestStatus === 'fulfilled') {
-      onSuccess();
-    }
-  }, [addCommentData, dispatch, onSuccess]);
+      if (response.meta.requestStatus === 'fulfilled') {
+         onSuccess();
+      }
+   }, [addCommentData, dispatch, onSuccess]);
 
-  const validateAddComment = useCallback(() => {
-    text.onBlur();
-    personName.onBlur();
-    if (
-      !text.isEmpty
+   const validateAddComment = useCallback(() => {
+      text.onBlur();
+      personName.onBlur();
+      if (
+         !text.isEmpty
             && !personName.isEmpty
-    ) {
-      handleAddComment();
-    }
-  }, [text, personName, handleAddComment]);
+      ) {
+         handleAddComment();
+      }
+   }, [text, personName, handleAddComment]);
 
-  return (
-     <DynamicModuleLoader
-       reducers={initialReducers}
-       removeAfterUnmount
-     >
-        <div className={cls.wrapper}>
-           <div>
-              <Input
-                type='text'
-                value={personName.value}
-                onChange={personName.onChange}
-                label='Ваше имя'
-              />
-              {(personName.isDirty && personName.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
-           </div>
+   return (
+      <DynamicModuleLoader
+         reducers={initialReducers}
+         removeAfterUnmount
+      >
+         <div className={cls.wrapper}>
+            <div>
+               <Input
+                  type='text'
+                  value={personName.value}
+                  onChange={personName.onChange}
+                  label='Ваше имя'
+               />
+               {(personName.isDirty && personName.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
+            </div>
 
-           <div>
-              <Input
-                type='text'
-                value={text.value}
-                onChange={text.onChange}
-                label='Ваш комментарий'
-              />
-              {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
-           </div>
-           <Button full variant='xs' background='violet-primary' onClick={validateAddComment}>
-              Оставить комментарий
-           </Button>
-           {
-                 error
+            <div>
+               <Input
+                  type='text'
+                  value={text.value}
+                  onChange={text.onChange}
+                  label='Ваш комментарий'
+               />
+               {(text.isDirty && text.isEmpty) && <ErrorText>Поле не должно быть пустым</ErrorText>}
+            </div>
+            <Button full variant='xs' background='violet-primary' onClick={validateAddComment}>
+               Оставить комментарий
+            </Button>
+            {
+               error
                  && (
-                 <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
+                    <ErrorText>Произошла ошибка, повторите попытку позже</ErrorText>
                  )
-             }
-        </div>
-     </DynamicModuleLoader>
-  );
+            }
+         </div>
+      </DynamicModuleLoader>
+   );
 };
 
 export default AddCommentForm;

@@ -1,15 +1,15 @@
 export {
-  authData,
+   authData,
 } from './authData/authData';
 
 export {
-  authErrors,
+   authErrors,
 } from './authErrors/authErrors';
 
 export {
-  authIsLoading,
+   authIsLoading,
 } from './authIsLoading/authIsLoading';
 
 export {
-  authIsSuccess,
+   authIsSuccess,
 } from './authIsSuccess/authIsSuccess';

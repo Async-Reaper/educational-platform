@@ -1,17 +1,17 @@
 export {
-  getTopic,
+   getTopic,
 } from './model/api/getTopic';
 
 export * from './model/selector';
 
 export {
-  topicActions,
-  topicReducer,
+   topicActions,
+   topicReducer,
 } from './model/slice/topicSlice';
 
 export {
-  TopicsType,
-  TopicSchema,
-  ResourceType,
-  TrainingApparatuses,
+   TopicsType,
+   TopicSchema,
+   ResourceType,
+   TrainingApparatuses,
 } from './model/types';

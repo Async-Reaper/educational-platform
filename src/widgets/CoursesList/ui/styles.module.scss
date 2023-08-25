@@ -21,8 +21,6 @@
         align-items: center;
         opacity: 2.7;
         background: rgb(155 83 200 / 10%);
-
-        //box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur(4.5px);
         -webkit-backdrop-filter: blur(4.5px);
         border-radius: var(--border-radius-md);
@@ -38,10 +36,6 @@
             height: 12px;
             top: 0;
             right: 30px;
-        }
-
-        &:hover {
-
         }
     }
 }

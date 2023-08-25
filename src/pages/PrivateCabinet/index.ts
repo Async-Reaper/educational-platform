@@ -1,3 +1,3 @@
 export {
-  PrivateCabinetAsync as PrivateCabinet,
+   PrivateCabinetAsync as PrivateCabinet,
 } from './ui/PrivateCabinet.async';

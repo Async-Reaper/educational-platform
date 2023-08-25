@@ -4,11 +4,11 @@ module.exports = {
       es2021: true,
       jest: true,
    },
-   extends: [
-      'airbnb',
+   extends: ['airbnb',
       'plugin:react/recommended',
       'plugin:@typescript-eslint/eslint-recommended',
       'plugin:@typescript-eslint/recommended',
+      'plugin:storybook/recommended',
    ],
    parser: '@typescript-eslint/parser',
    parserOptions: {
@@ -63,6 +63,7 @@ module.exports = {
       'react/button-has-type': 'off',
       'react/default-props-match-prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'off',
       'react/function-component-definition': 'off',
       'react/require-default-props': 'off',
       'react/no-array-index-key': 'off',
